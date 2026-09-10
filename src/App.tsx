@@ -90,7 +90,7 @@ export default function App() {
           <Gauge
             label="Core Temperature"
             value={reactor?.coreTempC ?? 0}
-            unit=" \u00b0C"
+            unit={" \u00b0C"}
             max={760}
             tone="amber"
           />
