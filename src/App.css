@@ -1,0 +1,271 @@
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.brand p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.brand__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.brand__dot--online {
+  background: var(--cyan);
+  color: var(--cyan);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.brand__dot--standby {
+  background: var(--muted);
+  color: var(--muted);
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid var(--line);
+}
+
+.status--online {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(53, 214, 208, 0.1);
+}
+
+.status--standby {
+  color: var(--muted);
+}
+
+.panel {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.panel__title {
+  margin: 0 0 14px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gauges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.gauge__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.gauge__label {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.gauge__value {
+  font-size: 26px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gauge__unit {
+  font-size: 14px;
+  color: var(--muted);
+  margin-left: 2px;
+}
+
+.gauge__track {
+  height: 10px;
+  border-radius: 999px;
+  background: #0b1119;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.gauge__fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.gauge__fill--cyan {
+  background: linear-gradient(90deg, #1f8f8b, var(--cyan));
+}
+
+.gauge__fill--amber {
+  background: linear-gradient(90deg, #b9741f, var(--amber));
+}
+
+.controls__label {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.controls__label strong {
+  color: var(--text);
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  accent-color: var(--cyan);
+}
+
+.controls__buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+  filter: brightness(1.15);
+}
+
+.btn:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: linear-gradient(180deg, #2bbdb8, #1c8f8b);
+  border-color: #2bbdb8;
+  color: #04120f;
+}
+
+.btn--danger {
+  background: linear-gradient(180deg, #ff6b6b, #d13c3c);
+  border-color: #ff6b6b;
+  color: #180404;
+}
+
+.banner {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.banner--error {
+  background: rgba(255, 93, 93, 0.12);
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.log__item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #0b1119;
+  border-left: 3px solid var(--line);
+  font-size: 14px;
+}
+
+.log__item--info {
+  border-left-color: var(--cyan);
+}
+
+.log__item--warn {
+  border-left-color: var(--amber);
+}
+
+.log__item--critical {
+  border-left-color: var(--red);
+  background: rgba(255, 93, 93, 0.08);
+}
+
+.log__level {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--muted);
+  min-width: 58px;
+}
+
+.log__msg {
+  color: var(--text);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

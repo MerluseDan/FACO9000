@@ -1,0 +1,14 @@
+{
+  "name": "FACO 9000",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "api",
+      "command": "npm run dev:api"
+    },
+    {
+      "name": "web",
+      "command": "npm run dev:web"
+    }
+  ]
+}
