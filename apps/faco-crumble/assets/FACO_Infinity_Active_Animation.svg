@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-label="FACO animated infinity for active voice calls">
+<defs><linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#92d9ff"/><stop offset=".43" stop-color="#288eff"/><stop offset="1" stop-color="#1e4dc8"/></linearGradient><linearGradient id="light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b4f4ff"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#83d2ff"/></linearGradient></defs>
+<circle cx="160" cy="110" r="89" fill="#edf8ff"/><circle cx="160" cy="110" r="100" fill="none" stroke="#ddedff"/>
+<g transform="translate(10 22) scale(2)">
+<path d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="url(#ink)" stroke-width="12" stroke-linecap="round" fill="none"/>
+<path class="motion" pathLength="100" d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="url(#light)" stroke-width="5" stroke-linecap="round" stroke-dasharray="13 87" fill="none"/>
+</g>
+<style>.motion{animation:facoFlow 2.75s linear infinite}@keyframes facoFlow{to{stroke-dashoffset:-100}}@media(prefers-reduced-motion:reduce){.motion{animation:none}}</style>
+</svg>

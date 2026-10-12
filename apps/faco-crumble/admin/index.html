@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7fbff" />
+  <meta name="referrer" content="no-referrer" />
+  <title>FACO Crumble | Ubuntu Control Center</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/admin.css" />
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+<div class="ambient ambient-1" aria-hidden="true"></div><div class="ambient ambient-2" aria-hidden="true"></div>
+<div class="shell">
+  <header class="header">
+    <div class="brand"><svg class="brand-icon" width="43" height="43" viewBox="0 0 88 88" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="brandBGAdmin" x1="12" y1="0" x2="82" y2="88" gradientUnits="userSpaceOnUse"><stop stop-color="#65b7fc"/><stop offset=".48" stop-color="#1d83f6"/><stop offset="1" stop-color="#254bce"/></linearGradient><linearGradient id="brandRibbonAdmin" x1="12" y1="29" x2="78" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".5" stop-color="#f5ffff"/><stop offset="1" stop-color="#d1eaff"/></linearGradient></defs><rect width="88" height="88" rx="24" fill="url(#brandBGAdmin)"/><path d="M44 44C36 31 29 31 24 31C14 31 12 40 12 44C12 53 18 57 25 57C34 57 39 49 44 44C51 35 58 31 64 31C73 31 76 39 76 44C76 52 70 57 63 57C55 57 49 48 44 44" stroke="url(#brandRibbonAdmin)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name"><strong>faco<span>.</span></strong><small>CRUMBLE / CONTROL CENTER</small></span></div>
+    <div id="connectionStatus" class="connection"><span class="status-dot"></span><span>Connecting Cloudflare</span></div>
+  </header>
+  <section class="hero">
+    <div><p class="eyebrow">UBUNTU / PRIVATE INVITATIONS</p><h1>Invite quietly.<br><em>Talk freely.</em></h1><p class="subtitle">One beautiful place to share private invitations. Up to ten equal participants. Each QR grants one unique spot in your circle, then vanishes on the next credential refresh.</p></div>
+    <div class="connection-card"><div class="muted"><span class="live-pin"></span> PUBLIC CONNECTION</div><b id="publicUrl">Waiting for Cloudflare…</b><span id="epochNotice">New invitation codes are issued at each launch.</span><span class="connection-note">The Ubuntu control center stays on localhost. It is not public.</span></div>
+  </section>
+  <main class="body-grid">
+    <nav class="side" aria-label="Invitation list">
+      <div class="nav-head"><b>INVITATIONS</b><small id="onlineCount">0 people online</small></div>
+      <button type="button" class="slot" data-role="landing"><span class="slot-symbol landing">⌁</span><span class="slot-copy"><b>Public entrance</b><small>Cloudflare link / no login</small></span><span class="slot-chevron">›</span></button>
+      <div class="divider">PRIVATE INVITES / 01—10</div>
+      <div id="guestSlots" class="guest-slots"></div>
+      <p class="side-foot"><span class="side-led"></span> Only guests with QR credentials can enter. The server is not a participant.</p>
+    </nav>
+    <section class="content">
+      <div class="detail-head"><div><p class="eyebrow" id="selectionType">PUBLIC ENTRANCE QR</p><h2 id="selectionTitle">Your Cloudflare link</h2><p id="selectionDescription">Share a personal QR to grant private calling access.</p></div><div class="number-badge" id="selectionBadge">00</div></div>
+      <div class="qr-panel">
+        <div class="qr-white" id="qrContainer"><div id="qrLoading" class="qr-loading">Your code will appear when Cloudflare connects.</div><img id="qrImage" class="qr-image hidden" alt="QR code containing the selected link" /></div>
+        <div class="qr-caption"><span class="qr-caption-dot"></span><span id="qrCaption">Public entrance • No credentials attached</span></div>
+      </div>
+      <div class="link-block"><label for="inviteUrl">INVITATION LINK</label><div class="link-field"><input id="inviteUrl" readonly spellcheck="false" value="Waiting for secure connection" aria-label="Selected invitation URL"/><button id="copyButton" type="button" disabled>Copy</button></div></div>
+      <div class="actions"><button type="button" id="shareButton" class="main-action" disabled>Share invite ↗</button><button type="button" id="saveButton" class="alt-action" disabled>Save QR ↓</button></div>
+      <p class="important" id="securityHint">The public QR is only an entrance. Share a personal QR to let someone join.</p>
+      <div class="controls"><div class="controls-heading"><span>ACCESS SETTINGS</span><span id="edition">Edition 01</span></div><div class="controls-row"><div><b>Participant invitations</b><small>1–10 separate, equal call identities</small></div><div class="counter"><button type="button" id="removeGuest" aria-label="Remove a participant slot">−</button><span id="guestCount">10</span><button type="button" id="addGuest" aria-label="Add a participant slot">+</button></div></div><div class="controls-row"><div><b>Refresh all credentials</b><small>Disconnects everyone and immediately revokes shared QRs</small></div><button type="button" id="rotateButton" class="reset-btn">Rotate all</button></div><p class="controls-foot" id="lastRotated">Each restart creates new private invitation credentials.</p></div>
+      <div class="doctor"><div class="doctor-heading"><div><p class="eyebrow">FACO / PROGRAM DOCTOR</p><b>Connection health</b></div><button id="doctorToggle" class="doctor-action" type="button" aria-expanded="false" aria-controls="doctorResults">Show checks ↗</button></div><div id="doctorResults" class="doctor-results hidden" role="status" aria-live="polite">Checks are ready.</div><p class="doctor-copy">A lightweight local status check. No passwords, chat or voice are logged.</p></div>
+    </section>
+  </main>
+  <footer><span>FACO CRUMBLE</span><span>Private QR management • Local server only</span><span>v0.5.1 / CLOUDLIGHT</span></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

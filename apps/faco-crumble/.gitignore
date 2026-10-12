@@ -1,0 +1,20 @@
+# FACO Crumble: no ephemeral credentials or local operating data on GitHub
+private/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+_logs/
+_qa_*
+.env
+.env.*
+*.key
+*.pem
+settings.json
+secrets.json
+*.sqlite3
+*.db
+node_modules/
+.DS_Store

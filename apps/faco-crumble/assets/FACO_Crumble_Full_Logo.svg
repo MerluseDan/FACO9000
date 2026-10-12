@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 230" role="img" aria-label="FACO Crumble infinity logo">
+<defs>
+  <linearGradient id="facobg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#69beff"/><stop offset=".5" stop-color="#2387f7"/><stop offset="1" stop-color="#2549c7"/></linearGradient>
+  <linearGradient id="facoribbon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".52" stop-color="#e8faff"/><stop offset="1" stop-color="#badfff"/></linearGradient>
+</defs>
+<rect x="20" y="20" width="185" height="185" rx="55" fill="url(#facobg)"/>
+<path d="M113 112C98 89 86 87 72 87C50 87 44 102 44 112C44 127 53 140 72 140C89 140 99 127 113 112C126 96 140 87 155 87C176 87 181 104 181 113C181 131 171 140 155 140C139 140 126 127 113 112" stroke="url(#facoribbon)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="244" y="130" fill="#1c3653" font-family="Inter,DejaVu Sans,Arial,sans-serif" font-size="110" font-weight="900" letter-spacing="-8">faco</text>
+<circle cx="465" cy="117" r="8" fill="#257ef3"/>
+<text x="245" y="174" fill="#7895b1" font-family="Inter,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="7">CRUMBLE / PRIVATE CIRCLE</text>
+</svg>

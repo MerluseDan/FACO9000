@@ -1,0 +1,225 @@
+{
+  "application": "FACO Crumble",
+  "version": "0.5.1",
+  "release": "Standard XDG Linux installation + portable GitHub distribution",
+  "createdUTC": "2026-10-12T05:50:30.809782+00:00",
+  "originBaseline": "v0.5.0 Cloudlight Infinity",
+  "entrypoint": "run.sh",
+  "network": {
+    "public": 8787,
+    "localhost_admin": 8788
+  },
+  "roles": [
+    "user01",
+    "user02",
+    "user03",
+    "user04",
+    "user05",
+    "user06",
+    "user07",
+    "user08",
+    "user09",
+    "user10"
+  ],
+  "readiness": {
+    "Python_automated_tests": "Passed 23/23 before release package",
+    "JavaScript_mock_suites": "Passed 2/2",
+    "Chromium_design_and_interactions": "Passed network-free mobile and desktop browser tests",
+    "QR_decoding": "Passed with actual QR parser",
+    "Ubuntu_launcher": "Passed real local process restart and legacy settings migration",
+    "Cloudflare_live_connection": "Not verified on user Ubuntu server",
+    "Android_to_Android_audio": "Not verified on physical phones",
+    "Ten_person_media_performance": "Not field tested",
+    "Linux_fresh_install": "Passed: OS-default home, custom mounted path, absent custom drive refusal",
+    "Linux_installed_launcher": "Passed: wrapper starts local service"
+  },
+  "trackedFileCount": 31,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 240,
+      "mode": "0644",
+      "sha256": "f2d76ec57b046bb9903e16f3847b8f08b7cb8f898842799e7c3f384a774170ff"
+    },
+    {
+      "path": "Caddyfile.example",
+      "size": 373,
+      "mode": "0644",
+      "sha256": "92b85a0100df20a3d84882fff193d2c8ace927475b9a22b0ea67b29b011aa848"
+    },
+    {
+      "path": "README.md",
+      "size": 13846,
+      "mode": "0644",
+      "sha256": "e3932909bfd37fe0560edaea1ef5d4d9de3135ea12f21e9be64c930d8f37131b"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "size": 4717,
+      "mode": "0644",
+      "sha256": "862c77c88b37422ba1409c01a662a88a2251e67b1b6c8de32509e57833ca03ad"
+    },
+    {
+      "path": "admin/admin.css",
+      "size": 11047,
+      "mode": "0644",
+      "sha256": "5ea7e3000bfc5f670ee249395b7b50b4872301e9f54d5592533e3bb829ca2c6f"
+    },
+    {
+      "path": "admin/admin.js",
+      "size": 11281,
+      "mode": "0644",
+      "sha256": "f4f9f00f2031d676d17c6b71c6eca876532e512dc4a9a87666ebb0e18e5ff6d8"
+    },
+    {
+      "path": "admin/index.html",
+      "size": 6122,
+      "mode": "0644",
+      "sha256": "c9f028acf40be44510fb3485118a5e7ca70e04e6944e829e464607aaebe4ffef"
+    },
+    {
+      "path": "assets/FACO_Crumble_Full_Logo.svg",
+      "size": 1247,
+      "mode": "0644",
+      "sha256": "1a306db42716d82035cdd07b75819d3a6aa38d786813eb36d4b3e96df1bf52e7"
+    },
+    {
+      "path": "assets/FACO_Infinity_Active_Animation.svg",
+      "size": 1389,
+      "mode": "0644",
+      "sha256": "6dc10e296c04a7c49fc3e58b287ad33ae917618ccd1281a5682639170099dd7a"
+    },
+    {
+      "path": "install.sh",
+      "size": 4271,
+      "mode": "0755",
+      "sha256": "a39b99f37ee90d1c3c6b32a6dada32275b7cbb7848c6f3549be8b7949b521230"
+    },
+    {
+      "path": "launcher.py",
+      "size": 10363,
+      "mode": "0755",
+      "sha256": "c1cf41839aaa18760caf3c0ea6c75b8119185fbd9fdb9066c5e367b9f6954d87"
+    },
+    {
+      "path": "public/app.js",
+      "size": 46122,
+      "mode": "0644",
+      "sha256": "1a6d3dbe58e4d718885231a8a3bb0ce1f7bd32b526744ce5fe185b53265862a6"
+    },
+    {
+      "path": "public/favicon.svg",
+      "size": 971,
+      "mode": "0644",
+      "sha256": "002f73dfe4789d85b750f54b7fd265b05450e5fbe03f4c85ee5d96c130ba354e"
+    },
+    {
+      "path": "public/index.html",
+      "size": 15639,
+      "mode": "0644",
+      "sha256": "a6e6fbf03d4280a7871b23d6c17f92a5bec26fb995f997bd62ecc1eabc409344"
+    },
+    {
+      "path": "public/style.css",
+      "size": 24942,
+      "mode": "0644",
+      "sha256": "53fe1b1b2f7ad24b57f0c3ddf1757d260100976d9b11b35a51ec187eca21f42e"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 31,
+      "mode": "0644",
+      "sha256": "ee74ed78a0182fc9f38d8baa2e6519e32bbf4e5a3e44146f160eabeb87532ebf"
+    },
+    {
+      "path": "run.sh",
+      "size": 2382,
+      "mode": "0755",
+      "sha256": "9278c71b5978f3dd446ea865f24b531f9c263ad20aed0abb968fb69a62d6ea48"
+    },
+    {
+      "path": "scripts/doctor.py",
+      "size": 2380,
+      "mode": "0755",
+      "sha256": "dc6e47f460bc765ae51f9d50b0b7ee0b015f4aaf2a5a059c1e2e28f26de6ec23"
+    },
+    {
+      "path": "scripts/install_linux.py",
+      "size": 8345,
+      "mode": "0755",
+      "sha256": "30b4afb3bd7df3564791ed7c906cc70ab500e1f1def9e31ac3f5e8f6be401a2c"
+    },
+    {
+      "path": "server.py",
+      "size": 30603,
+      "mode": "0755",
+      "sha256": "2d5d375fe8548f4ffdff4e5c86cad2e8390b12079c9ca7d7c8d5c8a321c7a80b"
+    },
+    {
+      "path": "start.sh",
+      "size": 146,
+      "mode": "0755",
+      "sha256": "ad73963f4750422085fa53dae2b48bbd5ff71574414156fae2f1a2bef34b5ecb"
+    },
+    {
+      "path": "tests/test_admin_layout_optional.py",
+      "size": 5144,
+      "mode": "0644",
+      "sha256": "b334e42b944f312190601412112cb181572891d34a8c07fdc9b6cc52b9bc773b"
+    },
+    {
+      "path": "tests/test_admin_mock.cjs",
+      "size": 4810,
+      "mode": "0644",
+      "sha256": "f3be362b1dfaa6dd2f71f926761644d7293748fdda49a20c3fc366024c67db7f"
+    },
+    {
+      "path": "tests/test_chromium_dom_optional.py",
+      "size": 5952,
+      "mode": "0644",
+      "sha256": "3eef91d2aa25edb6910ec5b6e83728b3c1e1de4c0eefc77bd437f947137ad517"
+    },
+    {
+      "path": "tests/test_client_mock.cjs",
+      "size": 11594,
+      "mode": "0644",
+      "sha256": "46a6edc34273b8c36b4ed45910acfc0dc98af23cbaa378e08ca16743e4629a2f"
+    },
+    {
+      "path": "tests/test_facoux_optional.py",
+      "size": 8643,
+      "mode": "0644",
+      "sha256": "dc06b1ac33300b13d3c55817ce32cbd70257acf652bfc028de704d42cbb76a1a"
+    },
+    {
+      "path": "tests/test_linux_install.py",
+      "size": 6338,
+      "mode": "0644",
+      "sha256": "5ba1cd35b44f85f819be9b400712eb513ae083a981cacdd8ff13356ceb4d8ed3"
+    },
+    {
+      "path": "tests/test_process_smoke.py",
+      "size": 5516,
+      "mode": "0644",
+      "sha256": "3122a2d4ec8b87f46c56598b7de61990bc8bf5891a9df5442f082e0bd580da15"
+    },
+    {
+      "path": "tests/test_qr_scan_optional.py",
+      "size": 2010,
+      "mode": "0644",
+      "sha256": "03d1a4b0ec7ef76d9bdf47017de9ba02aa17b460fa6d7b3ec8e64b2e63f2a2c9"
+    },
+    {
+      "path": "tests/test_signaling.py",
+      "size": 16168,
+      "mode": "0644",
+      "sha256": "0caba9ddd9f6768d77934840114448939d9aeaa7ce0d0fa825265e80f7ce4d93"
+    },
+    {
+      "path": "tests/test_tunnel.py",
+      "size": 1861,
+      "mode": "0644",
+      "sha256": "fd10852e598f5bf1aca22f435774c30b696fac594bf686cc55c4112849d0280f"
+    }
+  ]
+}
