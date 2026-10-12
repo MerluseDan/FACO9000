@@ -491,7 +491,7 @@ class InfinityEmblem extends StatelessWidget {
   final AnimationController controller;
   final double height;
   final bool animate;
-  @override Widget build(BuildContext context) => AnimatedBuilder(animation: controller, builder: (_, _) =>
+  @override Widget build(BuildContext context) => AnimatedBuilder(animation: controller, builder: (context, child) =>
     SizedBox(width: height * 1.9, height: height,
       child: CustomPaint(painter: InfinityPainter(t: animate ? controller.value : -1))));
 }
