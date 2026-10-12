@@ -15,6 +15,8 @@ void facoHostBackground(ServiceInstance service) async {
   WidgetsFlutterBinding.ensureInitialized();
   DartPluginRegistrant.ensureInitialized();
   CrumbleServer? current;
+  bool launching = false;
+  bool stopping = false;
   StreamSubscription? events;
   Timer? heartbeat;
 
@@ -32,12 +34,15 @@ void facoHostBackground(ServiceInstance service) async {
   }
 
   service.on('session.start').listen((arg) async {
+    if (stopping || launching) return;
     if (current?.isRunning == true) { snapshot(); return; }
+    launching = true;
     final count = arg?['count'] is int ? arg!['count'] as int : 10;
     final requested = count.clamp(1, 10);
     final created = CrumbleServer(assetLoader: asset);
     try {
       await created.start(participantCount: requested);
+      if (stopping) { await created.stop(); return; }
       current = created;
       await events?.cancel();
       events = created.events.listen((event) {
@@ -48,7 +53,9 @@ void facoHostBackground(ServiceInstance service) async {
       snapshot();
     } catch (e) {
       await created.stop();
-      service.invoke('session.error', {'message': 'Could not start phone server: $e'});
+      if (!stopping) service.invoke('session.error', {'message': 'Could not start phone server: $e'});
+    } finally {
+      launching = false;
     }
   });
   service.on('session.setBase').listen((arg) {
@@ -68,6 +75,7 @@ void facoHostBackground(ServiceInstance service) async {
   });
   service.on('session.snapshot').listen((_) => snapshot());
   service.on('session.stop').listen((_) async {
+    stopping = true;
     heartbeat?.cancel();
     await events?.cancel();
     await current?.stop();

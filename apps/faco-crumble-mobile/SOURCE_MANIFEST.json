@@ -12,8 +12,8 @@
     "assets/web/style.css": "53fe1b1b2f7ad24b57f0c3ddf1757d260100976d9b11b35a51ec187eca21f42e",
     "build_apk.sh": "81dba75eb8dac4b52138a1940debfdc4d58c9bf51865424877f9b59463a8455f",
     "lib/crumble_server.dart": "ffbd3acc00c8d8ee68c8f60b3d7e230254615ae0405c0a4a21fbbccf2fbcc3cc",
-    "lib/host_background.dart": "9a955ab38b4e61adbb17401390cf605c9b286b0ae4ee9e70ba9be6c9487bb581",
-    "lib/main.dart": "f7c7dd5c46e6004ad7400c01d6fb784c41290261067aa86cae42de6be4633b17",
+    "lib/host_background.dart": "e633ea0e58f26c18ec8a4c2d0b043c3adcfc393f825f869e3a2ed71c799ed1b9",
+    "lib/main.dart": "1a2f906481e6a543b88335970638bb57a6288c0269a894ecae5c1216fa377fcb",
     "pubspec.yaml": "bc67db77976313f9575c766f904ab71433e4c1af33c21619fdce63abefa00cdb",
     "test/crumble_server_test.dart": "24ab0505f494d76def247b42de42e8179e88e7eac7cd00546beb73a05d74830d",
     "tool/configure_android.py": "3e2e0efb48717380b5bc41af43d97a45c60dd48e8e76f792c8222cd49b87001c"
