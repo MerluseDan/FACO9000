@@ -1,0 +1,55 @@
+name: FACO Crumble Mobile Host APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/faco-crumble-mobile/**'
+      - '.github/workflows/android-apk.yml'
+  pull_request:
+    paths:
+      - 'apps/faco-crumble-mobile/**'
+      - '.github/workflows/android-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: apps/faco-crumble-mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Flutter and packages
+        run: |
+          flutter --version
+          flutter pub get
+      - name: Generate Android project
+        run: |
+          flutter create --platforms=android --org com.faco --project-name faco_crumble_mobile .
+          python3 tool/configure_android.py
+          dart run flutter_launcher_icons
+          rm -f test/widget_test.dart
+      - name: Dart protocol tests
+        run: flutter test --reporter expanded
+      - name: Compile installable Android APK
+        run: flutter build apk --debug --target-platform android-arm64
+      - name: Artifact hash and structure
+        run: |
+          test -s build/app/outputs/flutter-apk/app-debug.apk
+          sha256sum build/app/outputs/flutter-apk/app-debug.apk
+          unzip -t build/app/outputs/flutter-apk/app-debug.apk | tail -2
+      - name: Upload test APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FACO_Crumble_Mobile_Host_v0.6.0_android_arm64_DEBUG_APK
+          path: apps/faco-crumble-mobile/build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30

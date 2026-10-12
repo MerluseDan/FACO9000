@@ -1,0 +1,21 @@
+{
+  "version": "0.6.0",
+  "files": {
+    ".github/workflows/android-apk.yml": "01b244db82caa72bcf169da94cabb8e7fabd3a7aa4f4f75bf1c38bbe21563b1b",
+    ".gitignore": "aa96ff8f4a7317fc58748ee9cab3d31d62ba32b633ac3af668bbe3352d947797",
+    "README.md": "bdabfeeae93d70b86ba5654f59a524e1d73e6eefd7d0acd4d85474154c41cfc9",
+    "analysis_options.yaml": "c07c367e89230948653d5c0a78abf85508f4d06222165e2daf9911c6abe26e0d",
+    "assets/icon/faco.png": "a3433caa5183a5f497c336344ea7377d58b5440e08639aa93eb189c573fe0c68",
+    "assets/web/app.js": "1a6d3dbe58e4d718885231a8a3bb0ce1f7bd32b526744ce5fe185b53265862a6",
+    "assets/web/favicon.svg": "002f73dfe4789d85b750f54b7fd265b05450e5fbe03f4c85ee5d96c130ba354e",
+    "assets/web/index.html": "a6e6fbf03d4280a7871b23d6c17f92a5bec26fb995f997bd62ecc1eabc409344",
+    "assets/web/style.css": "53fe1b1b2f7ad24b57f0c3ddf1757d260100976d9b11b35a51ec187eca21f42e",
+    "build_apk.sh": "81dba75eb8dac4b52138a1940debfdc4d58c9bf51865424877f9b59463a8455f",
+    "lib/crumble_server.dart": "ffbd3acc00c8d8ee68c8f60b3d7e230254615ae0405c0a4a21fbbccf2fbcc3cc",
+    "lib/host_background.dart": "9a955ab38b4e61adbb17401390cf605c9b286b0ae4ee9e70ba9be6c9487bb581",
+    "lib/main.dart": "f7c7dd5c46e6004ad7400c01d6fb784c41290261067aa86cae42de6be4633b17",
+    "pubspec.yaml": "bc67db77976313f9575c766f904ab71433e4c1af33c21619fdce63abefa00cdb",
+    "test/crumble_server_test.dart": "24ab0505f494d76def247b42de42e8179e88e7eac7cd00546beb73a05d74830d",
+    "tool/configure_android.py": "3e2e0efb48717380b5bc41af43d97a45c60dd48e8e76f792c8222cd49b87001c"
+  }
+}
