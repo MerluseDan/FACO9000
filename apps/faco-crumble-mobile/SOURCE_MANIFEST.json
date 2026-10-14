@@ -13,7 +13,7 @@
     "assets/web/index.html": "f145b58c10da0e338a71e153929f64ec4c90570c85eb5ef7504a45c618d060cb",
     "assets/web/style.css": "f89f80de0da24937589ed0c54a18e54e48adfac51fb9bc9b06bd55278950786e",
     "build_apk.sh": "81dba75eb8dac4b52138a1940debfdc4d58c9bf51865424877f9b59463a8455f",
-    "lib/crumble_server.dart": "d0a50fa31728a60af9f575232d1e84fa2da26b9840d41d61887d09c8ec147879",
+    "lib/crumble_server.dart": "a5acd8d1db5d7038f2977eebd4677c2a5f1d16b0e2d3f00ebf6a1b6c30ebdfa9",
     "lib/host_background.dart": "e633ea0e58f26c18ec8a4c2d0b043c3adcfc393f825f869e3a2ed71c799ed1b9",
     "lib/main.dart": "b7da41d9ea371f0eb993f4b6608cebda718f6d0997fe0f2cce562671a874a5fb",
     "pubspec.yaml": "325a15ed5a971092a749fd915bf3c5f29f26d823273e5784d1ab5924fb895d08",

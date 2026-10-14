@@ -507,7 +507,7 @@ class CrumbleServer {
         final existing = call.members.toList()..sort();
         call.members.add(role);
         _memberRoom[role] = call.id;
-        final people = call.members.map((r) => {'role': r, 'name': _names[r], 'video': _camerasOn.contains(r)}).toList()..sort((a, b) => (a['role'] ?? '').compareTo(b['role'] ?? ''));
+        final people = call.members.map((r) => {'role': r, 'name': _names[r], 'video': _camerasOn.contains(r)}).toList()..sort((a, b) => (a['role']?.toString() ?? '').compareTo(b['role']?.toString() ?? ''));
         _send(role, {'type': 'joined', 'id': call.id, 'members': people});
         for (final member in existing) {
           _send(member, {'type': 'member-joined', 'id': call.id, 'role': role, 'name': _names[role], 'video': false});
