@@ -1,0 +1,16 @@
+.dart_tool/
+.flutter-plugins*
+.packages
+.pub-cache/
+.pub/
+build/
+android/.gradle/
+android/local.properties
+android/key.properties
+android/app/*.jks
+android/app/*.keystore
+*.apk
+*.aab
+*.log
+credentials.json
+private/
