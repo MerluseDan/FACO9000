@@ -78,6 +78,7 @@ class CrumbleServer {
   final Map<String, String> _names = {};
   final Map<String, VoiceRoom> _rooms = {};
   final Map<String, String> _memberRoom = {};
+  final Set<String> _camerasOn = <String>{};
   final Map<String, String> _pendingRoom = {};
   final Map<String, Queue<DateTime>> _chatTimes = {};
   final Map<String, String> _tokenHashes = {};
@@ -190,6 +191,7 @@ class CrumbleServer {
     for (final timer in _authTimeouts.values) { timer.cancel(); }
     _clients.clear(); _names.clear(); _rooms.clear(); _memberRoom.clear();
     _pendingRoom.clear(); _chatTimes.clear(); _pendingAuth.clear(); _authTimeouts.clear();
+    _camerasOn.clear();
     _issueTokens();
     _notify({'type': 'rotated', 'epoch': _epoch, 'reason': reason});
   }
@@ -206,7 +208,7 @@ class CrumbleServer {
     for (final room in _rooms.values) { for (final timer in room.timers.values) { timer.cancel(); } }
     _clients.clear(); _names.clear(); _rooms.clear(); _memberRoom.clear();
     _pendingRoom.clear(); _chatTimes.clear(); _pendingAuth.clear(); _authTimeouts.clear();
-    _tokenHashes.clear(); _tokens.clear(); _publicBaseUrl = '';
+    _tokenHashes.clear(); _tokens.clear(); _camerasOn.clear(); _publicBaseUrl = '';
     final http = _http;
     _http = null;
     await http?.close(force: true);
@@ -222,7 +224,7 @@ class CrumbleServer {
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'no-referrer',
     'X-Frame-Options': 'DENY',
-    'Permissions-Policy': 'microphone=(self), camera=(), geolocation=()',
+    'Permissions-Policy': 'microphone=(self), camera=(self), geolocation=()',
     'Content-Security-Policy': "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self' ws: wss:; media-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
   };
 
@@ -242,7 +244,7 @@ class CrumbleServer {
   Future<void> _handleRequest(HttpRequest request) async {
     final response = request.response;
     securityHeaders.forEach(response.headers.set);
-    response.headers.set('X-FACO-Mobile', '0.6.0');
+    response.headers.set('X-FACO-Mobile', '0.6.1');
     try {
       if (request.method != 'GET' || _closed) {
         response.statusCode = HttpStatus.methodNotAllowed;
@@ -266,7 +268,7 @@ class CrumbleServer {
       }
       if (request.uri.path == '/healthz') {
         response.headers.contentType = ContentType.json;
-        response.write(jsonEncode({'ok': true, 'service': 'faco-crumble-mobile', 'version': '0.6.0'}));
+        response.write(jsonEncode({'ok': true, 'service': 'faco-crumble-mobile', 'version': '0.6.1'}));
         await response.close();
         return;
       }
@@ -402,6 +404,7 @@ class CrumbleServer {
     for (final member in room.members.toList()) {
       _memberRoom.remove(member);
       _send(member, {'type': 'ended', 'id': room.id, 'reason': 'ended'});
+      _camerasOn.remove(member);
     }
     room.members.clear();
   }
@@ -440,6 +443,7 @@ class CrumbleServer {
       final call = _rooms[waiting];
       if (call != null) { _dropInvite(call, role, reason); _finishIfEmpty(call); }
     }
+    _camerasOn.remove(role);
     final callId = _memberRoom.remove(role);
     if (callId != null) {
       final call = _rooms[callId];
@@ -503,10 +507,10 @@ class CrumbleServer {
         final existing = call.members.toList()..sort();
         call.members.add(role);
         _memberRoom[role] = call.id;
-        final people = call.members.map((r) => {'role': r, 'name': _names[r]}).toList()..sort((a, b) => (a['role'] ?? '').compareTo(b['role'] ?? ''));
+        final people = call.members.map((r) => {'role': r, 'name': _names[r], 'video': _camerasOn.contains(r)}).toList()..sort((a, b) => (a['role'] ?? '').compareTo(b['role'] ?? ''));
         _send(role, {'type': 'joined', 'id': call.id, 'members': people});
         for (final member in existing) {
-          _send(member, {'type': 'member-joined', 'id': call.id, 'role': role, 'name': _names[role]});
+          _send(member, {'type': 'member-joined', 'id': call.id, 'role': role, 'name': _names[role], 'video': false});
         }
         _presence();
         break;
@@ -525,6 +529,19 @@ class CrumbleServer {
         if (call != null && call.id == data['id'] && target is String && target != role &&
             call.members.contains(target) && _validSignal(data['data'], role, target)) {
           _send(target, {'type': 'signal', 'id': call.id, 'from': role, 'data': data['data']});
+        }
+        break;
+      case 'video':
+        final call = _rooms[_memberRoom[role]];
+        if (call != null && call.id == data['id'] && call.members.contains(role) && data['enabled'] is bool) {
+          if (data['enabled'] == true) {
+            _camerasOn.add(role);
+          } else {
+            _camerasOn.remove(role);
+          }
+          for (final member in call.members.where((r) => r != role)) {
+            _send(member, {'type': 'video', 'id': call.id, 'from': role, 'enabled': data['enabled']});
+          }
         }
         break;
       case 'ptt':

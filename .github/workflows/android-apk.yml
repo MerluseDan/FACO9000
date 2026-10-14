@@ -37,6 +37,8 @@ jobs:
           python3 tool/configure_android.py
           dart run flutter_launcher_icons
           rm -f test/widget_test.dart
+      - name: Web client JS syntax
+        run: node --check assets/web/app.js
       - name: Dart protocol tests
         run: flutter test --reporter expanded
       - name: Compile installable Android APK
@@ -49,7 +51,7 @@ jobs:
       - name: Upload test APK
         uses: actions/upload-artifact@v4
         with:
-          name: FACO_Crumble_Mobile_Host_v0.6.0_android_arm64_DEBUG_APK
+          name: FACO_Crumble_Mobile_Host_v0.6.1_VIDEO_android_arm64_DEBUG_APK
           path: apps/faco-crumble-mobile/build/app/outputs/flutter-apk/app-debug.apk
           if-no-files-found: error
           retention-days: 30

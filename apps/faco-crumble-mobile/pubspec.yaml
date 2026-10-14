@@ -1,6 +1,6 @@
 name: faco_crumble_mobile
-version: 0.6.0+1
-description: FACO Crumble mobile-hosted ephemeral private voice and messaging.
+version: 0.6.1+2
+description: FACO Crumble mobile-hosted ephemeral private voice, video and messaging.
 publish_to: none
 environment:
   sdk: '>=3.5.0 <4.0.0'

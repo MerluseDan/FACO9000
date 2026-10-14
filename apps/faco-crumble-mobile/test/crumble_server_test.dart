@@ -104,6 +104,63 @@ void main() {
     for (final peer in peers) { await peer.close(); }
   });
 
+
+  test('Video status is per-room, late-join aware, and cleared after leaving', () async {
+    final server = CrumbleServer(assetLoader: bytes, port: 0);
+    await server.start(participantCount: 4);
+    addTearDown(server.stop);
+    final connections = <Peer>[];
+    for (var i = 1; i <= 4; i++) {
+      final role = 'user${i.toString().padLeft(2, '0')}';
+      final user = await connect(server, role, server.invitationTokens[role]!, 'P$i');
+      await user.next('ready');
+      connections.add(user);
+    }
+    addTearDown(() async { for (final p in connections) { await p.close(); } });
+    final alice = connections[0], bob = connections[1], chloe = connections[2], outsider = connections[3];
+    alice.send('dial', {'target':'user02'});
+    final invite = await bob.next('incoming');
+    final id = invite['id'] as String;
+    bob.send('answer', {'id':id});
+    final joined = await bob.next('joined');
+    expect((joined['members'] as List).every((x) => x['video'] == false), true);
+
+    alice.send('video', {'id':id, 'enabled':true});
+    final enabled = await bob.next('video');
+    expect(enabled, containsPair('from','user01'));
+    expect(enabled, containsPair('enabled',true));
+    outsider.send('video', {'id':id, 'enabled':true}); // no membership => ignored
+    bob.send('invite', {'id':id, 'target':'user03'});
+    await chloe.next('incoming');
+    chloe.send('answer', {'id':id});
+    final lateJoin = await chloe.next('joined');
+    final lateMembers = (lateJoin['members'] as List).cast<Map>();
+    expect(lateMembers.firstWhere((x) => x['role']=='user01')['video'], true);
+    expect(lateMembers.firstWhere((x) => x['role']=='user02')['video'], false);
+
+    alice.send('video', {'id':id, 'enabled':false});
+    final disabled = await chloe.next('video');
+    expect(disabled, containsPair('from','user01'));
+    expect(disabled, containsPair('enabled',false));
+    bob.send('video', {'id':id, 'enabled':true});
+    final bobOn = await chloe.next('video');
+    expect(bobOn, containsPair('from','user02'));
+    expect(bobOn, containsPair('enabled',true));
+
+    // End this room, then reconnect: video must NOT leak into the next call.
+    bob.send('end', {'id':id});
+    await bob.next('ended');
+    alice.send('end', {'id':id});
+    await alice.next('ended');
+    // Chloe's room is automatically ended when only one remains.
+    await chloe.next('ended');
+    bob.send('dial', {'target':'user01'});
+    final nextInvite = await alice.next('incoming');
+    alice.send('answer', {'id': nextInvite['id']});
+    final nextRoom = await alice.next('joined');
+    expect((nextRoom['members'] as List).every((x) => x['video'] == false), true);
+  });
+
   test('HTTP static assets and privacy headers, no admin route', () async {
     final server = CrumbleServer(assetLoader: bytes, port: 0);
     await server.start(participantCount: 1);
@@ -114,6 +171,7 @@ void main() {
     var res = await req.close();
     expect(res.statusCode, 200);
     expect(res.headers.value('Cache-Control'), contains('no-store'));
+    expect(res.headers.value('Permissions-Policy'), contains('camera=(self)'));
     expect(await utf8.decoder.bind(res).join(), contains('FACO'));
     req = await client.getUrl(Uri.parse('http://127.0.0.1:${server.actualPort}/api/state'));
     res = await req.close();

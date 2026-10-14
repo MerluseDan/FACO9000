@@ -287,7 +287,7 @@ class _CrumbleHomeState extends State<CrumbleHome> with TickerProviderStateMixin
         onChanged: (v) => setState(() => _participantCount = v.round())),
       const Divider(height: 28),
       SwitchListTile.adaptive(contentPadding: EdgeInsets.zero, value: _internet,
-        title: const Text('Internet voice + messages'),
+        title: const Text('Internet voice, video + messages'),
         subtitle: const Text('Use a Cloudflare tunnel connected from this phone.'),
         onChanged: (v) => setState(() => _internet = v)),
       if (_internet) ...[
@@ -330,7 +330,7 @@ class _CrumbleHomeState extends State<CrumbleHome> with TickerProviderStateMixin
       const SizedBox(height: 16),
       _panel(child: Column(children: [
         InfinityEmblem(controller: _infinity, height: 100, animate: _activeCalls > 0 && !_reducedMotion),
-        Text(_activeCalls > 0 ? 'Infinity is active · Voice connected' : 'Waiting for conversations',
+        Text(_activeCalls > 0 ? 'Infinity is active · Private call connected' : 'Waiting for conversations',
           style: const TextStyle(color: facoSoft)),
         const SizedBox(height: 14),
         Row(children: [
@@ -401,7 +401,7 @@ class _CrumbleHomeState extends State<CrumbleHome> with TickerProviderStateMixin
         const SizedBox(height: 16),
         Text('Phone server: ${_running ? 'Running' : 'Stopped'}'),
         Text('Connected participants: $_online / $_participantCount'),
-        Text('Active voice rooms: $_activeCalls'),
+        Text('Active call rooms: $_activeCalls'),
         Text('Tunnel: ${_internet ? _tunnelState : 'Not required (local)'}'),
         Text('QR credential rotation: ${_state['epoch'] ?? 0}'),
         const SizedBox(height: 12),
@@ -427,7 +427,7 @@ class _CrumbleHomeState extends State<CrumbleHome> with TickerProviderStateMixin
               child: Row(children: [Expanded(child: Text(_alert, style: const TextStyle(color: Color(0xFF944339)))), IconButton(onPressed: () => _warn(''), icon: const Icon(Icons.close), tooltip: 'Dismiss message')])),
             if (_phase == 0) _startPanel() else if (_phase == 1) _setupPanel() else _livePanel(),
             const SizedBox(height: 14),
-            const Center(child: Text('FACO · Private by default · v0.6.0', style: TextStyle(fontSize: 12, color: facoSoft))),
+            const Center(child: Text('FACO · Private by default · v0.6.1', style: TextStyle(fontSize: 12, color: facoSoft))),
             const SizedBox(height: 22),
           ]),
         )));
