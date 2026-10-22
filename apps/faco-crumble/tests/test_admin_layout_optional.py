@@ -60,7 +60,6 @@ class AdminLayout(unittest.TestCase):
                         const qr=document.getElementById('qrImage');qr.src=image;qr.classList.remove('hidden');
                         document.getElementById('qrCaption').textContent='Private entry · One distinct credential per person';
                         document.getElementById('inviteUrl').value='https://example.invalid/preview-not-a-real-invite';
-                        document.getElementById('securityHint').textContent='Preview only. Real invitations are generated securely by your Ubuntu server.';
                         document.getElementById('lastRotated').textContent='Session credentials refresh when Crumble or Cloudflare restarts.';
                         document.getElementById('guestCount').textContent='10';
                         document.getElementById('edition').textContent='Edition 03';
