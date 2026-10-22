@@ -17,7 +17,7 @@ async function go(){
  const document={getElementById:el,createElement:()=>new E(),querySelectorAll:()=>[landing]};
  const history={replaceState(a,b,url){this.url=url}};
  const storage=new Map(),sessionStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};
- const calls=[],copied=[],objectURLs=[];let confirms=0;
+ const calls=[],copied=[],objectURLs=[];
  const state={epoch:1,guestCount:10,baseUrl:'https://voice.trycloudflare.com',tunnelState:'Active',
   online:['user01','user03'],reason:'Started',invites:Array.from({length:10},(_,i)=>{const role=`user${String(i+1).padStart(2,'0')}`;
    return {role,label:`Person ${String(i+1).padStart(2,'0')}`,url:`https://voice.trycloudflare.com/#role=${role}&key=BB${i}`}})};
@@ -32,7 +32,7 @@ async function go(){
  const URL={createObjectURL:b=>{const u=`blob:fake-${objectURLs.length}`;objectURLs.push(u);return u},revokeObjectURL() {}};
  const context={document,history,sessionStorage,location:{hash:'#admin=PRIVATEADMINKEYPRIVATEADMINKEYPRIVATEADMINKEY',pathname:'/'},
   fetch,URL,URLSearchParams,navigator:{clipboard:{writeText:async v=>copied.push(v)}},window:{addEventListener(){}},
-  Blob,console,setTimeout:()=>1,clearTimeout:()=>{},setInterval:()=>1,confirm:()=>{confirms++;return true}};
+  Blob,console,setTimeout:()=>1,clearTimeout:()=>{},setInterval:()=>1,confirm:()=>{throw new Error('Unexpected browser confirmation')}};
  vm.runInNewContext(source,context);
  async function flush(){for(let i=0;i<24;i++)await Promise.resolve()}
  await flush();
@@ -51,7 +51,7 @@ async function go(){
  el('saveButton').click();await flush();assert.ok(objectURLs.length>=3);
  el('removeGuest').click();await flush();assert.equal(state.guestCount,9);assert.equal(state.epoch,2);
  el('rotateButton').click();await flush();assert.equal(state.epoch,3);
- assert.ok(confirms>=2);
+  assert.ok(!source.includes('confirm('), 'No redundant browser confirmation popups');
  assert.ok(calls.some(x=>x.url==='/qr/user08.svg'));
  assert.ok(calls.every(x=>x.args.headers['X-FACO-Admin']));
  assert.ok(!state.invites.some(x=>x.role==='owner'));
