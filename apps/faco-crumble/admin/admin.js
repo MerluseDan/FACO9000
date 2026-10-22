@@ -115,9 +115,6 @@
       `Share this private QR. The recipient enters a name, chooses cookie preference and joins as ${titleFor(selected)}. Everyone has equal calling and messaging permissions.`;
     $('qrCaption').textContent = selected === 'landing' ? 'Public entrance · No credentials attached' :
       'Private entry · Secret key embedded in QR';
-    $('securityHint').textContent = selected === 'landing' ?
-      'The public QR is only an entrance. An individual private QR is needed to join after choosing a name.' :
-      'Anyone who receives this QR or its link can use this slot until the next rotation. Share it privately.';
     const url = urlFor(selected);
     $('inviteUrl').value = url || 'Waiting for Cloudflare…';
     for (const id of ['copyButton','shareButton','saveButton']) $(id).disabled = !url;
@@ -190,9 +187,9 @@
   $('copyButton').addEventListener('click',copyLink);
   $('shareButton').addEventListener('click',shareLink);
   $('saveButton').addEventListener('click',saveQR);
-  $('removeGuest').addEventListener('click',()=>{if(state.guestCount>1 && confirm('Changing slots disconnects everyone, ends calls and renews all keys. Continue?'))change('guest-count',{count:state.guestCount-1});});
-  $('addGuest').addEventListener('click',()=>{if(state.guestCount<10 && confirm('Changing slots disconnects everyone, ends calls and renews all keys. Continue?'))change('guest-count',{count:state.guestCount+1});});
-  $('rotateButton').addEventListener('click',()=>{if(confirm('Expire all active invitations and disconnect any live call?'))change('rotate',{});});
+  $('removeGuest').addEventListener('click',()=>{if(state.guestCount>1 && !busy)change('guest-count',{count:state.guestCount-1});});
+  $('addGuest').addEventListener('click',()=>{if(state.guestCount<10 && !busy)change('guest-count',{count:state.guestCount+1});});
+  $('rotateButton').addEventListener('click',()=>{if(!busy)change('rotate',{});});
   if (!adminToken) {
     $('qrLoading').textContent = 'Open the private admin URL printed in the terminal on this Ubuntu computer.';
     tell('Admin key is missing. Use the URL from your server terminal.');
