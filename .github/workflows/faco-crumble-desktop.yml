@@ -51,7 +51,7 @@ jobs:
           retention-days: 30
 
   macos:
-    runs-on: macos-14
+    runs-on: macos-15-intel
     defaults:
       run:
         shell: bash
@@ -61,6 +61,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          architecture: 'x64'
+      - name: Verify native Intel build environment
+        run: |
+          test "$(uname -m)" = x86_64
+          python -c "import platform; assert platform.machine() == 'x86_64', platform.machine()"
       - name: Install build dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt pyinstaller==6.16.0
       - name: Signaling and video test
@@ -71,6 +76,7 @@ jobs:
       - name: Native macOS app bundle
         run: |
           pyinstaller --noconfirm --clean --windowed \
+            --target-arch x86_64 \
             --name 'FACO Crumble' \
             --osx-bundle-identifier 'com.faco.crumble.desktop' \
             --icon assets/FACO_Crumble.icns \
@@ -79,6 +85,11 @@ jobs:
             --add-data admin:admin \
             --add-data assets:assets \
             launcher.py
+      - name: Verify Intel application architecture
+        run: |
+          executable="dist/FACO Crumble.app/Contents/MacOS/FACO Crumble"
+          file "$executable"
+          test "$(lipo -archs "$executable")" = x86_64
       - name: Test actual macOS app executable and local QR web service
         run: python qa/native_smoke.py "dist/FACO Crumble.app/Contents/MacOS/FACO Crumble"
       - name: Package macOS application

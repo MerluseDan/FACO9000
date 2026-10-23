@@ -28,9 +28,9 @@ Open the Windows release ZIP, extract the **whole** `FACO Crumble` folder anywhe
 
 ### macOS
 
-Extract the macOS ZIP, open **`FACO Crumble.app`**, and the localhost QR panel opens in your browser. It bundles Python dependencies. Mac test builds are unsigned/unnotarized: macOS may initially block launch; review and use your system's **Open Anyway** option if you trust the package. Default participant-count setting: `~/Library/Application Support/FACO/Crumble/settings.json`. An Intel-only build requires Rosetta on Apple Silicon Macs.
+Extract the macOS ZIP, open **`FACO Crumble.app`**, and the localhost QR panel opens in your browser. It bundles Python dependencies. Mac test builds are unsigned/unnotarized: macOS may initially block launch; review and use your system's **Open Anyway** option if you trust the package. Default participant-count setting: `~/Library/Application Support/FACO/Crumble/settings.json`. The macOS ZIP targets Intel (`x86_64`); it is not an ARM64 or universal build. Running it on Apple Silicon requires Rosetta and has not been verified.
 
-**Native ZIP build verification:** GitHub Actions compiles the executables and runs the program on corresponding hosted OS runners. Physical microphone/camera tests across consumer networks remain required.
+**Native ZIP build verification:** The workflow builds macOS on `macos-15-intel` with x64 Python and PyInstaller `--target-arch x86_64`, checks the executable with `lipo`, and runs the bundled service smoke test before packaging the Intel ZIP. This configuration alone is not proof of a successful native build: check the Actions run for the exact commit. Earlier `macos-14` builds were ARM64 despite their Intel filenames and must not be used as Intel builds. Physical microphone/camera tests across consumer networks remain required.
 
 ### Cross-platform source (without native binary)
 
