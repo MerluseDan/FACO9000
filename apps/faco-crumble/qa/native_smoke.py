@@ -7,13 +7,19 @@ def free_port():
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('program');a=p.parse_args()
-    pub,adm=free_port(),free_port()
+    with socket.socket() as first, socket.socket() as second:
+        first.bind(('127.0.0.1',0))
+        second.bind(('127.0.0.1',0))
+        pub,adm=first.getsockname()[1],second.getsockname()[1]
+    assert pub != adm
     env={**os.environ,'FACO_NO_GUI':'1','FACO_PORT':str(pub),'FACO_ADMIN_PORT':str(adm)}
     proc=subprocess.Popen([a.program,'--local','--no-open'],env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
     try:
         deadline=time.monotonic()+35
         while time.monotonic()<deadline:
-            if proc.poll() is not None: raise RuntimeError(f'Native process exited: {proc.returncode}')
+            if proc.poll() is not None:
+                output = proc.communicate(timeout=4)[0].decode(errors='replace') if proc.stdout else ''
+                raise RuntimeError(f'Native process exited: {proc.returncode}; output: {output[-6000:]}')
             try:
                 with urllib.request.urlopen(f'http://127.0.0.1:{pub}/healthz',timeout=.4) as r:
                     info=json.load(r)
