@@ -88,7 +88,7 @@ async def run_quick_tunnel(state: ControlState, binary: str, public_port: int):
     logpath = log_home() / 'tunnel.log'
     logpath.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
     while True:
-        print('Starting Cloudflare HTTPS tunnel…', flush=True)
+        print('Starting Cloudflare HTTPS tunnel...', flush=True)
         state.tunnel_state = 'Connecting'
         process = None
         try:
@@ -185,9 +185,9 @@ async def run_services(args):
         await web.TCPSite(adm_runner, '127.0.0.1', args.admin_port).start()
         started_adm = True
         url = f'http://127.0.0.1:{args.admin_port}/#admin={state.admin_token}'
-        print('\n' + '═' * 62, flush=True)
-        print('FACO CRUMBLE  •  Desktop Invite & QR Control Center', flush=True)
-        print('═' * 62, flush=True)
+        print('\n' + '=' * 62, flush=True)
+        print('FACO CRUMBLE  |  Desktop Invite & QR Control Center', flush=True)
+        print('=' * 62, flush=True)
         print('LOCAL CONTROL CENTER (never share):', url, sep='\n', flush=True)
         print('PUBLIC CALL SERVICE: 127.0.0.1:' + str(args.public_port), flush=True)
         print('ADMIN CONTROLS:      127.0.0.1:' + str(args.admin_port), flush=True)
