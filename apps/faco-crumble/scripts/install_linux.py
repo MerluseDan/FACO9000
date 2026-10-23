@@ -15,7 +15,7 @@ APP = 'faco-crumble'
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ('README.md', 'RELEASE_NOTES.md', 'RELEASE_MANIFEST.json', 'Caddyfile.example',
          'requirements.txt', 'server.py', 'launcher.py', 'run.sh', 'start.sh', 'install.sh', '.gitignore')
-DIRS = ('assets', 'public', 'admin', 'scripts', 'tests')
+DIRS = ('assets', 'public', 'admin', 'scripts', 'tests', 'qa')
 EXECUTABLES = ('run.sh', 'start.sh', 'install.sh', 'launcher.py', 'scripts/doctor.py',
                'scripts/install_linux.py')
 
@@ -165,7 +165,7 @@ def install(args) -> Path:
         'Exec=' + desktop_exec + ' --quick', 'Icon=' + desktop_icon,
         'Terminal=true', 'Categories=Network;AudioVideo;', 'StartupNotify=false', ''
     ]), 0o644)
-    print('\nFACO CRUMBLE v0.5.1 INSTALLED')
+    print('\nFACO CRUMBLE v0.6.2 INSTALLED')
     for label, path in [('Application', target), ('Command', wrapper), ('Desktop shortcut', desktop),
                         ('Settings', locations['config']), ('Runtime environment', locations['venv']),
                         ('Logs', locations['state']), ('Cache', locations['cache'])]:
