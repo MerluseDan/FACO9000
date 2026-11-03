@@ -1,0 +1,615 @@
+{
+  "amortization_horizons": [
+    64,
+    512,
+    4096
+  ],
+  "budgets": "All methods allowed same deployment horizon/query caps. Methods using calibrated z/L pay all requested calibration audits/references incl pending. FixedFresh and privileged KnownAll pay0. NoAuditTrainFresh pays0 incremental audit/ref cost; existing x and delayed Y assumed available without incremental acquisition charge for every method. It is a lower-information/lower-cost strong baseline.",
+  "calibration": {
+    "L_reference_delay": 17,
+    "Y_delay": 5,
+    "audit_cost": 0.00375,
+    "cases": 128,
+    "cutoff": 128,
+    "reference_cap": 32,
+    "reference_cost": 0.003,
+    "selected_request_prob_agreement": 0.8,
+    "selected_request_prob_disagreement": 0.1,
+    "selection_MAP_model": {
+      "a": 0.8,
+      "pi": 0.2
+    }
+  },
+  "classification": "Synthetic SRDE robustness extension using established joint inference and Bayesian decision theory; no new algorithm or first-ever claim",
+  "conditions": [
+    {
+      "a": 0.65,
+      "family": "on_grid",
+      "id": "C00",
+      "pi": 0.2,
+      "q": 1.0
+    },
+    {
+      "a": 0.65,
+      "family": "on_grid",
+      "id": "C01",
+      "pi": 0.2,
+      "q": 0.5
+    },
+    {
+      "a": 0.65,
+      "family": "on_grid",
+      "id": "C02",
+      "pi": 0.8,
+      "q": 1.0
+    },
+    {
+      "a": 0.65,
+      "family": "on_grid",
+      "id": "C03",
+      "pi": 0.8,
+      "q": 0.5
+    },
+    {
+      "a": 0.8,
+      "family": "on_grid",
+      "id": "C04",
+      "pi": 0.2,
+      "q": 1.0
+    },
+    {
+      "a": 0.8,
+      "family": "on_grid",
+      "id": "C05",
+      "pi": 0.2,
+      "q": 0.5
+    },
+    {
+      "a": 0.8,
+      "family": "on_grid",
+      "id": "C06",
+      "pi": 0.8,
+      "q": 1.0
+    },
+    {
+      "a": 0.8,
+      "family": "on_grid",
+      "id": "C07",
+      "pi": 0.8,
+      "q": 0.5
+    },
+    {
+      "a": 0.7,
+      "family": "off_grid",
+      "id": "C08",
+      "pi": 0.35,
+      "q": 0.8
+    },
+    {
+      "a": 0.9,
+      "family": "off_grid",
+      "id": "C09",
+      "pi": 0.65,
+      "q": 0.2
+    }
+  ],
+  "date": "2026-11-03",
+  "deployment": "unchanged LA1 generative family and three-slot actions, two F max at .015, one A max at .00375, response at next slot, fresh accuracy .7, terminal abstention .15 vs squared error",
+  "leakage": "calibration seed seed*1000+condition index; holdout separate seed offset20000000. Hidden Y/L raw values withheld until delays; selectors never see raw L. Parameters fixed before held-out scores.",
+  "limits": "synthetic only; two off-grid stationary conditions challenge discrete support, not temporal shift. No real sensor reuse or empirical validation. Does not diagnose out-of-family mechanisms or changing source quality. No native engine or human theory validation.",
+  "methods": [
+    "FixedFresh",
+    "QOnlyFull",
+    "JointMAPFull",
+    "JointMeanFull",
+    "JointBMAFull",
+    "JointBMAFresh",
+    "NoAuditTrainFresh",
+    "SRDERecursive",
+    "KnownAll"
+  ],
+  "mixture": "joint posterior predictive over x,Y,L,Z formed before conditioning on new x; within-case evidence updates mixture weights implicitly. Posterior frozen across deployment cases. Table backward induction and recursive solver use identical finite action graph; tie order Stop,F,A and epsilon1e-12",
+  "primary": "JointBMAFull minus QOnlyFull exact total loss at H512 across all10 fixed conditions; same observation packets, calibration charges and deployment actions",
+  "prior": "uniform discrete independent over 4 source accuracies,4 copy prevalences,6 audit reliabilities; QOnly uses same q grid with a=.8,pi=.2 fixed",
+  "question": "Does learning source accuracy and copy prevalence alongside audit reliability repair LA2 decisions, and does audit acquisition improve over equally trained fresh-evidence policies?",
+  "secondary": "JointBMAFull vs JointBMAFresh (identical learned posterior and costs; audit action removed); vs NoAuditTrainFresh (learns a/pi from x and arrived Y, no z/L, no audit/reference calibration charge); vs MAP and posterior-mean plug-ins; on-grid/off-grid; horizons64/4096; sampled checks; Brier/ECE/coverage",
+  "seeds": [
+    93501,
+    93502,
+    93503,
+    93504,
+    93505,
+    93506,
+    93507,
+    93508,
+    93509,
+    93510,
+    93511,
+    93512
+  ],
+  "source_core_sha256": "fcb8193275a59d9b40bdd71ffd7ec6321b84179c1b93b16dd3e48ffc23b306cc",
+  "study": "SRDE-LA3",
+  "theta_grid": [
+    [
+      0.55,
+      0.1,
+      0.0
+    ],
+    [
+      0.55,
+      0.1,
+      0.25
+    ],
+    [
+      0.55,
+      0.1,
+      0.5
+    ],
+    [
+      0.55,
+      0.1,
+      0.75
+    ],
+    [
+      0.55,
+      0.1,
+      0.8
+    ],
+    [
+      0.55,
+      0.1,
+      1.0
+    ],
+    [
+      0.55,
+      0.2,
+      0.0
+    ],
+    [
+      0.55,
+      0.2,
+      0.25
+    ],
+    [
+      0.55,
+      0.2,
+      0.5
+    ],
+    [
+      0.55,
+      0.2,
+      0.75
+    ],
+    [
+      0.55,
+      0.2,
+      0.8
+    ],
+    [
+      0.55,
+      0.2,
+      1.0
+    ],
+    [
+      0.55,
+      0.5,
+      0.0
+    ],
+    [
+      0.55,
+      0.5,
+      0.25
+    ],
+    [
+      0.55,
+      0.5,
+      0.5
+    ],
+    [
+      0.55,
+      0.5,
+      0.75
+    ],
+    [
+      0.55,
+      0.5,
+      0.8
+    ],
+    [
+      0.55,
+      0.5,
+      1.0
+    ],
+    [
+      0.55,
+      0.8,
+      0.0
+    ],
+    [
+      0.55,
+      0.8,
+      0.25
+    ],
+    [
+      0.55,
+      0.8,
+      0.5
+    ],
+    [
+      0.55,
+      0.8,
+      0.75
+    ],
+    [
+      0.55,
+      0.8,
+      0.8
+    ],
+    [
+      0.55,
+      0.8,
+      1.0
+    ],
+    [
+      0.65,
+      0.1,
+      0.0
+    ],
+    [
+      0.65,
+      0.1,
+      0.25
+    ],
+    [
+      0.65,
+      0.1,
+      0.5
+    ],
+    [
+      0.65,
+      0.1,
+      0.75
+    ],
+    [
+      0.65,
+      0.1,
+      0.8
+    ],
+    [
+      0.65,
+      0.1,
+      1.0
+    ],
+    [
+      0.65,
+      0.2,
+      0.0
+    ],
+    [
+      0.65,
+      0.2,
+      0.25
+    ],
+    [
+      0.65,
+      0.2,
+      0.5
+    ],
+    [
+      0.65,
+      0.2,
+      0.75
+    ],
+    [
+      0.65,
+      0.2,
+      0.8
+    ],
+    [
+      0.65,
+      0.2,
+      1.0
+    ],
+    [
+      0.65,
+      0.5,
+      0.0
+    ],
+    [
+      0.65,
+      0.5,
+      0.25
+    ],
+    [
+      0.65,
+      0.5,
+      0.5
+    ],
+    [
+      0.65,
+      0.5,
+      0.75
+    ],
+    [
+      0.65,
+      0.5,
+      0.8
+    ],
+    [
+      0.65,
+      0.5,
+      1.0
+    ],
+    [
+      0.65,
+      0.8,
+      0.0
+    ],
+    [
+      0.65,
+      0.8,
+      0.25
+    ],
+    [
+      0.65,
+      0.8,
+      0.5
+    ],
+    [
+      0.65,
+      0.8,
+      0.75
+    ],
+    [
+      0.65,
+      0.8,
+      0.8
+    ],
+    [
+      0.65,
+      0.8,
+      1.0
+    ],
+    [
+      0.8,
+      0.1,
+      0.0
+    ],
+    [
+      0.8,
+      0.1,
+      0.25
+    ],
+    [
+      0.8,
+      0.1,
+      0.5
+    ],
+    [
+      0.8,
+      0.1,
+      0.75
+    ],
+    [
+      0.8,
+      0.1,
+      0.8
+    ],
+    [
+      0.8,
+      0.1,
+      1.0
+    ],
+    [
+      0.8,
+      0.2,
+      0.0
+    ],
+    [
+      0.8,
+      0.2,
+      0.25
+    ],
+    [
+      0.8,
+      0.2,
+      0.5
+    ],
+    [
+      0.8,
+      0.2,
+      0.75
+    ],
+    [
+      0.8,
+      0.2,
+      0.8
+    ],
+    [
+      0.8,
+      0.2,
+      1.0
+    ],
+    [
+      0.8,
+      0.5,
+      0.0
+    ],
+    [
+      0.8,
+      0.5,
+      0.25
+    ],
+    [
+      0.8,
+      0.5,
+      0.5
+    ],
+    [
+      0.8,
+      0.5,
+      0.75
+    ],
+    [
+      0.8,
+      0.5,
+      0.8
+    ],
+    [
+      0.8,
+      0.5,
+      1.0
+    ],
+    [
+      0.8,
+      0.8,
+      0.0
+    ],
+    [
+      0.8,
+      0.8,
+      0.25
+    ],
+    [
+      0.8,
+      0.8,
+      0.5
+    ],
+    [
+      0.8,
+      0.8,
+      0.75
+    ],
+    [
+      0.8,
+      0.8,
+      0.8
+    ],
+    [
+      0.8,
+      0.8,
+      1.0
+    ],
+    [
+      0.95,
+      0.1,
+      0.0
+    ],
+    [
+      0.95,
+      0.1,
+      0.25
+    ],
+    [
+      0.95,
+      0.1,
+      0.5
+    ],
+    [
+      0.95,
+      0.1,
+      0.75
+    ],
+    [
+      0.95,
+      0.1,
+      0.8
+    ],
+    [
+      0.95,
+      0.1,
+      1.0
+    ],
+    [
+      0.95,
+      0.2,
+      0.0
+    ],
+    [
+      0.95,
+      0.2,
+      0.25
+    ],
+    [
+      0.95,
+      0.2,
+      0.5
+    ],
+    [
+      0.95,
+      0.2,
+      0.75
+    ],
+    [
+      0.95,
+      0.2,
+      0.8
+    ],
+    [
+      0.95,
+      0.2,
+      1.0
+    ],
+    [
+      0.95,
+      0.5,
+      0.0
+    ],
+    [
+      0.95,
+      0.5,
+      0.25
+    ],
+    [
+      0.95,
+      0.5,
+      0.5
+    ],
+    [
+      0.95,
+      0.5,
+      0.75
+    ],
+    [
+      0.95,
+      0.5,
+      0.8
+    ],
+    [
+      0.95,
+      0.5,
+      1.0
+    ],
+    [
+      0.95,
+      0.8,
+      0.0
+    ],
+    [
+      0.95,
+      0.8,
+      0.25
+    ],
+    [
+      0.95,
+      0.8,
+      0.5
+    ],
+    [
+      0.95,
+      0.8,
+      0.75
+    ],
+    [
+      0.95,
+      0.8,
+      0.8
+    ],
+    [
+      0.95,
+      0.8,
+      1.0
+    ]
+  ],
+  "uncertainty": "1000 paired stratified calibration-world bootstrap draws seed88321; secondary comparisons exploratory, no multiple-testing adjustment"
+}
