@@ -1,0 +1,376 @@
+{
+  "title": "SRDE P4 state-conditioned portal vs seasonal and shuffle controls",
+  "date": "2026-11-03",
+  "status": "ONE_RETROSPECTIVE_HOLDOUT_SCORED",
+  "source": "NOAA PSL Ni\u00f1o3.4 ERSSTv6 1950-2025, 1981-2010 anomaly reference",
+  "source_sha256": "1b781bd28a560b5d4d364e0fcdbe38e13164e6368eb340754669a3d1071c7ed6",
+  "protocol_sha256": "22a8d8491bcea404d3986f9d6aa746b4e9d0753c57d7dbd314b7d9e7f190db41",
+  "code_sha256": "5efacae4e482b5faccdbf6755d8c3183ccb7308546752d79d5ca9173c24fbe02",
+  "dataset": {
+    "raw_months": 912,
+    "train": 621,
+    "validation": 129,
+    "test": 141,
+    "test_start": "2014-01-01",
+    "test_end": "2025-09-01",
+    "test_positive_rate": 0.20567375886524822
+  },
+  "methods": {
+    "constant": {
+      "config": {
+        "method": "constant"
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.16533814,
+        "log_loss": 0.51496238,
+        "auc": 0.5,
+        "accuracy_0_5": 0.79432624,
+        "ece10": 0.04434043
+      },
+      "fit_seconds": 0.0,
+      "predict_seconds": 0.0
+    },
+    "calendar_logistic": {
+      "config": {
+        "method": "calendar_logistic",
+        "C": 1.0
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.15977096,
+        "log_loss": 0.49881633,
+        "auc": 0.60714286,
+        "accuracy_0_5": 0.79432624,
+        "ece10": 0.0442267
+      },
+      "fit_seconds": 0.0051,
+      "predict_seconds": 0.0009
+    },
+    "logistic": {
+      "config": {
+        "method": "logistic",
+        "C": 1.0
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.15537454,
+        "log_loss": 0.5032043,
+        "auc": 0.73399015,
+        "accuracy_0_5": 0.79432624,
+        "ece10": 0.10467773
+      },
+      "fit_seconds": 0.0042,
+      "predict_seconds": 0.0007
+    },
+    "random_forest": {
+      "config": {
+        "method": "random_forest",
+        "min_samples_leaf": 5
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.14345998,
+        "log_loss": 0.43804015,
+        "auc": 0.82112069,
+        "accuracy_0_5": 0.79432624,
+        "ece10": 0.09587377
+      },
+      "fit_seconds": 0.3532,
+      "predict_seconds": 0.0158
+    },
+    "hist_boost": {
+      "config": {
+        "method": "hist_boost",
+        "max_leaf_nodes": 7
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.15146913,
+        "log_loss": 0.48281158,
+        "auc": 0.78663793,
+        "accuracy_0_5": 0.80141844,
+        "ece10": 0.1130596
+      },
+      "fit_seconds": 0.1041,
+      "predict_seconds": 0.0025
+    },
+    "direct_analog": {
+      "config": {
+        "method": "direct_analog",
+        "k": 36,
+        "tau": 0.5
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.12618034,
+        "log_loss": 0.37379937,
+        "auc": 0.87130542,
+        "accuracy_0_5": 0.81560284,
+        "ece10": 0.08701896
+      },
+      "fit_seconds": 0.0057,
+      "predict_seconds": 0.0044
+    },
+    "season_portal": {
+      "config": {
+        "method": "season_portal"
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.16678675,
+        "log_loss": 0.52132547,
+        "auc": 0.61899631,
+        "accuracy_0_5": 0.79432624,
+        "ece10": 0.08485898
+      },
+      "fit_seconds": 0.0,
+      "predict_seconds": 0.0183
+    },
+    "state_portal": {
+      "config": {
+        "method": "state_portal",
+        "k": 6,
+        "tau": 1.2
+      },
+      "metrics": {
+        "n": 141,
+        "positive_rate": 0.2056738,
+        "brier": 0.12752884,
+        "log_loss": 0.3855117,
+        "auc": 0.84282635,
+        "accuracy_0_5": 0.80851064,
+        "ece10": 0.0605036
+      },
+      "fit_seconds": 0.0,
+      "predict_seconds": 0.5148
+    }
+  },
+  "primary_A_state_vs_season": {
+    "year_blocks": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "replicates": 5000,
+    "portal_minus_comparator": -0.0392579,
+    "ci95": [
+      -0.08131209,
+      -0.00433681
+    ],
+    "convincing_gain_by_protocol": true
+  },
+  "primary_B_state_vs_five_month_shuffles": {
+    "shuffled_brier_each": [
+      0.16212339343013782,
+      0.1706130632663665,
+      0.1903430218707021,
+      0.17351540521339026,
+      0.18629508592168123
+    ],
+    "average_shuffled_brier": 0.17657799394045556,
+    "state_portal_brier": 0.1275288412239956,
+    "difference": -0.049049152716459946,
+    "ci95_year_block": [
+      -0.09661075076895018,
+      -0.009916640953309297
+    ],
+    "convincing_gain_by_protocol": true
+  },
+  "secondary_C_state_vs_validation_selected_conventional": {
+    "name": "hist_boost",
+    "year_blocks": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "replicates": 5000,
+    "portal_minus_comparator": -0.02394029,
+    "ci95": [
+      -0.06308745,
+      0.00610828
+    ],
+    "convincing_gain_by_protocol": false
+  },
+  "secondary_D_frozen_frame": {
+    "n": 141,
+    "positive_rate": 0.2056738,
+    "brier": 0.14552166,
+    "log_loss": 0.45806187,
+    "auc": 0.75969828,
+    "accuracy_0_5": 0.80141844,
+    "ece10": 0.08084557
+  },
+  "negative_label_shuffle": {
+    "n": 141,
+    "positive_rate": 0.2056738,
+    "brier": 0.16744664,
+    "log_loss": 0.52382954,
+    "auc": 0.58928571,
+    "accuracy_0_5": 0.79432624,
+    "ece10": 0.08915061
+  },
+  "best_holdout_conventional_descriptive": {
+    "name": "direct_analog",
+    "brier": 0.12618034
+  },
+  "hundred_step_validation_era_stability_not_forecasts": [
+    {
+      "issue_date": "2003-01-01",
+      "checkpoints": [
+        {
+          "hop": 1,
+          "mean_anomaly": 0.5809374999999999,
+          "std_anomaly": 0.16488365926843693,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 3,
+          "mean_anomaly": 0.18859375,
+          "std_anomaly": 0.32771637502715284,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 12,
+          "mean_anomaly": -0.13054687500000003,
+          "std_anomaly": 0.9676237877800102,
+          "outside_training_range": 0.0234375
+        },
+        {
+          "hop": 25,
+          "mean_anomaly": 0.07546875,
+          "std_anomaly": 0.8497774151349502,
+          "outside_training_range": 0.0078125
+        },
+        {
+          "hop": 50,
+          "mean_anomaly": 0.03023437499999998,
+          "std_anomaly": 0.8396525181992605,
+          "outside_training_range": 0.015625
+        },
+        {
+          "hop": 100,
+          "mean_anomaly": -0.03976562500000001,
+          "std_anomaly": 0.709489764773502,
+          "outside_training_range": 0.0
+        }
+      ]
+    },
+    {
+      "issue_date": "2008-05-01",
+      "checkpoints": [
+        {
+          "hop": 1,
+          "mean_anomaly": -0.54421875,
+          "std_anomaly": 0.1523083292155669,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 3,
+          "mean_anomaly": -0.441875,
+          "std_anomaly": 0.37075882912615854,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 12,
+          "mean_anomaly": -0.29367187499999997,
+          "std_anomaly": 0.6129830634560667,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 25,
+          "mean_anomaly": -0.172109375,
+          "std_anomaly": 0.7591191980098443,
+          "outside_training_range": 0.0078125
+        },
+        {
+          "hop": 50,
+          "mean_anomaly": -0.152265625,
+          "std_anomaly": 0.7820318236448945,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 100,
+          "mean_anomaly": -0.18710937500000002,
+          "std_anomaly": 0.9229539468668572,
+          "outside_training_range": 0.015625
+        }
+      ]
+    },
+    {
+      "issue_date": "2013-09-01",
+      "checkpoints": [
+        {
+          "hop": 1,
+          "mean_anomaly": -0.18593749999999998,
+          "std_anomaly": 0.10960466958004117,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 3,
+          "mean_anomaly": -0.273046875,
+          "std_anomaly": 0.35452556015432,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 12,
+          "mean_anomaly": -0.03671875,
+          "std_anomaly": 0.7513842531610824,
+          "outside_training_range": 0.0
+        },
+        {
+          "hop": 25,
+          "mean_anomaly": -0.12890625000000003,
+          "std_anomaly": 0.9052159914688525,
+          "outside_training_range": 0.0078125
+        },
+        {
+          "hop": 50,
+          "mean_anomaly": -0.03578125000000004,
+          "std_anomaly": 1.0722585752272804,
+          "outside_training_range": 0.0234375
+        },
+        {
+          "hop": 100,
+          "mean_anomaly": -0.19804687500000004,
+          "std_anomaly": 1.0674283191637435,
+          "outside_training_range": 0.0625
+        }
+      ]
+    }
+  ],
+  "interpretation_limit": [
+    "Historical retrospective observation, no contemporaneous real-time data vintage",
+    "Calendar monthly anomalies may have residual seasonality",
+    "Nino3.4 related to P3 Nino1+2 but new era and data",
+    "No human meaning or feeling states",
+    "Overlapping three-month targets are not independent",
+    "Year bootstrap limited by holdout duration",
+    "No claim of novel probabilistic theorem"
+  ]
+}
