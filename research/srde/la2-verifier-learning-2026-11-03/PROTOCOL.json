@@ -1,0 +1,114 @@
+{
+  "amortization_horizons": [
+    64,
+    512,
+    4096
+  ],
+  "calibration_audit_cost": 0.00375,
+  "calibration_cases_per_world": 128,
+  "calibration_cutoff": 128,
+  "classification": "Documented SRDE benchmark extension and robustness test; established Bayesian observer learning and selection-bias methods, no first-ever claim",
+  "conditions": [
+    {
+      "actual_acc": 0.8,
+      "family": "specified",
+      "id": "C00",
+      "q": 1.0
+    },
+    {
+      "actual_acc": 0.65,
+      "family": "source_model_error",
+      "id": "C01",
+      "q": 1.0
+    },
+    {
+      "actual_acc": 0.8,
+      "family": "specified",
+      "id": "C02",
+      "q": 0.8
+    },
+    {
+      "actual_acc": 0.65,
+      "family": "source_model_error",
+      "id": "C03",
+      "q": 0.8
+    },
+    {
+      "actual_acc": 0.8,
+      "family": "specified",
+      "id": "C04",
+      "q": 0.5
+    },
+    {
+      "actual_acc": 0.65,
+      "family": "source_model_error",
+      "id": "C05",
+      "q": 0.5
+    },
+    {
+      "actual_acc": 0.8,
+      "family": "specified",
+      "id": "C06",
+      "q": 0.0
+    },
+    {
+      "actual_acc": 0.65,
+      "family": "source_model_error",
+      "id": "C07",
+      "q": 0.0
+    }
+  ],
+  "date": "2026-11-03",
+  "deployment": "Three-step LA1 action graph, max two fresh reports and one lineage audit. Same terminal decisions and action costs for recursive/conventional methods. KnownAuditQ is an information-advantaged diagnostic, not budget-fair learned baseline.",
+  "event_delay": 5,
+  "information": "Learners receive sanitized observation packets only. Later finer evidence replaces marginal evidence; baseline counts on selected references intentionally ignores missingness mechanism.",
+  "limits": "Synthetic; fixed fitted q, no deployment retraining or drift. H is counterfactual calibration amortization, not an extra sampled test set. No independent empirical dataset in this study. Binary event truth and lineage are distinct; affect F is outside this experiment and never used as truth.",
+  "loss": "Abstention=.15; otherwise squared probability error; plus deployment query costs and calibration total divided by H; Brier includes forecasts even if abstaining",
+  "methods": [
+    "FreshOnly",
+    "AssumePerfect",
+    "LatentBayes",
+    "TargetHardCounts",
+    "RandomVerifiedCounts",
+    "SelectedVerifiedCounts",
+    "MixedRandomBayes",
+    "MixedSelectedBayes",
+    "DoubleCountSelected",
+    "SRDETypedRecursive",
+    "KnownAuditQ"
+  ],
+  "primary": "MixedSelectedBayes minus SelectedVerifiedCounts total expected per-case loss at H=512; paired stratified calibration-world bootstrap 1000 draws seed61621; fixed condition mixture",
+  "prior": "discrete uniform q in {0,.01,...,1}; posterior mean quantized to nearest .01 with +1e-12 before Python round",
+  "question": "Does one-factor typed delayed feedback improve audit-reliability estimation and downstream cost relative to selective verified counts, and does it repay calibration cost?",
+  "reference_cap": 32,
+  "reference_cost": 0.003,
+  "reference_delay_from_issue": 17,
+  "sample_holdout_cases_per_world": 128,
+  "secondary": "random-verified counts, FreshOnly, overlapping-factor negative control; specified vs source-model-error families; amortization horizons64/4096; q absolute error and interval coverage",
+  "seeds": [
+    91201,
+    91202,
+    91203,
+    91204,
+    91205,
+    91206,
+    91207,
+    91208,
+    91209,
+    91210,
+    91211,
+    91212,
+    91213,
+    91214,
+    91215,
+    91216,
+    91217,
+    91218,
+    91219,
+    91220
+  ],
+  "source_core_sha256": "fcb8193275a59d9b40bdd71ffd7ec6321b84179c1b93b16dd3e48ffc23b306cc",
+  "status": "freeze before held-out scoring",
+  "study": "SRDE-LA2",
+  "verification": "Perfect simulated lineage reference, requested only after Y arrives; random probability .25; selected probability .8 if audit agrees with model MAP L else .1; both capped32"
+}
