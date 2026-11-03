@@ -43,3 +43,11 @@ python audit_independent.py
 ## Integrity boundary
 
 Our novel work here is an SRDE *interpretation and operator proposal* applying order memory, state dependence, and reverse confidence to a navigable meaning-space architecture. The underlying affine composition and rotation noncommutativity are standard mathematics; the simulation is not an external predictive benchmark. Additional worker quorum, subjective feeling, state-updating valence, learned semantic coordinates, and human cognition **were not tested**.
+
+## Verified Google Drive publication
+
+- [Blackbird Knowledge Repository / P5 folder](https://drive.google.com/drive/folders/1xOIEbLetVNGP4ayEenpqFic--EwLsdzo)
+- [Complete reproducible archive, including the raw 4,096-world CSV](https://drive.google.com/file/d/1xv1ZemYUe-yVVq-omzUWEGemK6lQn62J/view?usp=drivesdk)
+- [Illustrated 2-page PDF](https://drive.google.com/file/d/1g4tYhObeycbAcixT9e036UAEb8-Os6pD/view?usp=drivesdk)
+
+The GitHub repository publishes the preregistration, simulation, original report, results and independent audit. Binary figures and the larger raw CSV are included in the complete Drive archive. This section documents availability only; frozen scientific protocol and source files remain unchanged.
