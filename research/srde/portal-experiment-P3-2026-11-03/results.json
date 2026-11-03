@@ -1,0 +1,284 @@
+{
+  "status": "HOLDOUT_PREDICTIONS_COMPLETE__REPORT_RECOVERED_AFTER_SERIALIZATION_FAILURE",
+  "project": "Blackbird Intelligence SRDE-P3",
+  "publication_date": "2026-11-03",
+  "model_execution_status": "one run finished generation of all holdout predictions; JSON report writer failed on numpy int64 year field after writing CSV. Original model and source code kept unchanged.",
+  "recovery_status": "only independent metrics reconstructed from immutable saved test_predictions.csv; forecasts NOT rerun or retuned",
+  "prereg_sha256": "d8a6b1094da6378a3c5cc9d95f5febd2a14dc668c8b2f07cea82c368da3a932f",
+  "source_sha256": "83a3d6e1dd55a01ad4659a449edca1512b6b16d993ef5ed886be56931e99ea7f",
+  "model_code_sha256": "6562ba9d7a9ecbca8ae70c51d4dec97680a47197e1b22a8c660c035df1c66d5b",
+  "prediction_csv_sha256": "be37f11329bde7e9279d4eb5102df44c746ac5e5a09243b4e5e6df59c931bc2a",
+  "dataset": "NOAA ERSST.v3b Ni\u00f1o 1+2 monthly SST via statsmodels.datasets.elnino 1950-2010",
+  "event_definition": "temperature(t+3 months) - temperature(t) >= 0.5 degrees Celsius",
+  "sizes": {
+    "raw_months": 732,
+    "training": 405,
+    "validation": 141,
+    "holdout": 165
+  },
+  "holdout_dates": [
+    "1997-01-01",
+    "2010-09-01"
+  ],
+  "holdout_event_rate": 0.41818181818181815,
+  "validation_scores_selected": {
+    "logistic": 0.0466531,
+    "random_forest": 0.04498901,
+    "hist_boost": 0.0490108,
+    "direct_analog": 0.05131292
+  },
+  "selected_primary_comparator": "random_forest",
+  "primary_paired_year_bootstrap": {
+    "n_year_blocks": 14,
+    "years": [
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010
+    ],
+    "replicates": 5000,
+    "difference_portal_minus_baseline": -0.0029302136317830153,
+    "ci95": [
+      -0.009541575396774887,
+      0.0035118856262207243
+    ]
+  },
+  "models": {
+    "constant": {
+      "config": {
+        "method": "constant"
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.24384449,
+        "log_loss": 0.68079522,
+        "auc": 0.5,
+        "accuracy": 0.58181818,
+        "ece10": 0.02321012
+      }
+    },
+    "calendar_logistic": {
+      "config": {
+        "method": "calendar_logistic",
+        "C": 1.0
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.0507738,
+        "log_loss": 0.15532826,
+        "auc": 0.97916667,
+        "accuracy": 0.91515152,
+        "ece10": 0.02926299
+      }
+    },
+    "logistic": {
+      "config": {
+        "method": "logistic",
+        "C": 1.0
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.0495731,
+        "log_loss": 0.15650828,
+        "auc": 0.98641304,
+        "accuracy": 0.93939394,
+        "ece10": 0.02430291
+      }
+    },
+    "random_forest": {
+      "config": {
+        "method": "random_forest",
+        "min_samples_leaf": 5
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.0520997,
+        "log_loss": 0.17228056,
+        "auc": 0.98097826,
+        "accuracy": 0.92727273,
+        "ece10": 0.02768035
+      }
+    },
+    "hist_boost": {
+      "config": {
+        "method": "hist_boost",
+        "max_leaf_nodes": 15
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.06842365,
+        "log_loss": 0.22967474,
+        "auc": 0.97705314,
+        "accuracy": 0.8969697,
+        "ece10": 0.06659418
+      }
+    },
+    "direct_analog": {
+      "config": {
+        "method": "direct_analog",
+        "k": 64,
+        "tau": 0.5
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.05293024,
+        "log_loss": 0.16929504,
+        "auc": 0.98354469,
+        "accuracy": 0.92121212,
+        "ece10": 0.04944366
+      }
+    },
+    "recursive_portal": {
+      "config": {
+        "method": "recursive_portal",
+        "k": 32,
+        "tau": 0.5
+      },
+      "metrics": {
+        "n": 165,
+        "positive_rate": 0.4181818,
+        "brier": 0.04916949,
+        "log_loss": 0.15523478,
+        "auc": 0.98618659,
+        "accuracy": 0.92121212,
+        "ece10": 0.04286051
+      }
+    }
+  },
+  "negative_controls_and_ablation": {
+    "frozen_local_coordinate_frame": {
+      "n": 165,
+      "positive_rate": 0.4181818,
+      "brier": 0.11406915,
+      "log_loss": 0.42414282,
+      "auc": 0.93229167,
+      "accuracy": 0.84848485,
+      "ece10": 0.09207641
+    },
+    "within_month_shuffled_training_deltas": {
+      "n": 165,
+      "positive_rate": 0.4181818,
+      "brier": 0.04610253,
+      "log_loss": 0.15162061,
+      "auc": 0.98777174,
+      "accuracy": 0.92121212,
+      "ece10": 0.04269544
+    }
+  },
+  "best_holdout_conventional_descriptive": {
+    "name": "logistic",
+    "brier": 0.0495731
+  },
+  "yearwise": [
+    {
+      "year": 1997,
+      "n": 12,
+      "portal_brier": 0.1335283905383377,
+      "validation_selected_baseline_brier": 0.12860517151988213
+    },
+    {
+      "year": 1998,
+      "n": 12,
+      "portal_brier": 0.037705592312777876,
+      "validation_selected_baseline_brier": 0.06002897615991746
+    },
+    {
+      "year": 1999,
+      "n": 12,
+      "portal_brier": 0.07633852644753641,
+      "validation_selected_baseline_brier": 0.09003112368934518
+    },
+    {
+      "year": 2000,
+      "n": 12,
+      "portal_brier": 0.021379329487703578,
+      "validation_selected_baseline_brier": 0.01653463300334153
+    },
+    {
+      "year": 2001,
+      "n": 12,
+      "portal_brier": 0.037486058330431456,
+      "validation_selected_baseline_brier": 0.060395897589504144
+    },
+    {
+      "year": 2002,
+      "n": 12,
+      "portal_brier": 0.03731699193023361,
+      "validation_selected_baseline_brier": 0.018643289500203247
+    },
+    {
+      "year": 2003,
+      "n": 12,
+      "portal_brier": 0.015648735534729258,
+      "validation_selected_baseline_brier": 0.01748091770644074
+    },
+    {
+      "year": 2004,
+      "n": 12,
+      "portal_brier": 0.026875249183686858,
+      "validation_selected_baseline_brier": 0.03601081496385705
+    },
+    {
+      "year": 2005,
+      "n": 12,
+      "portal_brier": 0.061001428232574796,
+      "validation_selected_baseline_brier": 0.057608475482871464
+    },
+    {
+      "year": 2006,
+      "n": 12,
+      "portal_brier": 0.05510429125851011,
+      "validation_selected_baseline_brier": 0.04411312687372599
+    },
+    {
+      "year": 2007,
+      "n": 12,
+      "portal_brier": 0.07010073329396861,
+      "validation_selected_baseline_brier": 0.09013044312620766
+    },
+    {
+      "year": 2008,
+      "n": 12,
+      "portal_brier": 0.029292646368605124,
+      "validation_selected_baseline_brier": 0.026009451695539632
+    },
+    {
+      "year": 2009,
+      "n": 12,
+      "portal_brier": 0.044468248320691205,
+      "validation_selected_baseline_brier": 0.04595169968506225
+    },
+    {
+      "year": 2010,
+      "n": 9,
+      "portal_brier": 0.03977896881271648,
+      "validation_selected_baseline_brier": 0.033102485720589256
+    }
+  ],
+  "notes": [
+    "Historical observational dataset; no literal mind portals and no subjective feeling recorded",
+    "Three transitions compose the actual forecast; 100-step run is separate stability stress",
+    "Temporal and seasonal predictive structure dominates, and all models share same snapshot",
+    "A 0.5C temperature change is not an official El Nino event",
+    "Not point-in-time-vintage data, no contemporaneous real-world prediction",
+    "Compare at preselected baseline; descriptive ranking after holdout is not a new prereg hypothesis",
+    "14 year blocks: exploratory intervals; no claim of statistically proven advantage",
+    "Negative-control reconstructions are computed strictly from first saved forecast probabilities"
+  ]
+}
