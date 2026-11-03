@@ -1,0 +1,17 @@
+{
+  "experiment": "SRDE-P6",
+  "phase": "PRE-HOLDOUT FROZEN",
+  "date": "2026-11-03",
+  "source_sha256": "5dbdb3bf3eadd8b2cfd53e0db8db2d722affa74a0d7901772e7eec7ba4689465",
+  "protocol_sha256": "3b580b981a73155ffa7f19e0be81364fc391d0571ad551e349312f09e254ac30",
+  "validation_lock_sha256": "dd5f16c02ca5f1e5483db4d59e015f3d40acdeb5015b1a40802fb8236a278e18",
+  "development_worlds": 48,
+  "selected_parameters": {
+    "eta": 0,
+    "gamma": 0
+  },
+  "holdout_worlds": 160,
+  "holdout_scored": false,
+  "drive_preholdout": "https://drive.google.com/file/d/1VB6xlCIv_tijKeAbw2N9F6rJie2bJVqJ/view?usp=drivesdk",
+  "note": "No result re-specification or retuning permitted; hypothesis collapses to risk-only if eta=gamma=0."
+}
