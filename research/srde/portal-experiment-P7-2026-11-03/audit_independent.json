@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "date": "2026-11-03",
+  "test_worlds": 3000,
+  "metrics_rows": 240000,
+  "metrics_groups": 80,
+  "all_hashes_match": true,
+  "all_per_world_memory_budgets_match": true,
+  "complete_B40_action_log_verified_all_worlds": true,
+  "conventional_matched_tie_verified_all_budgets_and_families": true,
+  "independent_reverse_provenance_J_matches_B20_payloads_worlds": 80,
+  "largest_B20_payload_roundtrip_error": 0,
+  "largest_metrics_mean_error": 8.348877145181177e-14,
+  "paired_B20_add_against_log_delta": -0.005927169086154821,
+  "paired_B20_add_against_log_interval_95": [
+    -0.0060620716375511296,
+    -0.005799643112266993
+  ],
+  "scientific_limits": [
+    "Same known synthetic generator, not external confirmation",
+    "The exact additive-query mechanism is matched to the sensitivity code",
+    "Conventional forward sensitivity and SRDE representation carry identical information",
+    "Full event log at 40 bytes is lossless under public initial state",
+    "Offline ridge decoder model weights are shared and not charged as per-world bytes",
+    "Read-only audit does not independently replicate every synthetic distribution outside this generator"
+  ]
+}
