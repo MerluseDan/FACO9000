@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "independent_of_runner_import": true,
+  "frozen_files_verified": 6,
+  "calibration_packets_checked": 20480,
+  "posterior_fits_checked": 1280,
+  "forecast_rows_checked": 478720,
+  "max_numeric_error": 1.4627188349436437e-14,
+  "checks": [
+    "delayed labels and references",
+    "verification selection and cap",
+    "posterior latent summation",
+    "reference acquisition cost including pending",
+    "exact world probability mass",
+    "forecast posterior and chronology",
+    "query cost and abstention",
+    "all world decision and Brier metrics",
+    "recursive and conventional forecast/trace identity",
+    "source freeze hashes"
+  ]
+}

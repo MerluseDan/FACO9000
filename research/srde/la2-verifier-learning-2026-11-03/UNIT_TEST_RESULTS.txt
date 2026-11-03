@@ -1,0 +1,17 @@
+test_copy_impossible_disagreement (test_la2.CalibrationTests.test_copy_impossible_disagreement) ... ok
+test_empty_uniform (test_la2.CalibrationTests.test_empty_uniform) ... ok
+test_event_boundary (test_la2.CalibrationTests.test_event_boundary) ... ok
+test_hidden_values_excluded (test_la2.CalibrationTests.test_hidden_values_excluded) ... ok
+test_joint_factor_identity (test_la2.CalibrationTests.test_joint_factor_identity) ... ok
+test_lineage_boundary (test_la2.CalibrationTests.test_lineage_boundary) ... ok
+test_one_verified_likelihood (test_la2.CalibrationTests.test_one_verified_likelihood) ... ok
+test_pending_reference_charged (test_la2.CalibrationTests.test_pending_reference_charged) ... ok
+test_recursive_same_information (test_la2.CalibrationTests.test_recursive_same_information) ... ok
+test_reference_replaces_marginal (test_la2.CalibrationTests.test_reference_replaces_marginal) ... ok
+test_request_cap_and_latency (test_la2.CalibrationTests.test_request_cap_and_latency) ... ok
+test_source_core_preserved (test_la2.CalibrationTests.test_source_core_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.003s
+
+OK

@@ -1,0 +1,13 @@
+{
+  "list": "[Faco] SRDV rollout",
+  "list_id": "cbXsIHkI_VT6XgjB",
+  "read_current_state": true,
+  "status": "UI mutation unavailable: Add a task locator was found in the correct iframe and list, but the browser reported Click target is no longer available. No task change is claimed.",
+  "pending_changes": [
+    {"title":"SRDE-B16 LA2 novelty review and public protocol freeze", "desired_status":"completed", "evidence":"NOVELTY.md; pre-run commit 684f1974e7a1cdee9ca19c5a4d575283a61c04f5"},
+    {"title":"SRDE-B17 Execute LA2 delayed verifier learning and independent audit", "desired_status":"completed", "evidence":"478720 forecasts, 12 tests, independent audit and exact two-process replay"},
+    {"title":"SRDE-B18 Publish LA2 full source/data to GitHub and canonical Drive with readback", "desired_status":"incomplete until external copies verified", "dependency":"B17"},
+    {"title":"SRDE-B11 broader lineage-audit research", "desired_status":"remain incomplete", "notes":"LA1 static known-q and LA2 delayed calibration completed; empirical provenance, temporal changes and source-model learning remain open."}
+  ],
+  "scheduled": false
+}
