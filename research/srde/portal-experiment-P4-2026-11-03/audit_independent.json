@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-11-03",
+  "source_code_protocol_hash_checks": {
+    "protocol_sha256": true,
+    "source_sha256": true,
+    "code_sha256": true
+  },
+  "source_git_blob_sha": "1baa53c6c65a9ce6f02e6f11dd3673d051c42963",
+  "train_rows": 621,
+  "validation_rows": 129,
+  "holdout_rows": 141,
+  "holdout_positive_cases": 29,
+  "year_blocks": 12,
+  "brier_independently_recomputed": {
+    "constant": 0.16533813711879525,
+    "calendar_logistic": 0.1597709569664197,
+    "logistic": 0.15537454161204287,
+    "random_forest": 0.14345998048067946,
+    "hist_boost": 0.15146912665627646,
+    "direct_analog": 0.12618033768683518,
+    "season_portal": 0.16678674520526132,
+    "state_portal": 0.12752884122452582
+  },
+  "primary_A_delta": -0.0392579039807355,
+  "primary_A_ci95": [
+    -0.08131209296181373,
+    -0.0043368063418158685
+  ],
+  "primary_B_delta": -0.04904915271645601,
+  "primary_B_ci95": [
+    -0.09661075076910072,
+    -0.009916640952087897
+  ],
+  "primary_C_validation_selected_name": "hist_boost",
+  "primary_C_delta": -0.023940285431750634,
+  "primary_C_ci95": [
+    -0.0630874477231397,
+    0.006108277958212133
+  ],
+  "holdout_forecasts_unchanged": true,
+  "caveats": [
+    "This retrospective backtest uses NOAA historical archive rather than point-in-time vintage observations.",
+    "NOAA ERSSTv6 monthly Ni\u00f1o3.4 anomalies and previous P3 Ni\u00f1o1+2 SST involve related ocean phenomena.",
+    "Only twelve year clusters, overlapping three-month target windows; bootstrap inference exploratory.",
+    "Long-chain stability is not 100-month forecast skill or evidence of universal semantic relatedness.",
+    "A matched strong conventional direct analog has a slightly better descriptive holdout Brier score.",
+    "The predeclared gain criterion is a decision rule, not independent statistical confirmation in another domain."
+  ]
+}
