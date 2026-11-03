@@ -1,0 +1,16 @@
+test_condition_after_integrating (test_la3.Tests.test_condition_after_integrating) ... ok
+test_delayed_packet_sanitized (test_la3.Tests.test_delayed_packet_sanitized) ... ok
+test_empty_uniform_prior (test_la3.Tests.test_empty_uniform_prior) ... ok
+test_impossible_observation_abstains (test_la3.Tests.test_impossible_observation_abstains) ... ok
+test_no_audit_action (test_la3.Tests.test_no_audit_action) ... ok
+test_noaudit_training_ignores_audit (test_la3.Tests.test_noaudit_training_ignores_audit) ... ok
+test_posterior_normalized (test_la3.Tests.test_posterior_normalized) ... ok
+test_predictive_mass (test_la3.Tests.test_predictive_mass) ... ok
+test_recursive_table_equality (test_la3.Tests.test_recursive_table_equality) ... ok
+test_single_model_matches_core (test_la3.Tests.test_single_model_matches_core) ... ok
+test_source_identity (test_la3.Tests.test_source_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.033s
+
+OK

@@ -1,0 +1,11 @@
+{
+ "list":"[Faco] SRDV rollout",
+ "status":"Pending native Tasks UI reconciliation. No native Google Tasks connector is exposed; earlier verified list read succeeded but Add a task mutations failed with Click target is no longer available. No Tasks creation/completion is claimed for LA3.",
+ "pending_steps":[
+  {"task":"LA3 check literature and related experiment chats; publish protocol freeze","work_status":"completed; verified pre-run freeze commit211fb23fcf96fc303a09fde0709a0cb3aa946a1c"},
+  {"task":"LA3 run120 calibration worlds, independent action/forecast audit and process replay","work_status":"completed;11tests,304128 forecasts independently checked,12scientific files replayed"},
+  {"task":"LA3 publish full archive/reports/source to GitHub and canonical UpdateInbox with readback","work_status":"pending external readback; see subsequent PUBLICATION_RECEIPT.json"},
+  {"task":"Broader lineage-audit empirical and temporal research","work_status":"incomplete; LA3 remains stationary synthetic research"}
+ ],
+ "scheduled":false
+}
