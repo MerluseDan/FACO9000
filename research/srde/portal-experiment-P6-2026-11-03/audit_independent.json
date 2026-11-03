@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "test_worlds": 160,
+  "hashes_match": true,
+  "checkpoints_each": 8,
+  "risk_only_exactly_equals_frozen_SRDE": true,
+  "all_means_recomputed": true,
+  "all_bootstraps_reproduced": true,
+  "independent_Kalman_RTS_check_worlds": [
+    {
+      "seed": 970100,
+      "scenario": "steady"
+    },
+    {
+      "seed": 970109,
+      "scenario": "steady"
+    },
+    {
+      "seed": 970140,
+      "scenario": "bursts"
+    },
+    {
+      "seed": 970149,
+      "scenario": "bursts"
+    },
+    {
+      "seed": 970180,
+      "scenario": "frames"
+    },
+    {
+      "seed": 970189,
+      "scenario": "frames"
+    },
+    {
+      "seed": 970220,
+      "scenario": "decoys"
+    },
+    {
+      "seed": 970229,
+      "scenario": "decoys"
+    }
+  ],
+  "maximum_absolute_risk_error": 1.942890293094024e-16,
+  "scenario_portal_minus_uniform": {
+    "steady": 0.0002666279054776814,
+    "bursts": -0.017020721219630906,
+    "frames": 0.0024454319675046307,
+    "decoys": 0.00012805876079790193
+  },
+  "empirical_vs_analytic": {
+    "uniform": {
+      "expected_risk_average_12_worlds": 0.05748323027483529,
+      "observed_mse_average_240_draws": 0.05722275081435887
+    },
+    "random": {
+      "expected_risk_average_12_worlds": 0.05582893712956242,
+      "observed_mse_average_240_draws": 0.05690475733541866
+    },
+    "priority_only": {
+      "expected_risk_average_12_worlds": 0.05827073428302961,
+      "observed_mse_average_240_draws": 0.057443067469552
+    },
+    "risk_only": {
+      "expected_risk_average_12_worlds": 0.05793844870735204,
+      "observed_mse_average_240_draws": 0.0580432539046771
+    },
+    "srde_hybrid": {
+      "expected_risk_average_12_worlds": 0.05793844870735204,
+      "observed_mse_average_240_draws": 0.0580432539046771
+    },
+    "covariance_greedy": {
+      "expected_risk_average_12_worlds": 0.044700760440445596,
+      "observed_mse_average_240_draws": 0.04542789647897362
+    }
+  },
+  "negative_control_degeneracy": "Priority-shuffle control cannot change hybrid when eta=0, by construction; it provides no independent evidence of priority validity.",
+  "limitations": [
+    "Kalman audit reuses frozen source generator but not experimental scoring/scheduling functions",
+    "Synthetic known Gaussian dynamics",
+    "No original algorithmic superiority"
+  ]
+}
