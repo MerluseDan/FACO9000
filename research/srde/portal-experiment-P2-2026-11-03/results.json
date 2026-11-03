@@ -1,0 +1,222 @@
+{
+  "title": "SRDE-P2 retrospective future-event prediction on real Mauna Loa weekly CO2",
+  "hypothesis_status": "tested in one historical observational dataset, not general validation",
+  "timing": {
+    "as_of": "2026-11-03",
+    "train_period": "<=1988",
+    "validation_period": "1989-1994",
+    "holdout_period": "1995-2001"
+  },
+  "dataset": {
+    "name": "statsmodels.datasets.co2",
+    "rows_original": 2284,
+    "original_missing": 59,
+    "rows_with_complete_lags_and_target": 1998,
+    "rows_train": 1320,
+    "rows_validation": 309,
+    "rows_test": 361,
+    "sha256_raw_csv": "0e5e9a1d2c8f12081e5a26a8ff44e2f67ffeb6b387ecdb2802e2505ec04e69c7"
+  },
+  "observed_test_positive_rate": 0.592797783933518,
+  "models": {
+    "constant": {
+      "config": {
+        "name": "constant"
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.24159372,
+        "log_loss": 0.67625233,
+        "roc_auc": 0.5,
+        "accuracy_at_0_5": 0.59279778,
+        "ece10": 0.01432315
+      },
+      "train_seconds": 0.0,
+      "predict_seconds": 0.0
+    },
+    "seasonal_logistic": {
+      "config": {
+        "name": "seasonal_logistic",
+        "C": 0.3
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.07220589,
+        "log_loss": 0.26920338,
+        "roc_auc": 0.9552578,
+        "accuracy_at_0_5": 0.90858726,
+        "ece10": 0.05785685
+      },
+      "train_seconds": 0.00394,
+      "predict_seconds": 0.001013
+    },
+    "logistic": {
+      "config": {
+        "name": "logistic",
+        "C": 0.3
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.06972539,
+        "log_loss": 0.2397093,
+        "roc_auc": 0.96096382,
+        "accuracy_at_0_5": 0.91412742,
+        "ece10": 0.03658644
+      },
+      "train_seconds": 0.005702,
+      "predict_seconds": 0.000797
+    },
+    "decision_tree": {
+      "config": {
+        "name": "decision_tree",
+        "max_depth": 4
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.07046431,
+        "log_loss": 0.23916684,
+        "roc_auc": 0.95649755,
+        "accuracy_at_0_5": 0.90858726,
+        "ece10": 0.0341063
+      },
+      "train_seconds": 0.004897,
+      "predict_seconds": 0.000678
+    },
+    "random_forest": {
+      "config": {
+        "name": "random_forest",
+        "min_samples_leaf": 10
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.05972556,
+        "log_loss": 0.20079174,
+        "roc_auc": 0.97367919,
+        "accuracy_at_0_5": 0.91412742,
+        "ece10": 0.03440998
+      },
+      "train_seconds": 0.451038,
+      "predict_seconds": 0.02268
+    },
+    "hist_gradient_boosting": {
+      "config": {
+        "name": "hist_gradient_boosting",
+        "max_leaf_nodes": 7
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.06003674,
+        "log_loss": 0.20511284,
+        "roc_auc": 0.96827516,
+        "accuracy_at_0_5": 0.92243767,
+        "ece10": 0.02133337
+      },
+      "train_seconds": 0.139754,
+      "predict_seconds": 0.004949
+    },
+    "srde_portal": {
+      "config": {
+        "name": "srde_portal",
+        "max_depth": 100,
+        "alpha": 0.65
+      },
+      "metrics": {
+        "n": 361,
+        "positive_rate": 0.592798,
+        "brier": 0.06150159,
+        "log_loss": 0.20611854,
+        "roc_auc": 0.97186725,
+        "accuracy_at_0_5": 0.91689751,
+        "ece10": 0.04299002
+      },
+      "train_seconds": 0.034169,
+      "predict_seconds": 0.00364,
+      "max_observed_depth": 3,
+      "fitted_nodes": 7,
+      "illustrative_trace": [
+        {
+          "depth": 0,
+          "support": 1629,
+          "prediction": 0.976421
+        },
+        {
+          "depth": 1,
+          "support": 1137,
+          "split_coordinate": "year_cos",
+          "split_threshold_scaled": -0.8255,
+          "direction": "right",
+          "local_prediction": 0.975485,
+          "blended_prediction": 0.975853
+        },
+        {
+          "depth": 2,
+          "support": 796,
+          "split_coordinate": "year_cos",
+          "split_threshold_scaled": 0.06195,
+          "direction": "right",
+          "local_prediction": 0.966713,
+          "blended_prediction": 0.970454
+        }
+      ]
+    }
+  },
+  "year_block_bootstrap_portal_minus_gradient_booster": {
+    "year_blocks": [
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001
+    ],
+    "replicates": 5000,
+    "portal_minus_booster_brier_mean": 0.001464848455389399,
+    "ci95_year_resample": [
+      -0.0034363840499481756,
+      0.005950912518698827
+    ]
+  },
+  "best_test_conventional_descriptive": {
+    "name": "random_forest",
+    "brier": 0.05972556,
+    "portal_minus_best_brier": 0.0017760300000000048
+  },
+  "portal_label_shuffle_negative_control": {
+    "metrics": {
+      "n": 361,
+      "positive_rate": 0.592798,
+      "brier": 0.2420789,
+      "log_loss": 0.67728886,
+      "roc_auc": 0.5183737,
+      "accuracy_at_0_5": 0.59279778,
+      "ece10": 0.02460978
+    },
+    "train_seconds": 0.007486
+  },
+  "reverse_bayesian_diagnostic": {
+    "question": "Given observed future E, infer earlier S=(CO2(t)-CO2(t-4)>0), not reverse causality",
+    "P(S=1_given_E=1)": 0.8365287588294652,
+    "P(S=1_given_E=0)": 0.24922118380062305,
+    "test_brier": 0.1615229803785088,
+    "test_baseline_prevalence_brier": 0.24155667682126353,
+    "test_n": 361
+  },
+  "elapsed_seconds": 1.0199328789999527,
+  "important_limits": [
+    "Only one historical observational domain",
+    "Not real-time forecasts or human cognition",
+    "100 is permitted recursion cap, not realized depth",
+    "Correlated local votes are not independent evidence",
+    "No feeling data",
+    "Missing samples were dropped rather than estimated",
+    "Historical snapshots may be revised",
+    "Year-block bootstrap has only seven blocks"
+  ]
+}
