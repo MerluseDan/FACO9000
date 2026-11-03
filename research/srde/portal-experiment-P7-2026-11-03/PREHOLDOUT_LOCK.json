@@ -1,0 +1,27 @@
+{
+  "experiment": "SRDE-P7",
+  "phase": "PRE-HOLDOUT FROZEN",
+  "timestamp_date": "2026-11-03",
+  "source_sha256": "00bfe1a0fadab69a7b09ea777a044b5fdc05645895a455a497ac6e8d3ea19d03",
+  "protocol_sha256": "b534eafba5d478df18c69cb1b1af0762b9e64eedd9109a00138f108e43026fe2",
+  "lock_sha256": "b047fc79b8627c20ebd7463c1ef3bfc30769a5a9a5b24eb7c21d2cc1d2e3a21f",
+  "model_file_sha256": "40ccf0b5e8170693e7fcdac49b5393c32588f5ffcab760a0135ba65285401547",
+  "budgets_bytes": [
+    12,
+    20,
+    32,
+    40
+  ],
+  "training_worlds": 5000,
+  "validation_worlds": 1000,
+  "holdout_worlds": "UNOPENED",
+  "selected_snapshot_ridge_alphas": {
+    "12": 0.1,
+    "20": 0.1,
+    "32": 10,
+    "40": 10
+  },
+  "frozen_preholdout_drive_url": "https://drive.google.com/file/d/1vObjtKj5nrk_IgtymLmhGUV2QH1DV_rR/view?usp=drivesdk",
+  "frozen_lock_drive_url": "https://drive.google.com/file/d/1KtPyY6SwnCM6bYW2xUa-QAlYj8m05F7c/view?usp=drivesdk",
+  "caveat": "Only per-world bytes controlled; shared learned decoder parameter bits not charged. Not a novelty claim."
+}
