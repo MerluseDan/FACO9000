@@ -1,0 +1,90 @@
+{
+  "study": "SRDE-LA2",
+  "date": "2026-11-03",
+  "status": "executed and published with independent readback",
+  "freeze_commit": "684f1974e7a1cdee9ca19c5a4d575283a61c04f5",
+  "publication_commit": "095034d1512bb98cc69d8e2c7bbc1ff9ef048292",
+  "github": {
+    "commit": "095034d1512bb98cc69d8e2c7bbc1ff9ef048292",
+    "files": 23,
+    "tree_truncated": false
+  },
+  "github_archive_raw_readback": {
+    "byte_identical": true,
+    "zip_crc_passed": true,
+    "payload_sha256_verified": 32
+  },
+  "drive": {
+    "folder_id": "1Mf4AWEmwXaGzOKq8bsolvOK6ZiHxXjLk",
+    "canonical_parent_id": "1XJbpQyX5okM2dmlbM4eSHKcXKQGg49xB",
+    "folder_parent_verified": true,
+    "shared": false,
+    "files": [
+      {
+        "id": "1qwrX_TvcNqulyyLiJiuu48PCrNAkVyMd",
+        "file": "SRDE_LA2_Verifier_Learning_2026-11-03.zip",
+        "sha256": "265dfc8ed0707a9ebb6858e3281fa6ca71def0918e201032e7a098e87a2e1afc",
+        "bytes": 4460006,
+        "parent": "1Mf4AWEmwXaGzOKq8bsolvOK6ZiHxXjLk",
+        "shared": false
+      },
+      {
+        "id": "1OlvErS4MpJg1HKHxxPjR9fdIwosJdBQG",
+        "file": "SRDE_LA2_Verifier_Learning_2026-11-03.zip.sha256",
+        "sha256": "09066a14bdd3f403358e088cbc1bdcbdd42c0efdbaae171eab61a9da795f38ec",
+        "bytes": 108,
+        "parent": "1Mf4AWEmwXaGzOKq8bsolvOK6ZiHxXjLk",
+        "shared": false
+      },
+      {
+        "id": "1AhYbBXkOPiTpn4_LHpesYD-BfS-1Q-Ao",
+        "file": "REPORT.pdf",
+        "sha256": "4ce6ba12c1e6aaddf14c27316bb321da8e30d31ed90631cd790ae777292e00fe",
+        "bytes": 127556,
+        "parent": "1Mf4AWEmwXaGzOKq8bsolvOK6ZiHxXjLk",
+        "shared": false
+      },
+      {
+        "id": "1CRZAqi3k8kIQAozlY_wuAbaAwHFFsTSu",
+        "file": "REPORT.md",
+        "sha256": "2e7065438e3cf4b3693019a896f42e723292e7abbdf4459958ebb4dc6bb4f234",
+        "bytes": 18415,
+        "parent": "1Mf4AWEmwXaGzOKq8bsolvOK6ZiHxXjLk",
+        "shared": false
+      }
+    ]
+  },
+  "archive": {
+    "name": "SRDE_LA2_Verifier_Learning_2026-11-03.zip",
+    "bytes": 4460006,
+    "sha256": "265dfc8ed0707a9ebb6858e3281fa6ca71def0918e201032e7a098e87a2e1afc",
+    "packaged_files": 33
+  },
+  "verification": {
+    "unit_tests": 12,
+    "independent_auditor_forecasts": 478720,
+    "calibration_packets": 20480,
+    "posterior_fits": 1280,
+    "max_numeric_error": 1.4627188349436437e-14,
+    "scientific_outputs_exact_replay": 11,
+    "clean_extraction_unit_tests": 12,
+    "clean_extraction_auditor_passed": true
+  },
+  "task_tracking": {
+    "status": "pending UI reconciliation; no task mutation claimed",
+    "list": "[Faco] SRDV rollout",
+    "B16": "work completed and verified; desired completed",
+    "B17": "work completed and verified; desired completed",
+    "B18": "external publication now completed and verified; desired completed",
+    "B11": "broader empirical/temporal work remains open",
+    "blocker": "Browser found the Add a task control in the existing list, but reported Click target is no longer available after fresh inspection."
+  },
+  "limitations": [
+    "synthetic data only",
+    "no recursive superiority",
+    "no native integration",
+    "no human cognitive validation",
+    "no empirical provenance dataset",
+    "literature review bounded; no worldwide-first claim"
+  ]
+}
