@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source": "one sealed 165-row holdout CSV; no model refitting or access to original experimental metric functions",
+  "source_and_code_sha256_valid": true,
+  "date_and_label_reconstruction_valid": true,
+  "model_scores_independently_recomputed": {
+    "constant": 0.243844494943396,
+    "calendar_logistic": 0.05077380407822794,
+    "logistic": 0.0495731032203061,
+    "random_forest": 0.05209970074809749,
+    "hist_boost": 0.06842365483301978,
+    "direct_analog": 0.05293023608226997,
+    "recursive_portal": 0.04916948711631448,
+    "frozen_local_coordinate_frame": 0.114069146093098,
+    "within_month_shuffled_training_deltas": 0.0461025262695235
+  },
+  "paired_portal_minus_preselected_rf": -0.0029302136317830157,
+  "observed_positive_cases": 69,
+  "total_cases": 165,
+  "report_serialization_failure_preserved": true
+}
