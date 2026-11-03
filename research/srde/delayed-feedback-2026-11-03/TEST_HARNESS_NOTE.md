@@ -1,0 +1,3 @@
+# Test chronology correction
+
+The first new test-suite run failed two harness cases (`test_recursion_sequential_replay` and `test_window_and_decay_finite`). Those tests delivered feedback at time t+8, then incorrectly attempted the next prediction at t+1. The existing future-feedback guard rejected that backward chronology. The harness now advances time by nine steps after each delivered feedback before predicting again. The frozen scientific runner, protocol, model settings and computed experiment outputs were not changed. All twelve final tests pass. The main simulation itself always delivers each label at its scheduled target_time+7 and passed its timestamp controls.

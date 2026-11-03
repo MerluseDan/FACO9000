@@ -1,0 +1,13 @@
+{
+ "public_protocol_commit":"58b0fed6b2fb3f57ffb1b01ecefeae733b898b56",
+ "public_source_freeze_commit":"da3d7a288515aca606bddfc47dcb21306c5f0316",
+ "previous_all_tests_publication_commit":"2f991ccec399aefebe075705bfd0c6c3d3ae190a",
+ "prior_study":"https://github.com/MerluseDan/FACO9000/tree/main/research/srde/learned-temporal-2026-11-03",
+ "public_study":"https://github.com/MerluseDan/FACO9000/tree/main/research/srde/delayed-feedback-2026-11-03",
+ "canonical_drive":"https://drive.google.com/drive/folders/15315BGmLeDl4vq1XdsKbk5tudAGKip8r",
+ "prior_all_tests_drive_snapshot":"https://drive.google.com/drive/folders/1Euat3RNoBy_uuUhUlFI6BEw0Qsa-z9ff",
+ "helper_origin":"Exact run_simulation.py from the preceding learned-temporal frozen study, copied as source_common.py; used for evidence decoding, eligibility, metrics and fit helpers. Original runner is not executed by importing it.",
+ "data_provenance":"New authored Markov/sensor streams with seeds 5101–5105; hidden drift and return; gold is retained separately from predictor inputs. No independent empirical dataset added.",
+ "execution":"Local CPU, no GPU/paid resource or new Colab run; exact local replay and focused audits/tests. Earlier Colab evidence remains in prior study.",
+ "scope":"Research only, no native engine deployment, no account-memory changes; other active research branches preserved."
+}

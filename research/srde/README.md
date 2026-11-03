@@ -23,4 +23,13 @@ The binary study's public-data pilot rerun reproduces the original Portal/Katz s
 
 The test packages contain the individual observations and predictions needed to check reported metrics. They are not proof of human cognitive theory, natural affect semantics, future-event forecasting outside their tested domains, or native engine integration. Historical E30 references in the reports are separate evidence; E28's primary package remains unrecovered and no fabricated E28 score is supplied.
 
-The next study in this chat is a separately frozen delayed-feedback drift-response simulation. Other active research branches and existing preregistrations are preserved; results are not pooled across independently designed studies.
+The delayed-feedback study is now complete; its negative results and full evidence are linked below. Other active research branches and existing preregistrations are preserved; results are not pooled across independently designed studies.
+
+
+## Additional complete publications
+
+- [Delayed-feedback drift and recovery](delayed-feedback-2026-11-03/RESEARCH_REPORT.md): 76,000 source cases, 50,000 deployment cases, 350,000 predictions, 12 tests and exact replay. Naive reset policies do not improve the complete deployment; false alarms and return costs are retained. [Complete package](delayed-feedback-2026-11-03/COMPLETE_PACKAGE.zip); [Drive folder](https://drive.google.com/drive/folders/15315BGmLeDl4vq1XdsKbk5tudAGKip8r).
+- [Historical E30 local-complete evidence](historical-e30-2026-10-16/README.md): repaired source/tests plus the exact original 155-member evidence archive. Local inference completed; Colab had zero model calls. No new inference or deployment is performed by publication. [Complete package](historical-e30-2026-10-16/COMPLETE_PACKAGE.zip); [Drive archive](https://drive.google.com/file/d/1KkOBpnMwsBCmlKVGdV-TLR9Hor8FTADt/view).
+
+The initial consolidated Drive snapshot is immutable at commit 2f991ccec399aefebe075705bfd0c6c3d3ae190a. Later completed studies and recovered historical evidence are added in their linked folders/archives. E28 remains an explicitly documented unrecovered primary-source gap.
+

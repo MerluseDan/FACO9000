@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "source_count": true,
+    "source_splits": true,
+    "causal_reports": true,
+    "prediction_count": true,
+    "unique_keys": true,
+    "feedback_not_from_future": true,
+    "vote_cap": true,
+    "brier_arithmetic": true,
+    "frozen_identities": true,
+    "exact_local_replay": true,
+    "recursive_sequential_equal": true
+  },
+  "all_passed": true,
+  "max_brier_error": 3.774758283725532e-15
+}

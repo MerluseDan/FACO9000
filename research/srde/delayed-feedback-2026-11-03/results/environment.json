@@ -1,0 +1,9 @@
+{
+  "accelerator": "CPU",
+  "elapsed_seconds": 26.900195509006153,
+  "numpy": "2.5.4",
+  "predictions": 350000,
+  "python": "3.14.4",
+  "sklearn": "1.9.1",
+  "source_cases": 76000
+}

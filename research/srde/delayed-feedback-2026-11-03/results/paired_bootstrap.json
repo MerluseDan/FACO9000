@@ -1,0 +1,146 @@
+{
+  "all:ExpDecayGraph4-FrozenGraph4": {
+    "brier_delta": 0.0036575239224525386,
+    "ci95": [
+      0.001643196168842417,
+      0.005692627832829234
+    ],
+    "world_clusters": 100
+  },
+  "all:FrozenRollingCal-FrozenGraph4": {
+    "brier_delta": 0.0073577322570153305,
+    "ci95": [
+      0.004571383781558362,
+      0.010233731649249638
+    ],
+    "world_clusters": 100
+  },
+  "all:ResetGraph4-FrozenGraph4": {
+    "brier_delta": 0.001834067328633298,
+    "ci95": [
+      -0.0003654666937952364,
+      0.004075327773707764
+    ],
+    "world_clusters": 100
+  },
+  "all:ResetPortal-FrozenGraph4": {
+    "brier_delta": 0.0040707324179243805,
+    "ci95": [
+      0.001692696533633664,
+      0.0063762920087198395
+    ],
+    "world_clusters": 100
+  },
+  "all:ResetSequential-FrozenGraph4": {
+    "brier_delta": 0.0040707324179243805,
+    "ci95": [
+      0.001692696533633664,
+      0.0063762920087198395
+    ],
+    "world_clusters": 100
+  },
+  "all:Window128Graph4-FrozenGraph4": {
+    "brier_delta": 0.0067665206816386655,
+    "ci95": [
+      0.004929113994377549,
+      0.008580436338363879
+    ],
+    "world_clusters": 100
+  },
+  "changed_worlds:ExpDecayGraph4-FrozenGraph4": {
+    "brier_delta": -0.0038327494422646475,
+    "ci95": [
+      -0.00628589196136312,
+      -0.0012261999186305604
+    ],
+    "world_clusters": 50
+  },
+  "changed_worlds:FrozenRollingCal-FrozenGraph4": {
+    "brier_delta": 0.004430340818659401,
+    "ci95": [
+      -0.0003444782948056591,
+      0.008798142591261725
+    ],
+    "world_clusters": 50
+  },
+  "changed_worlds:ResetGraph4-FrozenGraph4": {
+    "brier_delta": 0.0003995085049848172,
+    "ci95": [
+      -0.0026718181814253486,
+      0.003956331503885886
+    ],
+    "world_clusters": 50
+  },
+  "changed_worlds:ResetPortal-FrozenGraph4": {
+    "brier_delta": 0.002635440905591523,
+    "ci95": [
+      -0.0006101577861373313,
+      0.006166178331907555
+    ],
+    "world_clusters": 50
+  },
+  "changed_worlds:ResetSequential-FrozenGraph4": {
+    "brier_delta": 0.002635440905591523,
+    "ci95": [
+      -0.0006101577861373313,
+      0.006166178331907555
+    ],
+    "world_clusters": 50
+  },
+  "changed_worlds:Window128Graph4-FrozenGraph4": {
+    "brier_delta": 0.0024447698560581526,
+    "ci95": [
+      -0.0002736411183678098,
+      0.005197153049040657
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:ExpDecayGraph4-FrozenGraph4": {
+    "brier_delta": 0.011147797287169726,
+    "ci95": [
+      0.009420021632748157,
+      0.012737666406468019
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:FrozenRollingCal-FrozenGraph4": {
+    "brier_delta": 0.01028512369537126,
+    "ci95": [
+      0.006716396654450054,
+      0.013746009250286332
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:ResetGraph4-FrozenGraph4": {
+    "brier_delta": 0.0032686261522817785,
+    "ci95": [
+      0.00023470737348928566,
+      0.0068975090205602154
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:ResetPortal-FrozenGraph4": {
+    "brier_delta": 0.005506023930257236,
+    "ci95": [
+      0.0023108982209971256,
+      0.008777222960514874
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:ResetSequential-FrozenGraph4": {
+    "brier_delta": 0.005506023930257236,
+    "ci95": [
+      0.0023108982209971256,
+      0.008777222960514874
+    ],
+    "world_clusters": 50
+  },
+  "unchanged_worlds:Window128Graph4-FrozenGraph4": {
+    "brier_delta": 0.011088271507219178,
+    "ci95": [
+      0.009425393763524591,
+      0.012951886458234587
+    ],
+    "world_clusters": 50
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "metrics.json": true,
+  "alarms.json": true,
+  "controls.json": true,
+  "fit_parameters.json": true,
+  "paired_bootstrap.json": true,
+  "source_cases.jsonl.gz": true,
+  "latent_gold.json.gz": true,
+  "predictions.csv.gz": true,
+  "all_passed": true
+}

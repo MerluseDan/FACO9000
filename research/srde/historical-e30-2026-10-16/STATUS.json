@@ -1,0 +1,61 @@
+{
+  "task_list": "[Faco] SRDV rollout",
+  "experiment": "FACO SRDE E30",
+  "freeze": "e30_repair_v3/FREEZE.json",
+  "phase": "Local preflight/main/confirmation completed and independently validated; Colab browser transport blocked",
+  "validation": {
+    "original_crc": "pass",
+    "original_payload_hashes": "17/17 pass",
+    "original_tests": "23/23 pass",
+    "repaired_tests": "41/41 pass",
+    "pinned_model_tokenizer_hashes": "8/8 pass",
+    "all_484_expected_prompts": "tokenizer/prompt audit pass; max 314 evidence tokens",
+    "completed_v3_rows": "484/484 exact expected keys, pre-run prompt/token hashes, recomputed grades pass",
+    "reproducibility": "86 repeated input groups, 0 token divergences"
+  },
+  "measured_main_calls": {
+    "local": 320,
+    "colab": 0
+  },
+  "confirmation_calls": {
+    "local": 160,
+    "colab": 0
+  },
+  "blockers": [
+    "Colab: Chrome control Transport closed; exact runtime/package prepared; no Colab model generation executed"
+  ],
+  "main_conversation_update": "Attempted send_message_to_thread to source thread; tool returned thread not found. Durable workspace receipts and platform end-of-turn notification remain available.",
+  "updated_utc": "2026-10-16T10:45:58.659351+00:00",
+  "approvals": {
+    "colab_terms": "approved; dialog not shown after reload, no agent click",
+    "local_smoke": "approved; completed after guards cleared"
+  },
+  "active_freeze": "e30_repair_v3/FREEZE.json",
+  "v2_preserved": true,
+  "colab": {
+    "browser": "Dan\u2019s Chrome",
+    "gpu": "Tesla T4, 15360 MiB",
+    "python": "3.12.13",
+    "driver": "580.82.07",
+    "terms_dialog": "not shown on current reload; no agent acceptance click made",
+    "dependency_availability_check": "46 exact dependencies installed in isolated runtime; 41 tests passed"
+  },
+  "smoke": {
+    "local_v2": "TRUNCATED, 1 generation",
+    "numeric_diagnostics": "2 forwards; fp16 non-finite, fp32 finite",
+    "local_v3": "CORRECT valid JSON, EOS; 1.522 seconds, peak 6254586880 bytes",
+    "colab_v3": "0 calls; syntax failure before execution"
+  },
+  "current_report": "E30_LOCAL_RESULTS_REPORT.txt",
+  "current_resume": "RESUME_CURRENT.txt",
+  "preflight_calls": {
+    "local": 4,
+    "colab": 0
+  },
+  "local_resume": {
+    "first_saved_main_rows": 160,
+    "first160_bytes_preserved": true,
+    "active_log": "evidence/local_campaign_v3_resume1.log",
+    "state": "completed; original 160 rows and original runtime metadata unchanged"
+  }
+}

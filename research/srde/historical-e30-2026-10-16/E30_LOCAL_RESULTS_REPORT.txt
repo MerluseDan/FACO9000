@@ -1,0 +1,140 @@
+FACO SRDE E30 — LOCAL COMPLETED / COLAB BLOCKED
+Tracker: [Faco] SRDV rollout
+Generated UTC: 2026-10-16T10:45:58.650905+00:00
+
+Local outcome: four structurally valid preflight calls, all 320 main calls and
+all 160 independent-seed same-generator confirmation calls completed. Every
+expected task/method key, pre-run raw/token prompt hash and recomputed strict
+grade matched. All failures, invalid and wrong answers are retained.
+Colab outcome: exact package/runtime prepared on an observed free Tesla T4;
+zero model calls. Chrome control Transport closed, including a read-only
+check after Dan reported fixing it. No cross-platform result is available.
+
+CORRECTNESS — strict JSON; invalid/truncated responses count as wrong
+Method                 Main (80/method)        Confirmation (40/method)
+lexical                35/80 (43.75%)        17/40 (42.50%)
+temporal_graph         28/80 (35.00%)        13/40 (32.50%)
+graph_state            43/80 (53.75%)        18/40 (45.00%)
+srde_activated         38/80 (47.50%)        18/40 (45.00%)
+
+main: SRDE minus graph_state = -6.25 percentage points;
+95% world-clustered percentile bootstrap interval [-8.75, -2.50] points,
+8 worlds, 10000 fixed-seed resamples. Exploratory small-sample intervals.
+Method                 Mean inference s   Mean retrieval ms   State resolver ms   Invalid/truncated
+lexical                  0.4200            12.4052              0.0000          9
+temporal_graph           0.4408             1.4941              0.0000          0
+graph_state              0.4276             1.7295              0.0820          5
+srde_activated           0.4230             1.7555              0.0827          4
+
+confirmation: SRDE minus graph_state = 0.00 percentage points;
+95% world-clustered percentile bootstrap interval [-7.50, 7.50] points,
+4 worlds, 10000 fixed-seed resamples. Exploratory small-sample intervals.
+Method                 Mean inference s   Mean retrieval ms   State resolver ms   Invalid/truncated
+lexical                  0.4172            12.5419              0.0000          4
+temporal_graph           0.4161             1.4675              0.0000          0
+graph_state              0.4300             1.6926              0.0848          2
+srde_activated           0.4284             1.8680              0.0896          2
+
+preflight: statuses {"WRONG": 4}
+preflight: evidence token range 292–305 (cap 320).
+
+main: statuses {"CORRECT": 144, "INVALID_VALUE": 18, "WRONG": 158}
+main: evidence token range 248–314 (cap 320).
+
+confirmation: statuses {"CORRECT": 66, "INVALID_VALUE": 8, "WRONG": 86}
+confirmation: evidence token range 249–314 (cap 320).
+
+RESOURCE AND TIMING SCOPE
+GPU: GPU-62bbae97-7c54-9f6e-5692-56a3a24b5fd0, NVIDIA GeForce RTX 5060 Ti, 595.91.07, 16311 MiB; all parameters cuda:0 / float32; eager attention.
+Python 3.12.3; Torch 2.14.1+cu130; CUDA build 13.0.
+46 locked dependency versions; pinned model and tokenizer revision
+989aa7980e4cf806f80c7fef2b1adb7bc71aa306; all eight consumed files verified.
+Effective generation call: do_sample=False, max_new_tokens=80; fixed seed
+3040001, deterministic algorithms, TF32 disabled. Inherited repetition
+penalty 1.1 remains active. Logged generation_config is the inherited object;
+the frozen call overrides its sampling/max-token/pad settings. Warnings that
+temperature/top-p/top-k are ignored under greedy decoding are retained.
+The single unpadded input uses the original pad/EOS handling; its attention-
+mask warning is retained. No settings were changed after main scoring began.
+Peak per-call GPU allocation 6318436352 bytes;
+peak reserved 6522142720 bytes.
+Across 484 study calls: inference 207.3621 s;
+retrieval 2.1125 s;
+per-call occupancy guards 523.3937 s.
+Additional validation/persistence/prompt construction across invocations: 4.2001 s.
+Startup load seconds (separate from inference): 10.47637680400021, 26.316120671000135.
+One confirmation resource snapshot: [{"pid": 227862, "rss_kib": 1584300, "elapsed_seconds": 415, "command": "/media/owner/Faco Resources1/_shared/envs/qwen3-tts/bin/python -u e30_repair_v3/source/e30_campaign.py --platform local --out local_results_v3"}]; GPU: NVIDIA GeForce RTX 5060 Ti, 7707 MiB, 8136 MiB, 73.10 W, 63 %.
+RSS and GPU power/utilization are point-in-time observations, not peaks or
+integrated energy measurements. GPU totals include idle resident services.
+Inference timing includes CUDA synchronization. It excludes guard, startup,
+validation, export and operator delay. Latency is descriptive: a guard
+detected a competing Python workload after 160 main calls and stopped E30;
+brief contention between samples cannot be excluded. No other job was killed.
+
+FULL-VISIBLE-WORLD PREPROCESSING
+Both state methods resolve the full visible world before truncating evidence.
+The common prompt discloses this. Their state timer and full retrieval timer
+include the resolver, and visible-record/recursive-validity-check counts are
+preserved per call. Equal evidence tokens do not mean equal preprocessing cost.
+main graph_state: 15600 cumulative visible records, 280 validity checks.
+main srde_activated: 15600 cumulative visible records, 280 validity checks.
+confirmation graph_state: 7800 cumulative visible records, 140 validity checks.
+confirmation srde_activated: 7800 cumulative visible records, 140 validity checks.
+
+REPRODUCIBILITY AND RESUME
+Main interrupted once at 160 rows by the active-unrelated-compute guard.
+After fresh clear occupancy samples, the unchanged campaign resumed in the
+same directory. The original 160-row byte prefix and original preflight/main
+runtime metadata hashes remain identical. Saved questions were not re-executed.
+86 repeated input-hash groups covering 174 existing calls:
+0 groups with different generated token sequences.
+All four preflight prompts repeated in main produced identical token sequences.
+This is within-run repeated-input evidence, not an independent rerun or a
+local/Colab reproducibility result. State-method identical prompt counts: {"main": {"tasks": 80, "identical_input_prompts": 56, "note": "Shared prompts are retained in both frozen method totals; they are not independent new evidence."}, "confirmation": {"tasks": 40, "identical_input_prompts": 28, "note": "Shared prompts are retained in both frozen method totals; they are not independent new evidence."}}
+
+PRESERVED REPAIRS AND NEGATIVE EVIDENCE
+Original release: immutable ZIP CRC clean, 17 payload hashes match, 23 tests pass.
+Versioned repairs: strict structural preflight; complete runtime/code/model
+resume identity; lossless final-tail recovery and exact-key/prompt/grade checks;
+correct confirmation label; exact dependencies/CUDA placement; fsynced local
+and externally acknowledged Colab checkpoints; explicit full-world state cost.
+Repaired exact release regression suite: 41 tests pass. Pre-run tokenizer audit
+covers all 484 prompts, maximum 314 evidence tokens. No frozen scientific-code edits after main began.
+Preserved v2 smoke: 80 token-0 exclamation marks, no EOS, TRUNCATED. Dedicated
+diagnostic found finite weights but non-finite float16 layer/logits; a float32
+forward was finite. Separate v3 float32 freeze on both platforms was made
+before any main scores; successful dedicated local smoke remains excluded.
+Local accounting: 484 study generations (4 preflight + 320 main + 160
+confirmation), 2 excluded smoke generations (v2/v3), 2 diagnostic forwards.
+No accuracy-based question selection, retries, lenient answer salvage or pooling.
+
+COLAB EXACT BLOCKER AND CONTINUATION
+Target: https://colab.research.google.com/drive/11EHwDJsKtEEDyD7cLAZvL-KU_pQT7TFv
+Browser: Dan's Chrome, browser 3 / tab 1600131650. Resource probe observed
+Tesla T4 15360 MiB, driver 580.82.07, Python 3.12.13. Exact frozen ZIP and
+manifest verified there; isolated 46-package install and 41-test subprocess
+returned success. This does not establish a successful model load or campaign.
+The first smoke orchestration cell failed parsing before any execution. The
+correction could not be entered after browser-control timeout/Transport closed.
+Latest read-only check still returns Transport closed. Action is blocked by
+unavailable transport, not denied; no corrected model launcher was executed.
+No paid compute, upgrade, Drive mount or new OAuth grant. Terms approval
+persists; no Terms dialog was shown on reload and no agent acceptance click
+was made. A surviving T4 session must be checked again before continuation.
+Use RESUME_CURRENT.txt and FACO_SRDE_E30_REPAIRED_v3_ISOLATED.ipynb. They carry
+the same frozen study and pause for verified external checkpoint downloads.
+Source-thread messaging returned thread not found; these durable Library
+deliverables and the platform completion notification preserve the handoff.
+
+SCOPE
+Real Qwen inference over synthetic software-memory QA. Eight main worlds and
+four confirmation worlds from the same generator. No real-world validation,
+distribution-shift test or E29 learned-detector replication. Preserve nulls
+and losses. No local-versus-Colab correctness/latency/resource claim is possible
+until both matching platform stages have actually completed and been audited.
+
+HASHES
+Original ZIP: 8f5c15809e59574ec6d5da15e28c81b0075f15ef7f195bc6f3ba0a9a9f2950e8
+Active v3 ZIP: f54a7aa865049a9c8d7771372729f8a8814e117994eff499077a38935255cc9a
+FREEZE.json bytes: d584521f0fcf584a974d3a7172bbe756d7c0c92383bf64d41e46e4834daf00a3
+Canonical manifest identity: 49f79f067bb74287566093e0024eaacba756f48816b65dd6100937ae3a7aba4b

@@ -1,0 +1,37 @@
+[
+  {
+    "future_feedback_excluded": true,
+    "max_votes": 4,
+    "recursive_sequential_max_abs": 0.0,
+    "seed": 5101,
+    "source_cases": 15200
+  },
+  {
+    "future_feedback_excluded": true,
+    "max_votes": 4,
+    "recursive_sequential_max_abs": 0.0,
+    "seed": 5102,
+    "source_cases": 15200
+  },
+  {
+    "future_feedback_excluded": true,
+    "max_votes": 4,
+    "recursive_sequential_max_abs": 0.0,
+    "seed": 5103,
+    "source_cases": 15200
+  },
+  {
+    "future_feedback_excluded": true,
+    "max_votes": 4,
+    "recursive_sequential_max_abs": 0.0,
+    "seed": 5104,
+    "source_cases": 15200
+  },
+  {
+    "future_feedback_excluded": true,
+    "max_votes": 4,
+    "recursive_sequential_max_abs": 0.0,
+    "seed": 5105,
+    "source_cases": 15200
+  }
+]

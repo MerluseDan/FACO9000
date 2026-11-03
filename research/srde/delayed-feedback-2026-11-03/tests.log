@@ -1,0 +1,17 @@
+test_duplicate_invariance (__main__.DelayedTests.test_duplicate_invariance) ... ok
+test_frozen_does_not_update_weights (__main__.DelayedTests.test_frozen_does_not_update_weights) ... ok
+test_future_feedback_rejected (__main__.DelayedTests.test_future_feedback_rejected) ... ok
+test_generator_replay_and_causal_reports (__main__.DelayedTests.test_generator_replay_and_causal_reports) ... ok
+test_gold_input_rejected (__main__.DelayedTests.test_gold_input_rejected) ... ok
+test_max_four_votes (__main__.DelayedTests.test_max_four_votes) ... ok
+test_no_event_flag_required (__main__.DelayedTests.test_no_event_flag_required) ... ok
+test_old_regime_feedback_not_relearned_after_reset (__main__.DelayedTests.test_old_regime_feedback_not_relearned_after_reset) ... ok
+test_recursion_sequential_replay (__main__.DelayedTests.test_recursion_sequential_replay) ... ok
+test_reset_requires_observed_errors (__main__.DelayedTests.test_reset_requires_observed_errors) ... ok
+test_warmup_unknown (__main__.DelayedTests.test_warmup_unknown) ... ok
+test_window_and_decay_finite (__main__.DelayedTests.test_window_and_decay_finite) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.277s
+
+OK
