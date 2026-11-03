@@ -1,0 +1,436 @@
+{
+  "status": "FROZEN_VALIDATION",
+  "protocol_sha256": "22a8d8491bcea404d3986f9d6aa746b4e9d0753c57d7dbd314b7d9e7f190db41",
+  "source_sha256": "1b781bd28a560b5d4d364e0fcdbe38e13164e6368eb340754669a3d1071c7ed6",
+  "code_sha256": "5efacae4e482b5faccdbf6755d8c3183ccb7308546752d79d5ca9173c24fbe02",
+  "date": "2026-11-03",
+  "source": "NOAA PSL Ni\u00f1o3.4 ERSSTv6 monthly anomaly, 1950\u20132025",
+  "partitions": {
+    "train": 621,
+    "validation": 129,
+    "holdout": "NOT MATERIALIZED"
+  },
+  "fit_info": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "scipy": "1.17.0",
+    "python": "3.13.5"
+  },
+  "seeds": {
+    "base": 20261103,
+    "shuffle": [
+      20261120,
+      20261121,
+      20261122,
+      20261123,
+      20261124
+    ],
+    "bootstrap": 20261106
+  },
+  "selected": {
+    "constant": {
+      "method": "constant"
+    },
+    "calendar_logistic": {
+      "method": "calendar_logistic",
+      "C": 1.0
+    },
+    "logistic": {
+      "method": "logistic",
+      "C": 1.0
+    },
+    "random_forest": {
+      "method": "random_forest",
+      "min_samples_leaf": 5
+    },
+    "hist_boost": {
+      "method": "hist_boost",
+      "max_leaf_nodes": 7
+    },
+    "direct_analog": {
+      "method": "direct_analog",
+      "k": 36,
+      "tau": 0.5
+    },
+    "season_portal": {
+      "method": "season_portal"
+    },
+    "state_portal": {
+      "method": "state_portal",
+      "k": 6,
+      "tau": 1.2
+    }
+  },
+  "validation_grid": [
+    {
+      "family": "constant",
+      "config": {
+        "method": "constant"
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.15232404,
+        "log_loss": 0.48365906,
+        "auc": 0.5,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.02984683
+      },
+      "fit_seconds": 0.0,
+      "predict_seconds": 0.0
+    },
+    {
+      "family": "calendar_logistic",
+      "config": {
+        "method": "calendar_logistic",
+        "C": 1.0
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.14697534,
+        "log_loss": 0.46514349,
+        "auc": 0.66884921,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.03019847
+      },
+      "fit_seconds": 0.0042,
+      "predict_seconds": 0.001
+    },
+    {
+      "family": "logistic",
+      "config": {
+        "method": "logistic",
+        "C": 0.1
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12568129,
+        "log_loss": 0.39393986,
+        "auc": 0.84126984,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.07315163
+      },
+      "fit_seconds": 0.0042,
+      "predict_seconds": 0.0014
+    },
+    {
+      "family": "logistic",
+      "config": {
+        "method": "logistic",
+        "C": 1.0
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12525873,
+        "log_loss": 0.39132601,
+        "auc": 0.84206349,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.06319834
+      },
+      "fit_seconds": 0.0034,
+      "predict_seconds": 0.0006
+    },
+    {
+      "family": "logistic",
+      "config": {
+        "method": "logistic",
+        "C": 10.0
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12541122,
+        "log_loss": 0.39163665,
+        "auc": 0.84126984,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.06658841
+      },
+      "fit_seconds": 0.0041,
+      "predict_seconds": 0.0007
+    },
+    {
+      "family": "random_forest",
+      "config": {
+        "method": "random_forest",
+        "min_samples_leaf": 5
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12485859,
+        "log_loss": 0.40380411,
+        "auc": 0.77857143,
+        "accuracy_0_5": 0.82945736,
+        "ece10": 0.05070001
+      },
+      "fit_seconds": 0.2923,
+      "predict_seconds": 0.0177
+    },
+    {
+      "family": "random_forest",
+      "config": {
+        "method": "random_forest",
+        "min_samples_leaf": 15
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.1273141,
+        "log_loss": 0.401759,
+        "auc": 0.81865079,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.07099864
+      },
+      "fit_seconds": 0.2706,
+      "predict_seconds": 0.0151
+    },
+    {
+      "family": "hist_boost",
+      "config": {
+        "method": "hist_boost",
+        "max_leaf_nodes": 7
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11152393,
+        "log_loss": 0.35596329,
+        "auc": 0.84563492,
+        "accuracy_0_5": 0.84496124,
+        "ece10": 0.05294976
+      },
+      "fit_seconds": 0.0921,
+      "predict_seconds": 0.0025
+    },
+    {
+      "family": "hist_boost",
+      "config": {
+        "method": "hist_boost",
+        "max_leaf_nodes": 15
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11582982,
+        "log_loss": 0.39585699,
+        "auc": 0.80793651,
+        "accuracy_0_5": 0.84496124,
+        "ece10": 0.06820199
+      },
+      "fit_seconds": 0.1372,
+      "predict_seconds": 0.0032
+    },
+    {
+      "family": "direct_analog",
+      "config": {
+        "method": "direct_analog",
+        "k": 12,
+        "tau": 0.5
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11680972,
+        "log_loss": 0.3651526,
+        "auc": 0.83333333,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.05011805
+      },
+      "fit_seconds": 0.0061,
+      "predict_seconds": 0.0029
+    },
+    {
+      "family": "direct_analog",
+      "config": {
+        "method": "direct_analog",
+        "k": 12,
+        "tau": 1.5
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.1175087,
+        "log_loss": 0.36279483,
+        "auc": 0.84047619,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.06839116
+      },
+      "fit_seconds": 0.0049,
+      "predict_seconds": 0.0023
+    },
+    {
+      "family": "direct_analog",
+      "config": {
+        "method": "direct_analog",
+        "k": 36,
+        "tau": 0.5
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11565094,
+        "log_loss": 0.35974144,
+        "auc": 0.86428571,
+        "accuracy_0_5": 0.82170543,
+        "ece10": 0.09069095
+      },
+      "fit_seconds": 0.0042,
+      "predict_seconds": 0.0028
+    },
+    {
+      "family": "direct_analog",
+      "config": {
+        "method": "direct_analog",
+        "k": 36,
+        "tau": 1.5
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11859521,
+        "log_loss": 0.36767913,
+        "auc": 0.88611111,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.0890965
+      },
+      "fit_seconds": 0.0052,
+      "predict_seconds": 0.0028
+    },
+    {
+      "family": "season_portal",
+      "config": {
+        "method": "season_portal"
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.15725159,
+        "log_loss": 0.50686582,
+        "auc": 0.47876984,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.05669731
+      },
+      "fit_seconds": 0.0073,
+      "predict_seconds": 0.0201
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 6,
+        "tau": 0.4
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12024017,
+        "log_loss": 0.3618889,
+        "auc": 0.84642857,
+        "accuracy_0_5": 0.8372093,
+        "ece10": 0.05411333
+      },
+      "fit_seconds": 0.006,
+      "predict_seconds": 0.3415
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 6,
+        "tau": 1.2
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11718616,
+        "log_loss": 0.35646402,
+        "auc": 0.85992063,
+        "accuracy_0_5": 0.82945736,
+        "ece10": 0.07947239
+      },
+      "fit_seconds": 0.006,
+      "predict_seconds": 0.3318
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 12,
+        "tau": 0.4
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12064917,
+        "log_loss": 0.36458967,
+        "auc": 0.84880952,
+        "accuracy_0_5": 0.82945736,
+        "ece10": 0.09942311
+      },
+      "fit_seconds": 0.0056,
+      "predict_seconds": 0.3499
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 12,
+        "tau": 1.2
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12386808,
+        "log_loss": 0.37959613,
+        "auc": 0.84603175,
+        "accuracy_0_5": 0.82945736,
+        "ece10": 0.08073433
+      },
+      "fit_seconds": 0.005,
+      "predict_seconds": 0.3451
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 24,
+        "tau": 0.4
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.11889671,
+        "log_loss": 0.36147723,
+        "auc": 0.86845238,
+        "accuracy_0_5": 0.82170543,
+        "ece10": 0.07316267
+      },
+      "fit_seconds": 0.005,
+      "predict_seconds": 0.3638
+    },
+    {
+      "family": "state_portal",
+      "config": {
+        "method": "state_portal",
+        "k": 24,
+        "tau": 1.2
+      },
+      "validation": {
+        "n": 129,
+        "positive_rate": 0.1860465,
+        "brier": 0.12882921,
+        "log_loss": 0.39954845,
+        "auc": 0.82936508,
+        "accuracy_0_5": 0.81395349,
+        "ece10": 0.08728442
+      },
+      "fit_seconds": 0.0052,
+      "predict_seconds": 0.3658
+    }
+  ],
+  "note": "No test labels or test metrics were created during validation stage"
+}
