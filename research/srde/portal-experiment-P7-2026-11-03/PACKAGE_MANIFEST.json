@@ -1,0 +1,167 @@
+{
+  "experiment": "SRDE-P7",
+  "status": "COMPLETE_AUDITED",
+  "file_count_without_metadata": 31,
+  "source_and_protocol_frozen_before_validation": true,
+  "validation_lock_frozen_before_holdout": true,
+  "heldout_worlds": 3000,
+  "world_metric_rows": 240000,
+  "files": [
+    {
+      "file": "PREREGISTRATION.md",
+      "size_bytes": 8307,
+      "sha256": "b534eafba5d478df18c69cb1b1af0762b9e64eedd9109a00138f108e43026fe2"
+    },
+    {
+      "file": "srde_p7.py",
+      "size_bytes": 22977,
+      "sha256": "00bfe1a0fadab69a7b09ea777a044b5fdc05645895a455a497ac6e8d3ea19d03"
+    },
+    {
+      "file": "LOCKED_SELECTION.json",
+      "size_bytes": 4596,
+      "sha256": "b047fc79b8627c20ebd7463c1ef3bfc30769a5a9a5b24eb7c21d2cc1d2e3a21f"
+    },
+    {
+      "file": "snapshot_models.npz",
+      "size_bytes": 15403,
+      "sha256": "40ccf0b5e8170693e7fcdac49b5393c32588f5ffcab760a0135ba65285401547"
+    },
+    {
+      "file": "PREHOLDOUT_MANIFEST.json",
+      "size_bytes": 1016,
+      "sha256": "3d1b9cce87fe724f995ce8c666235dde00b111955d374757a5cefae9eafed461"
+    },
+    {
+      "file": "P7_PREHOLDOUT_FROZEN.zip",
+      "size_bytes": 26909,
+      "sha256": "7246d10c564c9ffac1bcd494de37eb13359b6a2d3737664a09b430aab6d7d88d"
+    },
+    {
+      "file": "validation_stdout.log",
+      "size_bytes": 115,
+      "sha256": "ea689800a6450bfcdcdba5d1a8bde1533ce02a189df76bf6677493b389e9a77c"
+    },
+    {
+      "file": "evaluation_stdout.log",
+      "size_bytes": 645,
+      "sha256": "d6452842be11dc95e0102a6d44693949a8c9583c06405bd0c82c61aafbf0c16d"
+    },
+    {
+      "file": "results.json",
+      "size_bytes": 28182,
+      "sha256": "6994008c4b6f215b5a6e990fdb982e3f16fa8004e430d52f570acaadf876bfa7"
+    },
+    {
+      "file": "holdout_world_metrics.csv",
+      "size_bytes": 11744638,
+      "sha256": "ab7680f5ac76d7f601c7bfc26ac54a8abaa9710654204a512a7ddafd053334ff"
+    },
+    {
+      "file": "audit_independent.py",
+      "size_bytes": 6489,
+      "sha256": "e27ad75983c1b090cd5e1b599357db727bae31b860c862f3af26efc682c9a832"
+    },
+    {
+      "file": "audit_independent.json",
+      "size_bytes": 1187,
+      "sha256": "27a446609517eb620d90bbcb11b1e2b4790bbc530220e3a198e9c0063afa2fac"
+    },
+    {
+      "file": "README.md",
+      "size_bytes": 3601,
+      "sha256": "02c2ef9c0fa667742f351ae31cfb334b8b20dc6d1aff92cb6c69eeeaf6f0751d"
+    },
+    {
+      "file": "RESEARCH_REPORT.md",
+      "size_bytes": 11732,
+      "sha256": "f074e2f3485142aa45e0f4cfa0e7388cef4d92814b13a10110b713dfdae9110e"
+    },
+    {
+      "file": "SRDE_P7_Research_Report.pdf",
+      "size_bytes": 248841,
+      "sha256": "8e0a337fc87a7c11dbe85cc9f536b1292d5cac44ecec4b96a11eef2d63fc9ec8"
+    },
+    {
+      "file": "build_publication.py",
+      "size_bytes": 22819,
+      "sha256": "ba668de473a26e9b955af39601c7821b63a1304052376c89041d0dfb49cfb986"
+    },
+    {
+      "file": "p7_additive_memory_curve.png",
+      "size_bytes": 85658,
+      "sha256": "fd9d185de4607f8a9ff568647bcbead6a2d67e1de1dd05788ffb5d6e18ae475a"
+    },
+    {
+      "file": "p7_structural_memory_curve.png",
+      "size_bytes": 78986,
+      "sha256": "2ed4391b7cb4f9192f3b1870eeaac333ddd9cf0136741fb3d6264f1f6c331538"
+    },
+    {
+      "file": "p7_large_rotation_stress.png",
+      "size_bytes": 75350,
+      "sha256": "c7c94793c0141aa5b091171d72307f6034776366f4d2e673dadee252e06213b6"
+    },
+    {
+      "file": "holdout_srde_B12.bin",
+      "size_bytes": 36000,
+      "sha256": "3bb9506d2754e55adc77fba140520c5ed82b77ace814a6502d0fa52e01405688"
+    },
+    {
+      "file": "holdout_srde_B20.bin",
+      "size_bytes": 60000,
+      "sha256": "5cb7b3b517ad70a86e3474258b85b8477b091bac1ca7606a0f0eea0ff3851c3b"
+    },
+    {
+      "file": "holdout_srde_B32.bin",
+      "size_bytes": 96000,
+      "sha256": "1bb99a7da14b5358da4448c34daf0fd1e828d6770043a48aa262738c3c277144"
+    },
+    {
+      "file": "holdout_srde_B40.bin",
+      "size_bytes": 120000,
+      "sha256": "e3182dfda0aa04ec7491988247318ac90d79a3569f1958e35995e37486648737"
+    },
+    {
+      "file": "holdout_snapshots_B12.bin",
+      "size_bytes": 36000,
+      "sha256": "60d11a2be6bffd7b8329a085daa6d0f83407c108ac58675e33650f09eba543d2"
+    },
+    {
+      "file": "holdout_snapshots_B20.bin",
+      "size_bytes": 60000,
+      "sha256": "401c43beff0c0d7c301879e1f5455127fca4e51e22afeac6a4fa17afe6925356"
+    },
+    {
+      "file": "holdout_snapshots_B32.bin",
+      "size_bytes": 96000,
+      "sha256": "63cb995750eae192b1b991d5c0103bb5e44b0493458a4a71b3d2814e16a13439"
+    },
+    {
+      "file": "holdout_snapshots_B40.bin",
+      "size_bytes": 120000,
+      "sha256": "ff880e187c0dd8c3581e9aeb12d81e59d69928bf14ab44133b548295509c7261"
+    },
+    {
+      "file": "holdout_recent_log_B12.bin",
+      "size_bytes": 36000,
+      "sha256": "0976d2dc2ccf571152d97d5dadb58399fe8d89e3cb499ef7bea8b8b923b0a022"
+    },
+    {
+      "file": "holdout_recent_log_B20.bin",
+      "size_bytes": 60000,
+      "sha256": "832147fcdbee2aec3fd7764d013fdd12f3e404b479af805bd9ce7f176a144a83"
+    },
+    {
+      "file": "holdout_recent_log_B32.bin",
+      "size_bytes": 96000,
+      "sha256": "79a962e8205b7685b1aec1a0afdfde8bca219e66f94cf36a881e647ca14b0287"
+    },
+    {
+      "file": "holdout_recent_log_B40.bin",
+      "size_bytes": 120000,
+      "sha256": "5feefa9a9edce4fb285fa725236a440c69ae949dd164b6180bca8b080986dc6d"
+    }
+  ],
+  "caveat": "Synthetic source-response representation comparison, not novel mathematics or validated cognition"
+}
