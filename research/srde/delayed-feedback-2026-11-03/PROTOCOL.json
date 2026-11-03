@@ -1,0 +1,20 @@
+{
+ "id":"SRDE-DELAYED-FEEDBACK-20261103-v1",
+ "seeds":[5101,5102,5103,5104,5105],"worlds":20,"contexts":2,
+ "training_times":[20,120],"calibration_times":[130,160],"deployment_times":[170,420],
+ "target":"binary context state at t+1; reports no later than t; maximum age 8",
+ "feedback":"target label revealed at target_time+7 = issue_time+8; delivery before new predictions at each time; predictors never receive unrevealed labels",
+ "generator":"new seed families, 8 sources and 2 context Markov states. First 10 worlds per family have hidden source inversion and faster state changes at a random time 230..250, then return at 330..350. Last 10 worlds never change. Predictor code sees neither world regime flags nor change times.",
+ "methods":["FrozenGraph4","FrozenRollingCal","Window128Graph4","ExpDecayGraph4","ResetGraph4","ResetPortal","ResetSequential"],
+ "budget":"max four decoded independent eligible reports per prediction; all headers inspected; online source updates use only the reports actually consumed by that method, not uninspected votes; training may use all eligible lineages for all methods",
+ "weights":"source/age correctness Beta(2,2) learned from training, no hidden reliability supplied. Window uses last128 resolved cases with initial pseudo-count mass32 fading out over first128 feedback cases. Exponential method decays non-prior counts by .98 per revealed case.",
+ "calibration":"sigmoid fitted on separate calibration, fixed except FrozenRollingCal refits on last128 revealed forecasts every32 labels after64 labels, C=10 max_iter=100. No evaluation tuning.",
+ "drift_detector":"mean squared error of last32 revealed calibrated forecasts > calibration mean Brier + .10; at least64 revealed labels between resets. Reset counts to Beta(2,2), disregard source updates from forecasts issued before reset, return .5 until32 post-reset cases have resolved.",
+ "portal":"rank headers by absolute learned source-age log likelihood; stop after at least2 votes if abs cumulative logodds >= logit(.85), max4. Sequential conventional implementation must match recursive implementation.",
+ "primary":"whole-deployment Brier and changed-world Brier vs FrozenGraph4; report all methods and controls, 1000 fixed-seed whole-world bootstrap draws",
+ "secondary":["AUC","accuracy","ECE10","confidence .8 coverage/risk","votes","false alarms on unchanged worlds","first alarm lag/misses per change","early32/late drift and return losses","update cost"],
+ "controls":["no future-feedback update","gold-free prediction input","unchanged worlds","duplicate invariance","recursive/sequential equality","exact new-source replay"],
+ "stopping":"five families, no outcome-driven retuning; retain failures and negative results",
+ "platform":"CPU because workload is small; no GPU or paid runtime needed",
+ "scope":"authored simulation with hidden changes, not empirical forecasting or native SRDE; original tests preserved"
+}
