@@ -1,0 +1,11 @@
+{
+  "before_scoring": true,
+  "experiment_id": "SRDE-LA1-20261103-v1",
+  "sha256": {
+    "NOVELTY_AND_CROSS_CHAT.md": "91228c2a01230ef19340d15d5e9294e5b9930bc757f40540999063d08c2e86db",
+    "PROTOCOL.json": "cfa25c3f95fcbb416682d08239b846fa2c715ed40bf5a2f0e89e8fd7adf99792",
+    "PROTOCOL.md": "b8d1bd390b5eb90a304d0065cda48871db3d7abd949da6035207fd6902d93f32",
+    "run_experiment.py": "fcb8193275a59d9b40bdd71ffd7ec6321b84179c1b93b16dd3e48ffc23b306cc",
+    "test_experiment.py": "7fc772b3de971f4057d8ec7961d3106e051b065712f222ac19b211be2dec8d40"
+  }
+}

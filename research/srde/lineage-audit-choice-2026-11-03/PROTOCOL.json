@@ -1,0 +1,940 @@
+{
+  "cases_per_seed_condition": 100,
+  "experiment_id": "SRDE-LA1-20261103-v1",
+  "novelty_status": "documented SRDE benchmark extension; not a worldwide novelty certificate",
+  "primary": "exact uniform specified-condition expected total loss GraphFullDP minus FreshOnlyDP",
+  "protocol": "PROTOCOL.md",
+  "scenarios": [
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C00"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C01"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C02"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C03"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C04"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C05"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C06"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C07"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C08"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C09"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C10"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C11"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C12"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C13"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C14"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C15"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C16"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C17"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C18"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C19"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C20"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C21"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C22"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "family": "specified",
+      "id": "C23"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C24"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C25"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C26"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C27"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C28"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.8
+      },
+      "family": "specified",
+      "id": "C29"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C30"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C31"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C32"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 2,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C33"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C34"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.06,
+        "cv": 0.015,
+        "delay": 4,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "specified",
+      "id": "C35"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "audit_shift",
+      "id": "Q36"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.5
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "audit_shift",
+      "id": "Q37"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 0.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.2,
+        "q": 1.0
+      },
+      "family": "audit_shift",
+      "id": "Q38"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 0.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.8,
+        "q": 1.0
+      },
+      "family": "audit_shift",
+      "id": "Q39"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.1,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.5,
+        "q": 1.0
+      },
+      "family": "prior_shift",
+      "id": "P40"
+    },
+    {
+      "actual": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.9,
+        "q": 1.0
+      },
+      "assumed": {
+        "acc": 0.8,
+        "ca": 0.00375,
+        "cv": 0.015,
+        "delay": 0,
+        "fresh": 0.7,
+        "pi": 0.5,
+        "q": 1.0
+      },
+      "family": "prior_shift",
+      "id": "P41"
+    }
+  ],
+  "seeds": [
+    8401,
+    8402,
+    8403,
+    8404,
+    8405
+  ]
+}
