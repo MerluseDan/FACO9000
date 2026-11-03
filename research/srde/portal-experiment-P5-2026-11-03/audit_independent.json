@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "worlds": 4096,
+  "depth": 100,
+  "sha256_checks": {
+    "protocol": true,
+    "code": true,
+    "worlds_csv": true
+  },
+  "individual_predictions_reconstructed": true,
+  "all_metrics_recomputed": true,
+  "independent_bootstrap_ci95": [
+    -0.01408442354329359,
+    -0.010143141964398378
+  ],
+  "paired_brier_difference": -0.01215126710661493,
+  "max_formula_residual_error_from_csv": 6.38378239159465e-16,
+  "matched_conventional_tie_verified": true,
+  "scoring": {
+    "srde_order_aware": {
+      "brier": 0.01188862889871227,
+      "log_loss": 0.03854584588952946,
+      "accuracy_at_0_5": 0.983154296875
+    },
+    "conventional_order_aware_closed_form": {
+      "brier": 0.01188862889871227,
+      "log_loss": 0.03854584588952946,
+      "accuracy_at_0_5": 0.983154296875
+    },
+    "order_blind_bayesian_mixture": {
+      "brier": 0.024039896005327202,
+      "log_loss": 0.07355742495630338,
+      "accuracy_at_0_5": 0.96142578125
+    },
+    "wrong_order_negative_control": {
+      "brier": 0.059666684044832816,
+      "log_loss": 0.5523980297706453,
+      "accuracy_at_0_5": 0.93359375
+    },
+    "root_only_no_anchor": {
+      "brier": 0.24999663625418658,
+      "log_loss": 0.693140453068043,
+      "accuracy_at_0_5": 0.509765625
+    },
+    "uninformed_0_5": {
+      "brier": 0.25,
+      "log_loss": 0.6931471805599453,
+      "accuracy_at_0_5": 0.48388671875
+    }
+  },
+  "limitations": [
+    "P5 100-level portal effect is an algebraic property of predefined affine maps, not an empirical new law.",
+    "The strongest matched conventional order-aware closed form ties SRDE exactly.",
+    "The forecast task is generated from known ordered maps and is not a genuine external prediction test.",
+    "Subjective feelings, physical brains, independent real-world behavior, and universal meaning were not observed."
+  ]
+}
