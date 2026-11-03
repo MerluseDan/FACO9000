@@ -1,0 +1,145 @@
+{
+  "title": "SRDE Portal Depth: 100-level controlled synthetic sanity checks",
+  "generated_on": "2026-11-02",
+  "seed": 20261102,
+  "tested_properties": "Long-path connectivity vs information retention; independent vs duplicate voting",
+  "not_tested": [
+    "semantic meaning representation",
+    "geometric orientation",
+    "feeling F",
+    "temporal portal lifetimes",
+    "forecasting actual future events",
+    "human neuroscience",
+    "SRDE superiority over alternative algorithms"
+  ],
+  "binary_chain_experiments": [
+    {
+      "per_edge_preservation_q": 0.995,
+      "depth": 100,
+      "trials": 20000,
+      "one_route": {
+        "correct": 13537,
+        "accuracy": 0.67685,
+        "wilson_95": [
+          0.67033,
+          0.6833
+        ],
+        "theoretical_accuracy": 0.68302,
+        "oracle_brier": 0.21876,
+        "trivial_0_5_brier": 0.25
+      },
+      "three_independent_routes_majority": {
+        "correct": 15145,
+        "accuracy": 0.75725,
+        "wilson_95": [
+          0.75126,
+          0.76314
+        ],
+        "theoretical_accuracy": 0.76226
+      },
+      "duplicate_ballots_have_no_new_information": true,
+      "directional_note": "Root to endpoint is generation; endpoint to root is inference under a uniform-root symmetric-channel assumption."
+    },
+    {
+      "per_edge_preservation_q": 0.98,
+      "depth": 100,
+      "trials": 20000,
+      "one_route": {
+        "correct": 10248,
+        "accuracy": 0.5124,
+        "wilson_95": [
+          0.50547,
+          0.51932
+        ],
+        "theoretical_accuracy": 0.50844,
+        "oracle_brier": 0.24986,
+        "trivial_0_5_brier": 0.25
+      },
+      "three_independent_routes_majority": {
+        "correct": 10317,
+        "accuracy": 0.51585,
+        "wilson_95": [
+          0.50892,
+          0.52277
+        ],
+        "theoretical_accuracy": 0.51265
+      },
+      "duplicate_ballots_have_no_new_information": true,
+      "directional_note": "Root to endpoint is generation; endpoint to root is inference under a uniform-root symmetric-channel assumption."
+    },
+    {
+      "per_edge_preservation_q": 0.9,
+      "depth": 100,
+      "trials": 20000,
+      "one_route": {
+        "correct": 10155,
+        "accuracy": 0.50775,
+        "wilson_95": [
+          0.50082,
+          0.51468
+        ],
+        "theoretical_accuracy": 0.5,
+        "oracle_brier": 0.25,
+        "trivial_0_5_brier": 0.25
+      },
+      "three_independent_routes_majority": {
+        "correct": 9978,
+        "accuracy": 0.4989,
+        "wilson_95": [
+          0.49197,
+          0.50583
+        ],
+        "theoretical_accuracy": 0.5
+      },
+      "duplicate_ballots_have_no_new_information": true,
+      "directional_note": "Root to endpoint is generation; endpoint to root is inference under a uniform-root symmetric-channel assumption."
+    },
+    {
+      "per_edge_preservation_q": 0.5,
+      "depth": 100,
+      "trials": 20000,
+      "one_route": {
+        "correct": 10079,
+        "accuracy": 0.50395,
+        "wilson_95": [
+          0.49702,
+          0.51088
+        ],
+        "theoretical_accuracy": 0.5,
+        "oracle_brier": 0.25,
+        "trivial_0_5_brier": 0.25
+      },
+      "three_independent_routes_majority": {
+        "correct": 10083,
+        "accuracy": 0.50415,
+        "wilson_95": [
+          0.49722,
+          0.51108
+        ],
+        "theoretical_accuracy": 0.5
+      },
+      "duplicate_ballots_have_no_new_information": true,
+      "directional_note": "Root to endpoint is generation; endpoint to root is inference under a uniform-root symmetric-channel assumption."
+    }
+  ],
+  "reachability_null_experiment": {
+    "width": 12,
+    "depth": 100,
+    "outgoing_edges_per_node": 2,
+    "worlds": 100,
+    "mean_reachable_endpoints_by_depth": {
+      "0": 1.0,
+      "1": 2.0,
+      "2": 3.73,
+      "3": 5.92,
+      "5": 9.04,
+      "10": 9.92,
+      "25": 10.01,
+      "50": 10.03,
+      "100": 9.9
+    },
+    "fraction_worlds_all_endpoints_reachable_at_final_depth": 0.02,
+    "important": "These are randomly wired noncausal links. Long path existence is a negative control, not discovered meaning."
+  },
+  "interpretation": "Random portals connect many endpoints but carry no real information. Signal along long noisy chains rapidly degrades. Independent votes can help only under assumptions about their dependence and accuracy."
+}
