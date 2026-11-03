@@ -1,0 +1,147 @@
+{
+  "title": "SRDE-P5 portal ordering and reverse-path instability",
+  "experiment_date": "2026-11-03",
+  "status": "synthetic_analytic_experiment_not_real_world_prediction",
+  "seed": 20261103,
+  "worlds": 4096,
+  "depth": 100,
+  "protocol_sha256": "86cbf24c544b151bc79670b03705d3748276999295bafa6861fb4e9a4d35c920",
+  "source_sha256": "178c7f82bf5629f83aa1a7226359dc66f37c1bdc288480498ba40ed1b458dae8",
+  "synthetic_worlds_csv_sha256": "4948253791d28fa97512b98493cadeb16ce3bcd51d2db002b46b85a14afa9c24",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "equations": {
+    "A": "a*x+(1-a)*u",
+    "B": "a*x+(1-a)*v",
+    "a_F": "0.72+0.18*F",
+    "AB_minus_BA_at_100": "(1-a**100)*(1-a)/(1+a)*(v-u)",
+    "root_memory": "a**100",
+    "backward_noise_gain": "a**(-100)"
+  },
+  "numeric_verification": {
+    "max_forward_formula_coordinate_error": 1.3322676295501878e-15,
+    "max_portal_residual_coordinate_error": 9.08995101411847e-16,
+    "max_commuting_same_anchor_error": 0.0,
+    "by_valence": [
+      {
+        "F": 0.0,
+        "a": 0.72,
+        "worlds": 1387,
+        "normalized_order_residue_mean": 0.16279069767441776,
+        "analytic_ratio": 0.16279069767441776,
+        "root_memory_after_100": 5.410652511578629e-15
+      },
+      {
+        "F": 0.5,
+        "a": 0.8099999999999999,
+        "worlds": 1361,
+        "normalized_order_residue_mean": 0.10497237561654893,
+        "analytic_ratio": 0.10497237561654893,
+        "root_memory_after_100": 7.055079108655283e-10
+      },
+      {
+        "F": 1.0,
+        "a": 0.8999999999999999,
+        "worlds": 1348,
+        "normalized_order_residue_mean": 0.052630180979005965,
+        "analytic_ratio": 0.052630180979005965,
+        "root_memory_after_100": 2.6561398887587215e-05
+      }
+    ]
+  },
+  "forecasts": {
+    "event_definition": "1[projection of 100-step terminal + Normal(0,0.04^2) > 0]",
+    "worlds": 4096,
+    "metrics": {
+      "srde_order_aware": {
+        "brier": 0.011888628898712263,
+        "log_loss": 0.038545845889529445,
+        "accuracy_at_0_5": 0.983154296875
+      },
+      "conventional_order_aware_closed_form": {
+        "brier": 0.01188862889871227,
+        "log_loss": 0.03854584588952946,
+        "accuracy_at_0_5": 0.983154296875
+      },
+      "order_blind_bayesian_mixture": {
+        "brier": 0.024039896005327195,
+        "log_loss": 0.07355742495630338,
+        "accuracy_at_0_5": 0.96142578125
+      },
+      "wrong_order_negative_control": {
+        "brier": 0.05966668404483281,
+        "log_loss": 0.5523980297706453,
+        "accuracy_at_0_5": 0.93359375
+      },
+      "root_only_no_anchor": {
+        "brier": 0.24999663625418658,
+        "log_loss": 0.693140453068043,
+        "accuracy_at_0_5": 0.509765625
+      },
+      "uninformed_0_5": {
+        "brier": 0.25,
+        "log_loss": 0.6931471805599453,
+        "accuracy_at_0_5": 0.48388671875
+      }
+    },
+    "primary_ordered_minus_unordered_brier": -0.012151267106614932,
+    "world_bootstrap_ci95": [
+      -0.014084423543293591,
+      -0.010143141964398382
+    ],
+    "bootstrap_replicates": 2000,
+    "claim_of_improvement_on_constructed_mechanism": true
+  },
+  "reverse": {
+    "endpoint_3d_noise_std": 0.0001,
+    "worlds_per_F": 256,
+    "observations": [
+      {
+        "F": 0.0,
+        "a": 0.72,
+        "root_memory_coefficient": 5.410652511578629e-15,
+        "inverse_noise_condition_number": 184820591945247.06,
+        "median_observed_root_error": 29061307958.759132,
+        "median_predicted_noise_amplification": 29061307958.747013,
+        "median_noiseless_float_roundoff_error": 0.015626790723499956,
+        "median_observed_over_theoretical": 0.9999999999999633
+      },
+      {
+        "F": 0.5,
+        "a": 0.8099999999999999,
+        "root_memory_coefficient": 7.055079108655283e-10,
+        "inverse_noise_condition_number": 1417418549.9538684,
+        "median_observed_root_error": 219160.59778209002,
+        "median_predicted_noise_amplification": 219160.59778213466,
+        "median_noiseless_float_roundoff_error": 1.6052953607556898e-07,
+        "median_observed_over_theoretical": 0.9999999999999787
+      },
+      {
+        "F": 1.0,
+        "a": 0.8999999999999999,
+        "root_memory_coefficient": 2.6561398887587215e-05,
+        "inverse_noise_condition_number": 37648.619495990635,
+        "median_observed_root_error": 6.058827505575676,
+        "median_predicted_noise_amplification": 6.058827505584029,
+        "median_noiseless_float_roundoff_error": 6.175750943010114e-12,
+        "median_observed_over_theoretical": 0.9999999999999675
+      }
+    ]
+  },
+  "orientation": {
+    "worlds": 1024,
+    "different_axis_frobenius_residue_mean": 0.47823669621866727,
+    "different_axis_frobenius_residue_min": 0.03420589279806245,
+    "same_axis_null_max": 1.5700924586837752e-16
+  },
+  "important_limits": [
+    "The ordered synthetic event was generated by the same known affine equations; score advantage is designed into the task",
+    "The identical conventional order-aware closed form ties the SRDE operator",
+    "Same-anchor and same-axis controls show no effect",
+    "F is a simulated coordinate, not measured feeling",
+    "These maps illustrate path memory, not a novel theorem or evidence that the brain works this way",
+    "Reverse-map instability depends on numerical noise and strong contraction; not a proof that backward reasoning is impossible generally"
+  ],
+  "elapsed_seconds": 0.41132747599931463
+}
