@@ -1,0 +1,186 @@
+{
+  "retrieved": "2026-11-03",
+  "sources": [
+    {
+      "id": "S01",
+      "authors": "Belnap",
+      "date": "1977",
+      "title": "A Useful Four-Valued Logic",
+      "url": "https://link.springer.com/chapter/10.1007/978-94-010-1161-7_2",
+      "read_scope": "publisher abstract",
+      "supported_overlap": "Distinguishing inconsistent and incomplete evidence has a long formal history.",
+      "implication": "Binary evidence states are an implementation/diagnostic, not a new logic."
+    },
+    {
+      "id": "S02",
+      "authors": "Harnad",
+      "date": "1990; arXiv deposit 1999",
+      "title": "The Symbol Grounding Problem",
+      "url": "https://arxiv.org/abs/cs/9906002",
+      "read_scope": "author abstract; journal metadata",
+      "supported_overlap": "Arbitrary symbols require grounding beyond further arbitrary symbols.",
+      "implication": "Glyph relabeling and digit classification do not solve general grounding."
+    },
+    {
+      "id": "S03",
+      "authors": "Russell",
+      "date": "1980",
+      "title": "A Circumplex Model of Affect",
+      "url": "https://pdodds.w3.uvm.edu/research/papers/others/1980/russell1980a.pdf",
+      "read_scope": "primary PDF, introductory material",
+      "supported_overlap": "Pleasantness and arousal are established affect dimensions.",
+      "implication": "F in [0,1] is a coding convention, not novel affect theory or truth."
+    },
+    {
+      "id": "S04",
+      "authors": "Green, Karvounarakis, Tannen",
+      "date": "2007",
+      "title": "Provenance Semirings",
+      "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "read_scope": "primary PDF, abstract and recursive Datalog sections",
+      "supported_overlap": "Annotations track derivations; recursive provenance has algebraic and fixed-point treatments.",
+      "implication": "Provenance plus recursion alone is not a novel contribution."
+    },
+    {
+      "id": "S05",
+      "authors": "de Kleer",
+      "date": "1986",
+      "title": "An assumption-based TMS",
+      "url": "https://www.dekleer.org/Publications/An%20Assumption-Based%20TMS.pdf",
+      "read_scope": "primary PDF and publisher abstract",
+      "supported_overlap": "Assumption sets support reasoning across inconsistent alternatives.",
+      "implication": "Context/dependency tracking requires comparison with truth-maintenance approaches."
+    },
+    {
+      "id": "S06",
+      "authors": "Das et al.",
+      "date": "ICLR 2018; preprint 2017, v2 2018",
+      "title": "Go for a Walk and Arrive at the Answer (MINERVA)",
+      "url": "https://arxiv.org/html/1711.05851v2",
+      "read_scope": "primary full-text methods and evaluation passages",
+      "supported_overlap": "Learned query-conditioned graph traversal predates SRDE; evaluation includes leakage precautions.",
+      "implication": "Path traversal, multi-hop inference and unseen relations are established."
+    },
+    {
+      "id": "S07",
+      "authors": "Zhu et al.",
+      "date": "2021",
+      "title": "Neural Bellman-Ford Networks",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/f6a673f09493afcd8b129a0bcf1cd5bc-Paper.pdf",
+      "read_scope": "primary PDF introduction and formulation",
+      "supported_overlap": "Generalized path products and sums are learned through Bellman-Ford-style computation.",
+      "implication": "Recursive path composition needs an operational difference from established graph inference."
+    },
+    {
+      "id": "S08",
+      "authors": "Bifet, Gavalda",
+      "date": "2007 publication; author draft 17 October 2006",
+      "title": "Learning from Time-Changing Data with Adaptive Windowing",
+      "url": "https://www.cs.upc.edu/~gavalda/papers/adwin06.pdf",
+      "read_scope": "primary extended draft, introduction and algorithm passages",
+      "supported_overlap": "Adaptive windows address drift with statistical error bounds.",
+      "implication": "A better reset threshold, decay or window is not itself a fresh research problem."
+    },
+    {
+      "id": "S09",
+      "authors": "Adams, MacKay",
+      "date": "2007",
+      "title": "Bayesian Online Changepoint Detection",
+      "url": "https://arxiv.org/html/0710.3742v1",
+      "read_scope": "primary full-text algorithm and evaluation",
+      "supported_overlap": "Online run-length posterior and predictive distributions handle abrupt changes.",
+      "implication": "Bayesian state/change uncertainty must be included among conventional alternatives."
+    },
+    {
+      "id": "S10",
+      "authors": "Zliobaite",
+      "date": "2010 conference; indexed 2011",
+      "title": "Change with Delayed Labeling: When is it Detectable?",
+      "url": "https://ieeexplore.ieee.org/abstract/document/5693384",
+      "read_scope": "publisher abstract only",
+      "supported_overlap": "Studies which changes can be detected before labels arrive.",
+      "implication": "Label delay and detectability are established topics; detailed method comparison remains open."
+    },
+    {
+      "id": "S11",
+      "authors": "Grzenda, Gomes, Bifet",
+      "date": "online 2019; volume 2020",
+      "title": "Delayed labelling evaluation for data streams",
+      "url": "https://link.springer.com/article/10.1007/s10618-019-00654-y",
+      "read_scope": "primary full-text abstract and introduction",
+      "supported_overlap": "Evaluation must respect label latency; prediction refinement can be evaluated over time.",
+      "implication": "Timestamp guards are necessary evaluation practice, not evidence of originality."
+    },
+    {
+      "id": "S12",
+      "authors": "Beyer et al.",
+      "date": "2020",
+      "title": "Active feature acquisition on data streams under feature drift",
+      "url": "https://link.springer.com/article/10.1007/s12243-020-00775-2",
+      "read_scope": "primary full-text method section",
+      "supported_overlap": "Selects whether and which missing feature to acquire under cost and changing streams.",
+      "implication": "Budgeted adaptive evidence collection under drift already exists."
+    },
+    {
+      "id": "S13",
+      "authors": "Buttner, Spiliopoulou",
+      "date": "first online 5 October 2025; proceedings copyright 2026",
+      "title": "Investigating Delays of Combined Feature and Label Acquisitions on Data Streams",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-05461-6_25",
+      "read_scope": "publisher abstract and conference-hosted full chapter, methods/evaluation/conclusion",
+      "supported_overlap": "Combines feature and label queries, costs, missingness and delayed responses on streams.",
+      "implication": "Adding delayed queries to acquisition is insufficient novelty. Full chapter recovered from conference proceedings."
+    },
+    {
+      "id": "S14",
+      "authors": "Gibbs, Candes",
+      "date": "2024",
+      "title": "Conformal Inference for Online Prediction with Arbitrary Distribution Shifts",
+      "url": "https://www.jmlr.org/papers/v25/22-1218.html",
+      "read_scope": "publisher abstract and primary PDF retrieved",
+      "supported_overlap": "Adapts prediction sets to distribution shift.",
+      "implication": "Online uncertainty adjustment is established; probability calibration and set coverage are distinct."
+    },
+    {
+      "id": "S15",
+      "authors": "Dong, Berti-Equille, Srivastava",
+      "date": "2009",
+      "title": "Truth Discovery and Copying Detection in a Dynamic World",
+      "url": "https://lunadong.com/publication/lifespan_vldb.pdf",
+      "read_scope": "primary PDF, model and evaluation passages",
+      "supported_overlap": "Models source freshness, quality, evolving copying and changing true values.",
+      "implication": "Temporal provenance-aware truth discovery is especially close prior art."
+    },
+    {
+      "id": "S16",
+      "authors": "Dong, Saha, Srivastava",
+      "date": "2012 publication; VLDB 2013 presentation",
+      "title": "Less is More: Selecting Sources Wisely for Integration",
+      "url": "https://www.vldb.org/pvldb/vol6/p37-dong.pdf",
+      "read_scope": "primary PDF introduction and formulation",
+      "supported_overlap": "Trades information integration quality against source acquisition and integration costs.",
+      "implication": "Selecting fewer useful sources and considering marginal value is established."
+    },
+    {
+      "id": "S17",
+      "authors": "Gundersen et al.",
+      "date": "2021",
+      "title": "Active multi-fidelity Bayesian online changepoint detection",
+      "url": "https://proceedings.mlr.press/v161/gundersen21a/gundersen21a.pdf",
+      "read_scope": "primary PDF method formulation",
+      "supported_overlap": "Selects measurement fidelity through information gain per cost for change detection.",
+      "implication": "Cost-sensitive sensing plus drift is not a fresh combination by itself."
+    },
+    {
+      "id": "S18",
+      "authors": "Kobayashi et al.",
+      "date": "2026",
+      "title": "Learning-To-Measure: In-Context Active Feature Acquisition",
+      "url": "https://proceedings.mlr.press/v306/kobayashi26a.html",
+      "read_scope": "proceedings abstract only",
+      "supported_overlap": "Acquires features using uncertainty and conditional mutual information under missingness and scarce labels.",
+      "implication": "Recent acquisition methods belong in the comparison search; detailed implementation review remains open."
+    }
+  ],
+  "scope": "Targeted prior-art review, not an exhaustive systematic review. Read scope is explicit. No third-party PDFs are redistributed."
+}

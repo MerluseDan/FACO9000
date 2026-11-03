@@ -1,0 +1,52 @@
+{
+  "experiment_id": "SRDE-CANDIDATE-LINEAGE-AUDIT-v0.1",
+  "date": "2026-11-03",
+  "novelty_status": "CANDIDATE NOT CLEARED",
+  "exact_question": "When source assertions are observationally ambiguous between independent agreement and copied error, when is spending a limited query budget on a fallible provenance audit more useful than acquiring another assertion, under delayed gold feedback and changing source dependence?",
+  "closest_studies": [
+    "S04",
+    "S05",
+    "S12",
+    "S13",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "internal_comparators": [
+    "binary-semantics-2026-11-03",
+    "learned-temporal-2026-11-03",
+    "delayed-feedback-2026-11-03"
+  ],
+  "material_delta": "Active acquisition of uncertain lineage metadata is the intervention being evaluated; lineage is not supplied free or presumed correct. Match assertion histories before intervention so gains cannot come from extra information supplied only to the candidate.",
+  "scientific_reason": "Disentangles information made available by an audit from recursive scheduling and tests when dependence is identifiable. A negative result is informative if no audit policy adds value at matched cost.",
+  "observable_inputs": "Only acquired reports, observed headers and matured audit/label responses; no hidden lineage, drift flag or oracle accuracy.",
+  "actions_and_costs": [
+    "read assertion",
+    "request lineage audit with explicit error/delay/cost",
+    "wait or abstain"
+  ],
+  "primary_estimand": "To be frozen: paired whole-stream expected decision loss including acquisition, abstention and false-alarm costs, rather than accuracy only during drift.",
+  "controls": [
+    "same observation histories with/without paid audit",
+    "audit perfect/noisy/uninformative",
+    "lineage known versus latent",
+    "dependence change versus target change versus unchanged",
+    "recursive versus conventional sequential allocation with identical information",
+    "independent held-out generator and a defensible empirical source if feasible"
+  ],
+  "literature_queries": [
+    "provenance audit source selection truth discovery",
+    "latent copying active truth discovery",
+    "active feature acquisition concept drift delayed",
+    "active multi-fidelity Bayesian online changepoint detection"
+  ],
+  "unresolved_gaps": [
+    "Targeted full review of active truth discovery, causal sensing and lineage-audit acquisition is not complete.",
+    "S18 detailed method not yet reviewed.",
+    "No exact-match absence claim can be made from keyword search.",
+    "Implementing established baselines and a justified cost model is still necessary."
+  ],
+  "freeze_hashes": null,
+  "executed": false
+}

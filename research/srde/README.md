@@ -33,3 +33,8 @@ The delayed-feedback study is now complete; its negative results and full eviden
 
 The initial consolidated Drive snapshot is immutable at commit 2f991ccec399aefebe075705bfd0c6c3d3ae190a. Later completed studies and recovered historical evidence are added in their linked folders/archives. E28 remains an explicitly documented unrecovered primary-source gap.
 
+
+## Literature check before new experiments
+
+The [3 November novelty audit](novelty-audit-2026-11-03/RESEARCH_REPORT.md) compares 18 primary studies with the recovered SRDE experiments. Established ingredients and controlled replications are explicitly distinguished from an original contribution. Follow the [novelty gate](novelty-audit-2026-11-03/NOVELTY_GATE.md) before freezing a new discovery study; the provenance-audit candidate remains NOT CLEARED.
+

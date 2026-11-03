@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-03",
+  "routes": [
+    "web search/open",
+    "Firecrawl search",
+    "Consensus search/fetch",
+    "public conference proceedings download and local text inspection"
+  ],
+  "queries": [
+    "four valued logic Belnap information truth evidence database provenance semiring Green Karvounarakis Tannen 2007",
+    "concept drift delayed labels verification latency drift detection ADWIN DDM",
+    "selective prediction calibration distribution shift conformal prediction feedback delay",
+    "adaptive feature acquisition sequential classification value information probabilistic knowledge graph path reasoning MINERVA",
+    "concept drift delayed labels active feature acquisition correlated sources recurring concepts false alarms",
+    "active feature acquisition concept drift delayed",
+    "Harnad symbol grounding problem 1990",
+    "truth discovery temporal source copying",
+    "truth maintenance de Kleer assumption based dependencies",
+    "provenance concept drift delayed",
+    "Investigating Delays of Combined Feature and Label Acquisitions full text",
+    "active truth discovery budget sources",
+    "provenance audit source selection truth discovery",
+    "Less is More Selecting Sources Wisely for Integration",
+    "Active multi-fidelity Bayesian online changepoint detection"
+  ],
+  "query_log_scope": "Consolidated executed search families; not provider-exhaustive result export.",
+  "local_chapter_evidence": {
+    "url": "https://ds2025.ijs.si/assets/files/978-3-032-05461-6_Book_OnlinePDF.pdf",
+    "sha256": "dc68a2f3116fd5aacad50529ee0adaaf2c5f80c548c47e1c1a6b39081df2b87f",
+    "chapter_pages": "379\u2013391",
+    "inspected_sections": [
+      "1\u20134.1",
+      "5 conclusion"
+    ],
+    "notes": "Full text obtained from conference host; not redistributed."
+  }
+}

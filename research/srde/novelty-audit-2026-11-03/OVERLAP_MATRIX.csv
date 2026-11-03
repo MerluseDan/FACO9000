@@ -1,0 +1,11 @@
+study,question,closest_sources,classification,decision
+Portal Hypothesis v0.1,Connectivity/depth sanity checks,S04 S06 S07,established ingredients; SRDE diagnostic,More levels or a portal name is not a substantive novelty claim.
+P1 blind worlds,Matched graph/portal information,S04 S06 S07,controlled comparison / equivalence diagnostic,New generated seeds are replications; equal computations cannot establish an architecture advantage.
+P2 historical CO2,Historical forecasting application,S08 S09 S11,application benchmark; no method novelty established,A new dataset can test external validity but does not establish a new forecasting algorithm.
+Unseen-data pilot,Inductive graph evaluation,S06 S07,pilot on an established task,Use strong graph baselines and an official hard-negative/evaluation protocol before a new empirical claim.
+Binary semantics,"Evidence categories, provenance, context, valence, glyphs",S01 S02 S03 S04 S05 S15,diagnostic ablations of established distinctions,"Keep bit storage, truth, activation, uncertainty and pleasantness distinct; richer coding is not novel logic."
+Learned temporal,Learn source/age reliability,S08 S09 S12 S15,SRDE-specific comparison; broad premise established,"Separate source error, state dynamics, copying and freshness rather than merely changing drift strength."
+Delayed feedback,"Forgetting, resets, delayed labels, return costs",S08 S09 S10 S11 S12 S13 S14 S15 S17,bounded comparison; no novelty claim cleared,"Whole-stream losses are useful evidence, but delayed adaptation and recurring conditions are prior research areas."
+Historical E30,Activated memory versus graph prompt context,S04 S05 S06,implementation benchmark; literature gap not cleared,A comprehensive retrieval/memory benchmark review is still needed before claiming originality for E30.
+Proposed B09 detector calibration,Tune false alarms on development streams,S08 S09 S10 S11 S17,REJECTED as a standalone novel contribution,Useful engineering baseline/control only; this is not approved as the next unique SRDE study.
+Proposed provenance audit intervention,Spend query budget to resolve uncertain lineage versus another vote,S04 S05 S12 S13 S15 S16 S17 S18,CANDIDATE EXTENSION; NOT NOVELTY-CLEARED,Must close targeted audit/lineage acquisition literature and distinguish from multi-fidelity sensing and dynamic copying inference.
