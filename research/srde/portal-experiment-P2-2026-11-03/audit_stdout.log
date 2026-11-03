@@ -1,0 +1,20 @@
+PASS independent audit
+{
+  "verified_rows": 361,
+  "verified_prediction_date_range": [
+    "1995-01-07",
+    "2001-12-01"
+  ],
+  "verified_source_sha256": "0e5e9a1d2c8f12081e5a26a8ff44e2f67ffeb6b387ecdb2802e2505ec04e69c7",
+  "verified_locked_protocol_sha256": "f079ed3980fc8e1fdf506d048d80edf9f7a2c9ae4daa3c96bbdd81fb38df24f9",
+  "positive_event_prevalence": 0.592797783933518,
+  "max_abs_error_in_recomputed_brier": 3.958282465688079e-09,
+  "assertions_passed": [
+    "date split",
+    "exact +28-day outcome",
+    "raw source values",
+    "event targets",
+    "no heldout overlap",
+    "constant test count"
+  ]
+}

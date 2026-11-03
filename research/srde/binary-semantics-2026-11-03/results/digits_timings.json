@@ -1,0 +1,377 @@
+[
+  {
+    "fit_seconds": 0.0013935859897173941,
+    "method": "PixelLogistic",
+    "seed": 3101
+  },
+  {
+    "fit_seconds": 0.0008764100057305768,
+    "method": "PixelRBF",
+    "seed": 3101
+  },
+  {
+    "fit_seconds": 0.0006712780013913289,
+    "method": "BitRBF",
+    "seed": 3101
+  },
+  {
+    "infer_seconds": 0.00014439900405704975,
+    "method": "PixelLogistic",
+    "seed": 3101,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00011542500578798354,
+    "method": "PixelLogistic",
+    "seed": 3101,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0004730399959953502,
+    "method": "PixelRBF",
+    "seed": 3101,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0002207360084867105,
+    "method": "PixelRBF",
+    "seed": 3101,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00026622800214681774,
+    "method": "BitRBF",
+    "seed": 3101,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00023005100956652313,
+    "method": "BitRBF",
+    "seed": 3101,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0005047830054536462,
+    "method": "GraphKNN",
+    "seed": 3101,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0004329419898567721,
+    "method": "GraphKNN",
+    "seed": 3101,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0012058290012646466,
+    "method": "PortalDiffusion3",
+    "seed": 3101,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0011009929876308888,
+    "method": "PortalDiffusion3",
+    "seed": 3101,
+    "split": "shift"
+  },
+  {
+    "fit_seconds": 0.0013303950108820572,
+    "method": "PixelLogistic",
+    "seed": 3102
+  },
+  {
+    "fit_seconds": 0.0005632039974443614,
+    "method": "PixelRBF",
+    "seed": 3102
+  },
+  {
+    "fit_seconds": 0.0007764299953123555,
+    "method": "BitRBF",
+    "seed": 3102
+  },
+  {
+    "infer_seconds": 0.00014569600170943886,
+    "method": "PixelLogistic",
+    "seed": 3102,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00011266999354120344,
+    "method": "PixelLogistic",
+    "seed": 3102,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.000321134997648187,
+    "method": "PixelRBF",
+    "seed": 3102,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00021504898904822767,
+    "method": "PixelRBF",
+    "seed": 3102,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00027980399318039417,
+    "method": "BitRBF",
+    "seed": 3102,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0002486700104782358,
+    "method": "BitRBF",
+    "seed": 3102,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00048802899254951626,
+    "method": "GraphKNN",
+    "seed": 3102,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00047858500329311937,
+    "method": "GraphKNN",
+    "seed": 3102,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0011444610136095434,
+    "method": "PortalDiffusion3",
+    "seed": 3102,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0010922340006800368,
+    "method": "PortalDiffusion3",
+    "seed": 3102,
+    "split": "shift"
+  },
+  {
+    "fit_seconds": 0.0013522709923563525,
+    "method": "PixelLogistic",
+    "seed": 3103
+  },
+  {
+    "fit_seconds": 0.0006108170055085793,
+    "method": "PixelRBF",
+    "seed": 3103
+  },
+  {
+    "fit_seconds": 0.0005929629987804219,
+    "method": "BitRBF",
+    "seed": 3103
+  },
+  {
+    "infer_seconds": 0.0001564450067235157,
+    "method": "PixelLogistic",
+    "seed": 3103,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0001086049887817353,
+    "method": "PixelLogistic",
+    "seed": 3103,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0002444499987177551,
+    "method": "PixelRBF",
+    "seed": 3103,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0002026719885179773,
+    "method": "PixelRBF",
+    "seed": 3103,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0002794599859043956,
+    "method": "BitRBF",
+    "seed": 3103,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00024039798881858587,
+    "method": "BitRBF",
+    "seed": 3103,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0012085950002074242,
+    "method": "GraphKNN",
+    "seed": 3103,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0012221270008012652,
+    "method": "GraphKNN",
+    "seed": 3103,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0011210829979972914,
+    "method": "PortalDiffusion3",
+    "seed": 3103,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0010790669912239537,
+    "method": "PortalDiffusion3",
+    "seed": 3103,
+    "split": "shift"
+  },
+  {
+    "fit_seconds": 0.0013174909981898963,
+    "method": "PixelLogistic",
+    "seed": 3104
+  },
+  {
+    "fit_seconds": 0.0005820749938720837,
+    "method": "PixelRBF",
+    "seed": 3104
+  },
+  {
+    "fit_seconds": 0.0006045959889888763,
+    "method": "BitRBF",
+    "seed": 3104
+  },
+  {
+    "infer_seconds": 0.00014009399455972016,
+    "method": "PixelLogistic",
+    "seed": 3104,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00011300999904051423,
+    "method": "PixelLogistic",
+    "seed": 3104,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00023912299366202205,
+    "method": "PixelRBF",
+    "seed": 3104,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0002165469923056662,
+    "method": "PixelRBF",
+    "seed": 3104,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0002667799999471754,
+    "method": "BitRBF",
+    "seed": 3104,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00024099800793919712,
+    "method": "BitRBF",
+    "seed": 3104,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00045992599916644394,
+    "method": "GraphKNN",
+    "seed": 3104,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0004235499945934862,
+    "method": "GraphKNN",
+    "seed": 3104,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0011419660004321486,
+    "method": "PortalDiffusion3",
+    "seed": 3104,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0010918729967670515,
+    "method": "PortalDiffusion3",
+    "seed": 3104,
+    "split": "shift"
+  },
+  {
+    "fit_seconds": 0.0010797959985211492,
+    "method": "PixelLogistic",
+    "seed": 3105
+  },
+  {
+    "fit_seconds": 0.0005911059997742996,
+    "method": "PixelRBF",
+    "seed": 3105
+  },
+  {
+    "fit_seconds": 0.0005908979946980253,
+    "method": "BitRBF",
+    "seed": 3105
+  },
+  {
+    "infer_seconds": 0.00013902600039727986,
+    "method": "PixelLogistic",
+    "seed": 3105,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0001141110114986077,
+    "method": "PixelLogistic",
+    "seed": 3105,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0002483669959474355,
+    "method": "PixelRBF",
+    "seed": 3105,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0002112969959853217,
+    "method": "PixelRBF",
+    "seed": 3105,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00027034300728701055,
+    "method": "BitRBF",
+    "seed": 3105,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00023920799139887094,
+    "method": "BitRBF",
+    "seed": 3105,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.00048675200378056616,
+    "method": "GraphKNN",
+    "seed": 3105,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.00044082599924877286,
+    "method": "GraphKNN",
+    "seed": 3105,
+    "split": "shift"
+  },
+  {
+    "infer_seconds": 0.0011357809999026358,
+    "method": "PortalDiffusion3",
+    "seed": 3105,
+    "split": "test"
+  },
+  {
+    "infer_seconds": 0.0011044600105378777,
+    "method": "PortalDiffusion3",
+    "seed": 3105,
+    "split": "shift"
+  }
+]

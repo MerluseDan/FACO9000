@@ -1,0 +1,32 @@
+{
+  "protocol": "Training-only relation-path coefficients; 2 train negatives, 20 inductive evaluation negatives; 3 hops max, 12000 expansions; paired AUC/MRR.",
+  "train_edges": 4245,
+  "test_edges": 205,
+  "entity_overlap": 0,
+  "validation": {
+    "auc": 0.5961165048543691,
+    "mrr": 0.3117855768216122,
+    "hits1": 0.19309215595623397,
+    "hits10": 0.582970595787333
+  },
+  "test_portal": {
+    "auc": 0.608292682926829,
+    "mrr": 0.3141947077553009,
+    "hits1": 0.1896208509077576,
+    "hits10": 0.5984225209125165
+  },
+  "test_katz": {
+    "auc": 0.6637804878048783,
+    "mrr": 0.3556126984388491,
+    "hits1": 0.19941927990708488,
+    "hits10": 0.6661439621106997
+  },
+  "test_graph": {
+    "auc": 0.6080487804878048,
+    "mrr": 0.311755683365057,
+    "hits1": 0.18474280212726965,
+    "hits10": 0.5984225209125165
+  },
+  "cutoffs": 597,
+  "short_packets": 0
+}

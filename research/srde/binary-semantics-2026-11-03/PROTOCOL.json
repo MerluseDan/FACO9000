@@ -1,0 +1,17 @@
+{
+  "id": "SRDE-BINARY-20261103-v1",
+  "status": "frozen before new outcome computation; local timestamp/hash receipt in FREEZE.json",
+  "seeds": [3101,3102,3103,3104,3105],
+  "synthetic": {"worlds": {"train":40,"calibration":10,"test":20,"shift":20},"cases_per_world":60,"lineages":4,"max_path_depth":3,"max_copies_per_lineage":4,"target":"current binary proposition in query context","shift":"more old reports and copied sources; affect correlation reversed","hard_negative":"y=0 and at least one positive decoded report","note":"authored generative stress test; truth is gold, not the evidence state"},
+  "primary": "paired world-cluster bootstrap Brier difference PortalProb minus GraphBayes; exact same evidence and formula implemented by recursive vs iterative paths",
+  "secondary": "AUC, accuracy, log loss, 10-bin ECE, coverage/risk at fixed confidence .8; HGB and logistic full graph features; hard negatives",
+  "calibration":"fit sigmoid on separate calibration worlds only, raw and calibrated metrics saved",
+  "budget":"all methods see same max 48 edge occurrences/case; primary pair identical evidence; conventional learners fixed one model config per seed, no test model selection; dimensions and compute differ and are disclosed",
+  "models":"HGB max_iter=100 max_leaf_nodes=15 l2=1; logistic C=1; no hyperparameter search",
+  "controls":["shuffled test labels","activation only","affect only","F reversal shift","no lineage","no context","no temporal decay","ignore path sign","four-state evidence","Boolean positive-present"],
+  "independent":"sklearn bundled UCI handwritten digits 0 vs 1; five stratified 60/20/20 splits, row IDs frozen before fitting; shift rotation 20 degrees plus Gaussian sigma .12; grayscale SVC RBF C=10 gamma=scale, logistic C=1, bit-threshold SVC; weighted kNN vs 3-hop train-only graph diffusion with k=10; calibration on clean validation only; no test-test edges",
+  "grounding":"glyph labels are conventional semantics; contextual polarity mapping and joint label/probability complement invariance; unknown codebook is unidentifiable from bare symbols",
+  "uncertainty":"synthetic whole-world bootstrap 1000 draws; digits repetitions share images, descriptive seed mean/range only",
+  "decision":"no unique portal advantage unless it beats strongest equal-information conventional baseline on independent family and shift without Brier deterioration; no cognitive or real-event forecasting claim",
+  "stop":"execute all five seeds once, preserve failures, no outcome-driven tuning"
+}

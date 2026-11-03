@@ -1,0 +1,17 @@
+test_budget_four (__main__.TemporalTests.test_budget_four) ... ok
+test_deterministic_generator (__main__.TemporalTests.test_deterministic_generator) ... ok
+test_duplicate_invariance (__main__.TemporalTests.test_duplicate_invariance) ... ok
+test_inactive_excluded (__main__.TemporalTests.test_inactive_excluded) ... ok
+test_learned_parameters_finite (__main__.TemporalTests.test_learned_parameters_finite) ... ok
+test_learning_uses_training_only (__main__.TemporalTests.test_learning_uses_training_only) ... ok
+test_no_future_reports (__main__.TemporalTests.test_no_future_reports) ... ok
+test_predictor_does_not_use_gold (__main__.TemporalTests.test_predictor_does_not_use_gold) ... ok
+test_recursive_sequential (__main__.TemporalTests.test_recursive_sequential) ... ok
+test_temporal_gap (__main__.TemporalTests.test_temporal_gap) ... ok
+test_unknown_prior (__main__.TemporalTests.test_unknown_prior) ... ok
+test_unseen_worlds_disjoint (__main__.TemporalTests.test_unseen_worlds_disjoint) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.229s
+
+OK

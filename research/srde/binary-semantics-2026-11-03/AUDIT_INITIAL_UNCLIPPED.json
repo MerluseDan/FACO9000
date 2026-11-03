@@ -1,0 +1,15 @@
+{
+  "source_count": true,
+  "source_splits": true,
+  "prediction_count": true,
+  "unique_prediction_keys": true,
+  "only_heldout_gold": true,
+  "all_predictions_bounded": true,
+  "brier_recomputed_from_raw": false,
+  "frozen_code_identity": true,
+  "frozen_protocol_identity": true,
+  "digit_split_identity": true,
+  "repeat_reproduction": true,
+  "all_passed": false,
+  "max_arithmetic_brier_error": 1.7705628785336103e-07
+}

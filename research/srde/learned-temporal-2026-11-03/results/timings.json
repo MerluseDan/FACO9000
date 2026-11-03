@@ -1,0 +1,602 @@
+[
+  {
+    "method": "GraphLogistic4",
+    "phase": "fit",
+    "seconds": 0.015769078992889263,
+    "seed": 4101
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "fit",
+    "seconds": 0.09437905500817578,
+    "seed": 4101
+  },
+  {
+    "method": "Majority4",
+    "phase": "chronological",
+    "seconds": 0.016248843996436335,
+    "seed": 4101
+  },
+  {
+    "method": "Majority4",
+    "phase": "unseen",
+    "seconds": 0.015973868998116814,
+    "seed": 4101
+  },
+  {
+    "method": "Majority4",
+    "phase": "shift",
+    "seconds": 0.018808987995726056,
+    "seed": 4101
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "chronological",
+    "seconds": 0.01669580300222151,
+    "seed": 4101
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "unseen",
+    "seconds": 0.016437358004623093,
+    "seed": 4101
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "shift",
+    "seconds": 0.0167606920003891,
+    "seed": 4101
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "chronological",
+    "seconds": 0.015886392997344956,
+    "seed": 4101
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "unseen",
+    "seconds": 0.015800199995283037,
+    "seed": 4101
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "shift",
+    "seconds": 0.016137036989675835,
+    "seed": 4101
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "chronological",
+    "seconds": 0.016021506002289243,
+    "seed": 4101
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "unseen",
+    "seconds": 0.015968723993864842,
+    "seed": 4101
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "shift",
+    "seconds": 0.016463966996525414,
+    "seed": 4101
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "chronological",
+    "seconds": 0.03334862300835084,
+    "seed": 4101
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "unseen",
+    "seconds": 0.03240016599011142,
+    "seed": 4101
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "shift",
+    "seconds": 0.0328306790033821,
+    "seed": 4101
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "chronological",
+    "seconds": 0.03678896899509709,
+    "seed": 4101
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "unseen",
+    "seconds": 0.036037562997080386,
+    "seed": 4101
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "shift",
+    "seconds": 0.03659636100928765,
+    "seed": 4101
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "fit",
+    "seconds": 0.003244551000534557,
+    "seed": 4102
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "fit",
+    "seconds": 0.08412659900204744,
+    "seed": 4102
+  },
+  {
+    "method": "Majority4",
+    "phase": "chronological",
+    "seconds": 0.01606636799988337,
+    "seed": 4102
+  },
+  {
+    "method": "Majority4",
+    "phase": "unseen",
+    "seconds": 0.015843296991079114,
+    "seed": 4102
+  },
+  {
+    "method": "Majority4",
+    "phase": "shift",
+    "seconds": 0.01622494299954269,
+    "seed": 4102
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "chronological",
+    "seconds": 0.016399015992647037,
+    "seed": 4102
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "unseen",
+    "seconds": 0.016189276007935405,
+    "seed": 4102
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "shift",
+    "seconds": 0.016760402999352664,
+    "seed": 4102
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "chronological",
+    "seconds": 0.016048327990574762,
+    "seed": 4102
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "unseen",
+    "seconds": 0.015637799006071873,
+    "seed": 4102
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "shift",
+    "seconds": 0.01606629199523013,
+    "seed": 4102
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "chronological",
+    "seconds": 0.016133533004904166,
+    "seed": 4102
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "unseen",
+    "seconds": 0.016184851003345102,
+    "seed": 4102
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "shift",
+    "seconds": 0.016571247993852012,
+    "seed": 4102
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "chronological",
+    "seconds": 0.03285162799875252,
+    "seed": 4102
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "unseen",
+    "seconds": 0.03291084100783337,
+    "seed": 4102
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "shift",
+    "seconds": 0.0326553380000405,
+    "seed": 4102
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "chronological",
+    "seconds": 0.03600180700595956,
+    "seed": 4102
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "unseen",
+    "seconds": 0.03592041401134338,
+    "seed": 4102
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "shift",
+    "seconds": 0.03645368400611915,
+    "seed": 4102
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "fit",
+    "seconds": 0.00364619200991001,
+    "seed": 4103
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "fit",
+    "seconds": 0.08746886999870185,
+    "seed": 4103
+  },
+  {
+    "method": "Majority4",
+    "phase": "chronological",
+    "seconds": 0.017650413006776944,
+    "seed": 4103
+  },
+  {
+    "method": "Majority4",
+    "phase": "unseen",
+    "seconds": 0.01617461499699857,
+    "seed": 4103
+  },
+  {
+    "method": "Majority4",
+    "phase": "shift",
+    "seconds": 0.01574187900405377,
+    "seed": 4103
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "chronological",
+    "seconds": 0.016836066992254928,
+    "seed": 4103
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "unseen",
+    "seconds": 0.016815280003356747,
+    "seed": 4103
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "shift",
+    "seconds": 0.016895446999114938,
+    "seed": 4103
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "chronological",
+    "seconds": 0.016088689997559413,
+    "seed": 4103
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "unseen",
+    "seconds": 0.01616232199012302,
+    "seed": 4103
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "shift",
+    "seconds": 0.01632064399018418,
+    "seed": 4103
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "chronological",
+    "seconds": 0.016526253006304614,
+    "seed": 4103
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "unseen",
+    "seconds": 0.015813247999176383,
+    "seed": 4103
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "shift",
+    "seconds": 0.016634143990813754,
+    "seed": 4103
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "chronological",
+    "seconds": 0.03230993798933923,
+    "seed": 4103
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "unseen",
+    "seconds": 0.03231070699985139,
+    "seed": 4103
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "shift",
+    "seconds": 0.0323161970009096,
+    "seed": 4103
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "chronological",
+    "seconds": 0.05003131499688607,
+    "seed": 4103
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "unseen",
+    "seconds": 0.03708756000560243,
+    "seed": 4103
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "shift",
+    "seconds": 0.036255903003620915,
+    "seed": 4103
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "fit",
+    "seconds": 0.0032718160073272884,
+    "seed": 4104
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "fit",
+    "seconds": 0.08489258300687652,
+    "seed": 4104
+  },
+  {
+    "method": "Majority4",
+    "phase": "chronological",
+    "seconds": 0.016038504996686243,
+    "seed": 4104
+  },
+  {
+    "method": "Majority4",
+    "phase": "unseen",
+    "seconds": 0.01580524499877356,
+    "seed": 4104
+  },
+  {
+    "method": "Majority4",
+    "phase": "shift",
+    "seconds": 0.015908203000435606,
+    "seed": 4104
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "chronological",
+    "seconds": 0.016484349995153025,
+    "seed": 4104
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "unseen",
+    "seconds": 0.016248391999397427,
+    "seed": 4104
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "shift",
+    "seconds": 0.016350549994967878,
+    "seed": 4104
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "chronological",
+    "seconds": 0.015875404002144933,
+    "seed": 4104
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "unseen",
+    "seconds": 0.01591565299895592,
+    "seed": 4104
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "shift",
+    "seconds": 0.0160516220057616,
+    "seed": 4104
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "chronological",
+    "seconds": 0.01624328199250158,
+    "seed": 4104
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "unseen",
+    "seconds": 0.016098995998618193,
+    "seed": 4104
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "shift",
+    "seconds": 0.016295485009322874,
+    "seed": 4104
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "chronological",
+    "seconds": 0.03286747500533238,
+    "seed": 4104
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "unseen",
+    "seconds": 0.03277477600204293,
+    "seed": 4104
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "shift",
+    "seconds": 0.03280926500156056,
+    "seed": 4104
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "chronological",
+    "seconds": 0.036947658998542465,
+    "seed": 4104
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "unseen",
+    "seconds": 0.03647935698973015,
+    "seed": 4104
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "shift",
+    "seconds": 0.036595218000002205,
+    "seed": 4104
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "fit",
+    "seconds": 0.003935167012969032,
+    "seed": 4105
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "fit",
+    "seconds": 0.08279850598773919,
+    "seed": 4105
+  },
+  {
+    "method": "Majority4",
+    "phase": "chronological",
+    "seconds": 0.01604093099012971,
+    "seed": 4105
+  },
+  {
+    "method": "Majority4",
+    "phase": "unseen",
+    "seconds": 0.016112013996462338,
+    "seed": 4105
+  },
+  {
+    "method": "Majority4",
+    "phase": "shift",
+    "seconds": 0.016344607996870764,
+    "seed": 4105
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "chronological",
+    "seconds": 0.016490488007548265,
+    "seed": 4105
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "unseen",
+    "seconds": 0.01659565699810628,
+    "seed": 4105
+  },
+  {
+    "method": "LearnedGraph4",
+    "phase": "shift",
+    "seconds": 0.016390275006415322,
+    "seed": 4105
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "chronological",
+    "seconds": 0.016088938995380886,
+    "seed": 4105
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "unseen",
+    "seconds": 0.016125537003972568,
+    "seed": 4105
+  },
+  {
+    "method": "AdaptivePortal",
+    "phase": "shift",
+    "seconds": 0.01628198300022632,
+    "seed": 4105
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "chronological",
+    "seconds": 0.016302008996717632,
+    "seed": 4105
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "unseen",
+    "seconds": 0.016072369005996734,
+    "seed": 4105
+  },
+  {
+    "method": "GraphSequential",
+    "phase": "shift",
+    "seconds": 0.01635617800639011,
+    "seed": 4105
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "chronological",
+    "seconds": 0.03208697300578933,
+    "seed": 4105
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "unseen",
+    "seconds": 0.03238183900248259,
+    "seed": 4105
+  },
+  {
+    "method": "GraphLogistic4",
+    "phase": "shift",
+    "seconds": 0.03256271401187405,
+    "seed": 4105
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "chronological",
+    "seconds": 0.03533605100528803,
+    "seed": 4105
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "unseen",
+    "seconds": 0.03537716600112617,
+    "seed": 4105
+  },
+  {
+    "method": "GraphHGB4",
+    "phase": "shift",
+    "seconds": 0.03591351700015366,
+    "seed": 4105
+  }
+]

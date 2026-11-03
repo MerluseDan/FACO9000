@@ -1,0 +1,407 @@
+{
+  "four_state_table": [
+    {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "neg_a": [
+        0,
+        0
+      ],
+      "conjunction": [
+        0,
+        0
+      ],
+      "disjunction": [
+        0,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "neg_a": [
+        0,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        0,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "neg_a": [
+        0,
+        0
+      ],
+      "conjunction": [
+        0,
+        0
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "neg_a": [
+        0,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "neg_a": [
+        1,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        0,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "neg_a": [
+        1,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        0,
+        1
+      ]
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "neg_a": [
+        1,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "neg_a": [
+        1,
+        0
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        1
+      ]
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "neg_a": [
+        0,
+        1
+      ],
+      "conjunction": [
+        0,
+        0
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "neg_a": [
+        0,
+        1
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "neg_a": [
+        0,
+        1
+      ],
+      "conjunction": [
+        1,
+        0
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "neg_a": [
+        0,
+        1
+      ],
+      "conjunction": [
+        1,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "neg_a": [
+        1,
+        1
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "neg_a": [
+        1,
+        1
+      ],
+      "conjunction": [
+        0,
+        1
+      ],
+      "disjunction": [
+        1,
+        1
+      ]
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "neg_a": [
+        1,
+        1
+      ],
+      "conjunction": [
+        1,
+        1
+      ],
+      "disjunction": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "neg_a": [
+        1,
+        1
+      ],
+      "conjunction": [
+        1,
+        1
+      ],
+      "disjunction": [
+        1,
+        1
+      ]
+    }
+  ],
+  "boolean_collapse": [
+    {
+      "evidence_for": 0,
+      "evidence_against": 0,
+      "state": "neither",
+      "positive_present_bit": 0
+    },
+    {
+      "evidence_for": 0,
+      "evidence_against": 1,
+      "state": "false_only",
+      "positive_present_bit": 0
+    },
+    {
+      "evidence_for": 1,
+      "evidence_against": 0,
+      "state": "true_only",
+      "positive_present_bit": 1
+    },
+    {
+      "evidence_for": 1,
+      "evidence_against": 1,
+      "state": "both",
+      "positive_present_bit": 1
+    }
+  ],
+  "codebook_scores": [
+    {
+      "codebook": 0,
+      "decoder": 0,
+      "accuracy": 1.0
+    },
+    {
+      "codebook": 0,
+      "decoder": 1,
+      "accuracy": 0.0
+    },
+    {
+      "codebook": 1,
+      "decoder": 0,
+      "accuracy": 0.0
+    },
+    {
+      "codebook": 1,
+      "decoder": 1,
+      "accuracy": 1.0
+    }
+  ],
+  "unknown_codebook_expected_accuracy": 0.5,
+  "anchored_codebook_accuracy": 1.0,
+  "note": "Exhaustive toy symmetry demonstration, not learned general meaning. The positive-present bit merges neither with false-only and true-only with both. A probability .5 can also describe either unknown or exactly balanced contradictory evidence; store evidence state separately."
+}

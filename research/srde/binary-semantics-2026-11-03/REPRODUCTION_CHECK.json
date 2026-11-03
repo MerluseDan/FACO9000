@@ -1,0 +1,11 @@
+{
+  "synthetic_predictions.csv": true,
+  "digits_predictions.csv": true,
+  "synthetic_metrics.json": true,
+  "digits_metrics.json": true,
+  "paired_bootstrap.json": true,
+  "integrity.json": true,
+  "digits_splits.json": true,
+  "synthetic_raw_decompressed": true,
+  "all_passed": true
+}

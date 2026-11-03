@@ -1,0 +1,8 @@
+LOCKED VALIDATION: train 1320 validation 309 holdout_unscored 361
+constant                  val Brier=0.23689 config={'name': 'constant'}
+seasonal_logistic         val Brier=0.05531 config={'name': 'seasonal_logistic', 'C': 0.3}
+logistic                  val Brier=0.04655 config={'name': 'logistic', 'C': 0.3}
+decision_tree             val Brier=0.04592 config={'name': 'decision_tree', 'max_depth': 4}
+random_forest             val Brier=0.03974 config={'name': 'random_forest', 'min_samples_leaf': 10}
+hist_gradient_boosting    val Brier=0.03920 config={'name': 'hist_gradient_boosting', 'max_leaf_nodes': 7}
+srde_portal               val Brier=0.03707 config={'name': 'srde_portal', 'max_depth': 100, 'alpha': 0.65}

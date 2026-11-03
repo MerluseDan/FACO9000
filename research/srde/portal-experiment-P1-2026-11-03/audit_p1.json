@@ -1,0 +1,51 @@
+{
+  "checked_rows": 3456,
+  "depth": 100,
+  "file_sha256_before_audit": {
+    "LOCKED_INPUT_SHA256.txt": "1f125c12272a3cf9a64778dedaffd3758c01472206fed8ca9d85ca5621359c8a",
+    "OUTPUT_SHA256.txt": "e6271ba5f01565148d1c02f7ee64bc667df6e3c0f36957695b7905e4b73b79ec",
+    "PREREGISTRATION.md": "7a5525cc61d571208eb69de057e4bb2e93502990722d04c774ea2bd4d1f5d5e3",
+    "audit_p1.py": "13b07bc6c639b3f32631a71f1ee94d9c0f90128a8abbb470838104e4fd5cd98a",
+    "execution_stdout.log": "d52b3f3406bdf69d1d2f1f8ab3bd25ff95847aa87fb393bcc593ebcee5da02d1",
+    "heldout_predictions.jsonl": "1dca1fd6ee732e8cba6c782ee4643db65dd6479b749fd7d526cb8448f49718cd",
+    "srde_portal_p1.py": "be682e35aac8f02a54d821fa7d84a1f279c009c9d87af47cbc40c80f790065d0",
+    "summary.json": "00258de0be0cdace5bd489c6e931c78830b201ad3e1a110d420c6c95763ba279"
+  },
+  "independent_recomputed_metrics": {
+    "constant_0_5": {
+      "accuracy": 0.49971064814814814,
+      "backward_brier": 0.25,
+      "forward_brier": 0.25
+    },
+    "shuffled_world": {
+      "accuracy": 0.5101273148148148,
+      "backward_brier": 0.29529520698143646,
+      "forward_brier": 0.29529520698143646
+    },
+    "srde_portal": {
+      "accuracy": 0.6626157407407407,
+      "backward_brier": 0.20037013794559513,
+      "forward_brier": 0.20037013794559513
+    },
+    "state_blind_graph": {
+      "accuracy": 0.4910300925925926,
+      "backward_brier": 0.3402140352536779,
+      "forward_brier": 0.3402140352536779
+    },
+    "state_graph": {
+      "accuracy": 0.6626157407407407,
+      "backward_brier": 0.20037013794559513,
+      "forward_brier": 0.2003701379455952
+    }
+  },
+  "limitations": [
+    "Audit of outputs and runner invariants; not independent validation of the synthetic generator or real-world prediction.",
+    "Strong graph and SRDE parity is mathematically expected."
+  ],
+  "status": "PASS",
+  "strong_graph_equivalence": true,
+  "trials_per_world": 48,
+  "unique_trials": 3456,
+  "unrelated_null_spurious_prediction_brier": 0.29421783122618994,
+  "worlds": 72
+}

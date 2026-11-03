@@ -1,0 +1,12 @@
+{
+ "previous_study_report":"https://drive.google.com/file/d/1usTQxSKLMjv5auAfWncKYXmcK16iZ7tS/view",
+ "previous_study_folder":"https://drive.google.com/drive/folders/171OWjf8WNOxKa75HlO6Ku6qgItl-b85p",
+ "portal_hypothesis":"https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-hypothesis-2026-11-02/README.md",
+ "source_conversation":"https://chatgpt.com/c/6ae9dd53-fd80-83e9-8331-54f1ecee6e48",
+ "colab_notebook":"https://colab.research.google.com/drive/1oKsGyW5g8tHRCiZe49hvB0ri5z-aESKL",
+ "canonical_folder":"https://drive.google.com/drive/folders/1CncKu1uiGhF6Fi7zsRDtjxrBuN3ZXS3L",
+ "colab_permission":"User explicitly permits Google Colab for GPU-required tasks; check access/cost before GPU allocation. This run uses CPU in Colab and locally, no paid upgrade or GPU requested.",
+ "data_status":"All new worlds and drift authored by the experiment designer. Same frozen data across platforms; not independent new samples. No empirical dataset added in this round.",
+ "E28":"Primary package not recovered in prior round; no new E28 result asserted here.",
+ "integration":"Research artifacts only, no native SRDE schema/application change or account-memory modification."
+}

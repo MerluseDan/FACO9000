@@ -1,0 +1,12 @@
+WORLDS 72 CASES 3456 DEPTH 100
+srde_portal Brier= 0.20037014 Backward= 0.20037014 accuracy= 0.66261574
+state_graph Brier= 0.20037014 Backward= 0.20037014 accuracy= 0.66261574
+state_blind_graph Brier= 0.34021404 Backward= 0.34021404 accuracy= 0.49103009
+constant_0_5 Brier= 0.25 Backward= 0.25 accuracy= 0.49971065
+shuffled_world Brier= 0.29529521 Backward= 0.29529521 accuracy= 0.51012731
+H1_portal_vs_strong_graph delta= -0.0 CI= [-0.0, 0.0]
+H2_portal_vs_state_blind delta= -0.1398439 CI= [-0.17336672, -0.10755592]
+H4_portal_vs_mismatched_rules delta= -0.09492507 CI= [-0.12129319, -0.06849231]
+NULL {'n': 3456, 'unsupported_portal_association_brier': 0.29421783, 'correct_provenance_abstention_brier': 0.25, 'note': 'Independent synthetic null: a portal path does not establish an event link.'}
+F_SENSITIVITY {'pairs': 72, 'mean_absolute_forecast_change_F0_vs_F1': 0.21057231, 'nonzero_world_fraction': 0.75, 'meaning': 'Conditional-input sanity check only; not human emotion'}
+Saved in .

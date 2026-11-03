@@ -1,0 +1,543 @@
+{
+  "branches": 3,
+  "by_q": [
+    {
+      "blind_brier": 0.25073343,
+      "n": 1152,
+      "portal_brier": 0.25090721,
+      "q": 0.985,
+      "state_graph_brier": 0.25090721,
+      "uninformed_brier": 0.25,
+      "worlds": 24
+    },
+    {
+      "blind_brier": 0.31910869,
+      "n": 1152,
+      "portal_brier": 0.22950853,
+      "q": 0.995,
+      "state_graph_brier": 0.22950853,
+      "uninformed_brier": 0.25,
+      "worlds": 24
+    },
+    {
+      "blind_brier": 0.45079999,
+      "n": 1152,
+      "portal_brier": 0.12069467,
+      "q": 0.999,
+      "state_graph_brier": 0.12069467,
+      "uninformed_brier": 0.25,
+      "worlds": 24
+    }
+  ],
+  "development_smoke": {
+    "bayes_invariant": true,
+    "exact_graph_portal_invariant": true,
+    "gate_and_frame_invariants": true,
+    "outcomes_observed": false,
+    "smoke_seed": 2026110300
+  },
+  "environment": {
+    "cpu": "x86_64",
+    "gpu_used": false,
+    "pid": 608,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "event_flip": 0.04,
+  "levels": 100,
+  "limitations": [
+    "The generator and predictors share known causal mechanisms; prediction is in-simulator only.",
+    "No actual natural-language meaning embeddings or human cognition.",
+    "No external observational data, timestamps or intervention validation.",
+    "The strong graph baseline is information-equivalent to portal recursion.",
+    "CPU timings are for unoptimized Python prototypes, not a compute-efficiency proof."
+  ],
+  "method_status": "CPU synthetic experiment; no observed real-world future events",
+  "metrics": [
+    {
+      "backward": {
+        "brier": 0.20037014,
+        "brier_skill_vs_0_25": 0.19851945,
+        "ece_5bin": 0.01116806,
+        "log_loss": 0.58244156,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15474,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 572,
+            "observed": 0.14336
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 141,
+            "observed": 0.24113
+          },
+          {
+            "forecast": 0.50023,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2013,
+            "observed": 0.50671
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 150,
+            "observed": 0.67333
+          },
+          {
+            "forecast": 0.84591,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 580,
+            "observed": 0.8569
+          }
+        ],
+        "threshold_accuracy": 0.66261574
+      },
+      "forward": {
+        "brier": 0.20037014,
+        "brier_skill_vs_0_25": 0.19851945,
+        "ece_5bin": 0.00940418,
+        "log_loss": 0.58244156,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15457,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 569,
+            "observed": 0.14763
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 149,
+            "observed": 0.2953
+          },
+          {
+            "forecast": 0.4997,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2013,
+            "observed": 0.49379
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 142,
+            "observed": 0.72535
+          },
+          {
+            "forecast": 0.84575,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 583,
+            "observed": 0.86106
+          }
+        ],
+        "threshold_accuracy": 0.66261574
+      },
+      "model": "srde_portal",
+      "runtime_cpu_ns_mean_per_two_root_queries": 1340745.53,
+      "runtime_cpu_ns_median_per_two_root_queries": 1206667.5
+    },
+    {
+      "backward": {
+        "brier": 0.20037014,
+        "brier_skill_vs_0_25": 0.19851945,
+        "ece_5bin": 0.01116806,
+        "log_loss": 0.58244156,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15474,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 572,
+            "observed": 0.14336
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 141,
+            "observed": 0.24113
+          },
+          {
+            "forecast": 0.50023,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2013,
+            "observed": 0.50671
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 150,
+            "observed": 0.67333
+          },
+          {
+            "forecast": 0.84591,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 580,
+            "observed": 0.8569
+          }
+        ],
+        "threshold_accuracy": 0.66261574
+      },
+      "forward": {
+        "brier": 0.20037014,
+        "brier_skill_vs_0_25": 0.19851945,
+        "ece_5bin": 0.00940418,
+        "log_loss": 0.58244156,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15457,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 569,
+            "observed": 0.14763
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 149,
+            "observed": 0.2953
+          },
+          {
+            "forecast": 0.4997,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2013,
+            "observed": 0.49379
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 142,
+            "observed": 0.72535
+          },
+          {
+            "forecast": 0.84575,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 583,
+            "observed": 0.86106
+          }
+        ],
+        "threshold_accuracy": 0.66261574
+      },
+      "model": "state_graph",
+      "runtime_cpu_ns_mean_per_two_root_queries": 1404336.55,
+      "runtime_cpu_ns_median_per_two_root_queries": 1265777.5
+    },
+    {
+      "backward": {
+        "brier": 0.34021404,
+        "brier_skill_vs_0_25": -0.36085614,
+        "ece_5bin": 0.23928907,
+        "log_loss": 0.99914502,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.06134,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 566,
+            "observed": 0.51237
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 567,
+            "observed": 0.53263
+          },
+          {
+            "forecast": 0.49886,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 1152,
+            "observed": 0.49306
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 585,
+            "observed": 0.48718
+          },
+          {
+            "forecast": 0.93866,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 586,
+            "observed": 0.49317
+          }
+        ],
+        "threshold_accuracy": 0.49103009
+      },
+      "forward": {
+        "brier": 0.34021404,
+        "brier_skill_vs_0_25": -0.36085614,
+        "ece_5bin": 0.24298898,
+        "log_loss": 0.99914502,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.06134,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 573,
+            "observed": 0.51832
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 565,
+            "observed": 0.53097
+          },
+          {
+            "forecast": 0.49954,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 1152,
+            "observed": 0.48264
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 587,
+            "observed": 0.48552
+          },
+          {
+            "forecast": 0.93866,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 579,
+            "observed": 0.49914
+          }
+        ],
+        "threshold_accuracy": 0.49103009
+      },
+      "model": "state_blind_graph",
+      "runtime_cpu_ns_mean_per_two_root_queries": 4824.12,
+      "runtime_cpu_ns_median_per_two_root_queries": 3857.0
+    },
+    {
+      "backward": {
+        "brier": 0.25,
+        "brier_skill_vs_0_25": 0.0,
+        "ece_5bin": 0.00173611,
+        "log_loss": 0.69314718,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.5,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 3456,
+            "observed": 0.50174
+          }
+        ],
+        "threshold_accuracy": 0.50173611
+      },
+      "forward": {
+        "brier": 0.25,
+        "brier_skill_vs_0_25": 0.0,
+        "ece_5bin": 0.00028935,
+        "log_loss": 0.69314718,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.5,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 3456,
+            "observed": 0.49971
+          }
+        ],
+        "threshold_accuracy": 0.49971065
+      },
+      "model": "constant_0_5",
+      "runtime_cpu_ns_mean_per_two_root_queries": 514.81,
+      "runtime_cpu_ns_median_per_two_root_queries": 451.0
+    },
+    {
+      "backward": {
+        "brier": 0.29529521,
+        "brier_skill_vs_0_25": -0.18118083,
+        "ece_5bin": 0.12953819,
+        "log_loss": 0.82743097,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15677,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 552,
+            "observed": 0.49275
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 143,
+            "observed": 0.46853
+          },
+          {
+            "forecast": 0.5017,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2014,
+            "observed": 0.50199
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 147,
+            "observed": 0.52381
+          },
+          {
+            "forecast": 0.84445,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 600,
+            "observed": 0.51167
+          }
+        ],
+        "threshold_accuracy": 0.51012731
+      },
+      "forward": {
+        "brier": 0.29529521,
+        "brier_skill_vs_0_25": -0.18118083,
+        "ece_5bin": 0.13541574,
+        "log_loss": 0.82743097,
+        "n": 3456,
+        "reliability_bins": [
+          {
+            "forecast": 0.15635,
+            "hi": 0.2,
+            "lo": 0.0,
+            "n": 595,
+            "observed": 0.49916
+          },
+          {
+            "forecast": 0.25872,
+            "hi": 0.4,
+            "lo": 0.2,
+            "n": 144,
+            "observed": 0.51389
+          },
+          {
+            "forecast": 0.49895,
+            "hi": 0.6,
+            "lo": 0.4,
+            "n": 2014,
+            "observed": 0.48858
+          },
+          {
+            "forecast": 0.74128,
+            "hi": 0.8,
+            "lo": 0.6,
+            "n": 146,
+            "observed": 0.56849
+          },
+          {
+            "forecast": 0.84409,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 557,
+            "observed": 0.51885
+          }
+        ],
+        "threshold_accuracy": 0.51012731
+      },
+      "model": "shuffled_world",
+      "runtime_cpu_ns_mean_per_two_root_queries": 1326470.01,
+      "runtime_cpu_ns_median_per_two_root_queries": 1203136.0
+    }
+  ],
+  "name": "SRDE-P1 blind-world 100-level portal forecasting / backward inference",
+  "null_event": {
+    "correct_provenance_abstention_brier": 0.25,
+    "n": 3456,
+    "note": "Independent synthetic null: a portal path does not establish an event link.",
+    "unsupported_portal_association_brier": 0.29421783
+  },
+  "pre_registration_file": "PREREGISTRATION.md",
+  "primary_interpretation": "A nonnegative H1 point estimate does not favor SRDE over the strong graph baseline.",
+  "q_values": [
+    0.985,
+    0.995,
+    0.999
+  ],
+  "run_utc": "2026-11-03T13:38:25.810668+00:00",
+  "seed": 2026110301,
+  "synthetic_valence_sensitivity": {
+    "mean_absolute_forecast_change_F0_vs_F1": 0.21057231,
+    "meaning": "Conditional-input sanity check only; not human emotion",
+    "nonzero_world_fraction": 0.75,
+    "pairs": 72
+  },
+  "total_test_queries": 3456,
+  "trials_per_world": 48,
+  "world_clustered_bootstrap": {
+    "H1_portal_vs_strong_graph": {
+      "a": "srde_portal",
+      "b": "state_graph",
+      "bootstrap_reps": 5000,
+      "bootstrap_seed": 2026110399,
+      "negative_favors_a": true,
+      "paired_mean_brier_delta_a_minus_b": -0.0,
+      "world_bootstrap_ci95": [
+        -0.0,
+        0.0
+      ],
+      "worlds": 72
+    },
+    "H2_portal_vs_state_blind": {
+      "a": "srde_portal",
+      "b": "state_blind_graph",
+      "bootstrap_reps": 5000,
+      "bootstrap_seed": 2026110399,
+      "negative_favors_a": true,
+      "paired_mean_brier_delta_a_minus_b": -0.1398439,
+      "world_bootstrap_ci95": [
+        -0.17336672,
+        -0.10755592
+      ],
+      "worlds": 72
+    },
+    "H4_portal_vs_mismatched_rules": {
+      "a": "srde_portal",
+      "b": "shuffled_world",
+      "bootstrap_reps": 5000,
+      "bootstrap_seed": 2026110399,
+      "negative_favors_a": true,
+      "paired_mean_brier_delta_a_minus_b": -0.09492507,
+      "world_bootstrap_ci95": [
+        -0.12129319,
+        -0.06849231
+      ],
+      "worlds": 72
+    }
+  },
+  "worlds": 72
+}

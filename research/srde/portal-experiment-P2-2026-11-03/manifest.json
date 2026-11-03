@@ -1,0 +1,91 @@
+{
+  "experiment": "SRDE-P2",
+  "run_date": "2026-11-03",
+  "claim": "Retrospective, pre-registered test. Portal did not beat best conventional benchmark.",
+  "entries": {
+    "PREREGISTRATION.md": {
+      "sha256": "f079ed3980fc8e1fdf506d048d80edf9f7a2c9ae4daa3c96bbdd81fb38df24f9",
+      "bytes": 6575
+    },
+    "README.md": {
+      "sha256": "138bd0cb74e81d2ed0f6a3147e162fb87144f3fb87525ba941db479932d54d8b",
+      "bytes": 3214
+    },
+    "REPORT.md": {
+      "sha256": "0bf7e3d52d5dfffbfe3cd61ef35f8c08d30ca5564076052a5bba4105804ffc1d",
+      "bytes": 8096
+    },
+    "SRDE_P2_Research_Report.pdf": {
+      "sha256": "754fa398a9087a51fb26e3311ef75708d5b288c2ab0e14fd08375574aff09107",
+      "bytes": 508770
+    },
+    "srde_p2.py": {
+      "sha256": "eaf1bcc114d91012f541be62ce4453e670c0ea5051bf0e5748f38d348548a9e7",
+      "bytes": 19270
+    },
+    "audit_p2.py": {
+      "sha256": "fb06c20f6bf01f1f9911d9ecd6ed9e003f2d08bc52388f9969c8816a379f1fae",
+      "bytes": 3960
+    },
+    "test_srde_p2.py": {
+      "sha256": "75608d59195096dc5002479678d034561cc621bcfd1222a26b3381f76b78e371",
+      "bytes": 1833
+    },
+    "make_report.py": {
+      "sha256": "4ad491ad1fb311a50a6fa6cc80c5c5662abe3047dcd40cf28ba75acfb7841c4a",
+      "bytes": 17849
+    },
+    "source_statsmodels_co2.csv": {
+      "sha256": "0e5e9a1d2c8f12081e5a26a8ff44e2f67ffeb6b387ecdb2802e2505ec04e69c7",
+      "bytes": 38538
+    },
+    "locked_selection.json": {
+      "sha256": "29985fc5b7fdcefaf05bd2f11a28f315bb0aea87a7d808cbfc66dc46caccb2d3",
+      "bytes": 11776
+    },
+    "results.json": {
+      "sha256": "0981800d6a9471c34210f833b0c40f70dbb0c4296e3a8ee34df0751a2f870df8",
+      "bytes": 5999
+    },
+    "audit.json": {
+      "sha256": "dabfac8b6db716351f0fecbf7e4e8639b96fd228383ade690f7c8d04cd275fed",
+      "bytes": 3243
+    },
+    "all_feature_records.csv": {
+      "sha256": "16e45e91fe6fd5dfa24010c870e8def4a1a775dc76db3f53a27fd4a2912c435e",
+      "bytes": 359416
+    },
+    "test_predictions.csv": {
+      "sha256": "6ca8e63bc78a54c68ba8671427c2049c0f57ca94d6eb54e776bf20da2240222b",
+      "bytes": 66992
+    },
+    "validation_and_test_comparison.csv": {
+      "sha256": "3620d6087b58870f2854c7e41ba3f0730ef8539ee14601d4eb43aa1d0dec82a2",
+      "bytes": 452
+    },
+    "validation_stdout.log": {
+      "sha256": "7c7e1876b798d144502708ed890a87535c493131aa1d0456f31d1bad690baafe",
+      "bytes": 720
+    },
+    "execution_stdout.log": {
+      "sha256": "862d5cc60c14088dd7e34ef42ea3f197a862535ac4d6a01fc80e7dbb464e2ac7",
+      "bytes": 510
+    },
+    "audit_stdout.log": {
+      "sha256": "ff413eba30440764602543e9c8e519ae8f6727fbf2ae1cbd14ef3a24b7a869d4",
+      "bytes": 616
+    },
+    "holdout_brier.png": {
+      "sha256": "efd99edb5d08e1ff0caacb74f03736dadab3aea6ca81e70d2b872a35b5f8605e",
+      "bytes": 78197
+    },
+    "holdout_predictions.png": {
+      "sha256": "5e6799b9ff4821d8cf0046ffe79b51315d779e26789115038bc11051f52a31f7",
+      "bytes": 227793
+    },
+    "yearwise_brier.png": {
+      "sha256": "ece2b0b6bcc76eab643a2fc9ccbd127e4e48526673c3baa518343f86c6496087",
+      "bytes": 127074
+    }
+  }
+}

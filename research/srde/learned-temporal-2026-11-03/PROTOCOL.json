@@ -1,0 +1,22 @@
+{
+ "id":"SRDE-LEARNED-TEMPORAL-20261103-v1",
+ "status":"local protocol before any outcome computation",
+ "seeds":[4101,4102,4103,4104,4105],
+ "worlds":20,"unseen_worlds":10,"contexts":2,"steps":282,
+ "splits":{"train":[20,120],"calibration":[130,160],"chronological":[170,220],"shift":[230,280],"unseen":[170,270]},
+ "target":"state at t+1, reports from t-age only; no future report available",
+ "generator":"two binary Markov context states, initial flip probability .08; after time 230 main worlds flip .2 and first four source reliabilities reverse; 8 sources with fixed hidden rates .55-.9 except last two .2-.4; ages 0,1,3,8, duplicates, inactivity, wrong context and absent reports",
+ "learned":"Beta(2,2) source-by-age accuracy to future target estimated only from train; no true reliability/flip parameter supplied to any predictor",
+ "methods":["Majority4","LearnedGraph4","AdaptivePortal","GraphSequential","GraphLogistic4","GraphHGB4"],
+ "budget":"maximum 4 decoded independent eligible votes per prediction for every method; all headers may be inspected; source-age weights learned once, not from evaluation labels; fixed graph models use same top-4 evidence as LearnedGraph4",
+ "routing":"sort eligible lineage headers by absolute learned log likelihood; adaptive begins with 2 votes then opens until absolute logodds >= logit(.85) or four votes; compare recursive vs ordinary sequential implementation",
+ "model_fits":"one fixed Logistic C=1 max_iter=1000 and HGB max_iter=100 max_leaf_nodes=15 l2=1 per seed, no search",
+ "calibration":"sigmoid on calibration only; raw and calibrated metrics preserved; no shift refit",
+ "primary":"calibrated Brier AdaptivePortal minus best conventional baseline, separately chronological/unseen/shift; report world-clustered bootstrap 1000 draws; no superiority if tie or loss",
+ "secondary":["AUC","accuracy","logloss","ECE10","risk and coverage confidence .8","decoded votes","headers inspected","fit/inference wall time","hard-negative false positive rate"],
+ "hard_negative":"false future target with any eligible decoded positive report, evaluation-only slice",
+ "controls":["shuffled evaluation labels","recursive/sequential equivalence","duplicate invariance","future timestamp exclusion","no evaluation-label fit","disjoint unseen worlds","source drift without adaptation"],
+ "stop":"five seed families once, preserve failures and never retune on outcomes",
+ "platform":"execute exact frozen code locally and in Colab CPU, record versions; compare source/predictions with stated tolerance across versions; GPU only if workload warrants it and cost/access is checked",
+ "scope":"authored synthetic chronological simulation; not empirical real-event forecasting, native SRDE or human cognition validation"
+}

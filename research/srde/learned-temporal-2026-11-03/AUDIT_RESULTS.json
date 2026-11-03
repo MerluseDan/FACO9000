@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "source_count": true,
+    "source_splits": true,
+    "all_past_reports": true,
+    "prediction_count": true,
+    "unique_keys": true,
+    "matching_heldout_gold": true,
+    "vote_cap": true,
+    "brier_arithmetic": true,
+    "code_frozen": true,
+    "protocol_frozen": true,
+    "local_replay": true,
+    "colab_source_identity": true,
+    "colab_five_methods_exact": true,
+    "colab_zip_crc": true
+  },
+  "all_integrity_checks_passed": true,
+  "max_brier_error": 5.551115123125783e-17,
+  "cross_platform_all_models_numerical_tolerance_passed": false,
+  "limitation": "HGB version-sensitive difference retained; no all-model exact cross-platform claim."
+}

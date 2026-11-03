@@ -1,0 +1,122 @@
+{
+  "experiment": "SRDE-P1 real-world inductive relation prediction pilot",
+  "dataset": "GraIL FB15k-237 V1, public GitHub kkteru/grail",
+  "dataset_repo": "https://github.com/kkteru/grail",
+  "dataset_paths": [
+    "data/fb237_v1/train.txt",
+    "data/fb237_v1_ind/train.txt",
+    "data/fb237_v1_ind/valid.txt",
+    "data/fb237_v1_ind/test.txt"
+  ],
+  "github_git_blob_sha1": [
+    "d38ca521bab6fb8daad8255670abaf9d66dc6dc6",
+    "0ef0b9eae390e4932a7a33c490209521419c1a0f",
+    "4c56465129a66f2df777cac5b02569f2b1072a87",
+    "1dcb0a161bcd29c034a54e47a373dc06bd9f6ebe"
+  ],
+  "counts": {
+    "train_edges": 4245,
+    "inductive_inference_edges": 1993,
+    "inductive_valid_edges": 206,
+    "inductive_test_edges": 205,
+    "train_nodes": 1594,
+    "inductive_nodes": 1093,
+    "overlap_nodes": 0,
+    "relations": 180,
+    "mined_path_patterns": 10484,
+    "retained_rule_patterns": 2378
+  },
+  "protocol": {
+    "seed": 20261103,
+    "train_negative_candidates_per_positive": 2,
+    "evaluation_negative_candidates_per_positive": 20,
+    "max_walk_expansions_per_candidate": 12000,
+    "max_hops": 3,
+    "positive_edge_masked_during_training": true,
+    "negative_filter": "Exclude all observed inference/validation/test positives when constructing evaluation negatives. This label set used only for evaluation candidate filtering, never as model input."
+  },
+  "validation": {
+    "n": 206,
+    "supported_positive_rule_queries": 52,
+    "AUC": {
+      "CN": 0.6072815534,
+      "AA": 0.6077669903,
+      "Katz": 0.7035194175,
+      "Typed": 0.586407767,
+      "TypedMax": 0.5991504854,
+      "GraphConsensus": 0.5961165049,
+      "Portal": 0.5961165049,
+      "PortalNoQuorum": 0.5990291262
+    }
+  },
+  "test": {
+    "n": 205,
+    "supported_positive_rule_queries": 49,
+    "AUC": {
+      "CN": 0.5809756098,
+      "AA": 0.58,
+      "Katz": 0.6637804878,
+      "Typed": 0.6101219512,
+      "TypedMax": 0.6017073171,
+      "GraphConsensus": 0.6080487805,
+      "Portal": 0.6082926829,
+      "PortalNoQuorum": 0.6073170732
+    },
+    "MRR": {
+      "CN": 0.2774473698,
+      "AA": 0.2764344004,
+      "Katz": 0.3556126984,
+      "Typed": 0.3129283112,
+      "TypedMax": 0.3129377786,
+      "GraphConsensus": 0.3117556834,
+      "Portal": 0.3141947078,
+      "PortalNoQuorum": 0.3119582256
+    },
+    "HitsAt1": {
+      "CN": 0.1466318235,
+      "AA": 0.1478513357,
+      "Katz": 0.1994192799,
+      "Typed": 0.1787200216,
+      "TypedMax": 0.1847851336,
+      "GraphConsensus": 0.1847428021,
+      "Portal": 0.1896208509,
+      "PortalNoQuorum": 0.1847428021
+    }
+  },
+  "bootstrap_2000_query_resamples": {
+    "portal_minus_graph_consensus_AUC": {
+      "delta": 0.0002439024,
+      "ci95": [
+        0,
+        0.0007317073
+      ]
+    },
+    "portal_minus_katz_AUC": {
+      "delta": -0.0554878049,
+      "ci95": [
+        -0.087804878,
+        -0.0243902439
+      ]
+    },
+    "portal_minus_typed_AUC": {
+      "delta": -0.0018292683,
+      "ci95": [
+        -0.01,
+        0.0070731707
+      ]
+    }
+  },
+  "checks": {
+    "test_query_packets_with_less_than_20_negatives": 0,
+    "truncated_query_expansions": 0,
+    "train_run_observed_walks": 21366
+  },
+  "provenance": "Executed using the connected GitHub repository content and isolated JavaScript evaluation on 2026-11-03. Script provided for reproduction; no unchanged canonical SRDE host runtime used.",
+  "restrictions": [
+    "Exploratory, single V1 dataset and one negative-sampling seed; not official GraIL benchmark metrics",
+    "No matching GPU GNN/NBFNet/GraIL model run; not a state-of-art comparison",
+    "Portal variant contains structural relation-orientation/history/consensus only; does not implement learned valence/arousal/state",
+    "Many candidate relations have no learned positive paths: supported 49/205 test positives",
+    "Metrics are for 20 sampled corruptions per test fact, not all filtered entities"
+  ]
+}

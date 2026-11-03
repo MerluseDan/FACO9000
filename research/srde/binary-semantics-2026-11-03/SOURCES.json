@@ -1,0 +1,24 @@
+{
+  "conversation": "https://chatgpt.com/c/6ae9dd53-fd80-83e9-8331-54f1ecee6e48",
+  "research_options_conversation": "https://chatgpt.com/c/6ae93ab2-549c-83e9-ac03-14d6d1babe3d",
+  "proposal": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-hypothesis-2026-11-02/README.md",
+  "prior_evidence": "https://drive.google.com/file/d/1IO9B6b1NjNyhh9_SDstFbHMwD3yJsb8S/view",
+  "E30": "https://drive.google.com/file/d/1rWVGiB4-ngjEnNDwP-apC6U3U_kfb1Kt/view",
+  "E30_continuation_source": "/home/owner/Documents/Codex/2026-10-16/task-12/handoff_2026-10-16_srde_e30/CONVERSATION_SUMMARY.md",
+  "E28": {
+    "status": "primary not recovered",
+    "historical_library_pointer": "libfile_2bd5569ea874819188f07a6838f181e0",
+    "pointer_source": "https://drive.google.com/file/d/1_hQIF-B-JklggRhqb4wO4a_fIVn3YyL-/view",
+    "searches": [
+      "Drive SRDE and E28 keywords, folder and name filters",
+      "targeted local task-2, task-12, FACO_Blackbird, interpreter design and plugin references"
+    ],
+    "not_claimed": "E28 scores, reproduction or full November continuation corpus review"
+  },
+  "digits": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html",
+  "logic": "https://arxiv.org/abs/2111.09978",
+  "calibration": "https://arxiv.org/abs/1706.04599",
+  "hard_negatives": "https://arxiv.org/abs/2306.10453",
+  "canonical_folder": "https://drive.google.com/drive/folders/171OWjf8WNOxKa75HlO6Ku6qgItl-b85p",
+  "scope": "Current research artifacts only; no native app deployment; no account memory changes"
+}

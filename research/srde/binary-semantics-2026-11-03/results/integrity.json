@@ -1,0 +1,37 @@
+[
+  {
+    "max_edge_occurrences": 45,
+    "recursive_iterative_max_abs": 0.0,
+    "seed": 3101,
+    "shuffled_label_auc": 0.5022585921071663,
+    "split_worlds_disjoint": true
+  },
+  {
+    "max_edge_occurrences": 37,
+    "recursive_iterative_max_abs": 0.0,
+    "seed": 3102,
+    "shuffled_label_auc": 0.48970415090558383,
+    "split_worlds_disjoint": true
+  },
+  {
+    "max_edge_occurrences": 39,
+    "recursive_iterative_max_abs": 0.0,
+    "seed": 3103,
+    "shuffled_label_auc": 0.5162409995999823,
+    "split_worlds_disjoint": true
+  },
+  {
+    "max_edge_occurrences": 48,
+    "recursive_iterative_max_abs": 0.0,
+    "seed": 3104,
+    "shuffled_label_auc": 0.5116900578946784,
+    "split_worlds_disjoint": true
+  },
+  {
+    "max_edge_occurrences": 42,
+    "recursive_iterative_max_abs": 0.0,
+    "seed": 3105,
+    "shuffled_label_auc": 0.5232224460031947,
+    "split_worlds_disjoint": true
+  }
+]

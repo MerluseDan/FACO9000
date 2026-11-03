@@ -1,0 +1,441 @@
+{
+  "experiment": "SRDE conditional portal synthetic challenge",
+  "protocol_sha256": "00189109f19259c0f9cbde9fd70eb9484b57667289a11494afc5da164517124e",
+  "counts": {
+    "training": {
+      "samples": 12000,
+      "worlds": 80,
+      "positive_rate": 0.22775,
+      "mean_observation_paths": 6.848916666666667
+    },
+    "validation": {
+      "samples": 3000,
+      "worlds": 20,
+      "positive_rate": 0.223,
+      "mean_observation_paths": 6.674
+    },
+    "test": {
+      "samples": 9000,
+      "worlds": 60,
+      "positive_rate": 0.22833333333333333,
+      "mean_observation_paths": 6.8292222222222225
+    },
+    "shifted_confirmation": {
+      "samples": 6000,
+      "worlds": 40,
+      "positive_rate": 0.1915,
+      "mean_observation_paths": 13.631666666666666
+    }
+  },
+  "metrics": {
+    "validation": {
+      "CN": {
+        "auc": 0.5340542336058031,
+        "brier": 0.17280630554908333,
+        "log_loss": 0.5293670074737346,
+        "n": 3000
+      },
+      "Katz": {
+        "auc": 0.5382089328277669,
+        "brier": 0.17274019949768263,
+        "log_loss": 0.529177683664128,
+        "n": 3000
+      },
+      "TypedGraph": {
+        "auc": 0.6753114421275856,
+        "brier": 0.16488204508285464,
+        "log_loss": 0.5064971372799493,
+        "n": 3000
+      },
+      "ProvenanceGraph": {
+        "auc": 0.6924804368750557,
+        "brier": 0.15702096380121439,
+        "log_loss": 0.4872243853591878,
+        "n": 3000
+      },
+      "Portal": {
+        "auc": 0.6976989802101909,
+        "brier": 0.15482348362491583,
+        "log_loss": 0.4820109675000416,
+        "n": 3000
+      },
+      "PortalNoState": {
+        "auc": 0.6117815445169704,
+        "brier": 0.16871504163287968,
+        "log_loss": 0.5179631154098107,
+        "n": 3000
+      },
+      "PortalNoLineage": {
+        "auc": 0.6738493778852523,
+        "brier": 0.1640466440822342,
+        "log_loss": 0.5039150349731943,
+        "n": 3000
+      },
+      "PortalDepth2": {
+        "auc": 0.6211188767242579,
+        "brier": 0.16583129450516162,
+        "log_loss": 0.5108439181333871,
+        "n": 3000
+      },
+      "GraphLogistic": {
+        "auc": 0.6760815908797971,
+        "brier": 0.16471357439580642,
+        "log_loss": 0.50606719107536,
+        "n": 3000
+      },
+      "FullGraphLogistic": {
+        "auc": 0.7041429642326503,
+        "brier": 0.1537410522788066,
+        "log_loss": 0.47974839787553186,
+        "n": 3000
+      },
+      "FullGraphHGB": {
+        "auc": 0.7027927992053552,
+        "brier": 0.1532387096513488,
+        "log_loss": 0.47910651738638926,
+        "n": 3000
+      }
+    },
+    "test": {
+      "CN": {
+        "auc": 0.5321299609899821,
+        "brier": 0.17584032964885554,
+        "log_loss": 0.5362359012703065,
+        "n": 9000
+      },
+      "Katz": {
+        "auc": 0.5369597760646301,
+        "brier": 0.1757681606574973,
+        "log_loss": 0.5360261468488337,
+        "n": 9000
+      },
+      "TypedGraph": {
+        "auc": 0.664105633593108,
+        "brier": 0.1660366650926822,
+        "log_loss": 0.5107173975406463,
+        "n": 9000
+      },
+      "ProvenanceGraph": {
+        "auc": 0.6839389082450047,
+        "brier": 0.15863392205656987,
+        "log_loss": 0.4925860548439609,
+        "n": 9000
+      },
+      "Portal": {
+        "auc": 0.6903346593586381,
+        "brier": 0.1581558218063018,
+        "log_loss": 0.49021047865396145,
+        "n": 9000
+      },
+      "PortalNoState": {
+        "auc": 0.6272550925852939,
+        "brier": 0.16929660890153392,
+        "log_loss": 0.5183306719659685,
+        "n": 9000
+      },
+      "PortalNoLineage": {
+        "auc": 0.6640399804511988,
+        "brier": 0.1653055872416845,
+        "log_loss": 0.5080859085988058,
+        "n": 9000
+      },
+      "PortalDepth2": {
+        "auc": 0.6255711980997725,
+        "brier": 0.1658599523011296,
+        "log_loss": 0.5113556163250302,
+        "n": 9000
+      },
+      "GraphLogistic": {
+        "auc": 0.6641416482301854,
+        "brier": 0.16613604381701666,
+        "log_loss": 0.5106509875738431,
+        "n": 9000
+      },
+      "FullGraphLogistic": {
+        "auc": 0.6913301767975351,
+        "brier": 0.15712931393276447,
+        "log_loss": 0.488309493967568,
+        "n": 9000
+      },
+      "FullGraphHGB": {
+        "auc": 0.693707318013099,
+        "brier": 0.15702334035997895,
+        "log_loss": 0.4879047349934722,
+        "n": 9000
+      }
+    },
+    "shifted_confirmation": {
+      "CN": {
+        "auc": 0.5227582659511044,
+        "brier": 0.16118575724518874,
+        "log_loss": 0.5041366519308894,
+        "n": 6000
+      },
+      "Katz": {
+        "auc": 0.5260557476148674,
+        "brier": 0.1619593391324952,
+        "log_loss": 0.50582258368196,
+        "n": 6000
+      },
+      "TypedGraph": {
+        "auc": 0.6191951844693357,
+        "brier": 0.15896546910559448,
+        "log_loss": 0.5032782850286653,
+        "n": 6000
+      },
+      "ProvenanceGraph": {
+        "auc": 0.6231334319734171,
+        "brier": 0.14777768959030244,
+        "log_loss": 0.4682148483720828,
+        "n": 6000
+      },
+      "Portal": {
+        "auc": 0.6247389796438658,
+        "brier": 0.14663396518639957,
+        "log_loss": 0.46553215638031,
+        "n": 6000
+      },
+      "PortalNoState": {
+        "auc": 0.5655736778452183,
+        "brier": 0.15632196150145503,
+        "log_loss": 0.49156114823920755,
+        "n": 6000
+      },
+      "PortalNoLineage": {
+        "auc": 0.6186847606094156,
+        "brier": 0.15824443142527858,
+        "log_loss": 0.49757149134005474,
+        "n": 6000
+      },
+      "PortalDepth2": {
+        "auc": 0.5766417124119474,
+        "brier": 0.15020246255972894,
+        "log_loss": 0.4763287748758493,
+        "n": 6000
+      },
+      "GraphLogistic": {
+        "auc": 0.6155835544123497,
+        "brier": 0.16269831702508816,
+        "log_loss": 0.5132718375542146,
+        "n": 6000
+      },
+      "FullGraphLogistic": {
+        "auc": 0.6266311361425125,
+        "brier": 0.14636760648307404,
+        "log_loss": 0.46533482221505423,
+        "n": 6000
+      },
+      "FullGraphHGB": {
+        "auc": 0.6266096965462875,
+        "brier": 0.14663342753551112,
+        "log_loss": 0.4656293938605039,
+        "n": 6000
+      }
+    }
+  },
+  "bootstrap": {
+    "test": {
+      "Katz": {
+        "comparator": "Katz",
+        "delta_portal_minus_comparator_world_mean": 0.15534459851863106,
+        "delta_portal_minus_comparator_pooled": 0.15337488329400806,
+        "ci95_world_mean": [
+          0.13501471733532583,
+          0.1765063983021763
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "TypedGraph": {
+        "comparator": "TypedGraph",
+        "delta_portal_minus_comparator_world_mean": 0.025348527672697005,
+        "delta_portal_minus_comparator_pooled": 0.0262290257655301,
+        "ci95_world_mean": [
+          0.018560778715775682,
+          0.032639669549759914
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "ProvenanceGraph": {
+        "comparator": "ProvenanceGraph",
+        "delta_portal_minus_comparator_world_mean": 0.005672491119683345,
+        "delta_portal_minus_comparator_pooled": 0.006395751113633441,
+        "ci95_world_mean": [
+          0.0015090362345906887,
+          0.009567887613737211
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "GraphLogistic": {
+        "comparator": "GraphLogistic",
+        "delta_portal_minus_comparator_world_mean": 0.025446176910042747,
+        "delta_portal_minus_comparator_pooled": 0.026193011128452737,
+        "ci95_world_mean": [
+          0.01762821068545354,
+          0.03359699420198728
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "FullGraphLogistic": {
+        "comparator": "FullGraphLogistic",
+        "delta_portal_minus_comparator_world_mean": -0.0007573790100252682,
+        "delta_portal_minus_comparator_pooled": -0.0009955174388969201,
+        "ci95_world_mean": [
+          -0.003849279913075299,
+          0.0024429439394534564
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "FullGraphHGB": {
+        "comparator": "FullGraphHGB",
+        "delta_portal_minus_comparator_world_mean": -0.0034186970467107005,
+        "delta_portal_minus_comparator_pooled": -0.0033726586544609027,
+        "ci95_world_mean": [
+          -0.005663137903157963,
+          -0.0008108848709765825
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalNoState": {
+        "comparator": "PortalNoState",
+        "delta_portal_minus_comparator_world_mean": 0.06316958160646423,
+        "delta_portal_minus_comparator_pooled": 0.06307956677334425,
+        "ci95_world_mean": [
+          0.049938445964273374,
+          0.077244624985113
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalNoLineage": {
+        "comparator": "PortalNoLineage",
+        "delta_portal_minus_comparator_world_mean": 0.026240920745286795,
+        "delta_portal_minus_comparator_pooled": 0.026294678907439306,
+        "ci95_world_mean": [
+          0.018513567045922587,
+          0.033630404420727913
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalDepth2": {
+        "comparator": "PortalDepth2",
+        "delta_portal_minus_comparator_world_mean": 0.06441395157119247,
+        "delta_portal_minus_comparator_pooled": 0.06476346125886567,
+        "ci95_world_mean": [
+          0.055630674477613294,
+          0.07436259900497805
+        ],
+        "bootstrap_world_resamples": 500
+      }
+    },
+    "shifted_confirmation": {
+      "Katz": {
+        "comparator": "Katz",
+        "delta_portal_minus_comparator_world_mean": 0.09964061940633928,
+        "delta_portal_minus_comparator_pooled": 0.09868323202899842,
+        "ci95_world_mean": [
+          0.07570250815689887,
+          0.12274725547633826
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "TypedGraph": {
+        "comparator": "TypedGraph",
+        "delta_portal_minus_comparator_world_mean": 0.004077055514553646,
+        "delta_portal_minus_comparator_pooled": 0.005543795174530075,
+        "ci95_world_mean": [
+          -0.0037856815303694315,
+          0.01140379792128981
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "ProvenanceGraph": {
+        "comparator": "ProvenanceGraph",
+        "delta_portal_minus_comparator_world_mean": 0.0011389682944160096,
+        "delta_portal_minus_comparator_pooled": 0.001605547670448737,
+        "ci95_world_mean": [
+          -0.0008921624671941532,
+          0.003335853971320438
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "GraphLogistic": {
+        "comparator": "GraphLogistic",
+        "delta_portal_minus_comparator_world_mean": 0.008262488918041485,
+        "delta_portal_minus_comparator_pooled": 0.009155425231516134,
+        "ci95_world_mean": [
+          -0.002212291662276458,
+          0.020186252158511563
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "FullGraphLogistic": {
+        "comparator": "FullGraphLogistic",
+        "delta_portal_minus_comparator_world_mean": -0.0014764755044495343,
+        "delta_portal_minus_comparator_pooled": -0.0018921564986467132,
+        "ci95_world_mean": [
+          -0.009260580617984262,
+          0.006518757342576402
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "FullGraphHGB": {
+        "comparator": "FullGraphHGB",
+        "delta_portal_minus_comparator_world_mean": -0.002183756266802661,
+        "delta_portal_minus_comparator_pooled": -0.0018707169024216874,
+        "ci95_world_mean": [
+          -0.007013851741217674,
+          0.0030394492312343026
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalNoState": {
+        "comparator": "PortalNoState",
+        "delta_portal_minus_comparator_world_mean": 0.05779590890565188,
+        "delta_portal_minus_comparator_pooled": 0.05916530179864754,
+        "ci95_world_mean": [
+          0.035255702754989564,
+          0.08217853537793543
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalNoLineage": {
+        "comparator": "PortalNoLineage",
+        "delta_portal_minus_comparator_world_mean": 0.004670420940851625,
+        "delta_portal_minus_comparator_pooled": 0.006054219034450248,
+        "ci95_world_mean": [
+          -0.0030712260048803316,
+          0.011473181349206631
+        ],
+        "bootstrap_world_resamples": 500
+      },
+      "PortalDepth2": {
+        "comparator": "PortalDepth2",
+        "delta_portal_minus_comparator_world_mean": 0.048138785677403075,
+        "delta_portal_minus_comparator_pooled": 0.04809726723191843,
+        "ci95_world_mean": [
+          0.03897286219462031,
+          0.05768852849407279
+        ],
+        "bootstrap_world_resamples": 500
+      }
+    }
+  },
+  "label_shuffle_control": {
+    "Katz": 0.5088021454633994,
+    "Portal": 0.4951871061993872,
+    "FullGraphLogistic": 0.49603204882295543
+  },
+  "100_level_null": {
+    "worlds": 200,
+    "mean_reachable_endpoints": 9.795,
+    "min": 7,
+    "max": 12,
+    "interpretation": "High connectivity with no semantic or causal truth"
+  },
+  "unit_tests": {
+    "unseen_worlds": true,
+    "disjoint_shifted_worlds": true,
+    "exact_case_count": true,
+    "evidence_budget_max": true
+  },
+  "run_time_sec": 6.017091926000148
+}

@@ -1,0 +1,9 @@
+{
+  "predictions.csv": true,
+  "metrics.json": true,
+  "learned_parameters.json": true,
+  "controls.json": true,
+  "paired_bootstrap.json": true,
+  "source_decompressed": true,
+  "all_passed": true
+}

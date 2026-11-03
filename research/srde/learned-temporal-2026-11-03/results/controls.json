@@ -1,0 +1,52 @@
+[
+  {
+    "chronological_future_exclusion": true,
+    "max_votes": 4,
+    "recursive_sequential_max_difference": 0.0,
+    "seed": 4101,
+    "shuffled_auc": 0.496792868311905,
+    "source_cases": 11200,
+    "unseen_world_disjoint": true,
+    "vote_counts_equal": true
+  },
+  {
+    "chronological_future_exclusion": true,
+    "max_votes": 4,
+    "recursive_sequential_max_difference": 0.0,
+    "seed": 4102,
+    "shuffled_auc": 0.5040015046529758,
+    "source_cases": 11200,
+    "unseen_world_disjoint": true,
+    "vote_counts_equal": true
+  },
+  {
+    "chronological_future_exclusion": true,
+    "max_votes": 4,
+    "recursive_sequential_max_difference": 0.0,
+    "seed": 4103,
+    "shuffled_auc": 0.5008886512577426,
+    "source_cases": 11200,
+    "unseen_world_disjoint": true,
+    "vote_counts_equal": true
+  },
+  {
+    "chronological_future_exclusion": true,
+    "max_votes": 4,
+    "recursive_sequential_max_difference": 0.0,
+    "seed": 4104,
+    "shuffled_auc": 0.48451422936352295,
+    "source_cases": 11200,
+    "unseen_world_disjoint": true,
+    "vote_counts_equal": true
+  },
+  {
+    "chronological_future_exclusion": true,
+    "max_votes": 4,
+    "recursive_sequential_max_difference": 0.0,
+    "seed": 4105,
+    "shuffled_auc": 0.4962803886396144,
+    "source_cases": 11200,
+    "unseen_world_disjoint": true,
+    "vote_counts_equal": true
+  }
+]

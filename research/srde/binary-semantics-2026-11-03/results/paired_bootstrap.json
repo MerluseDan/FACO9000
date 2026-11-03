@@ -1,0 +1,146 @@
+{
+  "shift:Boolean-GraphBayes": {
+    "brier_delta": 0.04422941492384434,
+    "ci95": [
+      0.0393778468481062,
+      0.049152662631067795
+    ],
+    "worlds": 100
+  },
+  "shift:FourState-GraphBayes": {
+    "brier_delta": 0.034478983300725526,
+    "ci95": [
+      0.029972216599787528,
+      0.038942829763464776
+    ],
+    "worlds": 100
+  },
+  "shift:GraphHGB-GraphBayes": {
+    "brier_delta": 0.016103341040572428,
+    "ci95": [
+      0.013009778177811194,
+      0.019405567255294198
+    ],
+    "worlds": 100
+  },
+  "shift:GraphHGB_F-GraphBayes": {
+    "brier_delta": 0.7568806076043744,
+    "ci95": [
+      0.7515771372478566,
+      0.7622576121999646
+    ],
+    "worlds": 100
+  },
+  "shift:GraphLogistic-GraphBayes": {
+    "brier_delta": 0.014846770423719104,
+    "ci95": [
+      0.011527612062941969,
+      0.01808307795233836
+    ],
+    "worlds": 100
+  },
+  "shift:NoContext-GraphBayes": {
+    "brier_delta": 0.008646697504456659,
+    "ci95": [
+      0.006519797048340902,
+      0.010708713109410337
+    ],
+    "worlds": 100
+  },
+  "shift:NoLineage-GraphBayes": {
+    "brier_delta": 0.008306825733451878,
+    "ci95": [
+      0.005883674512721193,
+      0.01070338582195924
+    ],
+    "worlds": 100
+  },
+  "shift:NoTime-GraphBayes": {
+    "brier_delta": 0.030167063052981873,
+    "ci95": [
+      0.025851288218851805,
+      0.03456280547430341
+    ],
+    "worlds": 100
+  },
+  "shift:PortalProb-GraphBayes": {
+    "brier_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "worlds": 100
+  },
+  "test:Boolean-GraphBayes": {
+    "brier_delta": 0.06490794710601253,
+    "ci95": [
+      0.05926227985652882,
+      0.07083457082412023
+    ],
+    "worlds": 100
+  },
+  "test:FourState-GraphBayes": {
+    "brier_delta": 0.03175316603677267,
+    "ci95": [
+      0.028146318830973443,
+      0.03518814431352739
+    ],
+    "worlds": 100
+  },
+  "test:GraphHGB-GraphBayes": {
+    "brier_delta": 0.004078249095812952,
+    "ci95": [
+      0.0017451577689383613,
+      0.006489841101111616
+    ],
+    "worlds": 100
+  },
+  "test:GraphHGB_F-GraphBayes": {
+    "brier_delta": -0.1518309079088624,
+    "ci95": [
+      -0.15787398572966926,
+      -0.14545491088651147
+    ],
+    "worlds": 100
+  },
+  "test:GraphLogistic-GraphBayes": {
+    "brier_delta": -0.003552085219253543,
+    "ci95": [
+      -0.00534766947121739,
+      -0.0019097125375747306
+    ],
+    "worlds": 100
+  },
+  "test:NoContext-GraphBayes": {
+    "brier_delta": 0.014362066441528511,
+    "ci95": [
+      0.011569351528476518,
+      0.017328807940256402
+    ],
+    "worlds": 100
+  },
+  "test:NoLineage-GraphBayes": {
+    "brier_delta": 0.011197980341139996,
+    "ci95": [
+      0.008480488259048381,
+      0.013972157825979352
+    ],
+    "worlds": 100
+  },
+  "test:NoTime-GraphBayes": {
+    "brier_delta": 0.009801429929040635,
+    "ci95": [
+      0.0077434169665133315,
+      0.011956604426911294
+    ],
+    "worlds": 100
+  },
+  "test:PortalProb-GraphBayes": {
+    "brier_delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "worlds": 100
+  }
+}

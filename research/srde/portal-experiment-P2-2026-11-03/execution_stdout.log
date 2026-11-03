@@ -1,0 +1,7 @@
+RESULT constant                  test Brier=0.241594 AUC=0.5 n=361
+RESULT seasonal_logistic         test Brier=0.072206 AUC=0.9552578 n=361
+RESULT logistic                  test Brier=0.069725 AUC=0.96096382 n=361
+RESULT decision_tree             test Brier=0.070464 AUC=0.95649755 n=361
+RESULT random_forest             test Brier=0.059726 AUC=0.97367919 n=361
+RESULT hist_gradient_boosting    test Brier=0.060037 AUC=0.96827516 n=361
+RESULT srde_portal               test Brier=0.061502 AUC=0.97186725 n=361

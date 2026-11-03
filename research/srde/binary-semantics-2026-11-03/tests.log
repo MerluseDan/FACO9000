@@ -1,0 +1,23 @@
+test_affect_independence (__main__.Semantics.test_affect_independence) ... ok
+test_contradiction_cancels_equal_likelihood (__main__.Semantics.test_contradiction_cancels_equal_likelihood) ... ok
+test_duplicate_invariance (__main__.Semantics.test_duplicate_invariance) ... ok
+test_fde_demorgan_exhaustive (__main__.Semantics.test_fde_demorgan_exhaustive) ... ok
+test_fde_no_explosion (__main__.Semantics.test_fde_no_explosion) ... ok
+test_four_states (__main__.Semantics.test_four_states) ... ok
+test_generator_replay (__main__.Semantics.test_generator_replay) ... ok
+test_graph_query_independence (__main__.Semantics.test_graph_query_independence) ... ok
+test_inactive_is_not_negative (__main__.Semantics.test_inactive_is_not_negative) ... ok
+test_independent_corroboration (__main__.Semantics.test_independent_corroboration) ... ok
+test_probability_bounds (__main__.Semantics.test_probability_bounds) ... ok
+test_recursive_iterative_cases (__main__.Semantics.test_recursive_iterative_cases) ... ok
+test_signed_paths_exhaustive (__main__.Semantics.test_signed_paths_exhaustive) ... ok
+test_splits_no_row_leakage (__main__.Semantics.test_splits_no_row_leakage) ... ok
+test_staleness_tends_unknown (__main__.Semantics.test_staleness_tends_unknown) ... ok
+test_symbol_permutation (__main__.Semantics.test_symbol_permutation) ... ok
+test_unknown_is_not_false (__main__.Semantics.test_unknown_is_not_false) ... ok
+test_wrong_context_unknown (__main__.Semantics.test_wrong_context_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.039s
+
+OK

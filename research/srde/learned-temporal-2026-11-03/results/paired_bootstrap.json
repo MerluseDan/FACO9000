@@ -1,0 +1,122 @@
+{
+  "chronological:AdaptivePortal-GraphHGB4": {
+    "ci95": [
+      -0.00698756877542398,
+      -0.004118115757289738
+    ],
+    "delta": -0.005567948469917074,
+    "world_clusters": 100
+  },
+  "chronological:AdaptivePortal-GraphLogistic4": {
+    "ci95": [
+      -0.002330931768516978,
+      -0.0006573208399296042
+    ],
+    "delta": -0.001483678635555115,
+    "world_clusters": 100
+  },
+  "chronological:AdaptivePortal-GraphSequential": {
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "delta": 0.0,
+    "world_clusters": 100
+  },
+  "chronological:AdaptivePortal-LearnedGraph4": {
+    "ci95": [
+      -0.00010299542128953741,
+      0.0008735841587806881
+    ],
+    "delta": 0.0003724920678218936,
+    "world_clusters": 100
+  },
+  "chronological:AdaptivePortal-Majority4": {
+    "ci95": [
+      -0.041258012922822294,
+      -0.033638594758812944
+    ],
+    "delta": -0.037294417084797006,
+    "world_clusters": 100
+  },
+  "shift:AdaptivePortal-GraphHGB4": {
+    "ci95": [
+      0.0006663559928536233,
+      0.0037835283635402612
+    ],
+    "delta": 0.002226049959711234,
+    "world_clusters": 100
+  },
+  "shift:AdaptivePortal-GraphLogistic4": {
+    "ci95": [
+      1.0345207831592294e-06,
+      0.0019547463786547393
+    ],
+    "delta": 0.0009819063606158066,
+    "world_clusters": 100
+  },
+  "shift:AdaptivePortal-GraphSequential": {
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "delta": 0.0,
+    "world_clusters": 100
+  },
+  "shift:AdaptivePortal-LearnedGraph4": {
+    "ci95": [
+      0.0012136513206082748,
+      0.00263881172476815
+    ],
+    "delta": 0.0019406966775813621,
+    "world_clusters": 100
+  },
+  "shift:AdaptivePortal-Majority4": {
+    "ci95": [
+      0.00763430528285655,
+      0.015667261493682062
+    ],
+    "delta": 0.011754679376695863,
+    "world_clusters": 100
+  },
+  "unseen:AdaptivePortal-GraphHGB4": {
+    "ci95": [
+      -0.006753672608132001,
+      -0.0034615806838296853
+    ],
+    "delta": -0.005054090523948459,
+    "world_clusters": 50
+  },
+  "unseen:AdaptivePortal-GraphLogistic4": {
+    "ci95": [
+      -0.0018695725378406656,
+      -2.3521506173572167e-05
+    ],
+    "delta": -0.0009550452861828389,
+    "world_clusters": 50
+  },
+  "unseen:AdaptivePortal-GraphSequential": {
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "delta": 0.0,
+    "world_clusters": 50
+  },
+  "unseen:AdaptivePortal-LearnedGraph4": {
+    "ci95": [
+      9.81346128796927e-05,
+      0.0011106054600131074
+    ],
+    "delta": 0.0005919198694805973,
+    "world_clusters": 50
+  },
+  "unseen:AdaptivePortal-Majority4": {
+    "ci95": [
+      -0.038821040390817255,
+      -0.028051407623945084
+    ],
+    "delta": -0.033444951700539155,
+    "world_clusters": 50
+  }
+}

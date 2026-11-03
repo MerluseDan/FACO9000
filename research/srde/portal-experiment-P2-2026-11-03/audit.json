@@ -1,0 +1,110 @@
+{
+  "verified_rows": 361,
+  "verified_prediction_date_range": [
+    "1995-01-07",
+    "2001-12-01"
+  ],
+  "verified_source_sha256": "0e5e9a1d2c8f12081e5a26a8ff44e2f67ffeb6b387ecdb2802e2505ec04e69c7",
+  "verified_locked_protocol_sha256": "f079ed3980fc8e1fdf506d048d80edf9f7a2c9ae4daa3c96bbdd81fb38df24f9",
+  "recomputed_metrics": {
+    "constant": {
+      "brier": 0.24159372389872344,
+      "log_loss": 0.6762523318949624,
+      "accuracy_0_5": 0.592797783933518
+    },
+    "seasonal_logistic": {
+      "brier": 0.07220588870238527,
+      "log_loss": 0.26920337939179506,
+      "accuracy_0_5": 0.9085872576177285
+    },
+    "logistic": {
+      "brier": 0.06972538842289513,
+      "log_loss": 0.23970930208999588,
+      "accuracy_0_5": 0.9141274238227147
+    },
+    "decision_tree": {
+      "brier": 0.0704643098497279,
+      "log_loss": 0.23916684126256207,
+      "accuracy_0_5": 0.9085872576177285
+    },
+    "random_forest": {
+      "brier": 0.0597255626616141,
+      "log_loss": 0.2007917387695758,
+      "accuracy_0_5": 0.9141274238227147
+    },
+    "hist_gradient_boosting": {
+      "brier": 0.06003673758632813,
+      "log_loss": 0.20511284048519676,
+      "accuracy_0_5": 0.9224376731301939
+    },
+    "srde_portal": {
+      "brier": 0.061501586041717536,
+      "log_loss": 0.2061185378879217,
+      "accuracy_0_5": 0.9168975069252078
+    },
+    "portal_shuffled_control": {
+      "brier": 0.24207889890893977
+    }
+  },
+  "positive_event_prevalence": 0.592797783933518,
+  "max_abs_error_in_recomputed_brier": 3.958282465688079e-09,
+  "assertions_passed": [
+    "date split",
+    "exact +28-day outcome",
+    "raw source values",
+    "event targets",
+    "no heldout overlap",
+    "constant test count"
+  ],
+  "yearwise_holdout": {
+    "1995": {
+      "n": 52,
+      "event_rate": 0.5769230769230769,
+      "random_forest": 0.06225469372964621,
+      "hist_gradient_boosting": 0.051131057460734326,
+      "srde_portal": 0.056137380603633165
+    },
+    "1996": {
+      "n": 52,
+      "event_rate": 0.5961538461538461,
+      "random_forest": 0.04074021990416327,
+      "hist_gradient_boosting": 0.045359942958808616,
+      "srde_portal": 0.03436471892736284
+    },
+    "1997": {
+      "n": 52,
+      "event_rate": 0.5961538461538461,
+      "random_forest": 0.04205011394308345,
+      "hist_gradient_boosting": 0.04685834458082974,
+      "srde_portal": 0.045254216881437964
+    },
+    "1998": {
+      "n": 52,
+      "event_rate": 0.6923076923076923,
+      "random_forest": 0.06611790426586837,
+      "hist_gradient_boosting": 0.07778416462785152,
+      "srde_portal": 0.08310028720303632
+    },
+    "1999": {
+      "n": 52,
+      "event_rate": 0.5192307692307693,
+      "random_forest": 0.1075029441559283,
+      "hist_gradient_boosting": 0.10121389114293214,
+      "srde_portal": 0.10237229331072353
+    },
+    "2000": {
+      "n": 53,
+      "event_rate": 0.5849056603773585,
+      "random_forest": 0.06116077558032809,
+      "hist_gradient_boosting": 0.05431885233039018,
+      "srde_portal": 0.06492580211117138
+    },
+    "2001": {
+      "n": 48,
+      "event_rate": 0.5833333333333334,
+      "random_forest": 0.03643294714903,
+      "hist_gradient_boosting": 0.04233954698028434,
+      "srde_portal": 0.042856300187622286
+    }
+  }
+}
