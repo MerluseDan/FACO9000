@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "comparison": "scientific JSON bytes and decompressed CSV bytes; environment/runtime excluded",
+  "files": [
+    {
+      "file": "bootstrap.json",
+      "equal": true,
+      "sha256": "0acae139761bf82562c92e38fd0f2b3229bb1f88ed8f763bb827bff1e0dbb207"
+    },
+    {
+      "file": "condition_metrics.json",
+      "equal": true,
+      "sha256": "b95ea5e3f9f9075eaab640be6682a98d9b0c066174da6fc0f74a6b45044dd8de"
+    },
+    {
+      "file": "exact_atoms.csv.gz",
+      "equal": true,
+      "sha256": "f10ed38f160b9b097f77010b783974a2fef14913790111a946ee3333a6cb5446"
+    },
+    {
+      "file": "exact_predictions.csv.gz",
+      "equal": true,
+      "sha256": "15e621240b2b85f3ee8160edbe3218d9a48232ef0c3544a450cf6bcad4ab012d"
+    },
+    {
+      "file": "metrics.json",
+      "equal": true,
+      "sha256": "bf5bbd6b83a2a1f3530fa4b2a3a43800c8090f8ef347f48ca6ac5d26bf72d3df"
+    },
+    {
+      "file": "sample_predictions.csv.gz",
+      "equal": true,
+      "sha256": "7d5d0440a0735d925ac1f08031ce0b50f8bb0f8c07487446ec14efa76afbbaf7"
+    },
+    {
+      "file": "source_cases.csv.gz",
+      "equal": true,
+      "sha256": "a93b85fa2a9a8dcefdc2b2cf3dbba59e7dd360de6dd3d69a8d8778a910a17fd2"
+    },
+    {
+      "file": "state_checks.json",
+      "equal": true,
+      "sha256": "3fdfb8c41d81bb0b75bd76f04e8ac29fccc41c9b7a2d4430f6b85f3bf9e92d1e"
+    }
+  ]
+}

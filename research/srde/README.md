@@ -38,3 +38,7 @@ The initial consolidated Drive snapshot is immutable at commit 2f991ccec399aefeb
 
 The [3 November novelty audit](novelty-audit-2026-11-03/RESEARCH_REPORT.md) compares 18 primary studies with the recovered SRDE experiments. Established ingredients and controlled replications are explicitly distinguished from an original contribution. Follow the [novelty gate](novelty-audit-2026-11-03/NOVELTY_GATE.md) before freezing a new discovery study; the provenance-audit candidate remains NOT CLEARED.
 
+
+## LA1 — lineage audit choice, completed 3 November 2026
+
+[Full report and reproducibility package](lineage-audit-choice-2026-11-03/RESEARCH_REPORT.md). Cross-chat and prior-research checks precede the public freeze. Exact finite expectations plus 21,000 held-out cases test when a costly, fallible, delayed lineage query is worth more than another assertion. The optimal policy purchases audits in only 2/36 specified settings; the average benefit is small, the sampled interval includes zero, and overtrusted audits reverse it. Recursive and conventional policies tie. [Private UpdateInbox folder](https://drive.google.com/drive/folders/1s4wmPhpFUWiL4wL7O6_RfYM3GbPe1e4t). This is a documented benchmark extension, not certified worldwide novelty or native SRDE integration.

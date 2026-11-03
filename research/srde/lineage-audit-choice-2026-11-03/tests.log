@@ -1,0 +1,19 @@
+test_atom_mass (test_experiment.ContractTests.test_atom_mass) ... ok
+test_audit_first_can_wait_for_response (test_experiment.ContractTests.test_audit_first_can_wait_for_response) ... ok
+test_audit_option_weakly_improves_model_value (test_experiment.ContractTests.test_audit_option_weakly_improves_model_value) ... ok
+test_backward_recursive_equivalence (test_experiment.ContractTests.test_backward_recursive_equivalence) ... ok
+test_budget_cap (test_experiment.ContractTests.test_budget_cap) ... ok
+test_delay_guard (test_experiment.ContractTests.test_delay_guard) ... ok
+test_fallback_abstains (test_experiment.ContractTests.test_fallback_abstains) ... ok
+test_impossible_copy_disagreement (test_experiment.ContractTests.test_impossible_copy_disagreement) ... ok
+test_initial_copied_odds (test_experiment.ContractTests.test_initial_copied_odds) ... ok
+test_initial_independent_odds (test_experiment.ContractTests.test_initial_independent_odds) ... ok
+test_label_swap_symmetry (test_experiment.ContractTests.test_label_swap_symmetry) ... ok
+test_late_audit_never_selected (test_experiment.ContractTests.test_late_audit_never_selected) ... ok
+test_perfect_audit_recovers_lineage (test_experiment.ContractTests.test_perfect_audit_recovers_lineage) ... ok
+test_uninformative_audit_has_no_value (test_experiment.ContractTests.test_uninformative_audit_has_no_value) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.006s
+
+OK

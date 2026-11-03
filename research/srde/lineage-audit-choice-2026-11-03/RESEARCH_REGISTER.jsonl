@@ -1,0 +1,8 @@
+{"id": "LA1-I01", "status": "supported in authored known-model grid", "claim": "Costly lineage information is selected only in two of 36 specified settings; primary exact total-loss gain is small", "source": "results/condition_metrics.json"}
+{"id": "LA1-I02", "status": "not supported in tested scope", "claim": "No recursive advantage: full recursive and conventional policies produce identical forecasts and traces", "source": "AUDIT_RESULTS.json"}
+{"id": "LA1-I03", "status": "conditional adverse result", "claim": "Overtrusting an uninformative or inverted audit can reverse the benefit", "source": "DECISION_BOUNDARY.csv"}
+{"id": "LA1-I04", "status": "inconclusive sampled improvement", "claim": "The sampled paired loss interval versus fresh-only includes zero", "source": "results/bootstrap.json"}
+{"id": "LA1-I05", "status": "established decision-theory consequence", "claim": "Expanding an exactly optimized action set cannot worsen its modeled optimum; this is not a new theorem", "source": "OPTIMALITY_AUDIT.json"}
+{"id": "LA1-RQ2", "status": "candidate not novelty-cleared", "question": "How can audit reliability be learned from independent delayed verification without circular trust?", "next": "Literature and cross-chat comparison before a new freeze"}
+{"id": "LA1-RQ3", "status": "candidate not novelty-cleared", "question": "Does the result survive multiple copy partitions and shared-cause dependence?", "next": "Research existing active verification and structured latent-dependence methods"}
+{"id": "LA1-RQ4", "status": "open empirical gap", "question": "Can verified derivation chains and query costs be obtained from independent observed data?", "next": "Dataset provenance and suitability audit"}

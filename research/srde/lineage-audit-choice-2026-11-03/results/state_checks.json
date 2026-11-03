@@ -1,0 +1,212 @@
+[
+  {
+    "condition": "C00",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C01",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C02",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C03",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C04",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C05",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C06",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C07",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C08",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C09",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C10",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C11",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C12",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "C13",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "C14",
+    "equivalence": true,
+    "states": 220
+  },
+  {
+    "condition": "C15",
+    "equivalence": true,
+    "states": 220
+  },
+  {
+    "condition": "C16",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C17",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C18",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C19",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C20",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C21",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C22",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C23",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C24",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C25",
+    "equivalence": true,
+    "states": 168
+  },
+  {
+    "condition": "C26",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C27",
+    "equivalence": true,
+    "states": 256
+  },
+  {
+    "condition": "C28",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C29",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C30",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "C31",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "C32",
+    "equivalence": true,
+    "states": 220
+  },
+  {
+    "condition": "C33",
+    "equivalence": true,
+    "states": 220
+  },
+  {
+    "condition": "C34",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "C35",
+    "equivalence": true,
+    "states": 240
+  },
+  {
+    "condition": "Q36",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "Q37",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "Q38",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "Q39",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "P40",
+    "equivalence": true,
+    "states": 140
+  },
+  {
+    "condition": "P41",
+    "equivalence": true,
+    "states": 140
+  }
+]

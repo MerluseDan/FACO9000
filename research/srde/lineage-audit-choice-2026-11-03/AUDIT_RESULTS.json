@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "latent observation likelihood",
+    "exact probability mass",
+    "all posterior probabilities",
+    "query costs",
+    "abstention",
+    "squared-error/decision loss",
+    "no premature audit response",
+    "slot/query limits",
+    "all recursive/conventional forecasts and traces",
+    "uninformative/late audit controls",
+    "counts and uniqueness",
+    "frozen identities"
+  ],
+  "frozen_files_verified": 5,
+  "independent_of_runner_import": true,
+  "max_metric_recalculation_error": 1.6431300764452317e-14,
+  "passed": true,
+  "predictions_checked": 247752,
+  "split_counts": {
+    "exact": {
+      "prediction_rows": 58752,
+      "source_rows": 6528
+    },
+    "sample": {
+      "prediction_rows": 189000,
+      "source_rows": 21000
+    }
+  }
+}

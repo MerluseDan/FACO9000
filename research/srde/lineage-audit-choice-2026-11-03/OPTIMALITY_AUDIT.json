@@ -1,0 +1,260 @@
+{
+  "checks": [
+    {
+      "absolute_error": 0.0,
+      "condition": "C00",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C01",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C02",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C03",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C04",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C05",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C06",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C07",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C08",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C09",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C10",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 1.3877787807814457e-17,
+      "condition": "C11",
+      "independent_optimum": 0.07383000432129182,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C12",
+      "independent_optimum": 0.07280267040673208,
+      "reported": 0.07280267040673208,
+      "states_evaluated": 140
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C13",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 140
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C14",
+      "independent_optimum": 0.07280267040673208,
+      "reported": 0.07280267040673208,
+      "states_evaluated": 220
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C15",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 220
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C16",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C17",
+      "independent_optimum": 0.0738300043212918,
+      "reported": 0.0738300043212918,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C18",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C19",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C20",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C21",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C22",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C23",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C24",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C25",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 168
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C26",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C27",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 256
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C28",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C29",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C30",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 140
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C31",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 140
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C32",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 220
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C33",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 220
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C34",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    },
+    {
+      "absolute_error": 0.0,
+      "condition": "C35",
+      "independent_optimum": 0.08313416487455194,
+      "reported": 0.08313416487455194,
+      "states_evaluated": 240
+    }
+  ],
+  "conditions_checked": 36,
+  "max_error": 1.3877787807814457e-17,
+  "method": "Independent weighted-world partition search, no runner import or posterior-transition helpers",
+  "passed": true
+}

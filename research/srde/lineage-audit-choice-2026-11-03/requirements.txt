@@ -1,0 +1,2 @@
+# Scientific runner, tests and auditors: Python 3.10+, standard library only.
+# Optional chart/PDF: matplotlib and reportlab.
