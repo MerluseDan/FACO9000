@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "date": "2026-11-04",
+  "heldout_worlds": 2400,
+  "heldout_per_world_scores": 268800,
+  "source_and_protocol_locked_sha256_valid": true,
+  "every_budget_byte_count_valid": true,
+  "all_saved_scores_independently_reconstructed": true,
+  "max_group_MSE_absolute_difference": 5.684341886080802e-14,
+  "max_raw_per_world_MSE_discrepancy": 2.842170943040401e-14,
+  "all_conventional_hessian_twins_exact": true,
+  "lossless_arithmetic_paths_decoded_and_verified": 4124,
+  "entropy_full_counts_by_budget": {
+    "20": 9,
+    "24": 515,
+    "32": 1200,
+    "40": 2400
+  },
+  "entropy_fallback_suffixes_verified": 5476,
+  "all_prespecified_primary_bootstraps_independently_reproduced": true,
+  "scientific_limits": [
+    "The experiment's known synthetic generator matches the coder probability models exactly",
+    "Curve-sketch and conventional Hessian use identical mathematics",
+    "Saved full-log decoder validation confirms source information, not original scientific novelty",
+    "Zero error for full logs is a mathematical consequence of exact source recovery"
+  ]
+}
