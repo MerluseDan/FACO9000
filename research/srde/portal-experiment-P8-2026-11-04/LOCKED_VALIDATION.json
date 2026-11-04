@@ -1,0 +1,125 @@
+{
+  "status": "LOCKED_VALIDATION_TEST_UNOPENED",
+  "date": "2026-11-04",
+  "source_sha256": "7d033b8300a3bc3bb72c20a9bb1e26e58babf0209b3233134f730717c9c8daae",
+  "protocol_sha256": "57e239ebf9b7b5e76ad2baddb54cae515d6b9c1868ef6ae61cc29c0aeb8922b1",
+  "selection": "fixed methods, no parameter tuning",
+  "seed_dev": 880101,
+  "seed_test": 880202,
+  "worlds_dev": 800,
+  "worlds_holdout": "UNOPENED",
+  "budgets": [
+    20,
+    24,
+    32,
+    40
+  ],
+  "validation": {
+    "20": {
+      "fit_counts": {
+        "sticky": {
+          "fit": 0,
+          "n": 400,
+          "fit_rate": 0.0
+        },
+        "iid": {
+          "fit": 0,
+          "n": 400,
+          "fit_rate": 0.0
+        }
+      },
+      "lengths": {
+        "sticky": {
+          "min": 19,
+          "median": 23.0,
+          "max": 28
+        },
+        "iid": {
+          "min": 33,
+          "median": 33.0,
+          "max": 33
+        }
+      }
+    },
+    "24": {
+      "fit_counts": {
+        "sticky": {
+          "fit": 177,
+          "n": 400,
+          "fit_rate": 0.4425
+        },
+        "iid": {
+          "fit": 0,
+          "n": 400,
+          "fit_rate": 0.0
+        }
+      },
+      "lengths": {
+        "sticky": {
+          "min": 19,
+          "median": 23.0,
+          "max": 28
+        },
+        "iid": {
+          "min": 33,
+          "median": 33.0,
+          "max": 33
+        }
+      }
+    },
+    "32": {
+      "fit_counts": {
+        "sticky": {
+          "fit": 400,
+          "n": 400,
+          "fit_rate": 1.0
+        },
+        "iid": {
+          "fit": 0,
+          "n": 400,
+          "fit_rate": 0.0
+        }
+      },
+      "lengths": {
+        "sticky": {
+          "min": 19,
+          "median": 23.0,
+          "max": 28
+        },
+        "iid": {
+          "min": 33,
+          "median": 33.0,
+          "max": 33
+        }
+      }
+    },
+    "40": {
+      "fit_counts": {
+        "sticky": {
+          "fit": 400,
+          "n": 400,
+          "fit_rate": 1.0
+        },
+        "iid": {
+          "fit": 400,
+          "n": 400,
+          "fit_rate": 1.0
+        }
+      },
+      "lengths": {
+        "sticky": {
+          "min": 19,
+          "median": 23.0,
+          "max": 28
+        },
+        "iid": {
+          "min": 33,
+          "median": 33.0,
+          "max": 33
+        }
+      }
+    }
+  },
+  "numpy_version": "2.3.5",
+  "python": "3.13.5"
+}
