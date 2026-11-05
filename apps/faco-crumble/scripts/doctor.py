@@ -29,7 +29,7 @@ if errors:
 # Asset and user-facing call-shell contracts. Keep Doctor fast and read-only.
 front = (root / 'public' / 'index.html').read_text(encoding='utf8')
 style = (root / 'public' / 'style.css').read_text(encoding='utf8')
-for element in ('callInfinityStage','optionsPanel','audioInputSelect','audioOutputSelect',
+for element in ('videoGallery','cameraButton','flipCameraButton','callInfinityStage','optionsPanel','audioInputSelect','audioOutputSelect',
                 'saveOptionsButton','resetOptionsButton','callDock'):
     if f'id="{element}"' not in front: errors.append('Missing user-facing option: '+element)
 if 'infinityFlow' not in style or 'prefers-reduced-motion' not in style:

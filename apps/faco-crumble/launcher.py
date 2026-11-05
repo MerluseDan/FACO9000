@@ -13,6 +13,8 @@ import re
 import shutil
 import subprocess
 import sys
+import platform
+import webbrowser
 from pathlib import Path
 from aiohttp import web
 
@@ -22,18 +24,52 @@ ROOT = Path(__file__).resolve().parent
 TUNNEL_URL = re.compile(r'https://[a-zA-Z0-9-]+\.trycloudflare\.com', re.IGNORECASE)
 
 
+def settings_home() -> Path:
+    if os.getenv('FACO_CONFIG_DIR'):
+        return Path(os.environ['FACO_CONFIG_DIR']).expanduser()
+    if sys.platform == 'win32':
+        return Path(os.getenv('APPDATA') or (Path.home() / 'AppData' / 'Roaming')) / 'FACO' / 'Crumble'
+    if sys.platform == 'darwin':
+        return Path.home() / 'Library' / 'Application Support' / 'FACO' / 'Crumble'
+    return Path(os.getenv('XDG_CONFIG_HOME', str(Path.home() / '.config'))) / 'faco-crumble'
+
+
+def log_home() -> Path:
+    if os.getenv('FACO_STATE_DIR'):
+        return Path(os.environ['FACO_STATE_DIR']).expanduser()
+    if sys.platform == 'win32':
+        return Path(os.getenv('LOCALAPPDATA') or (Path.home() / 'AppData' / 'Local')) / 'FACO' / 'Crumble' / 'Logs'
+    if sys.platform == 'darwin':
+        return Path.home() / 'Library' / 'Logs' / 'FACO' / 'Crumble'
+    return Path(os.getenv('XDG_STATE_HOME', str(Path.home() / '.local' / 'state'))) / 'faco-crumble'
+
+
 def cloudflared_path() -> str | None:
     override = os.environ.get('FACO_CLOUDFLARED', '').strip()
-    choices = [override, shutil.which('cloudflared'),
-               str(Path.home() / '.local' / 'bin' / 'cloudflared')]
-    for candidate in choices:
-        if candidate and Path(candidate).is_file() and os.access(candidate, os.X_OK):
-            return candidate
+    found = shutil.which('cloudflared')
+    candidates = [override, found]
+    if sys.platform == 'win32':
+        p = os.getenv('PROGRAMFILES') or r'C:\Program Files'
+        candidates += [str(Path(p)/'cloudflared'/'cloudflared.exe'), str(Path.home()/'scoop'/'shims'/'cloudflared.exe')]
+    elif sys.platform == 'darwin':
+        candidates += ['/opt/homebrew/bin/cloudflared', '/usr/local/bin/cloudflared']
+    else:
+        candidates += [str(Path.home()/'.local'/'bin'/'cloudflared')]
+    for path in candidates:
+        if path and Path(path).is_file() and os.access(path, os.X_OK):
+            return str(path)
     return None
 
 
 def auto_open(url: str) -> bool:
-    if os.environ.get('FACO_NO_GUI') or not (os.getenv('DISPLAY') or os.getenv('WAYLAND_DISPLAY')):
+    if os.environ.get('FACO_NO_GUI'):
+        return False
+    if sys.platform in ('win32','darwin'):
+        try:
+            return bool(webbrowser.open(url))
+        except Exception:
+            return False
+    if not (os.getenv('DISPLAY') or os.getenv('WAYLAND_DISPLAY')):
         return False
     browser = shutil.which('xdg-open')
     if not browser:
@@ -49,11 +85,10 @@ def auto_open(url: str) -> bool:
 async def run_quick_tunnel(state: ControlState, binary: str, public_port: int):
     """No admin port is ever passed to cloudflared. Reconnects rotate invitations."""
     retry_seconds = 1
-    state_home = Path(os.getenv('XDG_STATE_HOME', str(Path.home() / '.local' / 'state')))
-    logpath = state_home / 'faco-crumble' / 'tunnel.log'
-    logpath.parent.mkdir(mode=0o700, exist_ok=True)
+    logpath = log_home() / 'tunnel.log'
+    logpath.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
     while True:
-        print('Starting Cloudflare HTTPS tunnel…', flush=True)
+        print('Starting Cloudflare HTTPS tunnel...', flush=True)
         state.tunnel_state = 'Connecting'
         process = None
         try:
@@ -79,7 +114,7 @@ async def run_quick_tunnel(state: ControlState, binary: str, public_port: int):
                             await state.set_tunnel(url)
                             if previous != url:
                                 print(f'Public HTTPS link: {url}', flush=True)
-                                print('A base-address QR and fresh private invitation QRs are in the Ubuntu panel.', flush=True)
+                                print('The desktop control panel contains fresh public and private QR codes.', flush=True)
                             retry_seconds = 1
                     lower = value.lower()
                     if any(needle in lower for needle in ('connection terminated', 'unregistered tunnel connection',
@@ -133,10 +168,9 @@ async def run_services(args):
         raise RuntimeError('cloudflared is missing. Install it first, or choose --local / --domain.')
     base = (f'http://localhost:{args.public_port}' if args.mode == 'local'
             else args.domain.rstrip('/') if args.mode == 'domain' else '')
-    config_root = Path(os.getenv('XDG_CONFIG_HOME', str(Path.home() / '.config')))
-    settings_path = config_root / 'faco-crumble' / 'settings.json'
+    settings_path = settings_home() / 'settings.json'
     # Preserve the last participant count when upgrading from the old FACO Private Talk launcher.
-    legacy_settings = config_root / 'faco-private-talk' / 'settings.json'
+    legacy_settings = (Path(os.getenv('XDG_CONFIG_HOME', str(Path.home() / '.config'))) / 'faco-private-talk' / 'settings.json')
     count_source = settings_path if settings_path.exists() else legacy_settings
     state = ControlState(count=load_guest_settings(count_source), base_url=base, settings_path=settings_path)
     pub_runner = web.AppRunner(create_app(state), access_log=None)
@@ -151,9 +185,9 @@ async def run_services(args):
         await web.TCPSite(adm_runner, '127.0.0.1', args.admin_port).start()
         started_adm = True
         url = f'http://127.0.0.1:{args.admin_port}/#admin={state.admin_token}'
-        print('\n' + '═' * 62, flush=True)
-        print('FACO CRUMBLE  •  Ubuntu Invite & QR Control Center', flush=True)
-        print('═' * 62, flush=True)
+        print('\n' + '=' * 62, flush=True)
+        print('FACO CRUMBLE  |  Desktop Invite & QR Control Center', flush=True)
+        print('=' * 62, flush=True)
         print('LOCAL CONTROL CENTER (never share):', url, sep='\n', flush=True)
         print('PUBLIC CALL SERVICE: 127.0.0.1:' + str(args.public_port), flush=True)
         print('ADMIN CONTROLS:      127.0.0.1:' + str(args.admin_port), flush=True)
@@ -191,7 +225,7 @@ def main():
     group.add_argument('--local', dest='mode', action='store_const', const='local', help='Local-only test; remote mic needs HTTPS')
     group.add_argument('--domain', help='Your existing HTTPS public domain (reverse proxy not created)')
     parser.set_defaults(mode='quick')
-    parser.add_argument('--no-open', action='store_true', help='Do not launch an Ubuntu browser')
+    parser.add_argument('--no-open', action='store_true', help='Do not launch the desktop control panel in a browser')
     parser.add_argument('--public-port', type=int, default=int(os.getenv('FACO_PORT', '8787')))
     parser.add_argument('--admin-port', type=int, default=int(os.getenv('FACO_ADMIN_PORT', '8788')))
     args = parser.parse_args()

@@ -1,0 +1,103 @@
+name: FACO Crumble Desktop v0.6.2 native builds
+on:
+  pull_request:
+    paths:
+      - 'apps/faco-crumble/**'
+      - '.github/workflows/faco-crumble-desktop.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: apps/faco-crumble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt pyinstaller==6.16.0
+      - name: Signaling, room-scoped video, and syntax tests
+        run: |
+          python -m unittest discover -s tests -p test_signaling.py -q
+          python -m unittest discover -s tests -p test_video_signaling.py -q
+          python -m compileall -q launcher.py server.py
+      - name: Native Windows portable app
+        run: >-
+          pyinstaller --noconfirm --clean --onedir --console
+          --name "FACO Crumble"
+          --icon assets/FACO_Crumble.ico
+          --hidden-import qrcode.image.svg
+          --add-data public:public
+          --add-data admin:admin
+          --add-data assets:assets
+          launcher.py
+      - name: Test actual Windows executable and local QR web service
+        run: python qa/native_smoke.py "dist/FACO Crumble/FACO Crumble.exe"
+      - name: Package Windows release
+        run: |
+          Compress-Archive -Path "dist/FACO Crumble" -DestinationPath FACO_Crumble_Desktop_v0.6.2_Windows_x64_PORTABLE.zip -Force
+          Get-FileHash FACO_Crumble_Desktop_v0.6.2_Windows_x64_PORTABLE.zip -Algorithm SHA256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FACO_Crumble_Desktop_v0.6.2_WINDOWS_x64
+          path: apps/faco-crumble/FACO_Crumble_Desktop_v0.6.2_Windows_x64_PORTABLE.zip
+          retention-days: 30
+
+  macos:
+    runs-on: macos-15-intel
+    defaults:
+      run:
+        shell: bash
+        working-directory: apps/faco-crumble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+      - name: Verify native Intel build environment
+        run: |
+          test "$(uname -m)" = x86_64
+          python -c "import platform; assert platform.machine() == 'x86_64', platform.machine()"
+      - name: Install build dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt pyinstaller==6.16.0
+      - name: Signaling and video test
+        run: |
+          python -m unittest discover -s tests -p 'test_signaling.py' -q
+          python -m unittest discover -s tests -p 'test_video_signaling.py' -q
+          python -m compileall -q launcher.py server.py
+      - name: Native macOS app bundle
+        run: |
+          pyinstaller --noconfirm --clean --windowed \
+            --target-arch x86_64 \
+            --name 'FACO Crumble' \
+            --osx-bundle-identifier 'com.faco.crumble.desktop' \
+            --icon assets/FACO_Crumble.icns \
+            --hidden-import qrcode.image.svg \
+            --add-data public:public \
+            --add-data admin:admin \
+            --add-data assets:assets \
+            launcher.py
+      - name: Verify Intel application architecture
+        run: |
+          executable="dist/FACO Crumble.app/Contents/MacOS/FACO Crumble"
+          file "$executable"
+          test "$(lipo -archs "$executable")" = x86_64
+      - name: Test actual macOS app executable and local QR web service
+        run: python qa/native_smoke.py "dist/FACO Crumble.app/Contents/MacOS/FACO Crumble"
+      - name: Package macOS application
+        run: |
+          ditto -c -k --sequesterRsrc --keepParent "dist/FACO Crumble.app" FACO_Crumble_Desktop_v0.6.2_macOS_Intel_APP.zip
+          shasum -a 256 FACO_Crumble_Desktop_v0.6.2_macOS_Intel_APP.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FACO_Crumble_Desktop_v0.6.2_MACOS_Intel
+          path: apps/faco-crumble/FACO_Crumble_Desktop_v0.6.2_macOS_Intel_APP.zip
+          retention-days: 30
