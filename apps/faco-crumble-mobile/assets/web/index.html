@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7faff" />
+  <meta name="description" content="FACO Crumble: an invite-only circle for private calls and messages." />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="color-scheme" content="light" />
+  <title>FACO Crumble | Speak. Disconnect. Crumble.</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<div class="cloud cloud-left" aria-hidden="true"></div><div class="cloud cloud-right" aria-hidden="true"></div>
+<section id="entryScreen" class="entry-screen" aria-labelledby="entryHeading">
+  <header class="brand entry-brand">
+    <svg class="brand-mark" width="43" height="43" viewBox="0 0 88 88" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="brandBGEntry" x1="12" y1="0" x2="82" y2="88" gradientUnits="userSpaceOnUse"><stop stop-color="#65b7fc"/><stop offset=".48" stop-color="#1d83f6"/><stop offset="1" stop-color="#254bce"/></linearGradient><linearGradient id="brandRibbonEntry" x1="12" y1="29" x2="78" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".5" stop-color="#f5ffff"/><stop offset="1" stop-color="#d1eaff"/></linearGradient></defs><rect width="88" height="88" rx="24" fill="url(#brandBGEntry)"/><path d="M44 44C36 31 29 31 24 31C14 31 12 40 12 44C12 53 18 57 25 57C34 57 39 49 44 44C51 35 58 31 64 31C73 31 76 39 76 44C76 52 70 57 63 57C55 57 49 48 44 44" stroke="url(#brandRibbonEntry)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="brand-type"><strong>faco<span class="brand-period">.</span></strong><small>CRUMBLE / PRIVATE CIRCLE</small></span>
+  </header>
+  <main class="entry-card">
+    <div class="entry-symbol" aria-hidden="true">
+      <span class="entry-halo"></span>
+      <svg class="infinity-art entry-infinity" viewBox="0 0 150 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="entryInk" x1="11" y1="5" x2="140" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#77c7ff"/><stop offset="0.47" stop-color="#1475ee"/><stop offset="1" stop-color="#1b4bc8"/></linearGradient></defs>
+        <path d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="url(#entryInk)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="eyebrow">A MOMENT BETWEEN PEOPLE</div>
+    <h1 id="entryHeading">Come on in.</h1>
+    <p class="entry-subtitle">A name. A connection. Nothing to set up.</p>
+    <form id="nameForm" autocomplete="off" novalidate>
+      <label class="field-label" for="nameInput">WHAT SHOULD WE CALL YOU?</label>
+      <input id="nameInput" name="faco_one_time_name" type="text" minlength="1" maxlength="40" autocomplete="off" autocapitalize="words" autocorrect="off" spellcheck="false" placeholder="Your name" required />
+      <p class="field-hint">1–40 characters. Your private QR handles access.</p>
+      <label class="cookie-choice" for="rememberName"><input id="rememberName" type="checkbox" /> <span><b>Remember my name</b><small>Optional name-only cookie. Off by default. No invite keys or messages are saved.</small></span></label>
+      <button id="nameNext" class="primary-button next-button" type="submit" disabled>Enter the circle <span aria-hidden="true">→</span></button>
+      <p id="entryError" class="error hidden" role="alert"></p>
+    </form>
+    <p class="entry-privacy"><span aria-hidden="true">◈</span> No accounts. No saved conversation history. Leave whenever.</p>
+  </main>
+  <footer class="entry-footer">FACO CRUMBLE <span>·</span> SPEAK. DISCONNECT. CRUMBLE.</footer>
+</section>
+<div id="appShell" class="app-shell hidden">
+  <header class="topbar">
+    <div class="brand"><svg class="brand-mark" width="43" height="43" viewBox="0 0 88 88" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="brandBGApp" x1="12" y1="0" x2="82" y2="88" gradientUnits="userSpaceOnUse"><stop stop-color="#65b7fc"/><stop offset=".48" stop-color="#1d83f6"/><stop offset="1" stop-color="#254bce"/></linearGradient><linearGradient id="brandRibbonApp" x1="12" y1="29" x2="78" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".5" stop-color="#f5ffff"/><stop offset="1" stop-color="#d1eaff"/></linearGradient></defs><rect width="88" height="88" rx="24" fill="url(#brandBGApp)"/><path d="M44 44C36 31 29 31 24 31C14 31 12 40 12 44C12 53 18 57 25 57C34 57 39 49 44 44C51 35 58 31 64 31C73 31 76 39 76 44C76 52 70 57 63 57C55 57 49 48 44 44" stroke="url(#brandRibbonApp)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-type"><strong>faco<span class="brand-period">.</span></strong><small>CRUMBLE / PRIVATE CIRCLE</small></span></div>
+    <div class="top-actions"><div class="header-state" role="status"><span id="socketLed" class="status-dot"></span><span id="socketText">Connecting</span></div><button id="optionsButton" class="options-trigger" type="button" aria-controls="optionsPanel" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2.1" fill="#f7faff"/><circle cx="16" cy="12" r="2.1" fill="#f7faff"/></svg> Options</button></div>
+  </header>
+  <div class="welcome-strip"><div class="welcome-text"><span class="avatar" id="selfAvatar">Y</span><span><small>GOOD TO SEE YOU</small><b id="selfName">You</b></span></div><div class="welcome-right"><span id="onlineCount" class="online-count">Connecting…</span><span class="privacy-pill"><span aria-hidden="true">◈</span> Invite only</span></div></div>
+  <div class="mobile-nav" role="tablist" aria-label="Workspace view"><button id="viewCallButton" type="button" class="mobile-tab selected" role="tab" aria-selected="true" aria-controls="mobileCallView">◉ &nbsp; Call</button><button id="viewChatButton" type="button" class="mobile-tab" role="tab" aria-selected="false" aria-controls="chatPanel">✉ &nbsp; Messages <span id="unreadPip" class="unread-pip hidden">●</span></button></div>
+  <main class="layout">
+    <aside class="people-panel" aria-labelledby="peopleHeading">
+      <div class="section-title"><div><p class="eyebrow">YOUR CIRCLE</p><h2 id="peopleHeading">People <span class="inline-spark">✳</span></h2></div><span class="people-range">UP TO 10</span></div>
+      <p class="micro-copy">Everyone here has the same permissions. Select someone to connect.</p>
+      <div id="contacts" class="contacts" role="group" aria-label="Available people"></div>
+      <div class="presence-note"><span class="small-dot"></span> Only people with an active tab appear online.</div>
+    </aside>
+    <div id="mobileCallView" class="center-panel">
+      <section class="call-panel" aria-labelledby="callHeading">
+        <div class="call-top"><div><p class="eyebrow">VOICE + VIDEO</p><h2 id="callHeading">Your line is open.</h2></div><span id="selectedTarget" class="target-tag">Choose someone</span></div>
+        <div class="stage" id="callInfinityStage" aria-hidden="true"><div class="stage-disc"></div><div class="stage-ring stage-ring-a"></div><div class="stage-ring stage-ring-b"></div>
+          <svg class="infinity-art call-infinity" viewBox="0 0 150 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="callInk" x1="11" y1="6" x2="144" y2="83" gradientUnits="userSpaceOnUse"><stop stop-color="#8ed4ff"/><stop offset=".42" stop-color="#258fff"/><stop offset=".75" stop-color="#246be3"/><stop offset="1" stop-color="#2744b6"/></linearGradient><linearGradient id="callFlash" x1="11" y1="45" x2="140" y2="45" gradientUnits="userSpaceOnUse"><stop stop-color="#aaf7ff"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#79c7ff"/></linearGradient></defs>
+            <path class="infinity-shadow" d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="#4ba3ff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="infinity-base" d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="url(#callInk)" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="infinity-trace" pathLength="100" d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="url(#callFlash)" stroke-width="5" stroke-dasharray="13 87" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="stage-glint glint-one"></div><div class="stage-glint glint-two"></div>
+        </div>
+        <section id="videoGallery" class="video-gallery hidden" aria-label="Call video gallery">
+          <div class="video-gallery-head"><span>LIVE CAMERA</span><span id="videoCount">Video off</span></div>
+          <div id="videoGrid" class="video-grid" aria-live="off"></div>
+        </section>
+        <div class="call-meta"><span id="callChannelLabel" class="call-channel-label"><span class="small-dot"></span> READY WHEN YOU ARE</span><h3 id="callStatus" class="call-status" aria-live="polite">Select an online person</h3><p id="callDetail" class="call-detail">Choose a person and tap Call.</p></div>
+        <div id="progressLine" class="progress-line hidden" aria-live="polite"><svg class="mini-infinity" viewBox="0 0 150 88" aria-hidden="true"><path d="M75 44C59 19 45 18 34 18C20 18 10 30 10 44C10 58 19 70 34 70C50 70 61 57 75 44C90 30 101 18 116 18C131 18 140 31 140 44C140 58 131 70 116 70C100 70 89 56 75 44" stroke="currentColor" stroke-width="13" stroke-linecap="round" fill="none"/></svg><span id="progressText">Connecting…</span></div>
+        <div id="participants" class="participants hidden" aria-label="Call participants"></div>
+        <div id="incomingActions" class="action-row hidden"><button id="answerButton" class="primary-button" type="button">Accept call <span aria-hidden="true">↗</span></button><button id="declineButton" class="ghost-button danger" type="button">Decline</button></div>
+        <div id="regularActions" class="action-row"><button id="callButton" class="primary-button" type="button" disabled>Call selected</button><button id="endButton" class="ghost-button danger hidden" type="button">End call</button></div>
+        <div id="modeControls" class="mode-controls hidden"><div class="toggle-mode" role="group" aria-label="Microphone mode"><button id="pttMode" class="mode selected" type="button" aria-pressed="true">Push to talk</button><button id="handsfreeMode" class="mode" type="button" aria-pressed="false">Hands-free</button></div><button id="pttButton" class="ptt-button" type="button" disabled><span class="ptt-spark" aria-hidden="true">◉</span> HOLD TO SPEAK</button><small id="micHint">Mic muted until you hold the button.</small></div>
+        <div id="videoControls" class="video-controls hidden" role="group" aria-label="Camera controls">
+          <div class="video-button-row">
+            <button id="cameraButton" type="button" class="video-button" aria-pressed="false">Start video</button>
+            <button id="flipCameraButton" type="button" class="video-button video-secondary" disabled>Flip camera ↻</button>
+          </div>
+          <small id="cameraHint" role="status" aria-live="polite">Camera is off. Turn it on only when you choose.</small>
+        </div>
+        <button id="soundButton" type="button" class="speaker-tip hidden">Tap to enable your speaker</button>
+        <p id="errorMessage" class="error hidden" role="alert"></p>
+        <p class="voice-footnote">◈ &nbsp;Encrypted calls • Camera off by default • No recordings stored</p>
+      </section>
+      <section id="chatPanel" class="chat-panel" aria-labelledby="chatHeading">
+        <div class="section-title chat-heading"><div><p class="eyebrow">HERE FOR A MOMENT</p><h2 id="chatHeading">Messages</h2></div><span class="chat-glyph" aria-hidden="true">✳</span></div>
+        <label class="recipient-label" for="chatRecipient">SEND TO <select id="chatRecipient" aria-label="Message recipient"></select></label>
+        <div id="chatHistory" class="chat-history" role="log" aria-live="polite" aria-label="Session messages"><p class="empty-chat">Conversations happen here, then disappear when you leave.</p></div>
+        <form id="chatForm" class="chat-compose" autocomplete="off"><input id="chatInput" maxlength="2000" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Write a message…" aria-label="Message text" /><button id="chatSend" type="submit" disabled aria-label="Send message">↑</button></form>
+        <p class="chat-note">Live delivery only, no server-side history. Text is not end-to-end encrypted.</p>
+      </section>
+    </div>
+  </main>
+  <button id="callDock" type="button" class="call-dock hidden"><span class="dock-infinity">∞</span><span>Private call in progress</span><strong>Return to call ↑</strong></button>
+  <footer class="app-footer"><span>FACO CRUMBLE <span class="subtle">/ SPEAK. DISCONNECT. CRUMBLE.</span></span><button id="leaveButton" type="button" class="leave-button">Leave &amp; clear session ↗</button></footer>
+</div>
+<div id="optionsBackdrop" class="options-backdrop hidden"></div>
+<aside id="optionsPanel" class="options-panel hidden" role="dialog" aria-label="FACO Crumble options" aria-modal="true" tabindex="-1">
+  <header class="options-header"><div><p class="eyebrow">FACO / OPTIONS</p><h2>Make it yours.</h2><p>These settings last only for this open session.</p></div><button id="optionsClose" class="close-button" type="button" aria-label="Close options">×</button></header>
+  <div class="options-content">
+    <section class="option-section"><h3>Audio devices</h3><label for="audioInputSelect">Microphone</label><select id="audioInputSelect"><option value="">System microphone</option></select><label for="audioOutputSelect">Speaker / headphones</label><select id="audioOutputSelect"><option value="">System output</option></select><div class="option-inline"><button id="testMicButton" type="button" class="option-small-button">Test microphone</button><button id="testSpeakerButton" type="button" class="option-small-button">Test speaker</button></div><p class="option-hint" id="deviceHint">Use HTTPS and allow microphone access when requested.</p></section>
+    <section class="option-section"><h3>Experience</h3><label class="option-check"><input type="checkbox" id="motionToggle" checked /><span><b>Infinity motion</b><small>Animate the infinity while a call is active.</small></span></label><label class="option-check"><input type="checkbox" id="focusToggle" /><span><b>Focus view</b><small>Hide messages to keep the call front and centre.</small></span></label><label class="option-check"><input type="checkbox" id="alertToggle" /><span><b>Incoming sound</b><small>Try playing a short notification when someone calls.</small></span></label></section>
+    <section class="option-section"><div class="option-title-line"><h3>Quick Doctor</h3><button id="doctorButton" class="option-small-button" type="button">Run checks</button></div><p id="doctorResult" class="option-hint" aria-live="polite">Check your browser, microphone support, network and audio capabilities.</p></section>
+    <div id="settingsProgress" class="settings-progress hidden"><span class="dock-infinity">∞</span><span id="settingsProgressText">Checking…</span></div>
+  </div>
+  <footer class="options-footer"><button id="resetOptionsButton" type="button" class="ghost-button">Reset</button><div><button id="cancelOptionsButton" type="button" class="ghost-button">Cancel</button><button id="saveOptionsButton" type="button" class="primary-button">Apply</button></div></footer>
+</aside>
+<div id="audioRack" class="hidden" aria-hidden="true"></div>
+</body>
+</html>
