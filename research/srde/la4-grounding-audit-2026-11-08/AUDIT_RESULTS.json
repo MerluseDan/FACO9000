@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "runner_imported": false,
+  "frozen_files": 7,
+  "independent_calibration_pools": 24,
+  "counterfactual_evaluation_worlds": 288,
+  "calibration_observations_checked": 2304,
+  "query_receipts_checked": 7472,
+  "posterior_fits_checked": 3168,
+  "forecasts_checked": 557568,
+  "max_numeric_error": 1.2212453270876722e-15,
+  "checks": [
+    "hidden values excluded from observed packets",
+    "counterfactual coupling",
+    "anchor mechanism and lineage response",
+    "all acquired-query choices via separate evidence-ratio planner; heuristic context ties accepted within1e-12",
+    "no repeated queries and cap4",
+    "full transcript posterior",
+    "all exact distribution weights",
+    "exact provenance-only orientation invariance",
+    "all forecast probabilities/abstention/Brier/decision loss",
+    "ECE and all world metrics",
+    "query expenses",
+    "recursive/table forecasts identical",
+    "observable-world marginal equivalence",
+    "echo-reference complete transcript invariance across target orientations"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "processes": 2,
+  "scientific_outputs_exact": {
+    "sample_predictions.csv.gz": "cadb9aff9a2c41a840cb65d08fac6f4497bc78bfaab24e3b372b5be7889bfaa6",
+    "metrics.json": "ace09b5303717dd586b90f8977d68ffdff8629243e4bd417f764e732f688f044",
+    "fits.csv.gz": "fa67a69cea79cf80ccfa1a276f1791c642980ce1ca61f90d305f4261db687a11",
+    "exact_atoms.csv.gz": "4f63eb861a7db6aa24b131b0de492dc2783f618cad4f2dec5b646960522a747f",
+    "calibration_observed.csv.gz": "2cccde8c02ac6b4d267e7b546c4e1dc9d1c2d086c6d9bf70a9e01f635829245f",
+    "query_receipts.csv.gz": "7c909a7ff77d5bed618334079a1a583fd562c3f11392529b7d5d4b48a32776d6",
+    "calibration_raw.csv.gz": "28a5efd92b21b3ea6c2a0643b8ce43463d6ef4272f7da7ee088d26aa4603e3ae",
+    "exact_predictions.csv.gz": "90763ac0b016b12281b2c776b640405aa515ef69d21ff8cfd8f19c92e33f6566",
+    "sample_cases.csv.gz": "6cf695bd0e0ea1d3c93b96bfcdbfe8f59b96b724b6cfd1087c51360910ce76a2",
+    "world_metrics.csv.gz": "cc778f8fb11803bce91d39f48ba68a5aeda031a4b1a142313e11bd7d941a3e4e",
+    "bootstrap.json": "c707c7b50b35c66e42b1b95845ef3c79e889219b6e0c315b082ce44006b0d742"
+  },
+  "gzip_headers_ignored": true,
+  "runtime_metadata_excluded": true
+}

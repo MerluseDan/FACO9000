@@ -1,0 +1,17 @@
+test_anchor_context_scope (test_la4.Tests.test_anchor_context_scope) ... ok
+test_brier_twin_bound (test_la4.Tests.test_brier_twin_bound) ... ok
+test_echo_not_grounded (test_la4.Tests.test_echo_not_grounded) ... ok
+test_lineage_cannot_orient (test_la4.Tests.test_lineage_cannot_orient) ... ok
+test_missing_not_false (test_la4.Tests.test_missing_not_false) ... ok
+test_outcome_mass (test_la4.Tests.test_outcome_mass) ... ok
+test_pool_coupling (test_la4.Tests.test_pool_coupling) ... ok
+test_probability_mass (test_la4.Tests.test_probability_mass) ... ok
+test_repeated_query_forbidden (test_la4.Tests.test_repeated_query_forbidden) ... ok
+test_short_lookahead_abstention_trap (test_la4.Tests.test_short_lookahead_abstention_trap) ... ok
+test_two_solvers_agree (test_la4.Tests.test_two_solvers_agree) ... ok
+test_unlabeled_orientation_symmetry (test_la4.Tests.test_unlabeled_orientation_symmetry) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.010s
+
+OK

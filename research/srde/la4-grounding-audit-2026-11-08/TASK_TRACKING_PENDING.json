@@ -1,0 +1,14 @@
+{
+ "list":"[Faco] SRDV rollout",
+ "list_id":"cbXsIHkI_VT6XgjB",
+ "last_read_date":"2026-11-08",
+ "status":"Read verified; editing unavailable. Mouse/locator/keyboard fallbacks failed. No Google Tasks changes claimed.",
+ "pending_changes":[
+  {"task":"LA4 literature and related-chat review; public protocol/proof/source freeze","work_status":"completed, freeze04cbe0fb35e80484e3e98a5514de28fbf94c712f verified before scoring","desired_task_status":"completed"},
+  {"task":"LA4 execute, independently audit, and exactly replay grounding-query experiment","work_status":"completed,557568forecasts,7472query receipts,12tests,11scientific outputs replayed","desired_task_status":"completed"},
+  {"task":"LA4 publish full source/data/report to GitHub and canonical Drive with readback","work_status":"pending external verification; subsequent PUBLICATION_RECEIPT.json is authoritative","desired_task_status":"complete only after readback"},
+  {"task":"Reconcile prior LA2 and LA3 task steps from their verified publication receipts","work_status":"research completed and published; Tasks synchronization remains pending"},
+  {"task":"Broader empirical grounding and source-model research","work_status":"incomplete; next work needs independent data and overlap review"}
+ ],
+ "scheduled":false
+}
