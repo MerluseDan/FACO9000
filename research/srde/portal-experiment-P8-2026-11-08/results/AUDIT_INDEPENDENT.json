@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "date": "2026-11-08",
+  "verified_archived_report_sources": 7,
+  "verified_exact_line_anchors": 15,
+  "independent_real_event_plan": 240,
+  "all_claim_status_comparisons": 4800,
+  "all_alerts_recomputed": true,
+  "event_type_counts": {
+    "remove": 90,
+    "restore": 78,
+    "unrelated": 48,
+    "duplicate": 24
+  },
+  "independently_recomputed_real_change_alerts": 210,
+  "independently_recomputed_naive_alerts": 1429,
+  "independently_recomputed_naive_false_alarms": 1219,
+  "unsupported_same_report_double_quote_control": true,
+  "independently_recomputed_synthetic_scale_proof_checks": 839,
+  "source_sha256_checks": true,
+  "repair_before_scores_verified_from_preserved_external_github_commits": true,
+  "limits": [
+    "Synthetic modifications to real authored SRDE reports, not actual live source corrections",
+    "Hand-authored proof links and corpus line anchors, no claim semantic truth verification",
+    "Synthetic 300-workspace scaling not independently gathered customer documents",
+    "SQLite and reverse-index equivalence means no novel algorithmic advantage",
+    "Actual benchmark elapsed times are preserved in original event trace, not externally reproduced here"
+  ]
+}
