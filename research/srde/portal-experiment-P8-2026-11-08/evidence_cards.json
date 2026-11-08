@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "evidence": [
+    {
+      "id": "E_P1_main",
+      "document": "P1",
+      "origin_root": "REPORT_P1",
+      "line_number": 12,
+      "full_line": "**Primary hypothesis H1 failed to show SRDE superiority:** portal recursion and the equally informed state-aware probabilistic graph achieved exactly the same **Brier score 0.20037**, with difference -0.00000 (world-bootstrap 95% CI -0.00000 to +0.00000). This tie is expected: state-explicit factor graphs can exactly represent the same stochastic transitions. The proposed portals are a useful **representation**, not evidence of a mathematically superior predictor.",
+      "line_sha256": "d1daa359d61976eb0daa6e96becfb981895a5841e68555fa6f3be779771f6a18",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P1-2026-11-03/REPORT.md#L12"
+    },
+    {
+      "id": "E_P1_caution",
+      "document": "P1",
+      "origin_root": "REPORT_P1",
+      "line_number": 66,
+      "full_line": "**Do not conclude** that SRDE surpasses graph computation: on this fixed finite-state model, it does not. The representation can match exact probabilistic inference and can require the model to track conditional coordinates/valence, but a state-aware graph can encode the identical information. The next high-value step is a **real timestamped external event dataset with withheld future outcomes**, strong time-aware graph/factor-graph and simple seasonal/repetition baselines, limited compute, realistic provenance, predeclared Brier/calibration and separate negative controls. This stage is **not yet executed** by P1. Also, before claiming any architectural efficiency, compare against optimized conventional graph implementations with identical preprocessing costs; the small CPU runtime difference here is not evidence.",
+      "line_sha256": "762a93b5606e42a239c51504b417dd53d855eafee58c8760d13a2f3c7419cfdb",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P1-2026-11-03/REPORT.md#L66"
+    },
+    {
+      "id": "E_P2_main",
+      "document": "P2",
+      "origin_root": "REPORT_P2",
+      "line_number": 10,
+      "full_line": "On **361 real future-event labels withheld from training and model selection** (1995–2001), the portal model scored **0.061502** Brier, compared with **0.059726** for random forest and **0.060037** for gradient boosting. **The SRDE prototype did not win.** It outperformed logistic regression (Brier **0.069725**) but not stronger nonlinear competitors. The earlier 1989–1994 validation advantage of SRDE (Brier **0.03707**) did **not** generalize to 1995–2001. Higher AUC is not proof of better calibration; both are recorded.",
+      "line_sha256": "bfd5c3893f948acb3a2516609d166e8e52d7c288ad9c054f4b3de09d157113c4",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P2-2026-11-03/REPORT.md#L10"
+    },
+    {
+      "id": "E_P2_caution",
+      "document": "P2",
+      "origin_root": "REPORT_P2",
+      "line_number": 12,
+      "full_line": "This is a useful null/negative finding: conditional local subspaces alone do not establish a better forecast architecture. The *hypothesis remains falsifiable and unproven.* No claims of human neuroscience, feelings, universal meaning mapping, or general prediction follow from this test.",
+      "line_sha256": "fd517c8d11cc3812d14a61e4e04312fb24b0656d99930385d718691d3b7cf9f8",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P2-2026-11-03/REPORT.md#L12"
+    },
+    {
+      "id": "E_P3_main",
+      "document": "P3",
+      "origin_root": "REPORT_P3",
+      "line_number": 15,
+      "full_line": "Portal Brier **0.04916949**, versus validation-selected random forest Brier **0.05209970**, a portal-minus-forest difference of **-0.00293021**. Paired year-block 95% exploratory bootstrap interval: **[-0.00954158, +0.00351189]**, based on 14 annual clusters. The interval crosses zero; **there is no confirmed predictive advantage**.",
+      "line_sha256": "db95e2dd4dadcb60544c7cc316c2efb4f5f48d56e632ccc2615b582294a87366",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P3-2026-11-03/REPORT.md#L15"
+    },
+    {
+      "id": "E_P3_shuffle",
+      "document": "P3",
+      "origin_root": "REPORT_P3",
+      "line_number": 17,
+      "full_line": "The surprising result is the within-calendar-month delta-shuffle control: its Brier **0.04610253** is *better* than the original portal network. Destroying the original local-state→transition correspondence did not destroy forecasting ability. That is a serious negative control against interpreting the observed forecast skill as evidence that the proposed state-dependent relationships are necessary. Seasonality and transition-distribution structure offer alternative explanations.",
+      "line_sha256": "7318bc7ed35d7d4d875cfdff06fa4bf1ca9407cbcd42b756937a311d54880928",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P3-2026-11-03/REPORT.md#L17"
+    },
+    {
+      "id": "E_P4_main",
+      "document": "P4",
+      "origin_root": "REPORT_P4",
+      "line_number": 10,
+      "full_line": "The state-dependent recursive portal achieved a **Brier score of 0.12753** across 141 monthly forecasts (2014-01 to 2025-09), versus **0.16679** for calendar-month-only portals and **0.17658** as the mean of five independently within-month shuffled-state transition controls. Its improvements passed both *prespecified exploratory gain criteria*: deltas <= -0.005 and year-block 95% CI entirely below zero. This is evidence that the *assignment of a change to its current state* helps forecast this specific historical ocean temperature-change task beyond season-only transitions.",
+      "line_sha256": "15db396097268857955a2cf855a3d9c117700827f6d41f0f5bc2ef5fc7839e9c",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P4-2026-11-03/REPORT.md#L10"
+    },
+    {
+      "id": "E_P4_conventional",
+      "document": "P4",
+      "origin_root": "REPORT_P4",
+      "line_number": 12,
+      "full_line": "The state portal **did not win overall**: direct-analog supervised retrieval had Brier **0.12618**, slightly better than the state portal. The portal outperformed the validation-selected gradient booster (Brier 0.15147), but that paired difference had a 95% CI that included zero. No claim of general superiority is justified.",
+      "line_sha256": "a4e2aa4136c34375a1e8d108c46a90acf00d028fe198fe4dd698e9e641ae7727",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P4-2026-11-03/REPORT.md#L12"
+    },
+    {
+      "id": "E_P5_order",
+      "document": "P5",
+      "origin_root": "REPORT_P5",
+      "line_number": 10,
+      "full_line": "Two sequences can contain identical portals in identical amounts yet produce different destinations because the **order of traversal matters**. We isolated this in a 100-level model with three local spatial coordinates and a fourth state coordinate `F` in `[0,1]`. In 4,096 synthetic worlds, a sequence-aware predictor achieved Brier `0.011889`, versus `0.024040` for the Bayesian order-blind mixture (paired improvement `0.012151`; 95% world-bootstrap interval for ordered minus unordered `[-0.014084,-0.010143]`). A conventional order-aware closed-form calculation performed identically. This supports a representation requirement—retain path order—not a novel forecasting advantage. Meanwhile, the initial coordinate's contribution decayed as `a^100`, making reverse reconstruction very unstable under noise. No empirical psychological interpretation follows from these results.",
+      "line_sha256": "aa7de34d40207444d403f6d83c97aaef79673d254bb09019f01ee347c27db060",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P5-2026-11-03/REPORT.md#L10"
+    },
+    {
+      "id": "E_P5_tie",
+      "document": "P5",
+      "origin_root": "REPORT_P5",
+      "line_number": 83,
+      "full_line": "**What it does not support:** claims about human consciousness, subconscious prediction, biological stress, universal meaning, true subjective feelings, natural causation, peer-reviewed novelty, or superiority to a conventional algorithm with equal information. The matched conventional approach tied exactly. The only paths tested for the primary identity were alternating AB and BA with equal counts.",
+      "line_sha256": "121e9808c3b8abaa0fc91e100d05e48a149b6079fccec0fd53df9d20df53046a",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P5-2026-11-03/REPORT.md#L83"
+    },
+    {
+      "id": "E_P6_null",
+      "document": "P6",
+      "origin_root": "REPORT_P6",
+      "line_number": 11,
+      "full_line": "**The proposed SRDE geometry and priority additions were not selected by validation** (`eta=0`, `gamma=0`). Thus the final SRDE hybrid is exactly the conventional risk-only quantile scheduler, on all held-out worlds and checkpoint budgets. It improves average weighted posterior error over uniform checkpoints but does not provide unique algorithmic capability. A stronger conventional posterior-covariance greedy scheduler is substantially better.",
+      "line_sha256": "3c5f7fe3455fae4ced3b228a85e08276d8f747d3630ab5db735b73f2b510cc2f",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P6-2026-11-03/RESEARCH_REPORT.md#L11"
+    },
+    {
+      "id": "E_P6_greedy",
+      "document": "P6",
+      "origin_root": "REPORT_P6",
+      "line_number": 24,
+      "full_line": "- SRDE/risk-only minus conventional covariance-greedy: **+0.01759280**, CI **[+0.01650200, +0.01871402]**. Positive means SRDE is worse.",
+      "line_sha256": "22ccffaa85079644c48d3200747c49063f95a0fef6fa7cc37d8c7219b40aa98d",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P6-2026-11-03/RESEARCH_REPORT.md#L24"
+    },
+    {
+      "id": "E_P7_add",
+      "document": "P7",
+      "origin_root": "REPORT_P7",
+      "line_number": 9,
+      "full_line": "An ordered 100-step path can be compressed to a small set of **provenance-conditioned response coefficients**, preserving the exact responses to an entire class of later source-reweighting questions. In the fixed synthetic generator, the 20-byte SRDE representation achieved held-out mean squared error **2.614e-08** per coordinate, versus **0.005927** for a packed 20-byte recent-event log and **0.141750** for half-precision value snapshots with a trained, query-aware decoder. A conventional mathematical sensitivity sketch holding the identical coefficients **tied SRDE exactly**.",
+      "line_sha256": "46d2d212ac9a85c5d881dc88c3593feafed0f186b2583661a10580cf9141bf9d",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P7-2026-11-03/RESEARCH_REPORT.md#L9"
+    },
+    {
+      "id": "E_P7_struct",
+      "document": "P7",
+      "origin_root": "REPORT_P7",
+      "line_number": 11,
+      "full_line": "The effect is sharply task-bound. For small structural portal rotations, the 32-byte SRDE sketch had error **0.084121**, while a recent-event log achieved **6.182e-05**. For the large rotation query, the 32-byte derivative extrapolation failed severely (**2.330210** MSE), worse than simply reusing the terminal endpoint (**0.278176**). At 40 bytes a packed full 100-token action/provenance log achieved zero error to floating-point precision on the tested additive, structural, and stress queries.",
+      "line_sha256": "d395a659f41d174556b288b0950611a0262b7689927655d6023f91270170c2a9",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P7-2026-11-03/RESEARCH_REPORT.md#L11"
+    },
+    {
+      "id": "E_P7_limit",
+      "document": "P7",
+      "origin_root": "REPORT_P7",
+      "line_number": 97,
+      "full_line": "**What P7 does NOT establish:** original mathematical invention; a nonconventional advantage over equally informed forward sensitivity/automatic differentiation; brain/subconscious modeling; external event prediction; behavior of arbitrary nonlinear portals; fairness of overall model training weights/compute costs; source provenance authenticity; or a universal 100-level semantic law.",
+      "line_sha256": "752f06a5d6b50050507b0d609721a749aa3c36a4262bdfa29784e7914dbd126c",
+      "provenance": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P7-2026-11-03/RESEARCH_REPORT.md#L97"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C_P1_NULL",
+      "title": "P1 did not outperform information-matched graph",
+      "proofs": [
+        [
+          "E_P1_main"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P2_REAL_NEG",
+      "title": "P2 historical test was weaker than the strongest comparator",
+      "proofs": [
+        [
+          "E_P2_main"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P3_SHUFFLE",
+      "title": "P3 state-link shuffle control outperformed the original portal",
+      "proofs": [
+        [
+          "E_P3_shuffle"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P4_MIXED",
+      "title": "P4 beat seasonal controls but did not beat direct analog",
+      "proofs": [
+        [
+          "E_P4_main",
+          "E_P4_conventional"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P5_ORDER",
+      "title": "P5 establishes path-order sensitivity inside its authored model",
+      "proofs": [
+        [
+          "E_P5_order"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P6_NULL",
+      "title": "P6 portal geometry terms were rejected by validation",
+      "proofs": [
+        [
+          "E_P6_null"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P7_ADD",
+      "title": "P7 compressed memory retained additive provenance responses",
+      "proofs": [
+        [
+          "E_P7_add"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P7_STRUCT",
+      "title": "P7 structural edits exposed a large failure boundary",
+      "proofs": [
+        [
+          "E_P7_struct"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P5_MATCHED",
+      "title": "P5 equal-information conventional method tied SRDE",
+      "proofs": [
+        [
+          "E_P5_order"
+        ],
+        [
+          "E_P5_tie"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_NO_UNIQUE_EDGE",
+      "title": "Multiple separate archived studies reported no unique SRDE computational edge",
+      "proofs": [
+        [
+          "E_P1_main",
+          "E_P5_tie"
+        ],
+        [
+          "E_P6_null",
+          "E_P7_add"
+        ],
+        [
+          "E_P2_main",
+          "E_P5_tie"
+        ]
+      ],
+      "min_independent_sources": 2
+    },
+    {
+      "id": "C_REAL_OBSERVATIONAL",
+      "title": "At least one historical observational SRDE study was completed",
+      "proofs": [
+        [
+          "E_P2_main"
+        ],
+        [
+          "E_P3_main"
+        ],
+        [
+          "E_P4_main"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P7_BOUNDARY",
+      "title": "P7 memory is useful for source reweighting but fails on structural edits",
+      "proofs": [
+        [
+          "C_P7_ADD",
+          "C_P7_STRUCT"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P5P6_ARCH",
+      "title": "P5 motivates order preservation but P6 shows weak checkpoint improvement",
+      "proofs": [
+        [
+          "C_P5_ORDER",
+          "C_P6_NULL"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_CAUTION",
+      "title": "Research conclusions require caveats and method parity",
+      "proofs": [
+        [
+          "C_NO_UNIQUE_EDGE",
+          "C_P7_BOUNDARY"
+        ],
+        [
+          "E_P1_caution",
+          "E_P7_limit"
+        ]
+      ],
+      "min_independent_sources": 2
+    },
+    {
+      "id": "C_PRIORITIZE_VERIFICATION",
+      "title": "Useful next step is operational evidence-change verification",
+      "proofs": [
+        [
+          "C_CAUTION",
+          "C_REAL_OBSERVATIONAL"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_SINGLE_ROOT_NOT_INDEPENDENT",
+      "title": "CONTROL: two quotes from P1 are not two independent reports",
+      "proofs": [
+        [
+          "E_P1_main",
+          "E_P1_caution"
+        ]
+      ],
+      "min_independent_sources": 2
+    },
+    {
+      "id": "C_P3P4_CONTEXT",
+      "title": "P3 and P4 are both ocean-based historical studies",
+      "proofs": [
+        [
+          "E_P3_main",
+          "E_P4_main"
+        ]
+      ],
+      "min_independent_sources": 2
+    },
+    {
+      "id": "C_P5_P7_MEMORY",
+      "title": "P5 and P7 jointly establish a bounded ordering-memory representation",
+      "proofs": [
+        [
+          "C_P5_ORDER",
+          "C_P7_BOUNDARY"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_P2_P4_SCOPE",
+      "title": "Real-world historical SRDE tests give mixed comparative outcomes",
+      "proofs": [
+        [
+          "C_P2_REAL_NEG",
+          "C_P4_MIXED"
+        ]
+      ],
+      "min_independent_sources": 1
+    },
+    {
+      "id": "C_NO_HUMAN_COGNITION",
+      "title": "Explicit limits to human cognitive interpretation are documented",
+      "proofs": [
+        [
+          "E_P5_tie"
+        ],
+        [
+          "E_P7_limit"
+        ]
+      ],
+      "min_independent_sources": 1
+    }
+  ],
+  "notes": [
+    "Proof paths OR across paths, AND within paths",
+    "A claim is evidence-backed only when every token on at least one proof path remains present, with explicit distinct-report root minimum",
+    "Status measures cited text retained, NOT factual scientific truth",
+    "CONTROL C_SINGLE_ROOT_NOT_INDEPENDENT starts as unsupported, to test duplicate-source handling",
+    "No automatic language-model extraction; 15 exact source-backed anchor lines and 20 explicitly authored dependency propositions"
+  ]
+}
