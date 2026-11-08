@@ -1,0 +1,61 @@
+{
+  "research_date": "2026-11-08",
+  "type": "verbatim_local_archives_of_seven_SRDE_public_research_reports",
+  "report_count": 7,
+  "sources": {
+    "P1": {
+      "filename": "P1.md",
+      "sha256": "b94d595e82759978f78de12c36524fee36d477bd499b45f550b7c590997a66dc",
+      "bytes": 8601,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P1-2026-11-03/REPORT.md",
+      "total_lines": 77
+    },
+    "P2": {
+      "filename": "P2.md",
+      "sha256": "0bf7e3d52d5dfffbfe3cd61ef35f8c08d30ca5564076052a5bba4105804ffc1d",
+      "bytes": 8096,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P2-2026-11-03/REPORT.md",
+      "total_lines": 90
+    },
+    "P3": {
+      "filename": "P3.md",
+      "sha256": "d5989b53df80d296a32a9287aa941a1f388bc03095387b4e42a946ca38e2aa6c",
+      "bytes": 8561,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P3-2026-11-03/REPORT.md",
+      "total_lines": 73
+    },
+    "P4": {
+      "filename": "P4.md",
+      "sha256": "04f29240bb3001176bfe7d249b27820555693f16179f2c26b8ea16717a600989",
+      "bytes": 7925,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P4-2026-11-03/REPORT.md",
+      "total_lines": 76
+    },
+    "P5": {
+      "filename": "P5.md",
+      "sha256": "58ed2eda7e3026639e03d74107dbb642a1caf642e0f98e16cdcf78c63b3f4552",
+      "bytes": 7266,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P5-2026-11-03/REPORT.md",
+      "total_lines": 94
+    },
+    "P6": {
+      "filename": "P6.md",
+      "sha256": "524312311a417772b56ff2170593c233a8b9b3af35f93c9bb22f3a085c7a0dc9",
+      "bytes": 7543,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P6-2026-11-03/RESEARCH_REPORT.md",
+      "total_lines": 80
+    },
+    "P7": {
+      "filename": "P7.md",
+      "sha256": "f074e2f3485142aa45e0f4cfa0e7388cef4d92814b13a10110b713dfdae9110e",
+      "bytes": 11732,
+      "reference_url": "https://github.com/MerluseDan/FACO9000/blob/main/research/srde/portal-experiment-P7-2026-11-03/RESEARCH_REPORT.md",
+      "total_lines": 107
+    }
+  },
+  "notes": [
+    "Original report files unchanged; copies for experiment only",
+    "Evidence roots correspond to physical reports, not independent scientific replication",
+    "An anchor is an entire Markdown line; moving a line preserves matching, editing it invalidates that anchor"
+  ]
+}
