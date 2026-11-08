@@ -1,0 +1,26 @@
+{
+  "phase": "PREHOLDOUT_LOCKED",
+  "date": "2026-11-08",
+  "event_seed": 20261108,
+  "scale_seed": 20261109,
+  "real_event_count": 240,
+  "scale_workspaces": 300,
+  "scale_event_count": 240,
+  "real_report_count": 7,
+  "anchors": 15,
+  "claims": 20,
+  "protocol_sha256": "ff302b539a65ada00b671bceb1ae1500c0eb15331124e718d0d9084bd876ce30",
+  "source_sha256": "ed0ff6a28e458a3501e5e01092e03583ad718636042720980f7cd0fec2ccf4c5",
+  "manifest_sha256": "0f445e8405a04094c68620d1c76677d8f8f5e764c0f32f2c40be4ff14ab4d351",
+  "cards_sha256": "f230e9ff5ca13d3cc6598349d82771ef53c61f7bb56b4e2abdcae7eedf55378f",
+  "source_corpus_file_sha256": {
+    "corpus/P1.md": "b94d595e82759978f78de12c36524fee36d477bd499b45f550b7c590997a66dc",
+    "corpus/P2.md": "0bf7e3d52d5dfffbfe3cd61ef35f8c08d30ca5564076052a5bba4105804ffc1d",
+    "corpus/P3.md": "d5989b53df80d296a32a9287aa941a1f388bc03095387b4e42a946ca38e2aa6c",
+    "corpus/P4.md": "04f29240bb3001176bfe7d249b27820555693f16179f2c26b8ea16717a600989",
+    "corpus/P5.md": "58ed2eda7e3026639e03d74107dbb642a1caf642e0f98e16cdcf78c63b3f4552",
+    "corpus/P6.md": "524312311a417772b56ff2170593c233a8b9b3af35f93c9bb22f3a085c7a0dc9",
+    "corpus/P7.md": "f074e2f3485142aa45e0f4cfa0e7388cef4d92814b13a10110b713dfdae9110e"
+  },
+  "data_and_evaluation_status": "UNOPENED; only small unit preflight evaluated with unrelated seed and 2 dummy workspaces"
+}
