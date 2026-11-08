@@ -1,0 +1,13 @@
+{
+  "study": "SRDE-LA4",
+  "before_scoring": true,
+  "sha256": {
+    "README.md": "feee478831bf9f1884c7d3110f5728a14e931912be1964f088195948b18360df",
+    "PROTOCOL.json": "606d1caebff5b36a4f333910c8bbf61e908ef167af7508aed7d9a0dabfdd6cea",
+    "NOVELTY.md": "9c9d0e8737f4db7a9584fa42a87b3f2eb9b15d947d876986d57cfd0b582f2acb",
+    "OBSERVABILITY_PROOF.md": "1d6f48e9c3cc5bc7bbc6afbf5ab225d6e3b6b74f52b5fc1501f04e76ec49c568",
+    "EXECUTION_NOTES.md": "854e1a551f82b4b10011283da82d82719a84a7f138562369001144a95948858f",
+    "run_la4.py": "7c68b135fcd85f13bdb71fff8d3c3d597790d9bf31cf0e58d111081d8ff7498b",
+    "test_la4.py": "ea3884e8f8e7c2fa3e8b718c140fcd2a38fe2a47f4b718f8aa08f9cc2e1d5116"
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "budgets": {
+    "abstain_cost": 0.15,
+    "amortization_horizon": 128,
+    "cost_per_query": 0.005,
+    "each_case_queries": "at most one event anchor and one lineage query",
+    "outcome_delay": "responses immediate in this bounded query task; no temporal-adaptation claim",
+    "total_queries_max": 4
+  },
+  "calibration_pool": {
+    "actual_reference_modes": [
+      "independent accuracy .9",
+      "independent accuracy .5",
+      "dependent echo of first report"
+    ],
+    "anchor_assumed_accuracy": 0.9,
+    "cases_per_context": 4,
+    "contexts": 2,
+    "hidden": "proxy B, true event Y=B xor context orientation, copying L, potential anchor responses",
+    "lineage_response_accuracy": 1.0,
+    "observable": "three source bits encoded as x plus context; known a and copy prior .2"
+  },
+  "classification": "Controlled grounding/observability robustness test and instantiation of established impossibility/active-learning ideas; no novel-theorem or worldwide-first claim",
+  "conditions": [
+    {
+      "a": 0.65,
+      "family": "independent",
+      "id": "C00",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.65,
+      "family": "independent",
+      "id": "C01",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.65,
+      "family": "independent",
+      "id": "C02",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.65,
+      "family": "independent",
+      "id": "C03",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.65,
+      "family": "uninformative",
+      "id": "C04",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.65,
+      "family": "uninformative",
+      "id": "C05",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.65,
+      "family": "uninformative",
+      "id": "C06",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.65,
+      "family": "uninformative",
+      "id": "C07",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.65,
+      "family": "dependent_echo",
+      "id": "C08",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.65,
+      "family": "dependent_echo",
+      "id": "C09",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.65,
+      "family": "dependent_echo",
+      "id": "C10",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.65,
+      "family": "dependent_echo",
+      "id": "C11",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.8,
+      "family": "independent",
+      "id": "C12",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.8,
+      "family": "independent",
+      "id": "C13",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.8,
+      "family": "independent",
+      "id": "C14",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.8,
+      "family": "independent",
+      "id": "C15",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "accurate"
+    },
+    {
+      "a": 0.8,
+      "family": "uninformative",
+      "id": "C16",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.8,
+      "family": "uninformative",
+      "id": "C17",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.8,
+      "family": "uninformative",
+      "id": "C18",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.8,
+      "family": "uninformative",
+      "id": "C19",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "random"
+    },
+    {
+      "a": 0.8,
+      "family": "dependent_echo",
+      "id": "C20",
+      "orientation": [
+        0,
+        0
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.8,
+      "family": "dependent_echo",
+      "id": "C21",
+      "orientation": [
+        0,
+        1
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.8,
+      "family": "dependent_echo",
+      "id": "C22",
+      "orientation": [
+        1,
+        0
+      ],
+      "reference": "echo"
+    },
+    {
+      "a": 0.8,
+      "family": "dependent_echo",
+      "id": "C23",
+      "orientation": [
+        1,
+        1
+      ],
+      "reference": "echo"
+    }
+  ],
+  "controls": "unlabeled/provenance transcripts invariant to orientation; .5 anchors are uninformative but learner still assumes .9; echo anchors violate independence and grounding. KnownOrientation is information-privileged and pays0, not a fair learned baseline.",
+  "coupling": "24 independent calibration pools =2 accuracies x12 seeds; each is evaluated counterfactually under4 context orientations x3 anchor mechanisms.288 evaluation worlds are NOT288 independent datasets. Raw source pool/held-out observable samples/noise uniforms shared across orientation/mechanism variants.",
+  "date": "2026-11-08",
+  "leakage": "selectors receive x,known a and revealed responses only; responder owns raw labels. No held-out outcomes enter selection. Independent holdout RNG seed offset30000000. Model/prior/cost/methods frozen before scoring.",
+  "limits": "synthetic exact semantic-orientation family; a and dependence known; only two contexts; no physical faults, real-world forecast proof, human cognition, representation-learning proof or native-engine integration.",
+  "loss": "squared probability error if predicting or .15 if abstaining, plus actual query expense/128. Brier/ECE scored even when abstaining. ECE10 equal-width bins.",
+  "methods": [
+    "LiteralBits",
+    "RobustAbstain",
+    "ProvenanceOnly",
+    "UniformAnchors",
+    "ConfidentAnchors",
+    "GreedyDecision",
+    "EntropyGreedy",
+    "TwoStepTable",
+    "TwoStepRecursive",
+    "SRDETypedGate",
+    "KnownOrientation"
+  ],
+  "planning": "posterior over each context orientation starts .5; full likelihood of each underlying case integrates B,L and conditions on observed anchor/lineage once. GreedyDecision minimizes one-query expected terminal decision risk+query cost/128; TwoStep uses two-query lookahead with stopping and replans until cap4. Explicit table and recursive solvers use same horizon,tie order,and epsilon1e-12. EntropyGreedy maximizes orientation entropy reduction while informative and budget remains; SRDETypedGate buys high-confidence-proxy anchors in least oriented context until posterior confidence .95 or cap.",
+  "primary": "TwoStepTable minus GreedyDecision exact total loss in independent .9-reference family; same information, query cap and charges. Other comparisons exploratory.",
+  "question": "Can provenance-only observations distinguish reversed source-to-target relationships, and can short decision lookahead or information-based query selection acquire useful grounding when abstention creates a decision-risk plateau?",
+  "secondary": "EntropyGreedy as strong conventional information acquisition; uniform/confident anchors; typed-gate heuristic; no-query robust abstention; provenance-only; literal assumption; privileged known orientation; lower/higher source accuracy and echo/uninformative controls; Brier,ECE,coverage,wrong accepted fraction,actual query counts.",
+  "seeds": [
+    94101,
+    94102,
+    94103,
+    94104,
+    94105,
+    94106,
+    94107,
+    94108,
+    94109,
+    94110,
+    94111,
+    94112
+  ],
+  "study": "SRDE-LA4",
+  "uncertainty": "1000 bootstrap draws seed99101; sample12 seed clusters within each source accuracy, retain all counterfactual orientations/reference modes within a resampled cluster. Primary24 independent clusters. No independent-trial inference from forecast count."
+}
