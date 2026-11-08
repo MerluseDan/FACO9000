@@ -1,0 +1,261 @@
+{
+  "date": "2026-11-08",
+  "project": "SRDE-P9A historical revision pilot",
+  "results": {
+    "status": "RETROSPECTIVE_EXPLORATORY_NOT_PROSPECTIVE",
+    "real_commits": 6,
+    "public_repositories": 5,
+    "probe_count": 12,
+    "semantic_changes": 5,
+    "manual_labels_not_independent": true,
+    "methods": {
+      "whole_file_exact_line": {
+        "TP": 3,
+        "FP": 1,
+        "TN": 6,
+        "FN": 2,
+        "precision": 0.75,
+        "recall": 0.6,
+        "false_alarm_rate": 0.14285714285714285,
+        "review_alerts": 4
+      },
+      "five_line_scoped_anchor": {
+        "TP": 5,
+        "FP": 1,
+        "TN": 6,
+        "FN": 0,
+        "precision": 0.8333333333333334,
+        "recall": 1,
+        "false_alarm_rate": 0.14285714285714285,
+        "review_alerts": 6
+      }
+    },
+    "cases": [
+      {
+        "id": "MDN_CONTEXT",
+        "kind": "claim",
+        "truth_changed": true,
+        "exact_alert": true,
+        "context_alert": true
+      },
+      {
+        "id": "MDN_CONTEXT_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      },
+      {
+        "id": "GITHUB_EXPIRY_SCOPE",
+        "kind": "claim",
+        "truth_changed": true,
+        "exact_alert": false,
+        "context_alert": true
+      },
+      {
+        "id": "GITHUB_EXPIRY_SCOPE_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      },
+      {
+        "id": "PEP694_FILE_STATES",
+        "kind": "claim",
+        "truth_changed": true,
+        "exact_alert": true,
+        "context_alert": true
+      },
+      {
+        "id": "PEP694_FILE_STATES_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      },
+      {
+        "id": "RUST_AWAIT_UNPIN",
+        "kind": "claim",
+        "truth_changed": true,
+        "exact_alert": true,
+        "context_alert": true
+      },
+      {
+        "id": "RUST_AWAIT_UNPIN_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      },
+      {
+        "id": "DESKTOP_CREDENTIALS",
+        "kind": "claim",
+        "truth_changed": false,
+        "exact_alert": true,
+        "context_alert": true
+      },
+      {
+        "id": "DESKTOP_CREDENTIALS_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      },
+      {
+        "id": "PYPA_WHEEL_LINK",
+        "kind": "claim",
+        "truth_changed": true,
+        "exact_alert": false,
+        "context_alert": true
+      },
+      {
+        "id": "PYPA_WHEEL_LINK_STABLE_CONTROL",
+        "kind": "control",
+        "truth_changed": false,
+        "exact_alert": false,
+        "context_alert": false
+      }
+    ],
+    "limitations": [
+      "Commits were selected because their messages indicated known corrections; no blind selection or prospective holdout.",
+      "Six small curated claims and six stable controls; not random representative sample.",
+      "Semantic gold labels are author's qualitative adjudications, not blinded independent review.",
+      "Five-line scoping identifies text-context changes, not automatically semantic invalidity.",
+      "All source snapshots fetched at exact GitHub parent/head refs; Git blobs recorded for reproducibility.",
+      "No separate proof-graph or downstream claim model evaluated in P9 pilot."
+    ]
+  },
+  "records": [
+    {
+      "key": "MDN_CONTEXT",
+      "repo": "mdn/content",
+      "commit": "a1aa79c09717761fc72c20bac94bb9c430ed487a",
+      "parent": "32eceacf42b6bff41d9605298eba143cb7e199a1",
+      "path": "files/en-us/web/javascript/reference/global_objects/json/parse/index.md",
+      "before_blob": "9c3f039b00b08e35e2e27110f579ff4d425b057d",
+      "after_blob": "f83c3b78734f66854a92bba80a75b978bcbed643",
+      "anchor_selector": "It is only passed when reviving primitive values",
+      "old_anchor_occurrences": [
+        43
+      ],
+      "old_selected_line": 43,
+      "after_exact_occurrences": [],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": true,
+      "manual_label_reason": "Original restriction on context argument corrected; context always passed, source property primitive-only.",
+      "control_selected_line": 4,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    },
+    {
+      "key": "GITHUB_EXPIRY_SCOPE",
+      "repo": "github/docs",
+      "commit": "1dd2c2653e4068cd9241b6ea8068388794bfb7ad",
+      "parent": "c6cfeb9512b4de7e2d0caa226493a5bfccda9ed5",
+      "path": "content/actions/how-tos/manage-workflow-runs/approve-runs-from-forks.md",
+      "before_blob": "08d5ebf42c9f5cda1ac9bda8f8a0fe3c7ae81edf",
+      "after_blob": "861d5fd4d94c2c1acbcaed1561052d347c7d64d4",
+      "anchor_selector": "Workflow runs that have been awaiting approval for more than 30 days are automatically deleted.",
+      "old_anchor_occurrences": [
+        24
+      ],
+      "old_selected_line": 24,
+      "after_exact_occurrences": [
+        27
+      ],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": true,
+      "manual_label_reason": "Product-version conditional inserted, but prior sentence remains verbatim in an else branch.",
+      "control_selected_line": 3,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    },
+    {
+      "key": "PEP694_FILE_STATES",
+      "repo": "python/peps",
+      "commit": "fb14b9a0562b14ca236d325ee55c45033f5bdb5d",
+      "parent": "b2612978530996d656ee7926f451c2f4c0054e3e",
+      "path": "peps/pep-0694.rst",
+      "before_blob": "89fc8089d96c4e6c24db1f563f60df5421829c63",
+      "after_blob": "376592f3cd1b4e4a3576f33852e10552c95df91f",
+      "anchor_selector": "``pending``, ``processing``, ``complete``, ``error``, and ``canceled``.",
+      "old_anchor_occurrences": [
+        565
+      ],
+      "old_selected_line": 565,
+      "after_exact_occurrences": [],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": true,
+      "manual_label_reason": "Status enumeration updated: completed replaces complete and canceled removed from files mapping.",
+      "control_selected_line": 3,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    },
+    {
+      "key": "RUST_AWAIT_UNPIN",
+      "repo": "rust-lang/book",
+      "commit": "1a9f1ebb013f8f1164080b6f81b9b33fe6e6d7fa",
+      "parent": "d9202d8a91ce9cd0569b7e1b243a4842c252386a",
+      "path": "src/ch17-05-traits-for-async.md",
+      "before_blob": "58d4e7e5654accca3e3e82d082aad74c3db02bc2",
+      "after_blob": "07ed8c0db7d975ded5dc873266f59deac8c823c1",
+      "anchor_selector": "awaiting a Future requires that the future in question implement the",
+      "old_anchor_occurrences": [
+        156
+      ],
+      "old_selected_line": 156,
+      "after_exact_occurrences": [],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": true,
+      "manual_label_reason": "Correction distinguishes direct .await implicit pin from boxed trait-object futures.",
+      "control_selected_line": 3,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    },
+    {
+      "key": "DESKTOP_CREDENTIALS",
+      "repo": "github/docs",
+      "commit": "c542dc3c202718a170a0c84399d6ceed6fe84a3f",
+      "parent": "234d43cfcfdde677a758738f83223a2b0924949d",
+      "path": "content/desktop/installing-and-authenticating-to-github-desktop/about-connections-to-github-in-github-desktop.md",
+      "before_blob": "923d01810ed02561183ffd83876fd1d7dc93e162",
+      "after_blob": "9e70ebff487dd26c843306b265acd7a3ea81fec4",
+      "anchor_selector": "caches your credentials (username and password",
+      "old_anchor_occurrences": [
+        19
+      ],
+      "old_selected_line": 19,
+      "after_exact_occurrences": [],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": false,
+      "manual_label_reason": "Broader claim that Desktop caches credentials remains supported despite removal of outdated password-specific wording.",
+      "control_selected_line": 2,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    },
+    {
+      "key": "PYPA_WHEEL_LINK",
+      "repo": "pypa/packaging.python.org",
+      "commit": "18ca3fc7f31d834689dd276d88ea094fc4dc63e8",
+      "parent": "5271c1f1c435f0e64bb4bf71dfeda167cad96ebf",
+      "path": "source/specifications/pylock-toml.rst",
+      "before_blob": "bc5cb5413c6b20f08617416106065c90e9ac7131",
+      "after_blob": "394f9a2060df067bb19271c3811f0e869f8d087b",
+      "anchor_selector": "either :ref:`pylock-packages-sdist-url` or :ref:`pylock-packages-sdist-path`.",
+      "old_anchor_occurrences": [
+        569,
+        640
+      ],
+      "old_selected_line": 640,
+      "after_exact_occurrences": [
+        569
+      ],
+      "after_scoped_context_match": false,
+      "manual_claim_changed": true,
+      "manual_label_reason": "Wheel-file section fixed to wheels URL/path; identical sdist text persists correctly in sdist section.",
+      "control_selected_line": 8,
+      "control_exact_match": true,
+      "control_scoped_context_match": true
+    }
+  ]
+}
