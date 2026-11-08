@@ -1,0 +1,184 @@
+{
+  "project": "SRDE P8 Evidence Change-Impact Utility",
+  "date": "2026-11-08",
+  "status": "COMPLETED_INDEPENDENTLY_AUDITED",
+  "individual_file_count": 34,
+  "files": [
+    {
+      "file": "PREREGISTRATION.md",
+      "size_bytes": 7173,
+      "sha256": "ff302b539a65ada00b671bceb1ae1500c0eb15331124e718d0d9084bd876ce30"
+    },
+    {
+      "file": "PRIOR_ART.md",
+      "size_bytes": 1552,
+      "sha256": "b10eb0197572a7524a2659f28d8c8bb9f8bf784ca4f1a7437c98c3f60d3b477d"
+    },
+    {
+      "file": "SOURCE_MANIFEST.json",
+      "size_bytes": 2604,
+      "sha256": "0f445e8405a04094c68620d1c76677d8f8f5e764c0f32f2c40be4ff14ab4d351"
+    },
+    {
+      "file": "evidence_cards.json",
+      "size_bytes": 18464,
+      "sha256": "f230e9ff5ca13d3cc6598349d82771ef53c61f7bb56b4e2abdcae7eedf55378f"
+    },
+    {
+      "file": "srde_p8.py",
+      "size_bytes": 20852,
+      "sha256": "ed0ff6a28e458a3501e5e01092e03583ad718636042720980f7cd0fec2ccf4c5"
+    },
+    {
+      "file": "FROZEN_INPUTS.json",
+      "size_bytes": 1380,
+      "sha256": "1195137f919370b2e6e55cdd58b03cbe7dfda4addfe9a7ce2ffa73d48c52b229"
+    },
+    {
+      "file": "P8_PREHOLDOUT_FROZEN.zip",
+      "size_bytes": 48444,
+      "sha256": "43ceb1b66c5c480fb92d21238056f7cee40c7cf5759a156b80f272c0297a91b3"
+    },
+    {
+      "file": "srde_p8_repaired.py",
+      "size_bytes": 21120,
+      "sha256": "5878c4d06cb0d317d937dcc5ec499572deb5d82271241e55c35a784758fdf386"
+    },
+    {
+      "file": "ENGINEERING_REPAIR.md",
+      "size_bytes": 1232,
+      "sha256": "1058d4ab603e9fd6327f5ba1c592f5f56f4c2187ce185b5d68b125320fe0ce9f"
+    },
+    {
+      "file": "evaluation_failure_pre_score.log",
+      "size_bytes": 923,
+      "sha256": "c1e95ff10841aec450a87c132cc3c907051b03ed63a909272cc7ceeef589c2f9"
+    },
+    {
+      "file": "evaluation_stdout.log",
+      "size_bytes": 973,
+      "sha256": "b1785776c7f4927c249a6b89ff2ef07ff5bf7b9bb03834add73a924d42fe2679"
+    },
+    {
+      "file": "audit_independent.py",
+      "size_bytes": 8152,
+      "sha256": "344f5b054a3655c734717d7dd248ddad17ee6594399e3504a3af2ed098d976d2"
+    },
+    {
+      "file": "README.md",
+      "size_bytes": 5433,
+      "sha256": "79408e3530b782cf56b4ce03eab32b6d08ca352fc0e8b9d8d2cdfdf8f2741d40"
+    },
+    {
+      "file": "RESEARCH_REPORT.md",
+      "size_bytes": 9687,
+      "sha256": "3d10c0059bf829b46b859901bf11de2bb0b4ef02bf5c1cd03dc2ac3ef0131179"
+    },
+    {
+      "file": "SRDE_P8_Research_Report.pdf",
+      "size_bytes": 161222,
+      "sha256": "0cc747dd0dda66b06feba47a961d5fed32ebff091a67a864b6125391d300b8dd"
+    },
+    {
+      "file": "build_pdf.py",
+      "size_bytes": 10079,
+      "sha256": "bd851554c3afd47477400cad603b2015290cc6769b7abf8c9545b8b1a2bb6dc3"
+    },
+    {
+      "file": "srde-evidence-impact_0.8.0~research1_all.deb",
+      "size_bytes": 37676,
+      "sha256": "51e6650a42d59a0f462738dbbeb1cc9da25714dd6941fab9a8bc008401a0cf0d"
+    },
+    {
+      "file": "DEMO_RETRACTION_E_P1_main.json",
+      "size_bytes": 4441,
+      "sha256": "97d1a3b7b1557ec925880e902ddfe1764f8f00bb756230e29c8863dbd301652e"
+    },
+    {
+      "file": "DEMO_RETRACTION_E_P7_add.json",
+      "size_bytes": 4696,
+      "sha256": "791dc93806ce5097bdfca1da7ac7edee622b20ec9d7c2655b4141757c2765311"
+    },
+    {
+      "file": "deb_qa_simulation.json",
+      "size_bytes": 4441,
+      "sha256": "97d1a3b7b1557ec925880e902ddfe1764f8f00bb756230e29c8863dbd301652e"
+    },
+    {
+      "file": "results/FINAL_RESULTS.json",
+      "size_bytes": 4569,
+      "sha256": "51a2047b8f153c0c71325967f281881ca82cbf43e988d4257e34c0dd73cb808c"
+    },
+    {
+      "file": "results/event_trace.csv",
+      "size_bytes": 23861,
+      "sha256": "27f4ec16a84555474761899329632eb0bed88bfeeb392556ab4c9eb5d31cdc02"
+    },
+    {
+      "file": "results/review_queue_examples.json",
+      "size_bytes": 16037,
+      "sha256": "a96308294b64ff8bb68022f6211a97e3406f26c43d55d41a78521a9e7b2e3eaf"
+    },
+    {
+      "file": "results/AUDIT_INDEPENDENT.json",
+      "size_bytes": 1218,
+      "sha256": "1685b3ed5f5842eb4a36d7002934cb788e11af9e826ffd89778ef2534471d672"
+    },
+    {
+      "file": "corpus/P1.md",
+      "size_bytes": 8601,
+      "sha256": "b94d595e82759978f78de12c36524fee36d477bd499b45f550b7c590997a66dc"
+    },
+    {
+      "file": "corpus/P2.md",
+      "size_bytes": 8096,
+      "sha256": "0bf7e3d52d5dfffbfe3cd61ef35f8c08d30ca5564076052a5bba4105804ffc1d"
+    },
+    {
+      "file": "corpus/P3.md",
+      "size_bytes": 8561,
+      "sha256": "d5989b53df80d296a32a9287aa941a1f388bc03095387b4e42a946ca38e2aa6c"
+    },
+    {
+      "file": "corpus/P4.md",
+      "size_bytes": 7925,
+      "sha256": "04f29240bb3001176bfe7d249b27820555693f16179f2c26b8ea16717a600989"
+    },
+    {
+      "file": "corpus/P5.md",
+      "size_bytes": 7266,
+      "sha256": "58ed2eda7e3026639e03d74107dbb642a1caf642e0f98e16cdcf78c63b3f4552"
+    },
+    {
+      "file": "corpus/P6.md",
+      "size_bytes": 7543,
+      "sha256": "524312311a417772b56ff2170593c233a8b9b3af35f93c9bb22f3a085c7a0dc9"
+    },
+    {
+      "file": "corpus/P7.md",
+      "size_bytes": 11732,
+      "sha256": "f074e2f3485142aa45e0f4cfa0e7388cef4d92814b13a10110b713dfdae9110e"
+    },
+    {
+      "file": "figures/p8_alert_burden.png",
+      "size_bytes": 40481,
+      "sha256": "f38e3b1712323001ecae2e321fd6db8b299fc71f0a2a488db01237ddebfeec80"
+    },
+    {
+      "file": "figures/p8_real_runtime.png",
+      "size_bytes": 43672,
+      "sha256": "5bf8c7f8ac5e0b80bf6dbb1ff1c0675d279f5e24a30e7f74c8d7473c349a1301"
+    },
+    {
+      "file": "figures/p8_scale_runtime.png",
+      "size_bytes": 50421,
+      "sha256": "bc2c4304d1ec95d1e7e8e77bd16cafcc2647b10bdf26f97926a99ee8494bb022"
+    }
+  ],
+  "notes": [
+    "Includes original frozen source, engineering failure and patched evaluated runner",
+    "All seven genuine research report snapshots are copies, unchanged",
+    "Installed demo binary is research-only and read-only by default",
+    "Full reports, explanations, visual PDF, figures and raw output trace included"
+  ]
+}
