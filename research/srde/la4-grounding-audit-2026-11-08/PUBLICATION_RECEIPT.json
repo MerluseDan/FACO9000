@@ -1,0 +1,101 @@
+{
+  "study": "SRDE-LA4",
+  "date": "2026-11-08",
+  "status": "executed, published and independently read back",
+  "freeze_commit": "04cbe0fb35e80484e3e98a5514de28fbf94c712f",
+  "publication_commit": "9a274e8be01c600c29fb461973b931972f3e5cd6",
+  "github": {
+    "repository": "MerluseDan/FACO9000",
+    "path": "research/srde/la4-grounding-audit-2026-11-08",
+    "verified_blobs_including_index": 24,
+    "archive_download_byte_identical": true,
+    "zip_crc_passed": true,
+    "payload_sha256_checks": 32
+  },
+  "drive": {
+    "folder_id": "1jmthmovsrWStj8HfXMzMXBaVm6YUEeh0",
+    "canonical_parent": "1XJbpQyX5okM2dmlbM4eSHKcXKQGg49xB",
+    "parent_and_private_sharing_verified": true,
+    "raw_file_readbacks": [
+      {
+        "id": "1763opmqFtgloK_eXlgsXH7nrchu-Bls_",
+        "name": "SRDE_LA4_Grounding_Audit_2026-11-08.zip",
+        "parent": "1jmthmovsrWStj8HfXMzMXBaVm6YUEeh0",
+        "shared": false,
+        "bytes": 2993362,
+        "sha256": "8df7df5ef619cee1bbe6257516acc6348c55dc6164c0e66d88b494f01bf78d1f"
+      },
+      {
+        "id": "1co5n8DWaPvMORIi6dv1CTkVfVG5a-WJJ",
+        "name": "SRDE_LA4_Grounding_Audit_2026-11-08.zip.sha256",
+        "parent": "1jmthmovsrWStj8HfXMzMXBaVm6YUEeh0",
+        "shared": false,
+        "bytes": 106,
+        "sha256": "bb7c2516d7f00ca55e92574f0ad0b6ce30d557ffba0b5b1e23705308fd25b945"
+      },
+      {
+        "id": "1vRaXoqT2DMlYPMRUAfX71KADAu-EWM_d",
+        "name": "REPORT.pdf",
+        "parent": "1jmthmovsrWStj8HfXMzMXBaVm6YUEeh0",
+        "shared": false,
+        "bytes": 147685,
+        "sha256": "979d7200a529594926484fa9167c42ada079fe86d3fb7d73b0ff6a90b4671800"
+      },
+      {
+        "id": "1Pdk890hDsrkka7DCfmm1URcmDpiQTmk5",
+        "name": "REPORT.md",
+        "parent": "1jmthmovsrWStj8HfXMzMXBaVm6YUEeh0",
+        "shared": false,
+        "bytes": 21490,
+        "sha256": "e699b25d411377ef8e2adff227b822d173ea3e264f8919b16bca5d384e433a52"
+      }
+    ]
+  },
+  "archive": {
+    "files": 33,
+    "bytes": 2993362,
+    "sha256": "8df7df5ef619cee1bbe6257516acc6348c55dc6164c0e66d88b494f01bf78d1f"
+  },
+  "verification": {
+    "unit_tests_passed": 12,
+    "clean_extraction_unit_tests_passed": 12,
+    "clean_extraction_independent_audit_passed": true,
+    "independent_query_receipts_checked": 7472,
+    "fitted_states_checked": 3168,
+    "forecast_rows_checked": 557568,
+    "maximum_numeric_error": 1.2212453270876722e-15,
+    "scientific_outputs_exact_two_process_replay": 11,
+    "independent_calibration_pools": 24,
+    "counterfactual_evaluation_worlds": 288,
+    "heuristic_numerical_context_ties_tolerance": 1e-12,
+    "scientific_frozen_files_unchanged": true
+  },
+  "findings": {
+    "primary_two_step_minus_greedy_independent_references": -0.005438877904220177,
+    "primary_cluster_interval": [
+      -0.016147796838768293,
+      0.002269025114725827
+    ],
+    "primary_superiority_established": false,
+    "independent_references_two_step_total_loss": 0.12619647580970314,
+    "robust_abstention_total_loss": 0.15,
+    "uninformative_references_two_step_total_loss": 0.1976825067709283,
+    "echo_references_two_step_total_loss": 0.2269734302233449,
+    "recursive_conventional_tie": true,
+    "perfect_provenance_alone_cannot_orient_declared_worlds": true
+  },
+  "limitations": [
+    "synthetic constructed worlds; no empirical/human-cognitive validation",
+    "24 independent calibration pools, not288 independent datasets",
+    "source channel known; only context orientations learned",
+    "actual reference quality/independence is not learned or certified",
+    "two-step is limited lookahead, not globally optimal four-query planning",
+    "established identifiability and active-learning ideas; no novel-theorem or worldwide-first claim",
+    "no native Blackbird integration"
+  ],
+  "tracking": {
+    "google_tasks": "existing SRDV list read on8November; mouse/locator actions and keyboard focus root unavailable; no task change claimed",
+    "publication_step": "now verified complete; reconcile pending local task list accordingly",
+    "broader_research": "remains open"
+  }
+}
