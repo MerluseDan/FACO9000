@@ -1,0 +1,137 @@
+{
+  "status": "COMPLETED_SINGLE_FROZEN_HOLDOUT",
+  "date": "2026-11-08",
+  "project": "SRDE P8 Evidence Change Impact Utility",
+  "primary": {
+    "events": 240,
+    "claim_comparisons": 4800,
+    "status_parity": true,
+    "alert_precision": 1.0,
+    "alert_recall": 1.0,
+    "naive_alerts": 1429,
+    "actual_change_alerts": 210,
+    "naive_extra_alerts": 1219,
+    "unique_removed_anchors_causing_claim_changes": 13,
+    "median_full_ms": 0.4229895,
+    "median_indexed_ms": 0.0539495,
+    "median_sqlite_ms": 0.048347,
+    "total_full_ms": 109.878542,
+    "total_indexed_ms": 18.573141,
+    "total_sqlite_ms": 13.649612,
+    "full_file_reads": 1680,
+    "indexed_file_reads": 240,
+    "sqlite_file_reads": 240
+  },
+  "scale_synthetic": {
+    "synthetic_workspaces": 300,
+    "claims": 6000,
+    "anchors": 4500,
+    "events": 240,
+    "claim_checks_full": 1440000,
+    "claim_checks_indexed": 839,
+    "fraction_claim_checks_indexed": 0.0005826388888888889,
+    "total_full_ms": 13422.887564,
+    "total_indexed_ms": 450.769373,
+    "total_sqlite_ms": 452.83204,
+    "all_events_exact_parity": true,
+    "first_12_edit_receipts": [
+      {
+        "step": 0,
+        "evidence": "E_W190__P3_main",
+        "changed_status_count": 1,
+        "indexed_claim_checks": 3
+      },
+      {
+        "step": 1,
+        "evidence": "E_W122__P7_struct",
+        "changed_status_count": 3,
+        "indexed_claim_checks": 5
+      },
+      {
+        "step": 2,
+        "evidence": "E_W70__P4_main",
+        "changed_status_count": 3,
+        "indexed_claim_checks": 5
+      },
+      {
+        "step": 3,
+        "evidence": "E_W242__P4_conventional",
+        "changed_status_count": 2,
+        "indexed_claim_checks": 2
+      },
+      {
+        "step": 4,
+        "evidence": "E_W168__P3_shuffle",
+        "changed_status_count": 1,
+        "indexed_claim_checks": 1
+      },
+      {
+        "step": 5,
+        "evidence": "E_W38__P5_tie",
+        "changed_status_count": 0,
+        "indexed_claim_checks": 5
+      },
+      {
+        "step": 6,
+        "evidence": "E_W282__P7_add",
+        "changed_status_count": 3,
+        "indexed_claim_checks": 6
+      },
+      {
+        "step": 7,
+        "evidence": "E_W18__P5_order",
+        "changed_status_count": 3,
+        "indexed_claim_checks": 4
+      },
+      {
+        "step": 8,
+        "evidence": "E_W103__P4_conventional",
+        "changed_status_count": 2,
+        "indexed_claim_checks": 2
+      },
+      {
+        "step": 9,
+        "evidence": "E_W59__P3_shuffle",
+        "changed_status_count": 1,
+        "indexed_claim_checks": 1
+      },
+      {
+        "step": 10,
+        "evidence": "E_W147__P1_main",
+        "changed_status_count": 1,
+        "indexed_claim_checks": 5
+      },
+      {
+        "step": 11,
+        "evidence": "E_W200__P1_caution",
+        "changed_status_count": 0,
+        "indexed_claim_checks": 3
+      }
+    ]
+  },
+  "controls": {
+    "duplicate_report_control": "PASS",
+    "alternative_proof_control": "PASS",
+    "multi_step_restore_control": "PASS"
+  },
+  "source_archived_sha256": {
+    "P1": "b94d595e82759978f78de12c36524fee36d477bd499b45f550b7c590997a66dc",
+    "P2": "0bf7e3d52d5dfffbfe3cd61ef35f8c08d30ca5564076052a5bba4105804ffc1d",
+    "P3": "d5989b53df80d296a32a9287aa941a1f388bc03095387b4e42a946ca38e2aa6c",
+    "P4": "04f29240bb3001176bfe7d249b27820555693f16179f2c26b8ea16717a600989",
+    "P5": "58ed2eda7e3026639e03d74107dbb642a1caf642e0f98e16cdcf78c63b3f4552",
+    "P6": "524312311a417772b56ff2170593c233a8b9b3af35f93c9bb22f3a085c7a0dc9",
+    "P7": "f074e2f3485142aa45e0f4cfa0e7388cef4d92814b13a10110b713dfdae9110e"
+  },
+  "method": "manually defined OR-AND evidence proofs, SHA-tagged line anchors, iterative status/provenance propagation",
+  "important_limits": [
+    "Seven previously written real research reports only; edits are injected in copies, not live changes",
+    "20 manually curated claim cards; no automatic semantic understanding or fact-checking",
+    "Distinct files are counted as distinct document roots, not independent scientific replications",
+    "Synthetic scaling uses 300 cloned workspace templates, not 300 unrelated real corpora",
+    "Full baseline rescans sources and graph; index stores extra dependency state",
+    "Incremental view maintenance, Datalog provenance and reverse dependency tracking are established technology",
+    "Timing includes Python runtime and machine-specific overhead, not a portable performance guarantee",
+    "The unsupported duplicate-root control is a negative logic test, not a false factual claim"
+  ]
+}
