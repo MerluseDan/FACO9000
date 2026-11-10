@@ -1,0 +1,379 @@
+{
+  "study": "SRDE-P9B",
+  "registered_date_local": "2026-11-10",
+  "version": "1.0",
+  "status": "BASELINE_FREEZE_UNSCORED",
+  "external_status": "PROSPECTIVE_MEANS_ONLY_FUTURE_REVISIONS_AFTER_FREEZE",
+  "sources_count": 10,
+  "claims_count": 20,
+  "history": "P1-P9A retained unchanged; P9A historical examples expressly excluded from evaluation as future events",
+  "protocols": {
+    "events": "future main-branch commits that change one of the ten pinned source paths",
+    "conditions": "No future revision has been scored at registry creation",
+    "scope": "10 files across 5 independent repositories, exactly two anchored claims/file",
+    "rules": "Any quote/section/conditional context mismatch triggers review only; semantic truth requires independent human assessment",
+    "negative": "Include all unchanged claims and all file-level changes with no affected registered claim",
+    "budget": "Report SHA/quote/context matching, number of files fetched, CPU time, manual review time, setup overhead; include all run failures",
+    "prior_art": "W3C Web Annotation TextQuote/Position selectors; incremental view maintenance; conventional Git diff and dependency index"
+  },
+  "sources": [
+    {
+      "document_id": "MDN_PARSE",
+      "repository": "mdn/content",
+      "source_path": "files/en-us/web/javascript/reference/global_objects/json/parse/index.md",
+      "source_commit_sha": "7ba141d212766d3c840c4176f72d39dce1df122e",
+      "source_blob_sha": "7ecef9657ef0a34f082e351b006f7ae0630e95f8",
+      "lines_at_freeze": 209,
+      "scope_note": "The context argument is provided regardless; this claim is about the source property.",
+      "source_url": "https://github.com/mdn/content/blob/7ba141d212766d3c840c4176f72d39dce1df122e/files/en-us/web/javascript/reference/global_objects/json/parse/index.md",
+      "claims": [
+        {
+          "id": "MDN_PARSE_P",
+          "role": "primary",
+          "claim": "The JSON.parse reviver context.source is available only for primitive values, not objects or arrays.",
+          "line_at_freeze": 45,
+          "quote": "- : The original JSON string representing this value. This property is only present when revivi",
+          "prefix": " is a new object for each invocation of the reviver function.\n        - `source` {{optional_inline}}",
+          "suffix": "\n### Return value\n",
+          "nearest_headings": [
+            "## Syntax",
+            "### Parameters"
+          ],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "MDN_PARSE_C",
+          "role": "control",
+          "claim": "JSON.parse constructs a JavaScript value from JSON text and permits an optional reviver.",
+          "line_at_freeze": 10,
+          "quote": "The **`JSON.parse()`** static method parses a JSON string, constructing the JavaScript value or",
+          "prefix": "ge-type: javascript-static-method\nbrowser-compat: javascript.builtins.JSON.parse\nsidebar: jsref\n---\n",
+          "suffix": "\n{{InteractiveExample(\"JavaScript Demo: JSON.parse()\")}}\n",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "MDN_STRINGIFY",
+      "repository": "mdn/content",
+      "source_path": "files/en-us/web/javascript/reference/global_objects/json/stringify/index.md",
+      "source_commit_sha": "7ba141d212766d3c840c4176f72d39dce1df122e",
+      "source_blob_sha": "2f9eda08f193276fe8ea0fec6a62899dfd57ef67",
+      "lines_at_freeze": 392,
+      "scope_note": "Number-valued space argument, not strings.",
+      "source_url": "https://github.com/mdn/content/blob/7ba141d212766d3c840c4176f72d39dce1df122e/files/en-us/web/javascript/reference/global_objects/json/stringify/index.md",
+      "claims": [
+        {
+          "id": "MDN_STRINGIFY_P",
+          "role": "primary",
+          "claim": "For numeric JSON.stringify space arguments, indentation is clamped to ten spaces.",
+          "line_at_freeze": 47,
+          "quote": "If this is a number, it indicates the number of space characters to be used as indentation, cla",
+          "prefix": "ing indentation, line break characters, etc.) into the output JSON string for readability purposes.\n",
+          "suffix": "\n    If this is a string, the string (or the first 10 characters of the string, if it's longer than ",
+          "nearest_headings": [
+            "## Syntax",
+            "### Parameters"
+          ],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "MDN_STRINGIFY_C",
+          "role": "control",
+          "claim": "JSON.stringify serializes a JavaScript value to a JSON string.",
+          "line_at_freeze": 10,
+          "quote": "The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optional",
+          "prefix": "ype: javascript-static-method\nbrowser-compat: javascript.builtins.JSON.stringify\nsidebar: jsref\n---\n",
+          "suffix": "\n{{InteractiveExample(\"JavaScript Demo: JSON.stringify()\", \"taller\")}}\n",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "MDN_ALLSETTLED",
+      "repository": "mdn/content",
+      "source_path": "files/en-us/web/javascript/reference/global_objects/promise/allsettled/index.md",
+      "source_commit_sha": "7ba141d212766d3c840c4176f72d39dce1df122e",
+      "source_blob_sha": "2ef5b6c826478bba4b4c91d304ea1a1ce851a89a",
+      "lines_at_freeze": 115,
+      "scope_note": "The fulfilled promise produces an ordered result array; distinguish from Promise.all.",
+      "source_url": "https://github.com/mdn/content/blob/7ba141d212766d3c840c4176f72d39dce1df122e/files/en-us/web/javascript/reference/global_objects/promise/allsettled/index.md",
+      "claims": [
+        {
+          "id": "MDN_ALLSETTLED_P",
+          "role": "primary",
+          "claim": "Promise.allSettled fulfills after all input promises settle, including an empty iterable.",
+          "line_at_freeze": 10,
+          "quote": "The **`Promise.allSettled()`** static method takes an iterable of promises as input and returns",
+          "prefix": " javascript-static-method\nbrowser-compat: javascript.builtins.Promise.allSettled\nsidebar: jsref\n---\n",
+          "suffix": "\n{{InteractiveExample(\"JavaScript Demo: Promise.allSettled()\", \"taller\")}}\n",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "MDN_ALLSETTLED_C",
+          "role": "control",
+          "claim": "An outcome entry has a value field when status is fulfilled.",
+          "line_at_freeze": 50,
+          "quote": "- : Only present if `status` is `\"fulfilled\"`. The value that the promise was fulfilled with.",
+          "prefix": "ing, either `\"fulfilled\"` or `\"rejected\"`, indicating the eventual state of the promise.\n  - `value`",
+          "suffix": "  - `reason`\n    - : Only present if `status` is `\"rejected\"`. The reason that the promise was rejec",
+          "nearest_headings": [
+            "### Parameters",
+            "### Return value"
+          ],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "GH_FORK",
+      "repository": "github/docs",
+      "source_path": "content/actions/how-tos/manage-workflow-runs/approve-runs-from-forks.md",
+      "source_commit_sha": "7c3387d3b513ed43ea26c9b2e4c0e1b12234c010",
+      "source_blob_sha": "861d5fd4d94c2c1acbcaed1561052d347c7d64d4",
+      "lines_at_freeze": 33,
+      "scope_note": "Specific guard: {% ifversion fpt or ghec %}; do not generalize behavior to GHES.",
+      "source_url": "https://github.com/github/docs/blob/7c3387d3b513ed43ea26c9b2e4c0e1b12234c010/content/actions/how-tos/manage-workflow-runs/approve-runs-from-forks.md",
+      "claims": [
+        {
+          "id": "GH_FORK_P",
+          "role": "primary",
+          "claim": "On GitHub.com/free and GitHub Enterprise Cloud, unapproved fork-triggered runs older than 30 days expire and are marked failed.",
+          "line_at_freeze": 25,
+          "quote": "Workflow runs that have been awaiting approval for more than 30 days expire and are marked as f",
+          "prefix": "our-enterprise#fork-pull-request-workflows-from-outside-collaborators).\n\n{% ifversion fpt or ghec %}",
+          "suffix": "{% else %}\nWorkflow runs that have been awaiting approval for more than 30 days are automatically de",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "GH_FORK_C",
+          "role": "control",
+          "claim": "Workflow runs triggered by fork pull requests can require maintainer approval.",
+          "line_at_freeze": 22,
+          "quote": "Workflow runs triggered by a contributor's pull request from a fork may require manual approval",
+          "prefix": "category:\n  - Manage and monitor workflow runs\ncontentType: how-tos\n---\n",
+          "suffix": "\n{% ifversion fpt or ghec %}\nWorkflow runs that have been awaiting approval for more than 30 days ex",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "GH_DESKTOP",
+      "repository": "github/docs",
+      "source_path": "content/desktop/installing-and-authenticating-to-github-desktop/about-connections-to-github-in-github-desktop.md",
+      "source_commit_sha": "7c3387d3b513ed43ea26c9b2e4c0e1b12234c010",
+      "source_blob_sha": "9e70ebff487dd26c843306b265acd7a3ea81fec4",
+      "lines_at_freeze": 26,
+      "scope_note": "Claim remains true even if mechanism/wording is refined.",
+      "source_url": "https://github.com/github/docs/blob/7c3387d3b513ed43ea26c9b2e4c0e1b12234c010/content/desktop/installing-and-authenticating-to-github-desktop/about-connections-to-github-in-github-desktop.md",
+      "claims": [
+        {
+          "id": "GH_DESKTOP_P",
+          "role": "primary",
+          "claim": "GitHub Desktop caches authenticated credentials for remote repository connections.",
+          "line_at_freeze": 19,
+          "quote": "After you authenticate to {% data variables.product.prodname_dotcom %}, you can connect to remo",
+          "prefix": "esktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop).\n",
+          "suffix": "\n{% data variables.product.prodname_desktop %} connects to {% data variables.product.prodname_dotcom",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "GH_DESKTOP_C",
+          "role": "control",
+          "claim": "GitHub Desktop connects to GitHub through HTTPS and may require remote URL changes for SSH-origin clones.",
+          "line_at_freeze": 21,
+          "quote": "{% data variables.product.prodname_desktop %} connects to {% data variables.product.prodname_do",
+          "prefix": "caches your credentials and uses them to authenticate for each connection to the remote repository.\n",
+          "suffix": "\n## Further reading\n",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "PEP694",
+      "repository": "python/peps",
+      "source_path": "peps/pep-0694.rst",
+      "source_commit_sha": "88b6b2d2f4d99b56e5a58f1d3db61a1fd7b99a2f",
+      "source_blob_sha": "a5b8dab9c5d240337c656b0ebcf8cfcfa91c7cad",
+      "lines_at_freeze": 1984,
+      "scope_note": "This is a draft/proposal text; do not claim implementation or adoption.",
+      "source_url": "https://github.com/python/peps/blob/88b6b2d2f4d99b56e5a58f1d3db61a1fd7b99a2f/peps/pep-0694.rst",
+      "claims": [
+        {
+          "id": "PEP694_P",
+          "role": "primary",
+          "claim": "PEP 694 specifies only completed file uploads may be published, rejecting incomplete uploads.",
+          "line_at_freeze": 726,
+          "quote": "This precondition is deliberately expressed as an allow-list -- only ``completed`` files may be",
+          "prefix": "first :ref:`deleting\n<file-upload-session-cancellation>` the files it no longer intends to publish.\n",
+          "suffix": "so that a file in any other state blocks publication rather than being silently included or silently",
+          "nearest_headings": [
+            "#. Complete the publishing session, publishing or discarding the stage.",
+            "#. Optionally check the status of a publishing session."
+          ],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "PEP694_C",
+          "role": "control",
+          "claim": "PEP 694 proposes an extensible API for uploading files to a Python package index.",
+          "line_at_freeze": 22,
+          "quote": "This PEP proposes an extensible API for uploading files to a Python package index such as PyPI.",
+          "prefix": "\n\nAbstract\n========\n",
+          "suffix": "Along with standardization, the upload API provides additional useful features such as support for:\n",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "PEP621",
+      "repository": "python/peps",
+      "source_path": "peps/pep-0621.rst",
+      "source_commit_sha": "88b6b2d2f4d99b56e5a58f1d3db61a1fd7b99a2f",
+      "source_blob_sha": "9b3ea85b68f3850f24512f78b96d198fa596508e",
+      "lines_at_freeze": 726,
+      "scope_note": "The word name is an exceptional required identity field.",
+      "source_url": "https://github.com/python/peps/blob/88b6b2d2f4d99b56e5a58f1d3db61a1fd7b99a2f/peps/pep-0621.rst",
+      "claims": [
+        {
+          "id": "PEP621_P",
+          "role": "primary",
+          "claim": "PEP 621 requires build backends to reject a metadata name field listed as dynamic.",
+          "line_at_freeze": 438,
+          "quote": "``name`` in ``dynamic``.",
+          "prefix": "list the field in ``dynamic``).\n- A build back-end MUST raise an error if the metadata specifies the",
+          "suffix": "- If the `core metadata`_ specification lists a field as \"Required\",\n  then the metadata MUST specif",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "PEP621_C",
+          "role": "control",
+          "claim": "PEP 621 describes project core metadata in pyproject.toml.",
+          "line_at_freeze": 29,
+          "quote": "``pyproject.toml`` file for packaging-related tools to consume.",
+          "prefix": "\nAbstract\n========\n\nThis PEP specifies how to write a project's `core metadata`_ in a",
+          "suffix": "\n\nMotivation",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "RUST_PIN",
+      "repository": "rust-lang/book",
+      "source_path": "src/ch17-05-traits-for-async.md",
+      "source_commit_sha": "2771df165f092a4fbb9f46b5b2e7450f19010adb",
+      "source_blob_sha": "7f2b66bd4db768795ecd5e5c6531309efa4b51b7",
+      "lines_at_freeze": 543,
+      "scope_note": "Distinguish direct await from boxed trait-object futures that may need Unpin.",
+      "source_url": "https://github.com/rust-lang/book/blob/2771df165f092a4fbb9f46b5b2e7450f19010adb/src/ch17-05-traits-for-async.md",
+      "claims": [
+        {
+          "id": "RUST_PIN_P",
+          "role": "primary",
+          "claim": "In Rust, directly awaiting a future implicitly pins it.",
+          "line_at_freeze": 197,
+          "quote": "Directly awaiting a future with `await` pins the future implicitly. That’s why",
+          "prefix": "nAll`. That struct is\ngeneric over a type `F`, which is constrained to implement the `Future` trait.",
+          "suffix": "we don’t need to use `pin!` everywhere we want to await futures.\n\nHowever, we’re not directly awaiti",
+          "nearest_headings": [
+            "### The `Future` Trait",
+            "### The `Pin` Type and the `Unpin` Trait"
+          ],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "RUST_PIN_C",
+          "role": "control",
+          "claim": "The Future associated type Output specifies what the future resolves to.",
+          "line_at_freeze": 39,
+          "quote": "First, `Future`’s associated type `Output` says what the future resolves to.",
+          "prefix": "s and also some syntax we\nhaven’t seen before, so let’s walk through the definition piece by piece.\n",
+          "suffix": "This is analogous to the `Item` associated type for the `Iterator` trait.\nSecond, `Future` has the `",
+          "nearest_headings": [
+            "## A Closer Look at the Traits for Async",
+            "### The `Future` Trait"
+          ],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "PYPA_PYLOCK",
+      "repository": "pypa/packaging.python.org",
+      "source_path": "source/specifications/pylock-toml.rst",
+      "source_commit_sha": "3d95d2b0de5b0c5997d6350ffed769dfd006d8fb",
+      "source_blob_sha": "6c1493d6783173a1b56edbc3f1f3bcccbf4d5fed",
+      "lines_at_freeze": 859,
+      "scope_note": "Wheel section distinct from sdist section; repeated sdist text elsewhere does not support wheel claim.",
+      "source_url": "https://github.com/pypa/packaging.python.org/blob/3d95d2b0de5b0c5997d6350ffed769dfd006d8fb/source/specifications/pylock-toml.rst",
+      "claims": [
+        {
+          "id": "PYPA_PYLOCK_P",
+          "role": "primary",
+          "claim": "In pylock.toml wheel-file entries, the precedence reference points to wheel URLs and paths.",
+          "line_at_freeze": 640,
+          "quote": "either :ref:`pylock-packages-wheels-url` or :ref:`pylock-packages-wheels-path`.",
+          "prefix": "ribution-format` file.\n- If specified, this key's value takes precedence over the file name found in",
+          "suffix": "\n\n.. _pylock-packages-wheels-upload-time:",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "PYPA_PYLOCK_C",
+          "role": "control",
+          "claim": "The pylock.toml format specifies dependencies for reproducible installation.",
+          "line_at_freeze": 8,
+          "quote": "The ``pylock.toml`` file format is for specifying dependencies to enable",
+          "prefix": "\n=============================\n``pylock.toml`` Specification\n=============================\n",
+          "suffix": "reproducible installation in a Python environment.\n\n.. note:: This specification was originally defi",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    },
+    {
+      "document_id": "PYPA_PYPROJECT",
+      "repository": "pypa/packaging.python.org",
+      "source_path": "source/guides/writing-pyproject-toml.rst",
+      "source_commit_sha": "3d95d2b0de5b0c5997d6350ffed769dfd006d8fb",
+      "source_blob_sha": "b0532c1313632169c19bc39140d4cbdd553bb552",
+      "lines_at_freeze": 629,
+      "scope_note": "Recommendation, not an unqualified mandatory requirement.",
+      "source_url": "https://github.com/pypa/packaging.python.org/blob/3d95d2b0de5b0c5997d6350ffed769dfd006d8fb/source/guides/writing-pyproject-toml.rst",
+      "claims": [
+        {
+          "id": "PYPA_PYPROJECT_P",
+          "role": "primary",
+          "claim": "The PyPA pyproject.toml guide strongly recommends a build-system table.",
+          "line_at_freeze": 11,
+          "quote": "- The ``[build-system]`` table is **strongly recommended**. It allows",
+          "prefix": " other tools such as linters, type checkers, etc. There are\nfour possible TOML tables in this file.\n",
+          "suffix": "  you to declare which :term:`build backend` you use and which other\n  dependencies are needed to bu",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        },
+        {
+          "id": "PYPA_PYPROJECT_C",
+          "role": "control",
+          "claim": "The project table contains core project metadata for many build backends.",
+          "line_at_freeze": 15,
+          "quote": "- The ``[project]`` table is the format that most build backends use to specify",
+          "prefix": "hich :term:`build backend` you use and which other\n  dependencies are needed to build your project.\n",
+          "suffix": "  your project's basic metadata, such as the dependencies, your name, etc.\n\n- The ``[dependency-grou",
+          "nearest_headings": [],
+          "full_line_occurrences_at_baseline": 1
+        }
+      ]
+    }
+  ]
+}
