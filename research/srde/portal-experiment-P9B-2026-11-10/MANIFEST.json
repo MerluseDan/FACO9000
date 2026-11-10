@@ -1,0 +1,44 @@
+{
+  "status": "P9B_FROZEN_ENGINEERING_PRELIGHT",
+  "registered_date": "2026-11-10",
+  "scientific_outcomes": 0,
+  "canonical_registry_github_commit": "1c8ce661a82aeda96f794fe287c71b340f5c154a",
+  "files": [
+    {
+      "name": "PREFLIGHT_RECEIPT.json",
+      "bytes": 633,
+      "sha256": "89e18459b20747269d4e3c8f5ec7205ee8534bceb9b2455a7b4351b8f283e069",
+      "git_blob_sha1": "a37907844f6ead7287c9ef258a53cbe3cb3e6231"
+    },
+    {
+      "name": "PREREGISTRATION.md",
+      "bytes": 7327,
+      "sha256": "be942880bd0d3912fa47da6ceec86a76cd3b89b6b721c60e0d083606d4d56ed5",
+      "git_blob_sha1": "fa48ea3351ab0c08f42c2f6c43b30408e175c184"
+    },
+    {
+      "name": "PRIOR_ART_AND_SCOPE.md",
+      "bytes": 1405,
+      "sha256": "443d240c800eeea99f4e728886c5b2788512b90a0bef299ad7b4f28dd4a0e8a0",
+      "git_blob_sha1": "442645e56b9231defbd38f987f69abb93a32fefa"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1499,
+      "sha256": "cb745796b43b87959bade30280313ad97a915eb20de060f84dbde763b4c55590",
+      "git_blob_sha1": "d818e5ba5247507890e541bdb341c0d941b6af14"
+    },
+    {
+      "name": "p9b_review_checker.py",
+      "bytes": 8852,
+      "sha256": "e71520c2f77509453863356bbb3124ca9e4f54984e6d884528b3abc156bd9d41",
+      "git_blob_sha1": "ec26e3e35b2745a4679813dd77f7614b1f3dbf93"
+    },
+    {
+      "name": "registry_mirror.json",
+      "bytes": 5222,
+      "sha256": "1541e01fb7c8d0ebf80f625e7d0a27f27168483ac9d0fa6d40faf645b330ad96",
+      "git_blob_sha1": "5e3cb7ce7d3f5865c2e85be7344d52836f030800"
+    }
+  ]
+}
