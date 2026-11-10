@@ -1,0 +1,15 @@
+{
+  "status": "ENGINEERING_PREFLIGHT_PASS",
+  "date": "2026-11-10",
+  "frozen_source_docs": 10,
+  "frozen_claims": 20,
+  "repos": 5,
+  "fixtures_count": 5,
+  "synthetic_only": true,
+  "future_revisions_evaluated": 0,
+  "independent_reviewers": 0,
+  "code_sha256": "e71520c2f77509453863356bbb3124ca9e4f54984e6d884528b3abc156bd9d41",
+  "mirror_sha256": "1541e01fb7c8d0ebf80f625e7d0a27f27168483ac9d0fa6d40faf645b330ad96",
+  "stdout": "P9B PREFLIGHT PASS: 5 deterministic offline fixture controls; no future real revisions scored",
+  "caveat": "This is preflight-only, not an accuracy result on future public documentation revisions."
+}
