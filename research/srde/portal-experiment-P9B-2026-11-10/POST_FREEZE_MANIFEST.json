@@ -1,0 +1,48 @@
+{
+  "study": "SRDE-P9B",
+  "status": "PRE_REVISION_BASELINE_FROZEN_AND_WATCH_ACTIVE",
+  "frozen_source_registry_commit": "1c8ce661a82aeda96f794fe287c71b340f5c154a",
+  "prospective_semantic_events_scored": 0,
+  "files": [
+    {
+      "name": "AUTOMATION_RECEIPT.json",
+      "size": 549,
+      "sha256": "b37ec6aa4c34aba5f676614c093c041ee9e64550d71084ae356745b481a6d388"
+    },
+    {
+      "name": "PREFLIGHT_RECEIPT.json",
+      "size": 633,
+      "sha256": "89e18459b20747269d4e3c8f5ec7205ee8534bceb9b2455a7b4351b8f283e069"
+    },
+    {
+      "name": "PREREGISTRATION.md",
+      "size": 7327,
+      "sha256": "be942880bd0d3912fa47da6ceec86a76cd3b89b6b721c60e0d083606d4d56ed5"
+    },
+    {
+      "name": "PRIOR_ART_AND_SCOPE.md",
+      "size": 1405,
+      "sha256": "443d240c800eeea99f4e728886c5b2788512b90a0bef299ad7b4f28dd4a0e8a0"
+    },
+    {
+      "name": "README.md",
+      "size": 1499,
+      "sha256": "cb745796b43b87959bade30280313ad97a915eb20de060f84dbde763b4c55590"
+    },
+    {
+      "name": "T0_SOURCE_INTEGRITY.json",
+      "size": 2947,
+      "sha256": "1b6793bd46960db42c6673fd5fdd479bf18e274efe56633c376dd43e87733658"
+    },
+    {
+      "name": "p9b_review_checker.py",
+      "size": 8852,
+      "sha256": "e71520c2f77509453863356bbb3124ca9e4f54984e6d884528b3abc156bd9d41"
+    },
+    {
+      "name": "registry_mirror.json",
+      "size": 5222,
+      "sha256": "1541e01fb7c8d0ebf80f625e7d0a27f27168483ac9d0fa6d40faf645b330ad96"
+    }
+  ]
+}
