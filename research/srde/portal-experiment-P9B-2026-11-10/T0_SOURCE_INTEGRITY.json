@@ -1,0 +1,84 @@
+{
+  "study": "SRDE-P9B",
+  "check_type": "POST_REGISTRATION_SOURCE_BLOB_READBACK",
+  "check_date": "2026-11-10",
+  "status": "PASS",
+  "source_count": 10,
+  "matching_baseline_blob_count": 10,
+  "future_events_scored": 0,
+  "source_issues": [],
+  "read_method": "Connected GitHub file fetch, ten registered paths on default branch; compared returned Git blob SHA to canonical immutable registry.",
+  "checked_sources": [
+    {
+      "id": "MDN_PARSE",
+      "repo": "mdn/content",
+      "path": "files/en-us/web/javascript/reference/global_objects/json/parse/index.md",
+      "blob_sha": "7ecef9657ef0a34f082e351b006f7ae0630e95f8",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "MDN_STRINGIFY",
+      "repo": "mdn/content",
+      "path": "files/en-us/web/javascript/reference/global_objects/json/stringify/index.md",
+      "blob_sha": "2f9eda08f193276fe8ea0fec6a62899dfd57ef67",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "MDN_ALLSETTLED",
+      "repo": "mdn/content",
+      "path": "files/en-us/web/javascript/reference/global_objects/promise/allsettled/index.md",
+      "blob_sha": "2ef5b6c826478bba4b4c91d304ea1a1ce851a89a",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "GH_FORK",
+      "repo": "github/docs",
+      "path": "content/actions/how-tos/manage-workflow-runs/approve-runs-from-forks.md",
+      "blob_sha": "861d5fd4d94c2c1acbcaed1561052d347c7d64d4",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "GH_DESKTOP",
+      "repo": "github/docs",
+      "path": "content/desktop/installing-and-authenticating-to-github-desktop/about-connections-to-github-in-github-desktop.md",
+      "blob_sha": "9e70ebff487dd26c843306b265acd7a3ea81fec4",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "PEP694",
+      "repo": "python/peps",
+      "path": "peps/pep-0694.rst",
+      "blob_sha": "a5b8dab9c5d240337c656b0ebcf8cfcfa91c7cad",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "PEP621",
+      "repo": "python/peps",
+      "path": "peps/pep-0621.rst",
+      "blob_sha": "9b3ea85b68f3850f24512f78b96d198fa596508e",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "RUST_PIN",
+      "repo": "rust-lang/book",
+      "path": "src/ch17-05-traits-for-async.md",
+      "blob_sha": "7f2b66bd4db768795ecd5e5c6531309efa4b51b7",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "PYPA_PYLOCK",
+      "repo": "pypa/packaging.python.org",
+      "path": "source/specifications/pylock-toml.rst",
+      "blob_sha": "6c1493d6783173a1b56edbc3f1f3bcccbf4d5fed",
+      "status": "SAME_AS_FROZEN"
+    },
+    {
+      "id": "PYPA_PYPROJECT",
+      "repo": "pypa/packaging.python.org",
+      "path": "source/guides/writing-pyproject-toml.rst",
+      "blob_sha": "b0532c1313632169c19bc39140d4cbdd553bb552",
+      "status": "SAME_AS_FROZEN"
+    }
+  ],
+  "important_limit": "This is an initial integrity check, not evidence of real future revisions or of semantic claim correctness."
+}
