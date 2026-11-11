@@ -1,4 +1,4 @@
-/* FACO Ubuntu QR console. Credentials sent ONLY from 127.0.0.1:admin-port.
+/* FACO Desktop QR console. Credentials sent ONLY from 127.0.0.1:admin-port.
    Each QR image includes the full bearer invite and is intentionally sensitive. */
 (() => {
   'use strict';
@@ -194,7 +194,7 @@
   $('addGuest').addEventListener('click',()=>{if(state.guestCount<10 && confirm('Changing slots disconnects everyone, ends calls and renews all keys. Continue?'))change('guest-count',{count:state.guestCount+1});});
   $('rotateButton').addEventListener('click',()=>{if(confirm('Expire all active invitations and disconnect any live call?'))change('rotate',{});});
   if (!adminToken) {
-    $('qrLoading').textContent = 'Open the private admin URL printed in the terminal on this Ubuntu computer.';
+    $('qrLoading').textContent = 'Open the private admin URL printed in the terminal on this computer.';
     tell('Admin key is missing. Use the URL from your server terminal.');
   } else { refresh(); setInterval(refresh, 2500); }
   window.addEventListener('pagehide',()=>{if(imageObjectUrl)URL.revokeObjectURL(imageObjectUrl);});

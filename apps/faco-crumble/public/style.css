@@ -302,3 +302,33 @@ body.faco-no-motion .call-panel.live .infinity-trace { opacity:.65;stroke-dashof
   *,*::before,*::after { animation:none!important;transition:none!important;scroll-behavior:auto!important; }
   .call-panel.live .infinity-trace { opacity:.65; }
 }
+
+/* Video rooms: opt-in camera, stable peer tiles, bounded mobile gallery. */
+.video-gallery { position:relative;z-index:2;width:100%;min-width:0;margin:3px auto 17px;text-align:left; }
+.video-gallery-head { display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 1px 9px;font-size:9px;font-weight:850;letter-spacing:.12em;color:#5f82a4; }
+.video-gallery-head span:last-child { color:#2383cf;letter-spacing:0;font-size:10px; }
+.video-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:252px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin; }
+.video-tile { position:relative;isolation:isolate;overflow:hidden;aspect-ratio:16/11;border-radius:12px;background:linear-gradient(150deg,#eef6ff,#dbeeff);border:1px solid #d7e7f8;min-width:0; }
+.video-tile video { width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .18s ease;background:#102e4f; }
+.video-tile.has-video video { opacity:1; }
+.video-tile.self-preview video { transform:scaleX(-1); }
+.video-tile.self-preview.back-camera video { transform:none; }
+.video-tile-placeholder { position:absolute;inset:0;display:grid;place-items:center;color:#7ca5c8;font-size:29px;font-weight:760;pointer-events:none; }
+.video-tile.has-video .video-tile-placeholder { display:none; }
+.video-tile-name { position:absolute;z-index:2;left:7px;bottom:7px;max-width:calc(100% - 14px);padding:4px 7px;border-radius:7px;background:#102944b5;color:white;font-size:10px;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.video-tile-status { position:absolute;top:7px;right:7px;border-radius:7px;padding:3px 6px;background:#f0f7ffdd;color:#4c7da5;font-size:9px;font-weight:760; }
+.video-tile.has-video .video-tile-status { color:#0e8069;background:#d5fff0df; }
+.video-controls { position:relative;z-index:2;width:100%;margin-top:12px;padding:12px 0;border-top:1px solid #e5f0fa; }
+.video-button-row { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px; }
+.video-button { min-height:46px;padding:10px;border:1px solid #9dc8f1;background:#e9f5ff;color:#226db7;border-radius:12px;font-size:12px;font-weight:820; }
+.video-button[aria-pressed="true"] { color:#fff;background:#246fe2;border-color:#246fe2; }
+.video-button.video-secondary { background:#f6faff;border-color:#d7e7f9;color:#4c779b; }
+.video-controls small { display:block;font-size:10px;line-height:1.5;color:#8199b0;margin-top:8px; }
+@media(max-width:700px){
+  .video-grid { gap:7px;max-height:225px; }
+  .video-gallery { margin-top:3px;margin-bottom:11px; }
+  .video-tile { border-radius:10px; }
+  .video-tile-status { font-size:8px; }
+  .video-button { min-height:44px; }
+}
+@media(prefers-reduced-motion:reduce) {.video-tile video { transition:none; }}

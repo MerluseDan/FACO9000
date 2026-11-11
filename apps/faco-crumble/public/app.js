@@ -28,6 +28,9 @@
     resetOptionsButton: $('resetOptionsButton'), cancelOptionsButton: $('cancelOptionsButton'),
     saveOptionsButton: $('saveOptionsButton'), doctorButton: $('doctorButton'),
     doctorResult: $('doctorResult'), deviceHint: $('deviceHint'),
+    videoGallery: $('videoGallery'), videoGrid: $('videoGrid'), videoCount: $('videoCount'),
+    videoControls: $('videoControls'), cameraButton: $('cameraButton'),
+    flipCameraButton: $('flipCameraButton'), cameraHint: $('cameraHint'),
     settingsProgress: $('settingsProgress'), settingsProgressText: $('settingsProgressText'),
   };
   const NAME_COOKIE = 'faco_crumble_name';
@@ -52,6 +55,12 @@
   const connections = new Map();
   const messages = new Map();
   let microphone = null;
+  let cameraStream = null;
+  let cameraFacing = 'user';
+  let cameraBusy = false;
+  let cameraGeneration = 0;
+  const videoTiles = new Map();
+  const cameraStates = new Map();
   let mode = 'ptt';
   let transmitting = false;
   const speaking = new Set();
@@ -151,7 +160,13 @@
     connect();
   }
   function resetCall() {
+    // Invalidate any outstanding camera permission dialog or camera switch.
+    cameraGeneration++;
+    cameraBusy = false;
+    stopCameraTracks();
+    cameraStates.clear();
     for (const role of Array.from(connections.keys())) closePeer(role);
+    for (const role of Array.from(videoTiles.keys())) removeVideoTile(role);
     if (microphone) {
       for (const track of microphone.getTracks()) track.stop();
       microphone = null;
@@ -317,7 +332,7 @@
     const inGroup = !!activeRoom && roomPeople.size >= 2;
     ui.callPanel.classList.toggle('live', phase === 'live');
     ui.callPanel.classList.toggle('ringing', phase === 'ringing' || phase === 'incoming');
-    ui.callChannelLabel.textContent = phase === 'live' ? '● ENCRYPTED VOICE ACTIVE' :
+    ui.callChannelLabel.textContent = phase === 'live' ? '● ENCRYPTED CALL ACTIVE' :
       phase === 'incoming' ? '● SOMEONE IS CALLING' : '● READY WHEN YOU ARE';
     const busyPhase = ['offline', 'dialing', 'ringing'].includes(phase);
     ui.progressLine.classList.toggle('hidden', !busyPhase);
@@ -348,13 +363,14 @@
       }
     }
     ui.participants.classList.toggle('hidden', !activeRoom);
+    renderVideoTiles();
     switch (phase) {
       case 'offline': ui.callStatus.textContent = 'Reconnecting private line'; ui.callDetail.textContent = 'Keep this browser open to receive calls.'; break;
       case 'idle': ui.callStatus.textContent = 'Ready to connect'; ui.callDetail.textContent = selected ? `${named} ${memberOnline(selected) ? 'is online' : 'is offline'}.` : 'Select a person to call or message.'; break;
       case 'dialing': ui.callStatus.textContent = 'Preparing microphone'; ui.callDetail.textContent = 'The first call needs microphone permission.'; break;
       case 'ringing': ui.callStatus.textContent = 'Ringing…'; ui.callDetail.textContent = `Inviting ${label(lastInviteTarget || selected)}.`; break;
       case 'incoming': ui.callStatus.textContent = 'Incoming call'; ui.callDetail.textContent = `${pending?.fromName || label(pending?.from)} is inviting you ${pending?.members?.length > 1 ? 'to a group conversation' : 'to talk'}.`; break;
-      case 'live': ui.callStatus.textContent = `Connected with ${Math.max(roomPeople.size - 1, 0)} ${roomPeople.size === 2 ? 'person' : 'people'}`; ui.callDetail.textContent = 'Private voice is active. Invite another available person at any time.'; break;
+      case 'live': ui.callStatus.textContent = `Connected with ${Math.max(roomPeople.size - 1, 0)} ${roomPeople.size === 2 ? 'person' : 'people'}`; ui.callDetail.textContent = 'Encrypted voice is active. Start video when you choose, or keep this voice-only.'; break;
       default: break;
     }
     renderPeople();
@@ -363,6 +379,148 @@
     ui.errorMessage.textContent = alertText;
     ui.errorMessage.classList.toggle('hidden', !alertText);
   }
+
+  function stopCameraTracks() {
+    const stream = cameraStream;
+    cameraStream = null;
+    if (stream) for (const track of stream.getTracks()) track.stop();
+  }
+  function videoTile(role) {
+    let item = videoTiles.get(role);
+    if (item) return item;
+    const tile = document.createElement('div'); tile.className = 'video-tile'; tile.dataset.role = role;
+    const placeholder = document.createElement('span'); placeholder.className = 'video-tile-placeholder';
+    placeholder.setAttribute('aria-hidden','true');
+    const video = document.createElement('video');
+    video.autoplay = true; video.playsInline = true; video.muted = true;
+    video.setAttribute('playsinline',''); video.setAttribute('aria-label', 'Video from ' + label(role));
+    const name = document.createElement('span'); name.className = 'video-tile-name';
+    const status = document.createElement('span'); status.className = 'video-tile-status';
+    tile.append(placeholder, video, name, status);
+    ui.videoGrid.append(tile);
+    item = {tile, placeholder, video, name, status};
+    videoTiles.set(role, item);
+    return item;
+  }
+  function removeVideoTile(role) {
+    const item = videoTiles.get(role);
+    if (!item) return;
+    item.video.pause?.(); item.video.srcObject = null;
+    item.tile.remove(); videoTiles.delete(role);
+  }
+  function renderVideoTiles() {
+    const live = !!activeRoom && phase === 'live';
+    ui.videoGallery.classList.toggle('hidden', !live);
+    ui.videoControls.classList.toggle('hidden', !live);
+    const members = live ? [...roomPeople.keys()].sort() : [];
+    for (const role of [...videoTiles.keys()]) if (!members.includes(role)) removeVideoTile(role);
+    for (const role of members) {
+      const item = videoTile(role);
+      const isSelf = role === identity?.role;
+      const visible = isSelf ? !!cameraStream : !!cameraStates.get(role);
+      item.tile.classList.toggle('has-video', visible);
+      item.tile.classList.toggle('self-preview', isSelf);
+      item.tile.classList.toggle('back-camera', isSelf && cameraFacing === 'environment');
+      item.name.textContent = isSelf ? `${displayName} (you)` : label(role);
+      item.video.setAttribute('aria-label', `${isSelf ? 'Your' : label(role) + ' camera'} video`);
+      item.placeholder.textContent = (isSelf ? displayName : label(role)).slice(0,1).toUpperCase() || '◌';
+      item.status.textContent = visible ? '● Live' : 'Camera off';
+      if (isSelf && cameraStream && item.video.srcObject !== cameraStream) {
+        item.video.srcObject = cameraStream; item.video.play().catch(() => {});
+      } else if (isSelf && !cameraStream && item.video.srcObject) {
+        item.video.pause?.(); item.video.srcObject = null;
+      }
+      // Do not recreate video elements: changing DOM nodes breaks remote playback.
+    }
+    const count = members.filter(role => role === identity?.role ? !!cameraStream : !!cameraStates.get(role)).length;
+    ui.videoCount.textContent = `${count} ${count === 1 ? 'camera' : 'cameras'} on`;
+    ui.cameraButton.disabled = !live || cameraBusy;
+    ui.cameraButton.textContent = cameraStream ? 'Stop video' : cameraBusy ? 'Connecting camera…' : 'Start video';
+    ui.cameraButton.setAttribute('aria-pressed', String(!!cameraStream));
+    ui.flipCameraButton.disabled = !live || cameraBusy || !cameraStream;
+    if (!cameraBusy) ui.cameraHint.textContent = cameraStream ?
+      `Video on · ${cameraFacing === 'user' ? 'Front' : 'Rear'} camera · Tap Stop to switch back to voice-only.` :
+      'Camera off. Your microphone and messages still work.';
+  }
+  function sendCameraState(enabled) {
+    if (!activeRoom || !authenticated) return;
+    send('video', {id: activeRoom, enabled});
+  }
+  async function cameraOff() {
+    cameraGeneration++;
+    cameraBusy = true;
+    const stream = cameraStream;
+    cameraStream = null;
+    renderVideoTiles();
+    // Stop capture immediately even if the network connection cannot replace its sender.
+    if (stream) for (const track of stream.getTracks()) track.stop();
+    await Promise.all([...connections.values()].map(async item => {
+      try { await item.videoSender?.replaceTrack(null); } catch (_) {}
+    }));
+    sendCameraState(false);
+    cameraBusy = false;
+    renderVideoTiles();
+  }
+  async function cameraOn(facing = cameraFacing) {
+    if (cameraBusy || phase !== 'live' || !activeRoom) return;
+    if (!navigator.mediaDevices?.getUserMedia) {
+      announce('Camera needs a secure HTTPS page and browser permission. Voice remains connected.'); return;
+    }
+    const generation = ++cameraGeneration;
+    const room = activeRoom;
+    cameraBusy = true; ui.cameraHint.textContent = 'Requesting camera permission…'; renderVideoTiles();
+    let stream;
+    const old = cameraStream;
+    const ask = () => navigator.mediaDevices.getUserMedia({audio:false, video:{
+      facingMode:facing === 'environment' ? {exact:'environment'} : {ideal:'user'}, width:{ideal:640,max:640},height:{ideal:360,max:360},
+      frameRate:{ideal:12,max:15},
+    }});
+    try {
+      try { stream = await ask(); }
+      catch (error) {
+        // Android may require releasing the first camera before selecting the other.
+        if (!old || !['NotReadableError', 'AbortError'].includes(error?.name)) throw error;
+        await Promise.all([...connections.values()].map(item => item.videoSender?.replaceTrack(null).catch(()=>{})));
+        stopCameraTracks();
+        stream = await ask();
+      }
+      if (generation !== cameraGeneration || activeRoom !== room || phase !== 'live') {
+        stream.getTracks().forEach(track => track.stop()); return;
+      }
+      const track = stream.getVideoTracks()[0];
+      if (!track) throw Error('Camera returned no video track.');
+      const applied = [];
+      try {
+        for (const item of connections.values()) {
+          if (!item.videoSender) throw Error('Video sender was not negotiated.');
+          await item.videoSender.replaceTrack(track);
+          applied.push(item.videoSender);
+        }
+      } catch (error) {
+        for (const sender of applied) { try {await sender.replaceTrack(old?.getVideoTracks()[0]?.readyState === 'live' ? old.getVideoTracks()[0] : null);} catch(_) {} }
+        throw error;
+      }
+      if (generation !== cameraGeneration || activeRoom !== room || phase !== 'live') {
+        for (const item of connections.values()) { try {await item.videoSender?.replaceTrack(null);} catch (_) {} }
+        stream.getTracks().forEach(t => t.stop()); return;
+      }
+      cameraStream = stream;
+      cameraFacing = track.getSettings?.().facingMode || facing;
+      track.addEventListener?.('ended', () => {
+        if (cameraStream === stream) cameraOff().catch(() => {});
+      });
+      if (old && old !== stream) old.getTracks().forEach(t => t.stop());
+      sendCameraState(true);
+      announce('');
+    } catch (err) {
+      if (stream) stream.getTracks().forEach(t => t.stop());
+      if (!cameraStream?.active) { stopCameraTracks(); sendCameraState(false); }
+      announce('Camera unavailable: ' + (err?.message || String(err)) + '. Your voice call is still active.');
+    } finally {
+      if (generation === cameraGeneration) { cameraBusy = false; renderVideoTiles(); }
+    }
+  }
+
   async function getMicrophone() {
     if (microphone && microphone.active) return microphone;
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error('Microphone requires an HTTPS connection and permission.');
@@ -394,6 +552,9 @@
     try {entry.pc.close();} catch (_) {}
     entry.audio.srcObject = null;
     entry.audio.remove();
+    if (entry.videoTile) {entry.videoTile.video.srcObject = null;}
+    cameraStates.delete(role);
+    removeVideoTile(role);
     speaking.delete(role);
   }
   function ensurePeer(role) {
@@ -409,19 +570,30 @@
         ui.deviceHint.textContent = 'The selected output is unavailable; your system output will be used.';
       });
     }
-    const item = {pc, audio, candidates: [], offered: false};
+    // Reserve video m-line now, even if cameras are currently off: future
+    // replaceTrack requires no SDP renegotiation, including in group calls.
+    const videoSender = pc.addTransceiver('video', {direction:'sendrecv'}).sender;
+    const item = {pc, audio, videoSender, videoTile: videoTile(role), candidates: [], offered: false};
     connections.set(role, item);
     for (const track of microphone.getAudioTracks()) pc.addTrack(track, microphone);
+    if (cameraStream) videoSender.replaceTrack(cameraStream.getVideoTracks()[0]).catch(() => {});
     pc.onicecandidate = event => {
       if (activeRoom && roomPeople.has(role)) send('signal', {id: activeRoom, target: role,
         data: {type:'candidate', candidate:event.candidate ? event.candidate.toJSON() : null}});
     };
     pc.ontrack = event => {
-      audio.srcObject = event.streams[0] || new MediaStream([event.track]);
-      audio.play().catch(() => {soundNeeded = true; ui.soundButton.classList.remove('hidden');});
+      if (event.track.kind === 'video') {
+        const tile = videoTile(role);
+        // Incoming streams may contain audio and video; route only video to a muted tile.
+        tile.video.srcObject = new MediaStream([event.track]);
+        tile.video.play().catch(() => {});
+      } else if (event.track.kind === 'audio') {
+        audio.srcObject = new MediaStream([event.track]);
+        audio.play().catch(() => {soundNeeded = true; ui.soundButton.classList.remove('hidden');});
+      }
     };
     pc.onconnectionstatechange = () => {
-      if (pc.connectionState === 'failed') announce('Audio to ' + label(role) + ' failed. This network may need a TURN relay.');
+      if (pc.connectionState === 'failed') announce('Connection to ' + label(role) + ' failed. This network may need a TURN relay.');
     };
     return item;
   }
@@ -572,7 +744,11 @@
         pending = null;
         activeRoom = data.id;
         roomPeople.clear();
-        for (const item of data.members || []) if (typeof item.role === 'string') roomPeople.set(item.role, item.name || label(item.role));
+        cameraStates.clear();
+        for (const item of data.members || []) if (typeof item.role === 'string') {
+          roomPeople.set(item.role, item.name || label(item.role));
+          if (item.video === true) cameraStates.set(item.role, true);
+        }
         phase = 'live';
         document.title = 'FACO Crumble | Private conversations';
         applyMode();
@@ -585,6 +761,7 @@
       case 'member-joined':
         if (data.id !== activeRoom) break;
         roomPeople.set(data.role, data.name || label(data.role));
+        cameraStates.set(data.role, data.video === true);
         phase = 'live';
         applyMode();
         if (identity.role < data.role) offerPeer(data.role).catch(err => announce('Audio connection issue: ' + (err?.message || String(err))));
@@ -595,6 +772,7 @@
         closePeer(data.role);
         roomPeople.delete(data.role);
         speaking.delete(data.role);
+        cameraStates.delete(data.role);
         render();
         break;
       case 'ended':
@@ -603,7 +781,13 @@
         announce('The conversation has ended.');
         break;
       case 'signal':
-        receiveSignal(data).catch(err => announce('Audio signaling problem: ' + (err?.message || String(err))));
+        receiveSignal(data).catch(err => announce('Call signaling problem: ' + (err?.message || String(err))));
+        break;
+      case 'video':
+        if (data.id === activeRoom && roomPeople.has(data.from) && typeof data.enabled === 'boolean') {
+          cameraStates.set(data.from, data.enabled);
+          renderVideoTiles();
+        }
         break;
       case 'ptt':
         if (data.id === activeRoom) {
@@ -863,6 +1047,9 @@
       `Secure context: ${location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1' ? 'Passed' : 'Needs HTTPS'}`,
       `WebRTC: ${typeof RTCPeerConnection === 'function' ? 'Available' : 'Unavailable'}`,
       `Microphone API: ${navigator.mediaDevices?.getUserMedia ? 'Available' : 'Unavailable'}`,
+      `Camera API: ${navigator.mediaDevices?.getUserMedia ? 'Available (permission on demand)' : 'Unavailable'}`,
+      `Camera streaming: ${cameraStream ? 'On' : 'Off'}`,
+      `Video peers: ${[...connections.values()].filter(p => p.videoSender).length}`,
       `Signaling: ${authenticated && socket?.readyState === WebSocket.OPEN ? 'Connected' : 'Disconnected'}`,
       `Audio peers: ${connections.size}`,
       `TURN servers: ${iceServers.filter(x => String(x.urls || '').includes('turn:')).length ? 'Configured' : 'Not configured'}`,
@@ -915,6 +1102,14 @@
   ui.answerButton.addEventListener('click', answerCall);
   ui.declineButton.addEventListener('click', hangUp);
   ui.endButton.addEventListener('click', hangUp);
+  ui.cameraButton.addEventListener('click', () => {
+    if (cameraBusy || phase !== 'live') return;
+    (cameraStream ? cameraOff() : cameraOn()).catch(err => announce('Camera error: ' + err));
+  });
+  ui.flipCameraButton.addEventListener('click', () => {
+    if (cameraBusy || !cameraStream || phase !== 'live') return;
+    cameraOn(cameraFacing === 'user' ? 'environment' : 'user').catch(err => announce('Camera error: ' + err));
+  });
   ui.pttMode.addEventListener('click', () => {mode = 'ptt'; applyMode();});
   ui.handsfreeMode.addEventListener('click', () => {mode = 'handsfree'; applyMode();});
   ui.chatRecipient.addEventListener('change', event => {chatTarget = event.target.value; render();});

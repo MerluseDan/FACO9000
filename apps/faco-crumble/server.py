@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """FACO Crumble: ten peer identities, server-managed rooms, direct/group chat.
 
-Audio travels via DTLS-SRTP WebRTC mesh. The Ubuntu server is the sole controller
+Audio travels via DTLS-SRTP WebRTC mesh. The desktop host is the sole controller
 for ephemeral credentials, presence, call memberships and message delivery; it
 is not an audio mixer or a storage service. Local admin is a separate listener.
 """
@@ -139,6 +139,7 @@ class Room:
         self.ring_seconds = ring_seconds
         self.pending_auth = 0
         self.chat_limits: dict[str, deque[float]] = {}
+        self.cameras_on: set[str] = set()
 
     def check_token(self, role: str, token: str) -> bool:
         expected = self.hashes.get(role)
@@ -205,6 +206,7 @@ class Room:
             await self._drop_invitation(call, target, 'cancelled')
         for member in list(call.members):
             self.member_call.pop(member, None)
+            self.cameras_on.discard(member)
             await self.send(member, {'type': 'ended', 'id': call.id, 'reason': 'ended'})
         call.members.clear()
 
@@ -243,6 +245,7 @@ class Room:
             return
 
     async def _leave(self, role: str, reason: str = 'left') -> None:
+        self.cameras_on.discard(role)
         pending_id = self.pending_call.get(role)
         if pending_id:
             call = self.calls.get(pending_id)
@@ -289,6 +292,7 @@ class Room:
             self.member_call.clear()
             self.pending_call.clear()
             self.chat_limits.clear()
+            self.cameras_on.clear()
         for ws in old:
             try:
                 await ws.send_json({'type': 'session-expired', 'message': 'QR invitations refreshed; scan a new code.'})
@@ -327,11 +331,12 @@ class Room:
                 existing = sorted(call.members)
                 call.members.add(role)
                 self.member_call[role] = call.id
-                people = [{'role': r, 'name': self.names.get(r)} for r in sorted(call.members)]
+                people = [{'role': r, 'name': self.names.get(r),
+                           'video': r in self.cameras_on} for r in sorted(call.members)]
                 await self.send(role, {'type': 'joined', 'id': call.id, 'members': people})
                 for member in existing:
                     await self.send(member, {'type': 'member-joined', 'id': call.id,
-                                             'role': role, 'name': self.names.get(role)})
+                                             'role': role, 'name': self.names.get(role), 'video': False})
                 await self.presence()
                 return
             if kind == 'decline':
@@ -353,6 +358,18 @@ class Room:
                 payload = data.get('data')
                 if valid_signal(payload, role, target):
                     await self.send(target, {'type': 'signal', 'id': call.id, 'from': role, 'data': payload})
+                return
+            if kind == 'video':
+                call = self.calls.get(self.member_call.get(role, ''))
+                enabled = data.get('enabled')
+                if call and call.id == data.get('id') and role in call.members and type(enabled) is bool:
+                    if enabled:
+                        self.cameras_on.add(role)
+                    else:
+                        self.cameras_on.discard(role)
+                    for member in call.members - {role}:
+                        await self.send(member, {'type': 'video', 'id': call.id,
+                                                 'from': role, 'enabled': enabled})
                 return
             if kind == 'ptt':
                 call = self.calls.get(self.member_call.get(role, ''))
@@ -443,7 +460,7 @@ class ControlState:
 
     def snapshot(self) -> dict[str, Any]:
         return {
-            'version': '0.5.1', 'baseUrl': self.base_url, 'epoch': self.epoch,
+            'version': '0.6.2', 'baseUrl': self.base_url, 'epoch': self.epoch,
             'reason': self.reason, 'guestCount': self.guest_count,
             'tunnelState': self.tunnel_state,
             'online': [r for r in self.room.clients if not self.room.clients[r].closed],
@@ -487,7 +504,7 @@ def no_cache(request: web.Request, resp: web.StreamResponse) -> web.StreamRespon
         'X-Content-Type-Options': 'nosniff',
         'Referrer-Policy': 'no-referrer',
         'X-Frame-Options': 'DENY',
-        'Permissions-Policy': 'microphone=(self), camera=(), geolocation=()',
+        'Permissions-Policy': 'microphone=(self), camera=(self), geolocation=()',
         'Content-Security-Policy': "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; "
             "connect-src 'self' ws: wss:; media-src 'self' blob:; object-src 'none'; "
             "frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
@@ -557,7 +574,7 @@ async def ws_handler(request: web.Request) -> web.StreamResponse:
 
 
 async def health(_: web.Request) -> web.Response:
-    return web.json_response({'ok': True, 'service': 'faco-crumble', 'version': '0.5.1'})
+    return web.json_response({'ok': True, 'service': 'faco-crumble', 'version': '0.6.2'})
 
 
 async def static_file(request: web.Request) -> web.Response:

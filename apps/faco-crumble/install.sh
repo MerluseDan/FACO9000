@@ -17,7 +17,7 @@ while [[ $# -gt 0 ]]; do
     *) echo "Unknown install flag: $1" >&2; exit 2 ;;
   esac
 done
-printf '%s\n' "FACO Crumble v0.5.1 • ${MODE} Program Doctor + Linux installation" '============================================================'
+printf '%s\n' "FACO Crumble v0.6.2 • ${MODE} Program Doctor + Linux installation" '============================================================'
 python3 - <<'PY'
 import sys
 print('Python:',sys.version.split()[0])
@@ -47,7 +47,11 @@ else
 fi
 if [[ "$MODE" != FAST ]]; then
   echo 'Running STANDARD regressions.'
-  python3 -m unittest discover -s tests -v
+  python3 -m unittest discover -s tests -p 'test_signaling.py' -v
+  python3 -m unittest discover -s tests -p 'test_video_signaling.py' -v
+  python3 -m unittest discover -s tests -p 'test_tunnel.py' -v
+  python3 -m unittest discover -s tests -p 'test_linux_install.py' -v
+  python3 -m unittest discover -s tests -p 'test_process_smoke.py' -v
   if command -v node >/dev/null 2>&1; then
     node tests/test_client_mock.cjs
     node tests/test_admin_mock.cjs
@@ -64,7 +68,7 @@ for p in (root/'public/favicon.svg', *sorted((root/'assets').glob('*.svg'))):
 source=(root/'public/app.js').read_text()
 assert 'localStorage.setItem' not in source and 'sessionStorage.setItem' not in source, 'Call client must not persist credentials'
 assert 'infinityFlow' in (root/'public/style.css').read_text(), 'Missing active-call infinity'
-assert "'version': '0.5.1'" in (root/'server.py').read_text(), 'Server version mismatch'
+assert "'version': '0.6.2'" in (root/'server.py').read_text(), 'Server version mismatch'
 installer=(root/'scripts/install_linux.py').read_text()
 assert 'XDG_DATA_HOME' in installer and 'XDG_STATE_HOME' in installer and 'XDG_CONFIG_HOME' in installer
 for path in (root/'run.sh', root/'launcher.py', root/'scripts/install_linux.py'):
