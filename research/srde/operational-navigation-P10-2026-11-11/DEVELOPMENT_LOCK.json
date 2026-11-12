@@ -1,0 +1,37 @@
+{
+  "study": "SRDE-P10",
+  "phase": "DEVELOPMENT_LOCKED_HOLDOUT_UNOPENED",
+  "frozen_source_sha256": "cdc70cee3676564410ea5ba66eaedea2d7f2d64c6ff942cd073b68ae2ee153c8",
+  "frozen_protocol_sha256": "c2fd473831ef27b58d96af7d9872dff80f2d9c302bf2ebfcc20bc92ffdd6e6c0",
+  "development_worlds": 100,
+  "holdout_worlds_planned": 400,
+  "lambda_grid": [
+    {
+      "lambda": 0.0,
+      "mean_valid_weighted": 61.059644561229995,
+      "mean_effort": 302.02099999999996,
+      "worlds": 100
+    },
+    {
+      "lambda": 0.2,
+      "mean_valid_weighted": 61.660796055311,
+      "mean_effort": 300.985,
+      "worlds": 100
+    },
+    {
+      "lambda": 0.6,
+      "mean_valid_weighted": 61.90246821167501,
+      "mean_effort": 299.374,
+      "worlds": 100
+    },
+    {
+      "lambda": 1.0,
+      "mean_valid_weighted": 62.821791488178995,
+      "mean_effort": 296.572,
+      "worlds": 100
+    }
+  ],
+  "selected_lambda": 1.0,
+  "selection_rule": "max dev weighted correctly valid work; tie lower lambda",
+  "holdout_access": "No holdout world generated or scored during development."
+}
