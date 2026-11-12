@@ -1,0 +1,40 @@
+{
+  "status": "DEVELOPMENT_LOCKED_CONFIRMATION_UNOPENED",
+  "dev_worlds": 100,
+  "confirm_worlds": 400,
+  "grid": [
+    {
+      "bonus": 0.31,
+      "mean_valid_weighted": 61.956888079059,
+      "mean_effort_units": 301.403
+    },
+    {
+      "bonus": 0.6,
+      "mean_valid_weighted": 63.504673412658,
+      "mean_effort_units": 299.642
+    },
+    {
+      "bonus": 0.9,
+      "mean_valid_weighted": 65.05023138356,
+      "mean_effort_units": 294.684
+    },
+    {
+      "bonus": 1.2,
+      "mean_valid_weighted": 65.477029284901,
+      "mean_effort_units": 293.796
+    },
+    {
+      "bonus": 1.5,
+      "mean_valid_weighted": 65.786731889984,
+      "mean_effort_units": 292.01
+    }
+  ],
+  "selected_bonus": 1.5,
+  "hashes": {
+    "p10_original_sha256": "cdc70cee3676564410ea5ba66eaedea2d7f2d64c6ff942cd073b68ae2ee153c8",
+    "p10b_code_sha256": "82ab3261d45e1e8a9c78507a561c719b63359f1eecebdaff648004aed0989d67",
+    "p10b_prereg_sha256": "f62499454e2184ea4cfda3b94f331b2c04b21ef5f04894b7275b0f7a7846addd"
+  },
+  "selection": "max development validated weighted value; tie lower bonus",
+  "confirmation_access": "No confirmation world was instantiated in this function."
+}
